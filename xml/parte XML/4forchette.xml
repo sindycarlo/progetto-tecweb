@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="4forchette.xsl"?>
+<database xmlns="http://www.4forchette.com"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+xsd:schemaLocation="4forchette.xsd"> <!-- non so bene che valori bisogna sostiture in questi attributi -->
+	<ricetteDB>
+		<ricetta>
+			<nomePiatto>Risotto agli asparagi</nomePiatto>
+			<autore>WWW.MISYA.INFO</autore>
+			<descrizione>
+				Il risotto agli asparagi e' una tipica ricetta primaverile,la prima ricetta con
+				gli asparagi che trovate sul mio blog e questo perché sono i nemici giurati di
+				mio marito, odia gli asparagi più di quanto non odi i carciofi e ho detto tutto!
+				Indovinate invece chi è un'estimatrice degli asparagi? La mia piccola
+				meraviglia, che ha apprezzato e ha condiviso con me il mio piatto di risotto
+				agli asparagi, e queste sono soddisfazioni. Non so dalle vostre parti, ma qui a
+				Napoli, o almeno a casa mia, gli asparagi non sono così radicati nelle nostre
+				abitudini alimentari quindi ho iniziato con una cosa semplice come il risotto
+				per poi preparare più in la' qualche altra cosina più sfiziosa. Bene, io vi
+				saluto e vi auguro una buona giornata, bacibaci
+			</descrizione>
+			<imgPiatto>risotto.jpg</imgPiatto>
+			<difficolta>1</difficolta>
+			<valutazioneUtenti>4</valutazioneUtenti> <!-- sara' da gestire in qualche modo (perl, js?) l'aggiornamento -->
+			<quantePersone>4</quantePersone>
+			<ingredienti>
+				<ingr>300 gr di riso</ingr>
+				<ingr>400 gr di asparagi</ingr>
+				<ingr>1 litro di brodo vegetale</ingr>
+				<ingr>1 scalogno</ingr> 
+				<ingr>vino bianco</ingr>
+				<ingr>40 gr di parmigiano</ingr> 
+				<ingr>30 gr di burro</ingr> 
+				<ingr>olio di oliva</ingr> 
+				<ingr>sale</ingr> 
+				<ingr>pepe bianco</ingr>
+			</ingredienti>
+			<tempoPreparazione unitaMisura="minuti">20</tempoPreparazione>	
+			<tempoCottura unitaMisura="minuti">20</tempoCottura>
+			<procedimento>
+				Pulite gli asparagi (clicca qui per vedere come pulire gli asparagi) e una volta
+				mondati lessateli in acqua appena salata per 5 minuti. 
+				Scolateli e tagliateli a pezzetti avendo cura di tenere da parte alcune punte
+				per la decorazione finale del piatto.
+				Nell'acqua in cui avrete cotto gli asparagi, aggiungete un dado vegetale (io uso
+				quello fatto in casa) così da ottenere il brodo che vi servirà durante la cottura.
+				Tritate lo scalogno finemente, mettetelo in una casseruola con l'olio e fatelo
+				appassire
+				Aggiungete il riso e fatelo tostare per un paio di minuti
+				Quindi aggiungete il vino bianco e lasciatelo sfumate. 
+				Aggiungete il brodo vegetale un mestolo per volta aggiungendolo man mano fino a
+				cuocere completamente il riso.
+				A metà cottura del risotto, aggiungete gli asparagi, aggiustate di sale e
+				mescolare
+				A fine cottura spegnete la fiamma e mantecate il risotto aggiungete burro e
+				parmigiano
+				Lasciar riposare il risotto agli asparagi un paio di minuti prima di servirlo
+				guarnendo il piatto con pepe bianco e le punte degli asparagi che avevate tenuto
+				da parte.
+			</procedimento>
+			<commenti>
+				<post>
+					<autore>Carlo4F</autore>
+					<data>2015/11/30</data>
+					<testo>Mi piace il risotto!</testo>
+				</post>
+				<post>
+					<autore>Luca4F</autore>
+					<data>2015/11/30</data>
+					<testo>Ottima ricetta!</testo>
+				</post>
+			</commenti>
+		</ricetta>
+		<ricetta>
+			<nomePiatto>Tiramisu'</nomePiatto>
+			<autore>www.gustissimo.it</autore>
+			<descrizione>
+				Il tiramisù è un dolce diffuso in tutta Italia, le cui origini vengono spesso contese fra regioni quali il Veneto, il Friuli Venezia Giulia, il Piemonte e altre. È un dessert al cucchiaio a base di savoiardi, o altri biscotti di consistenza friabile, inzuppati nel caffè, mascarpone, uova e zucchero.
+			</descrizione>			
+			<imgPiatto>tiramisu.jpg</imgPiatto>
+			<difficolta>1</difficolta>
+			<valutazioneUtenti>3</valutazioneUtenti>
+			<quantePersone>8</quantePersone>
+			<ingredienti>
+				<ingr>600 gr. di Savoiardi</ingr>
+				<ingr>120 gr. di Zucchero</ingr>
+				<ingr>5 Uova</ingr>
+				<ingr>500 gr. di Mascarpone</ingr>
+				<ingr>Cacao in polvere q.b.</ingr>
+				<ingr>Caffè q.b.</ingr>
+				<ingr>30 ml di Rum</ingr>
+			</ingredienti>
+			<tempoPreparazione unitaMisura="minuti">30</tempoPreparazione>	
+			<tempoCottura unitaMisura="ore in frigo">5</tempoCottura>
+			<procedimento>
+				Preparate un caffé con la moka, lasciatelo intiepidire e correggetelo col rum. Versatelo in una ciotola abbastanza larga da poterci inzuppare i savoiardi uno ad uno. Adagiate i biscotti in una vaschetta di plastica (in commercio troverete facilmente quelle fatte apposta per il tiramisù) foderando completamente il fondo.
+				Sbattete i tuorli delle uova con metà dello zucchero, aggiungete il mascarpone e mescolate con un cucchiaio di legno fino ad ottenere un composto ben amalgamato.
+				Montate a parte gli albumi montati a neve e lo zucchero restante. Incorporate il tutto delicatamente.
+				A questo punto avrete ottenuto una crema che distenderete con l’aiuto di un cucchiaio o di una spatola a formare uno strato sopra i savoiardi.
+				Coprite il tutto con una spolverata di cacao in polvere aiutandovi con un colino, poi procedete a formare un altro strato di savoiardi e crema.
+				Riponete in frigorifero a riposare per qualche ora.
+				Al momento di servire ricoprite il vostro tiramisù con un’ultima abbondante spolverata di cacao in polvere.				
+				I savoiardi vanno intinti nel caffé molto velocemente, per evitare che si impregnino troppo e si sbriciolino.
+				Amalgamando i vari ingredienti, usate l’accortezza di mescolare sempre nello stesso verso.
+				Le uova devono essere freschissime.
+				Se amate i sapori amari, potete aggiungere alla polvere di cacao anche un po’ di polvere di caffé.
+				Con l’aiuto di sagome di cartone potete decorare a piacimento la superficie del dolce, anche con scritte di auguri.
+			</procedimento>
+			<commenti>
+				<post>
+					<autore>Carlo4F</autore>
+					<data>2015/12/01</data>
+					<testo>Il risotto e' piu' buono!</testo>
+				</post>
+			</commenti>
+		</ricetta>
+	</ricetteDB>
+	<utentiDB>
+		<utente>
+			<mail>lucaalessio1994@gmail.com</mail> 
+			<pwd>progtecweb</pwd>
+			<nome>Luca</nome>
+			<cognome>Alessio</cognome>
+			<dataNascita>25/05/1994</dataNascita>
+			<username>Luca4F</username>
+		</utente>
+		<utente>
+			<mail>carlo@gmail.com</mail> 
+			<pwd>pwdcarlo</pwd>
+			<nome>Carlo</nome>
+			<cognome>Sindico</cognome>
+			<dataNascita>01/01/1994</dataNascita>
+			<username>Carlo4F</username>
+		</utente>
+	</utentiDB>
+</database>
+<!-- by Alessio Luca Last Update 01/12/2015-->

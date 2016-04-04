@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.4forchette.com"
+xmlns="http://www.4forchette.com"
+elementFormDefault="qualified"> <!-- modificare -->
+<xsd:element name="database">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="ricetteDB"/>
+			<xsd:element ref="utentiDB"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="ricetteDB">
+	<xsd:complexType>
+		<xsd:element ref="ricetta" maxOccurs="unbounded"/>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="utentiDB">
+	<xsd:complexType>
+		<xsd:element ref="utente" maxOccurs="unbounded"/>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="ricetta">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="nomePiatto" type="xsd:string"/>
+			<xsd:element name="autore" type="xsd:string"/>
+			<xsd:element name="descrizione" type="xsd:string"/>
+			<xsd:element name="imgPiatto" type="xsd:string"/>
+			<xsd:element name="difficolta" type="xsd:short"/> <!-- poi stampiamo come difficolta + /3 -->
+			<xsd:element name="valutazioneUtenti" type="xsd:short"/>
+			<xsd:element name="quantePersone" type="xsd:short"/>
+			<xsd:element name="ingredienti">
+				<xsd:complexType>
+					<xsd:element ref="ingr" minOccurs="1" maxOccurs="unbounded"/>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="tempoPreparazione" type="tempo"/>
+			<xsd:element name="tempoCottura" type="tempo"/>
+			<xsd:element name="procedimento" type="xsd:string"/>			
+			<xsd:element name="tag" minOccurs="1" maxOccurs="unbounded" type="xsd:string"/>
+			<xsd:element name="commenti">
+				<xsd:complexType>
+					<xsd:element ref="post" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="ingr" type="xsd:string"/>
+
+<xsd:element name="tempo">
+	<xsd:complexType>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:short">
+				<xsd:attribute name="unitaMisura" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="post">
+	<xsd:complexType>
+		<xsd:element name="autore" type="xsd:string"/>
+		<xsd:element name="data" type="xsd:date"/>
+		<xsd:element name="testo" type="xsd:string"/>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="utente">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="mail" type="xsd:string"/>
+			<xsd:element name="pwd" type="xsd:string"/>
+			<xsd:element name="nome" type="xsd:string"/>
+			<xsd:element name="cognome" type="xsd:string"/>
+			<xsd:element name="dataNascita" type="xsd:date"/>
+			<xsd:element name="username" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+</xsd:schema>
+<!-- by Alessio Luca Last Update 01/12/2015-->

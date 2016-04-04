@@ -460,7 +460,7 @@ height:31px;
 
 /*-----------media-query------------*/
 
-@media (max-width: 890px) {
+@media (max-width: 890px)  {
 
 /*---------------HEADER-------------*/
 	#header {	
@@ -474,6 +474,7 @@ height:31px;
 	#banner {
 	width:250px;
 	height:50px;
+	margin-left: 6em;
 }
 	#content .main {
 	margin: 0 auto;
@@ -601,15 +602,7 @@ margin:1.250em 0 0;
 	max-width:16.750em;
 	margin-left: 1.5em;
 }
-.box-contact{
-	
-	max-width:16.750em;
-	margin-left: 1.5em;
 }
-}
-
-
-
 
 @media (max-width: 330px) {
 

@@ -487,7 +487,6 @@ height:31px;
 	clear:both;
 	display:block;
 	width:auto;
-	margin-left: 7em;
 }
 
 .contenitore .blocco2 .lista-menu {
@@ -552,14 +551,15 @@ margin:1.250em 0 0;
 .lista-menu li {
     float: left;
     width: 15.875em;
-    margin-left: 3em;
+}
+.lista-menu .box-img {
+	width:100%;
 }
 
 .contenitore .blocco1 {
     clear: both;
     display: block;
     width: auto;
-    margin-left: 3em;
 }
 #banner {
 	width:250px;
@@ -635,7 +635,6 @@ text-align: center;
 }
 .contenitore .blocco1{
 	width:auto;
-	margin-left: 2em;
 }
 .contenitore .side-bar{
 	max-width:17em;

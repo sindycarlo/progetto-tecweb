@@ -481,7 +481,7 @@ height:31px;
 
 /*--------------CONTENT--------------*/
 
-.lista-menu li{}
+.lista-menu li{width:auto;}
 
 .contenitore .blocco1 {
 	clear:both;
@@ -550,7 +550,7 @@ margin:1.250em 0 0;
 
 .lista-menu li {
     float: left;
-    width: 15.875em;
+    width: auto;
 }
 .lista-menu .box-img {
 	width:100%;
@@ -645,8 +645,7 @@ text-align: center;
 	margin-left: 0.8em;
 }
 .lista-menu .box-img{
-	min-width:17em;
-	max-height:17em;
+	width:auto;
 	}
 
 .info {

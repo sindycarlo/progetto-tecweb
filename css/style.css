@@ -264,7 +264,7 @@ color: black;
 	color:#343434;
 	font-size:1.250em;
 	line-height:1.5em;}
-.lista-menu a:visited{color:#800080;}
+.lista-menu a:visited{color:#800080;text-decoration:underline;}
 .lista-menu a:hover{
 	text-decoration: underline;
 }
@@ -322,11 +322,6 @@ border-radius:1.125em;
 .button {
 	display:inline-block;
 	padding:0.5em 1em;
-	background:#E6E6FA;
-    box-shadow:0 0.063em 0.125em #c5c2a9;
-}
-.button a:visited{
-	color:#800080;
 }
 .buttons {
 	float:left;
@@ -589,6 +584,7 @@ text-align: center;
 @media (max-width: 330px) {
 
 /*--------HEADER-------*/
+
 #header{
 	height:auto;
 }
@@ -623,6 +619,10 @@ text-align: center;
 /*-----CONTENT------*/
 .lista-menu {
 	padding-left:0;
+}
+.lista-menu a{
+	display:block;
+	width: 10em;
 }
 .blocco1.thumbnail {
 	clear:both;

@@ -70,7 +70,7 @@ p {
 	width:58.750em;
 }
 .contenitore .blocco2{
-	width:38.750em;
+	width:38em;
 }
 
 
@@ -256,10 +256,10 @@ color: black;
 	border-radius:0.438em;
 	width:100%;
 }
-.blocco1 a:hover {
+.blocco1 a{
 	text-decoration: underline;
 }
- .blocco a:visited {
+ .blocco1 a:visited {
 	color:#800080;
 }
 
@@ -271,7 +271,7 @@ color: black;
 	font-size:1.250em;
 	line-height:1.5em;}
 .lista-menu a:visited{color:#800080;}
-.lista-menu a:hover{
+.lista-menu a{
 	text-decoration: underline;
 }
 .lista-menu .box-img {

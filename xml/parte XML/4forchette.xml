@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="4forchette.xsl"?>
-<database xmlns="http://www.4forchette.com"
+<ricetteDB xmlns="http://www.4forchette.com"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
 xsd:schemaLocation="4forchette.xsd"> <!-- non so bene che valori bisogna sostiture in questi attributi -->
-	<ricetteDB>
 		<ricetta>
 			<nomePiatto>Risotto agli asparagi</nomePiatto>
+			<categoria>Primo</categoria>
 			<autore>WWW.MISYA.INFO</autore>
 			<descrizione>
 				Il risotto agli asparagi e' una tipica ricetta primaverile,la prima ricetta con
@@ -21,7 +21,6 @@ xsd:schemaLocation="4forchette.xsd"> <!-- non so bene che valori bisogna sostitu
 			</descrizione>
 			<imgPiatto>risotto.jpg</imgPiatto>
 			<difficolta>1</difficolta>
-			<valutazioneUtenti>4</valutazioneUtenti> <!-- sara' da gestire in qualche modo (perl, js?) l'aggiornamento -->
 			<quantePersone>4</quantePersone>
 			<ingredienti>
 				<ingr>300 gr di riso</ingr>
@@ -36,7 +35,6 @@ xsd:schemaLocation="4forchette.xsd"> <!-- non so bene che valori bisogna sostitu
 				<ingr>pepe bianco</ingr>
 			</ingredienti>
 			<tempoPreparazione unitaMisura="minuti">20</tempoPreparazione>	
-			<tempoCottura unitaMisura="minuti">20</tempoCottura>
 			<procedimento>
 				Pulite gli asparagi (clicca qui per vedere come pulire gli asparagi) e una volta
 				mondati lessateli in acqua appena salata per 5 minuti. 
@@ -58,28 +56,16 @@ xsd:schemaLocation="4forchette.xsd"> <!-- non so bene che valori bisogna sostitu
 				guarnendo il piatto con pepe bianco e le punte degli asparagi che avevate tenuto
 				da parte.
 			</procedimento>
-			<commenti>
-				<post>
-					<autore>Carlo4F</autore>
-					<data>2015/11/30</data>
-					<testo>Mi piace il risotto!</testo>
-				</post>
-				<post>
-					<autore>Luca4F</autore>
-					<data>2015/11/30</data>
-					<testo>Ottima ricetta!</testo>
-				</post>
-			</commenti>
 		</ricetta>
 		<ricetta>
 			<nomePiatto>Tiramisu'</nomePiatto>
+			<categoria>Dessert</categoria>
 			<autore>www.gustissimo.it</autore>
 			<descrizione>
 				Il tiramisù è un dolce diffuso in tutta Italia, le cui origini vengono spesso contese fra regioni quali il Veneto, il Friuli Venezia Giulia, il Piemonte e altre. È un dessert al cucchiaio a base di savoiardi, o altri biscotti di consistenza friabile, inzuppati nel caffè, mascarpone, uova e zucchero.
 			</descrizione>			
 			<imgPiatto>tiramisu.jpg</imgPiatto>
 			<difficolta>1</difficolta>
-			<valutazioneUtenti>3</valutazioneUtenti>
 			<quantePersone>8</quantePersone>
 			<ingredienti>
 				<ingr>600 gr. di Savoiardi</ingr>
@@ -91,7 +77,6 @@ xsd:schemaLocation="4forchette.xsd"> <!-- non so bene che valori bisogna sostitu
 				<ingr>30 ml di Rum</ingr>
 			</ingredienti>
 			<tempoPreparazione unitaMisura="minuti">30</tempoPreparazione>	
-			<tempoCottura unitaMisura="ore in frigo">5</tempoCottura>
 			<procedimento>
 				Preparate un caffé con la moka, lasciatelo intiepidire e correggetelo col rum. Versatelo in una ciotola abbastanza larga da poterci inzuppare i savoiardi uno ad uno. Adagiate i biscotti in una vaschetta di plastica (in commercio troverete facilmente quelle fatte apposta per il tiramisù) foderando completamente il fondo.
 				Sbattete i tuorli delle uova con metà dello zucchero, aggiungete il mascarpone e mescolate con un cucchiaio di legno fino ad ottenere un composto ben amalgamato.
@@ -106,32 +91,7 @@ xsd:schemaLocation="4forchette.xsd"> <!-- non so bene che valori bisogna sostitu
 				Se amate i sapori amari, potete aggiungere alla polvere di cacao anche un po’ di polvere di caffé.
 				Con l’aiuto di sagome di cartone potete decorare a piacimento la superficie del dolce, anche con scritte di auguri.
 			</procedimento>
-			<commenti>
-				<post>
-					<autore>Carlo4F</autore>
-					<data>2015/12/01</data>
-					<testo>Il risotto e' piu' buono!</testo>
-				</post>
-			</commenti>
 		</ricetta>
 	</ricetteDB>
-	<utentiDB>
-		<utente>
-			<mail>lucaalessio1994@gmail.com</mail> 
-			<pwd>progtecweb</pwd>
-			<nome>Luca</nome>
-			<cognome>Alessio</cognome>
-			<dataNascita>25/05/1994</dataNascita>
-			<username>Luca4F</username>
-		</utente>
-		<utente>
-			<mail>carlo@gmail.com</mail> 
-			<pwd>pwdcarlo</pwd>
-			<nome>Carlo</nome>
-			<cognome>Sindico</cognome>
-			<dataNascita>01/01/1994</dataNascita>
-			<username>Carlo4F</username>
-		</utente>
-	</utentiDB>
-</database>
-<!-- by Alessio Luca Last Update 01/12/2015-->
+
+<!-- by Alessio Luca Last Update 05/04/2016 -->

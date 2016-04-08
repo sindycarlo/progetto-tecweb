@@ -241,6 +241,7 @@ color: black;
 	margin-bottom:1em;
 
 }
+
 .thumbnail{margin-bottom:1.125em}
 .box-img{
 	padding:0.625em;
@@ -255,7 +256,12 @@ color: black;
 	border-radius:0.438em;
 	width:100%;
 }
-
+.blocco1 a:hover {
+	text-decoration: underline;
+}
+ .blocco a:visited {
+	color:#800080;
+}
 
 
 .lista-menu{overflow:hidden;margin-left:-1.563em;padding-top:1.563em;}
@@ -264,7 +270,7 @@ color: black;
 	color:#343434;
 	font-size:1.250em;
 	line-height:1.5em;}
-.lista-menu a:visited{color:#800080;text-decoration:underline;}
+.lista-menu a:visited{color:#800080;}
 .lista-menu a:hover{
 	text-decoration: underline;
 }
@@ -376,9 +382,7 @@ border-radius:1.125em;
 }
 #contact-form input,
 #contact-form textarea {
-  padding: 0.250em 0.750em 0.313em;
   margin: 0;
-  font-size:1.0em;
   display: block;
   line-height: 1.5em;
   color: #343434;

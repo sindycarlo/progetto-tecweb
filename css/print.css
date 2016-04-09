@@ -19,3 +19,5 @@ body {font-size: 12pt;}
 .button {display:none;}
 
 
+/*---------nascondo salta contenuto-----------*/
+a.salta-main{display:none;}

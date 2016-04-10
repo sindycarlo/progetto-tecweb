@@ -87,7 +87,7 @@ z-index:-999;
 }
 a.salta-main:focus, a.salta-main:active {
 left: auto;
-top: 10em;
+top: 5em;
 width: 30%;
 height: auto;
 overflow:auto;
@@ -255,6 +255,9 @@ color: black;
 .box-img img{	
 	border-radius:0.438em;
 	width:100%;
+	min-height: 100px;
+	min-width: 200px;
+	max-width: 500px;
 }
 .blocco1 a{
 	text-decoration: underline;
@@ -495,7 +498,8 @@ height:31px;
 	width:auto;
 }
 .lista-menu .box-img{
-	width:90%;
+	width:auto;
+	float:left;
 	}
 
 .box-contact{

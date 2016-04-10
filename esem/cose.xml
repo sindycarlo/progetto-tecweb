@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<cose xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" cose.xsd">
+	<thing IDcode="1">
+		<stuff>100</stuff>
+		<blabla>sticazzi</blabla>
+		<contenuto>primo oggetto</contenuto>
+	</thing>
+	<thing IDcode="2">
+		<stuff>120</stuff>
+		<blabla>altre cose</blabla>
+		<contenuto>secondo oggetto</contenuto>
+	</thing>
+	<thing IDcode="3">
+		<stuff>1007777</stuff>
+		<blabla>cose</blabla>
+		<contenuto>vbb</contenuto>
+	</thing>
+	<thing IDcode="4">
+		<stuff>10023423423</stuff>
+		<blabla>blablablabla</blabla>
+		<contenuto>eccetera</contenuto>
+	</thing>
+</cose>

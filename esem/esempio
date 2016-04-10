@@ -1,0 +1,11 @@
+pagina indice: contiene 3 link, tutti che indirizzano alla stessa pagina ma che la vogliono vedere con contenuto diverso
+pagina template: cambia in base a che link l'ha chiamata (-> che parametro id viene passato da matchare nell' xml)
+
+i link nella pagina indice per ora sono statici, solo il contenuto della pagina template è dinamico
+
+CARICARE PAGINE PERL ED ESEGUIRLE IN MODO EASY
+quello che ho fatto è stato:
+connettermi con sto comando -L30080:tecnologie-web:80 -L30022:tecnologie-web:22 lalessio@ssh.studenti.math.unipd.it
+mettere come prima riga del file perl questa #!/usr/bin/perl -w
+da filezilla (tramite gui quindi) cambiare i permessi del file
+collegarsi a http://localhost:30080/tecweb/~lalessio/ e testare le pagine

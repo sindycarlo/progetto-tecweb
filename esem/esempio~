@@ -1,0 +1,4 @@
+pagina indice: contiene 3 link, tutti che indirizzano alla stessa pagina ma che la vogliono vedere con contenuto diverso
+pagina template: cambia in base a che link l'ha chiamata (-> che parametro id viene passato da matchare nell' xml)
+
+i link nella pagina indice per ora sono statici, solo il contenuto della pagina template è dinamico

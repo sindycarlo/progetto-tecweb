@@ -19,7 +19,7 @@ print "Content-Type: text/html\n\n";
 
 print "
 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
-<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\">
 <head>
     <title>Primi piatti</title>
     <meta name=\"title\" content=\"4forchette - Progetto di Tecnlogie web\"/>
@@ -39,7 +39,7 @@ print "
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-      <div id=\"banner\"><a href=\"../index.html\"><img alt=\"logo di quattro forchette\" src=\"../images/banner.png\"/></a></div>
+      <div id=\"banner\"><h1><a href=\"index.html\"> <span>2FORCHETTE</span></a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
@@ -54,7 +54,7 @@ print "
       <a href=\"../index.html\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
       Primi piatti
       </p>
-    </div> 
+    </div>
     </div>
   </div>
 </div>
@@ -63,20 +63,20 @@ print "
 <div id=\"content\">
     <div class=\"main\">
     <h2>Primi piatti</h2>
-    
+
     <div class=\"box-img\"><img src=\"../images/amatriciana.jpg\" alt=\"immagine che descrive spaghetti all'amatriciana\"/></div>
     <div>
         <p>
 
 Fiore all’occhiello della cucina italiana, i primi piatti sono indiscussi protagonisti di ogni tipo di menù. Si sposano con qualsiasi ingrediente e possono essere realizzati con pasta, riso e condimenti a base di carne, pesce, uova o verdure. Ogni tipo di pasta ha caratteristiche ben precise e deve essere condita in modo appropriato. La pasta fresca all’uovo, come le tagliatelle, è ideale da condire con sughi elaborati a base di carne, le orecchiette si sposano perfettamente con le cime di rapa, alcuni primi piatti sono gustosi se conditi con vari tipi di sughi “a crudo”, come il pesto. Non mancano poi timballi di pasta al forno, gustosi risotti o arancini di riso.
 </p>
-    </div>    
-    <div class=\"allinea\"></div>    
-        
     </div>
-    
+    <div class=\"allinea\"></div>
+
+    </div>
+
       <div class=\"contenitore\">";
-  
+
 my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
@@ -90,7 +90,7 @@ foreach my $thing (@cose)
   <div class=\"blocco2\">
       <ul class=\"lista-menu\">
       <li>
-        <a href=\"page_template.cgi?id=$id\">$bla</a> 
+        <a href=\"page_template.cgi?id=$id\">$bla</a>
         <div class=\"box-img\"><img src=\"../images/$id\" alt=\"immagine che descrive $bla\"/></div>
       </li>
       </ul>
@@ -106,20 +106,20 @@ foreach my $thing (@cose)
     <div class=\"main\">
           <div id=\"inline\">
 
-          <p>             
+          <p>
             <span>4Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
            </p>
-      <p> 
+      <p>
       <a href=\"http://validator.w3.org/check?uri=referer\"><img
       src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
 
         <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
         <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\"
             alt=\"CSS Valido!\"/></a>
-                    
+
         <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
         <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
-        alt=\"CSS Valido!\"/></a>       
+        alt=\"CSS Valido!\"/></a>
           </p>
           </div>
     <div class=\"allinea\"></div>

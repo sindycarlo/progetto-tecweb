@@ -19,25 +19,25 @@ xsd:schemaLocation="4forchette.xsd"> <!-- non so bene che valori bisogna sostitu
 				per poi preparare più in la' qualche altra cosina più sfiziosa. Bene, io vi
 				saluto e vi auguro una buona giornata, bacibaci
 			</descrizione>
-			<imgPiatto>risotto.jpg</imgPiatto>
+			<imgPiatto>risottoasparagi.jpg</imgPiatto>
 			<difficolta>1</difficolta>
 			<quantePersone>4</quantePersone>
 			<ingredienti>
 				<ingr>300 gr di riso</ingr>
 				<ingr>400 gr di asparagi</ingr>
 				<ingr>1 litro di brodo vegetale</ingr>
-				<ingr>1 scalogno</ingr> 
+				<ingr>1 scalogno</ingr>
 				<ingr>vino bianco</ingr>
-				<ingr>40 gr di parmigiano</ingr> 
-				<ingr>30 gr di burro</ingr> 
-				<ingr>olio di oliva</ingr> 
-				<ingr>sale</ingr> 
+				<ingr>40 gr di parmigiano</ingr>
+				<ingr>30 gr di burro</ingr>
+				<ingr>olio di oliva</ingr>
+				<ingr>sale</ingr>
 				<ingr>pepe bianco</ingr>
 			</ingredienti>
-			<tempoPreparazione unitaMisura="minuti">20</tempoPreparazione>	
+			<tempoPreparazione unitaMisura="minuti">20</tempoPreparazione>
 			<procedimento>
 				Pulite gli asparagi (clicca qui per vedere come pulire gli asparagi) e una volta
-				mondati lessateli in acqua appena salata per 5 minuti. 
+				mondati lessateli in acqua appena salata per 5 minuti.
 				Scolateli e tagliateli a pezzetti avendo cura di tenere da parte alcune punte
 				per la decorazione finale del piatto.
 				Nell'acqua in cui avrete cotto gli asparagi, aggiungete un dado vegetale (io uso
@@ -45,7 +45,7 @@ xsd:schemaLocation="4forchette.xsd"> <!-- non so bene che valori bisogna sostitu
 				Tritate lo scalogno finemente, mettetelo in una casseruola con l'olio e fatelo
 				appassire
 				Aggiungete il riso e fatelo tostare per un paio di minuti
-				Quindi aggiungete il vino bianco e lasciatelo sfumate. 
+				Quindi aggiungete il vino bianco e lasciatelo sfumate.
 				Aggiungete il brodo vegetale un mestolo per volta aggiungendolo man mano fino a
 				cuocere completamente il riso.
 				A metà cottura del risotto, aggiungete gli asparagi, aggiustate di sale e
@@ -63,7 +63,7 @@ xsd:schemaLocation="4forchette.xsd"> <!-- non so bene che valori bisogna sostitu
 			<autore>www.gustissimo.it</autore>
 			<descrizione>
 				Il tiramisù è un dolce diffuso in tutta Italia, le cui origini vengono spesso contese fra regioni quali il Veneto, il Friuli Venezia Giulia, il Piemonte e altre. È un dessert al cucchiaio a base di savoiardi, o altri biscotti di consistenza friabile, inzuppati nel caffè, mascarpone, uova e zucchero.
-			</descrizione>			
+			</descrizione>
 			<imgPiatto>tiramisu.jpg</imgPiatto>
 			<difficolta>1</difficolta>
 			<quantePersone>8</quantePersone>
@@ -76,7 +76,7 @@ xsd:schemaLocation="4forchette.xsd"> <!-- non so bene che valori bisogna sostitu
 				<ingr>Caffè q.b.</ingr>
 				<ingr>30 ml di Rum</ingr>
 			</ingredienti>
-			<tempoPreparazione unitaMisura="minuti">30</tempoPreparazione>	
+			<tempoPreparazione unitaMisura="minuti">30</tempoPreparazione>
 			<procedimento>
 				Preparate un caffé con la moka, lasciatelo intiepidire e correggetelo col rum. Versatelo in una ciotola abbastanza larga da poterci inzuppare i savoiardi uno ad uno. Adagiate i biscotti in una vaschetta di plastica (in commercio troverete facilmente quelle fatte apposta per il tiramisù) foderando completamente il fondo.
 				Sbattete i tuorli delle uova con metà dello zucchero, aggiungete il mascarpone e mescolate con un cucchiaio di legno fino ad ottenere un composto ben amalgamato.
@@ -84,7 +84,7 @@ xsd:schemaLocation="4forchette.xsd"> <!-- non so bene che valori bisogna sostitu
 				A questo punto avrete ottenuto una crema che distenderete con l’aiuto di un cucchiaio o di una spatola a formare uno strato sopra i savoiardi.
 				Coprite il tutto con una spolverata di cacao in polvere aiutandovi con un colino, poi procedete a formare un altro strato di savoiardi e crema.
 				Riponete in frigorifero a riposare per qualche ora.
-				Al momento di servire ricoprite il vostro tiramisù con un’ultima abbondante spolverata di cacao in polvere.				
+				Al momento di servire ricoprite il vostro tiramisù con un’ultima abbondante spolverata di cacao in polvere.
 				I savoiardi vanno intinti nel caffé molto velocemente, per evitare che si impregnino troppo e si sbriciolino.
 				Amalgamando i vari ingredienti, usate l’accortezza di mescolare sempre nello stesso verso.
 				Le uova devono essere freschissime.

@@ -33,7 +33,7 @@ foreach my $thing (@cose)
 {
      	my $bla = $thing->findvalue('blabla');
 	my $id = $thing->getAttribute('IDcode');
-	print "<a href=\"page_template.cgi?id=$id\">link che parla di $bla</a>"; 
+	print "<a href=\"page_template.cgi?id=$id\">link che parla di $bla</a>";
 }
 
 

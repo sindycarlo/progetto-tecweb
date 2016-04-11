@@ -3,7 +3,7 @@
 <ricetteDB xmlns="http://www.4forchette.com"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
 xsd:schemaLocation="4forchette.xsd"> <!-- non so bene che valori bisogna sostiture in questi attributi -->
-		<ricetta>
+		<ricetta><!--credo che vada messo un codice identificativo per ogni ricetta-->
 			<nomePiatto>Risotto agli asparagi</nomePiatto>
 			<categoria>Primo</categoria>
 			<autore>WWW.MISYA.INFO</autore>

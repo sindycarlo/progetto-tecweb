@@ -15,23 +15,24 @@ my $cgi = new CGI;
 my $id = $cgi->param('id');
 
 
-my $file = "../data/cose.xml";
+my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 
 
-my $thing = $doc->findnodes("/cose/thing[\@\IDcode = $id]")->get_node(1);
+my $thing = $doc->findnodes("/ricetteDB/ricetta")->get_node(1);
 
-my $stuff=$thing->findvalue('stuff');
-my $contenuto=$thing->findvalue('contenuto');        
+my $categoria=$thing->findvalue('categoria');
+my $autore=$thing->findvalue('autore');
+my $descrizione=$thing->findvalue('descrizione');
 
 # stampo la pagina
 print "Content-Type: text/html\n\n";
 
 print "<html> <head>\n";
-print "<title>template - $id</title>";
 print "</head>\n";
 print "<body>\n";
-print "<h1>$stuff</h1>\n";
-print "<p>$contenuto</p>\n";
+print "<h1>$categoria</h1>\n";
+print "<h2>$autore</h2>\n";
+print "<p>$descrizione</p>\n";
 print "</body> </html>\n";

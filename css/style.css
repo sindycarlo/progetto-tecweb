@@ -443,11 +443,14 @@ height:31px;
 	.main {
 	width:auto;
 	}
+	.header-menu {
+		text-align: center;
+		width:100%;
+	}
 	#banner {
-	width:250px;
-	height:50px;
-	margin-left: 6em;
-}
+	width:100%;
+	text-align:center;
+	}
 	#content .main {
 	margin: 0 auto;
 	position: relative;
@@ -565,9 +568,8 @@ margin:1.250em 0 0;
     width: auto;
 }
 #banner {
-	width:250px;
-	height:50px;
-	margin-left: 2.5em;
+text-align: center;
+width:100%;
 }
 #nav{
 overflow: hidden;

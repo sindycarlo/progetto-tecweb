@@ -75,7 +75,9 @@ Fiore all’occhiello della cucina italiana, i primi piatti sono indiscussi prot
 
     </div>
 
-      <div class=\"contenitore\">";
+      <div class=\"contenitore\">
+        <div class=\"blocco2\">
+          <ul class=\"lista-menu\">";
 
 my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
@@ -87,17 +89,17 @@ foreach my $thing (@cose)
       my $bla = $thing->findvalue('nomePiatto');
   my $id = $thing->findvalue('imgPiatto');
   print "
-  <div class=\"blocco2\">
-      <ul class=\"lista-menu\">
+  
+      
       <li>
         <a href=\"page_template.cgi?id=$id\">$bla</a>
         <div class=\"box-img\"><img src=\"../images/$id\" alt=\"immagine che descrive $bla\"/></div>
       </li>
-      </ul>
-    </div>";
+      
+    ";
 }
 
-  print "</div>
+  print "</ul></div></div>
     <div class=\"allinea\"></div>
 </div>
 

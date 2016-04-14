@@ -1,8 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-targetNamespace="http://www.4forchette.com"
-xmlns="http://www.4forchette.com"
-elementFormDefault="qualified">
+
+	elementFormDefault="qualified" >
 
 <xsd:element name="ricetteDB">
 	<xsd:complexType>
@@ -14,7 +13,7 @@ elementFormDefault="qualified">
 	<xsd:complexType>
 		<xsd:sequence>
 			<xsd:element name="nomePiatto" type="xsd:string"/>
-			<xsd:element name="categoria" type="xsd:string"/>  <!-- enumerazione antipasto / primo / secondo / dessert -->
+			<xsd:element name="categoria" type="xsd:string"/>  <!-- oppure enumerazione antipasto / primo / secondo / dessert ma come si fa? -->
 			<xsd:element name="autore" type="xsd:string"/>
 			<xsd:element name="descrizione" type="xsd:string"/>
 			<xsd:element name="imgPiatto" type="xsd:string"/>
@@ -25,28 +24,14 @@ elementFormDefault="qualified">
 					<xsd:element ref="ingr" minOccurs="1" maxOccurs="unbounded"/>
 				</xsd:complexType>
 			</xsd:element>
-			<!-- <xsd:element name="tempoPreparazione" type="tempo"/> -->
 			<xsd;element name="tempoPreparazione" type="xsd:short"/>
 			<xsd:element name="procedimento" type="xsd:string"/>			
 		</xsd:sequence>
+		<xsd:attribute name="IDCode" type="xsd:integer"/>
 	</xsd:complexType>
 </xsd:element>
 
 <xsd:element name="ingr" type="xsd:string"/>
-
-<!-- 
-per il tempo di cottura alla fine lo consideriamo come uno short int senza farti il tipo apposta a parte
-poi stampiamo sulla pagina il valore seguito da " minuti" e morta là
-<xsd:element name="tempo">
-	<xsd:complexType>
-		<xsd:simpleContent>
-			<xsd:extension base="xsd:short">
-				<xsd:attribute name="unitaMisura" type="xsd:string"/>
-			</xsd:extension>
-		</xsd:simpleContent>
-	</xsd:complexType>
-</xsd:element>
--->
 
 </xsd:schema>
 <!-- by Alessio Luca Last Update 05/04/2016-->

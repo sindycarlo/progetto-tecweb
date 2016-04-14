@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
 <ricetteDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" 4forchette.xsd"><!-- non so bene che valori bisogna sostiture in questi attributi -->
-		<ricetta><!--credo che vada messo un codice identificativo per ogni ricetta-->
+		<ricetta IDCode="1"><!--credo che vada messo un codice identificativo per ogni ricetta-->
 			<nomePiatto>Risotto agli asparagi</nomePiatto>
 			<categoria>Primo</categoria>
 			<autore>WWW.MISYA.INFO</autore>
@@ -55,7 +55,7 @@
 				da parte.
 			</procedimento>
 		</ricetta>
-		<ricetta>
+		<ricetta IDCode="2">
 			<nomePiatto>Tiramisu'</nomePiatto>
 			<categoria>Dessert</categoria>
 			<autore>www.gustissimo.it</autore>
@@ -91,7 +91,7 @@
 				Con l’aiuto di sagome di cartone potete decorare a piacimento la superficie del dolce, anche con scritte di auguri.
 			</procedimento>
 		</ricetta>
-  		<ricetta>
+  		<ricetta IDCode="3">
 			<nomePiatto>Pasta con crema ai carciofi</nomePiatto>
 			<categoria>Primo</categoria>
 			<autore>WWW.MISYA.INFO</autore>

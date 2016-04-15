@@ -136,6 +136,36 @@
 			  aggiungendo prezzemolo tritato e cubetti di pancetta croccanti
 			</procedimento>
 		</ricetta>
+		<ricetta IDCode="4">
+			<nomePiatto>Spaghetti aglio, olio e peperoncino</nomePiatto>
+			<categoria>Primo</categoria>
+			<autore>buttalapasta.it</autore>
+			<descrizione>
+			Gli spaghetti, aglio, olio e peperoncino sono un gustoso e facilissimo primo piatto. Su questa ricetta "internazionale" ci sono molte "scuole di pensiero". C'è chi asserisce che ci vuole il formaggio, e chi lo vieta assolutamente, qualcuno asserisce che l'aglio deve essere messo a pezzi grossi, mentre c'è chi lo trita, oppure chi lo schiaccia, e poi c'è anche chi aggiunge il prezzemolo. Scopri allora la ricetta originale, e mi raccomando, utilizzate gli spaghetti numero 5, perchè restano al dente più a lungo.
+			</descrizione>
+			<imgPiatto>spaghaop.jpg</imgPiatto>
+			<difficolta>1</difficolta>
+			<quantePersone>4</quantePersone>
+			<ingredienti>
+				<ingr>400 Gr Spaghetti Numero 5</ingr>
+				<ingr>2 Spicchi Di Aglio</ingr>
+				<ingr>Peperoncino Piccante Q.B.</ingr>
+				<ingr>1 Mazzetto Di Prezzemolo</ingr>
+				<ingr>Olio Evo Q.B.</ingr>
+				<ingr>Sale Q.B.</ingr>
+			</ingredienti>
+			<tempoPreparazione>15</tempoPreparazione>
+			<procedimento>
+			Mettere a bollire l’acqua salata per la pasta.
+			Sbucciare l'aglio, tagliarlo in verticale ed eliminare il germe al centro, quindi tagliare in due ogni metà.
+			In una padella versare l’olio unite l’aglio, facendolo rosolare a fuoco medio e stando attenti a non bruciarlo.
+			Aggiungere il peperoncino e mescolate.
+			Spegnere la fiamma ed eliminate l’aglio.
+			Cuocere gli spaghetti scolandoli prima che siano cotti, e conservare un bicchiere di acqua della cottura.
+			Rovesciare gli spaghetti nella pentola con l’olio, e rimettere sul fuoco la padella aggiungendo poco per volta l’acqua di cottura, mecsolando fino a fine cottura.
+			Portare in tavola gli spaghetti aggiungendo il prezzemolo fresco.
+			</procedimento>
+		</ricetta>
 	</ricetteDB>
 
 <!-- by Luca  Last Update 15/04/2016 -->

@@ -19,29 +19,27 @@ my $file ="../data/4forchette.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 
-#da implementare in modo diverso:
-my $thing = $doc->findnodes("/ricetteDB/ricetta")->get_node(1);#problema relativo a quale ricetta estrarre!!!
+my $ric = $doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $id]")->get_node(1);
 
+my $titolo=$ric->findvalue('nomePiatto');
+my $autore=$ric->findvalue('autore');
+my $descrizione=$ric->findvalue('descrizione');
+my $imgpiatto=$ric->findvalue('imgPiatto');
+my $quantepers=$ric->findvalue('quantePersone');
+#my $ingredienti=$ric->findvalue("ingredienti");
+my $procedimento=$ric->findvalue('procedimento');
+my $diff=$ric->findvalue('difficolta');
+my $cat=$ric->findvalue('categoria');
+my $tempo=$ric->findvalue('tempoPreparazione');
+my $ing=$ric->findvalue('ingredienti');
 
-my $titolo=$thing->findvalue('nomePiatto');
-my $autore=$thing->findvalue('autore');
-my $descrizione=$thing->findvalue('descrizione');
-my $imgpiatto=$thing->findvalue('imgPiatto');
-my $quantepers=$thing->findvalue('quantePersone');
-my $ingredienti=$thing->findnodes("ingredienti");
-my $procedimento=$thing->findvalue('procedimento');
-
-
-
-
-#bisogna stampare la pagina corretta relativa a quella ricetta!!
-# stampo la pagina
+# nelle parti stampate ci sono molte cose da rivedere ma lo faremo più avanti quando siamo sicuri funzioni tutto
 print "Content-Type: text/html\n\n";
 
 print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
 <head>
-    <title>$titolo</title>
+    <title>$titolo - 2Forchette.it</title>
     <meta name=\"title\" content=\"4forchette - Progetto di Tecnlogie web\"/>
     <meta name=\"description\" content=\"Ricetta risotto con gamberi\"/>
     <meta name=\"keywords\" content=\"4forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
@@ -85,31 +83,37 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
     <div class=\"side-bar\">
       <h1>INGREDIENTI</h1>
       <div id=\"num-pers\">(per $quantepers persone)</div>
+<p>$ing</p>
       <ul class=\"list\">";
-foreach my $ingredienti ($thing)
-{
-      
-	$id=$ingredienti->findvalue('ingr');#da sistemare chiedo a te luca!!
 
-  print "
+#per ora niente ingredienti
+#foreach my $ingredienti ($thing)
+#{
+      
+	#$id=$ingredienti->findvalue('ingr');
+
+  #print "
   
       
-      <li>
-      <p>$id</p>
-      </li>
+   #   <li>
+   #   <p>$id</p>
+   #   </li>
       
-    ";
-}        
+  #  ";
+#}        
 
 
   print  "</ul>
     </div>
     <div class=\"blocco2\">
       <h1>$titolo</h1>  
+	<span>Autore: $autore</span> <span>Categoria: $cat</span>
+<p>$descrizione</p>
     <div class=\"allinea\"></div>
       <div class=\"box-img\"><img src=\"../images/$imgpiatto\" alt=\"immagine che descrive un $titolo\"/></div>
       <h2>PREPARAZIONE</h2>
       <div>
+	<span>Tempo di preparazione: $tempo minuti</span>Difficoltà: $diff/3<span></span>
   <p>$procedimento</p>
   
      </div>
@@ -143,4 +147,4 @@ foreach my $ingredienti ($thing)
 </body>
 </html>
 ";
-
+#last update by luca 15/04/2016

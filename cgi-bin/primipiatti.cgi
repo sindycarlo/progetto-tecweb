@@ -82,18 +82,20 @@ Fiore all’occhiello della cucina italiana, i primi piatti sono indiscussi prot
 my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
-my @cose = $doc->findnodes("/ricetteDB/ricetta[categoria='Primo']");
+my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Primo']");
 
-foreach my $thing (@cose)
+foreach my $recipe (@ricette)
 {
-      my $bla = $thing->findvalue('nomePiatto');
-  my $id = $thing->findvalue('imgPiatto');
+      my $nome = $recipe->findvalue('nomePiatto');
+  my $id = $recipe->getAttribute('IDCode'); 
+	my $img = $recipe->findvalue('imgPiatto');
+#qua per ora lascio che metti anche l'immagine però in futuro mi sa che lo togliamo sennò diventa un menù infinito (e ci mette anche tanto a caricarlo)
   print "
   
       
       <li>
-        <a href=\"page_template.cgi?id=$id\">$bla</a>
-        <div class=\"box-img\"><img src=\"../images/$id\" alt=\"immagine che descrive $bla\"/></div>
+        <a href=\"page_template.cgi?id=$id\">$nome</a>
+        <div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></div>
       </li>
       
     ";
@@ -131,8 +133,7 @@ foreach my $thing (@cose)
 </html>";
 
 
-
-
+#last update by luca 15/04/2016
 
 
 

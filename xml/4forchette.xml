@@ -32,7 +32,7 @@
 				<ingr>sale</ingr>
 				<ingr>pepe bianco</ingr>
 			</ingredienti>
-			<tempoPreparazione unitaMisura="minuti">20</tempoPreparazione>
+			<tempoPreparazione>20</tempoPreparazione>
 			<procedimento>
 				Pulite gli asparagi e una volta
 				mondati lessateli in acqua appena salata per 5 minuti.
@@ -75,7 +75,7 @@
 				<ingr>Caffe' q.b.</ingr>
 				<ingr>30 ml di Rum</ingr>
 			</ingredienti>
-			<tempoPreparazione unitaMisura="minuti">30</tempoPreparazione>
+			<tempoPreparazione>30</tempoPreparazione>
 			<procedimento>
 				Preparate un caffe' con la moka, lasciatelo intiepidire e correggetelo col rum. Versatelo in una ciotola abbastanza larga da poterci inzuppare i savoiardi uno ad uno. Adagiate i biscotti in una vaschetta di plastica (in commercio troverete facilmente quelle fatte apposta per il tiramisù) foderando completamente il fondo.
 				Sbattete i tuorli delle uova con metà dello zucchero, aggiungete il mascarpone e mescolate con un cucchiaio di legno fino ad ottenere un composto ben amalgamato.
@@ -122,7 +122,7 @@
 				<ingr>pepe</ingr>
 			  	<ingr>1/2 limone</ingr>
 			</ingredienti>
-			<tempoPreparazione unitaMisura="minuti">20</tempoPreparazione>
+			<tempoPreparazione>20</tempoPreparazione>
 			<procedimento>
 			Pulite i carciofi. Poi tagliateli a spicchietti, e metteteli in acqua
 			  e limone per 30 minuti. Tritate la cipolla e mettetela nella padella
@@ -138,4 +138,4 @@
 		</ricetta>
 	</ricetteDB>
 
-<!-- by Luca  Last Update 14/04/2016 -->
+<!-- by Luca  Last Update 15/04/2016 -->

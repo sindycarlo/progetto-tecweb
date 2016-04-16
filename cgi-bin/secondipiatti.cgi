@@ -20,11 +20,11 @@ print "Content-Type: text/html\n\n";
 
 print "
 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
-<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\">
 <head>
-    <title>Dessert - 2Forchette</title>
+    <title>Secondi piatti - 2Forchette</title>
     <meta name=\"title\" content=\"2forchette - Progetto di Tecnlogie web\"/>
-    <meta name=\"description\" content=\"Sezione dessert del sito 4forchette\"/>
+    <meta name=\"description\" content=\"Sezione secondi piatti del sito 4forchette\"/>
     <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
@@ -40,7 +40,7 @@ print "
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-      <div id=\"banner\"><h1><a href=\"../public_html/index.html\"><span>2FORCHETTE</span></a></h1></div>
+      <div id=\"banner\"><h1><a href=\"index.html\"> <span>2FORCHETTE</span></a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
@@ -49,13 +49,13 @@ print "
           <a href=\"../contatti.html\">CONTATTACI</a>
         </div>
       </div>
-            <div class=\"allinea\"></div>
-                <div id='breadcrumb'>
+      <div class=\"allinea\"></div>
+            <div id='breadcrumb'>
         <p>Ti trovi in:
       <a href=\"../index.html\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
-      Dessert
+      Primi piatti
       </p>
-    </div> 
+    </div>
     </div>
   </div>
 </div>
@@ -63,32 +63,32 @@ print "
 <!--==============================content=================================-->
 <div id=\"content\">
     <div class=\"main\">
-    <h2>Dolci e dessert</h2>
-    
-    <div class=\"box-img\"><img src=\"../images/dolce.jpg\" alt=\"immagine che descrive la crostata con crema\"/></div>
+    <h2>Secondi piatti</h2>
+<div class=\"box-img\"><img src=\"images/arrosto.jpg\" alt=\"immagine che descrive l'arrosto\"/></div>
     <div>
         <p>
-L’Italia è famosa nel mondo per i numerosi dolci e dessert tipici della tradizione. Basta citare il tiramisù, golosità in grado di soddisfare il palato di tutti, il panettone o il pandoro, tipici nel periodo natalizio, o i tradizionali dolci del sud come la pastiera napoletana o la cassata siciliale. Impossibile dimenticare il carnevale, periodo perfetto per preparare ogni tipologia di dolce fritto come frappe o chiacchiere né i dolci al cucchiaio come il biancomangiare o il budino al cioccolato.
- E se i biscotti meritano un capitolo a parte, la bella stagione è subito sinonimo di gelati artigianali al pistacchio, alla crema o ai gusti più insoliti.
 
+Da sempre, nella nostra cucina, i secondi piatti rivestono un ruolo importante. Che sia a pranzo o a cena, un buon secondo è considerato indispensabile per un pasto completo, nutrizionalmente bilanciato, che permetta di soddisfare anche il palato. Divisi in quattro categorie – secondi a base di carne, a base di pesce, a base di verdure e a base mista – i secondi piatti si prestano molto bene anche a essere considerati piatti unici, soprattutto se abbinati a un contorno, e sono ideali anche durante le diete. Tante le ricette che spaziano dalla cotoletta alla milanese al pollo alla cacciatore o all’anatra all’arancia. Non mancano i salumi o il pesce.
 </p>
-    </div>    
-    <div class=\"allinea\"></div>    
-        
-    </div>
-      <div class=\"contenitore\">";
+    </div>          
+    <div class=\"allinea\"></div>
 
+    </div>
+
+      <div class=\"contenitore\">
+        <div class=\"blocco2\">
+          <ul class=\"lista-menu\">";
 
 my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
-my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Dessert']");
+my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Secondo']");
 
 foreach my $recipe (@ricette)
 {
-	  my $nome = $recipe->findvalue('nomePiatto');
-	  my $id = $recipe->getAttribute('IDCode'); 
-	  my $img = $recipe->findvalue('imgPiatto');
+      my $nome = $recipe->findvalue('nomePiatto');
+  my $id = $recipe->getAttribute('IDCode'); 
+	my $img = $recipe->findvalue('imgPiatto');
 #qua per ora lascio che metti anche l'immagine però in futuro mi sa che lo togliamo sennò diventa un menù infinito (e ci mette anche tanto a caricarlo)
   print "
   
@@ -100,26 +100,30 @@ foreach my $recipe (@ricette)
       
     ";
 }
-print "
+
+  print "</ul></div></div>
+    <div class=\"allinea\"></div>
+</div>
+
 <!--==============================footer=================================-->
 <div id=\"footer\">
     <div class=\"main\">
           <div id=\"inline\">
 
-          <p>             
+          <p>
             <span>4Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
            </p>
-      <p> 
+      <p>
       <a href=\"http://validator.w3.org/check?uri=referer\"><img
       src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
 
         <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
         <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\"
             alt=\"CSS Valido!\"/></a>
-                    
+
         <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
         <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
-        alt=\"CSS Valido!\"/></a>       
+        alt=\"CSS Valido!\"/></a>
           </p>
           </div>
     <div class=\"allinea\"></div>
@@ -127,6 +131,7 @@ print "
   </div>
 </body>
 </html>";
+
 
 
 

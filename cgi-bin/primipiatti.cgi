@@ -1,5 +1,6 @@
 #!/usr/bin/perl -w
-
+#last update by luca 16/04/2016
+#tutta la parte html che stampa è da rivedere!
 # librerie: servono tutte?
 use strict;
 use CGI qw(:standard);
@@ -21,10 +22,10 @@ print "
 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\">
 <head>
-    <title>Primi piatti</title>
-    <meta name=\"title\" content=\"4forchette - Progetto di Tecnlogie web\"/>
+    <title>Primi piatti - 2Forchette</title>
+    <meta name=\"title\" content=\"2forchette - Progetto di Tecnlogie web\"/>
     <meta name=\"description\" content=\"Sezione primi piatti del sito 4forchette\"/>
-    <meta name=\"keywords\" content=\"4forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
+    <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
@@ -86,9 +87,9 @@ my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Primo']");
 
 foreach my $recipe (@ricette)
 {
-      my $nome = $recipe->findvalue('nomePiatto');
-  my $id = $recipe->getAttribute('IDCode'); 
-	my $img = $recipe->findvalue('imgPiatto');
+	  my $nome = $recipe->findvalue('nomePiatto');
+	  my $id = $recipe->getAttribute('IDCode'); 
+	  my $img = $recipe->findvalue('imgPiatto');
 #qua per ora lascio che metti anche l'immagine però in futuro mi sa che lo togliamo sennò diventa un menù infinito (e ci mette anche tanto a caricarlo)
   print "
   
@@ -133,7 +134,8 @@ foreach my $recipe (@ricette)
 </html>";
 
 
-#last update by luca 15/04/2016
+
+
 
 
 

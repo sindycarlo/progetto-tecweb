@@ -86,13 +86,14 @@ my @cose = $doc->findnodes("/ricetteDB/ricetta[categoria='Dessert']");
 foreach my $thing (@cose)
 {
       my $bla = $thing->findvalue('nomePiatto');
-  my $id = $thing->findvalue('imgPiatto');
+  my $id = $thing->findvalue('IDCode');
+  my $img = $thing->findvalue('imgPiatto');
   print "
   <div class=\"blocco2\">
       <ul class=\"lista-menu\">
       <li>
-        <a href=\"page_template.cgi?id=$id\">$bla</a> 
-        <div class=\"box-img\"><img src=\"../images/$id\" alt=\"immagine che descrive $bla\"/></div>
+        <a href=\"page_template.cgi?id=$id\">$bla</a>
+        <div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $bla\"/></div>
       </li>
       </ul>
   </div>

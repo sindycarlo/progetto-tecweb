@@ -113,7 +113,7 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
       <div class=\"box-img\"><img src=\"../images/$imgpiatto\" alt=\"immagine che descrive un $titolo\"/></div>
       <h2>PREPARAZIONE</h2>
       <div>
-	<span>Tempo di preparazione: $tempo minuti</span>Difficoltà: $diff/3<span></span>
+	<span>Tempo di preparazione: $tempo minuti</span>Difficolta': $diff/3<span></span>
   <p>$procedimento</p>
   
      </div>

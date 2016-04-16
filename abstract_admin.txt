@@ -2,7 +2,7 @@ IMPORTANTE
 
 piccole linee guida : cosa vede e cosa può fare l'admin
 
-l'admin clicca su login in basso sul footer (può farlo da qualsiasi pagina immagino)
+l'admin clicca su login in basso sul footer (può farlo da qualsiasi pagina immagino)//coreggo ho chiesto in giro e mi hanno detto che admin si consiglia di metterlo solo nella homepage.(vediamo martedi'). (il resto sono d'accordo)
 viene reindirizzato alla pagina che abbiamo già (quella con solo login e password che hai fatte te carlo)
 se le credenziali sono sbagliate da errore (segnalato con javascript) altrimenti va tutto bene e l'admin viene reindirizzato alla sua pagina console apposita
 

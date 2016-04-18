@@ -6,8 +6,8 @@
 		<cognome>Alessio</cognome>
 		<dataNascita>25/05/1994</dataNascita> <!-- non ricordo il formato xml cmq il tipo date c'è -->
 		<mail>lucaalessio1994@gmail.com</mail> <!-- o <login></login> -->
-		<pwd>progtecweb</pwd>
-		<nomeUtente>4ForchetteFan</nomeUtente> <!-- o lasciamo nome e cognome? -->
+		<password>progtecweb</password>
+		<username>4ForchetteFan</username> <!-- o lasciamo nome e cognome? -->
 		<!-- <altro>...non credo serva altro (?)...</altro> -->
 	</amministratore>
 </amministratori>

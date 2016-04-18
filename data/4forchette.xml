@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
 <ricetteDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" 4forchette.xsd"><!-- non so bene che valori bisogna sostiture in questi attributi -->
-		<ricetta><!--credo che vada messo un codice identificativo per ogni ricetta-->
+		<ricetta IDCode="1"><!--credo che vada messo un codice identificativo per ogni ricetta-->
 			<nomePiatto>Risotto agli asparagi</nomePiatto>
 			<categoria>Primo</categoria>
 			<autore>WWW.MISYA.INFO</autore>
 			<descrizione>
 				Il risotto agli asparagi e' una tipica ricetta primaverile,la prima ricetta con
-				gli asparagi che trovate sul mio blog e questo perché sono i nemici giurati di
-				mio marito, odia gli asparagi più di quanto non odi i carciofi e ho detto tutto!
+				gli asparagi che trovate sul mio blog e questo perche' sono i nemici giurati di
+				mio marito, odia gli asparagi piu' di quanto non odi i carciofi e ho detto tutto!
 				Indovinate invece chi e' un'estimatrice degli asparagi? La mia piccola
 				meraviglia, che ha apprezzato e ha condiviso con me il mio piatto di risotto
 				agli asparagi, e queste sono soddisfazioni. Non so dalle vostre parti, ma qui a
@@ -32,7 +32,7 @@
 				<ingr>sale</ingr>
 				<ingr>pepe bianco</ingr>
 			</ingredienti>
-			<tempoPreparazione unitaMisura="minuti">20</tempoPreparazione>
+			<tempoPreparazione>20</tempoPreparazione>
 			<procedimento>
 				Pulite gli asparagi e una volta
 				mondati lessateli in acqua appena salata per 5 minuti.
@@ -55,7 +55,7 @@
 				da parte.
 			</procedimento>
 		</ricetta>
-		<ricetta>
+		<ricetta IDCode="2">
 			<nomePiatto>Tiramisu'</nomePiatto>
 			<categoria>Dessert</categoria>
 			<autore>www.gustissimo.it</autore>
@@ -75,7 +75,7 @@
 				<ingr>Caffe' q.b.</ingr>
 				<ingr>30 ml di Rum</ingr>
 			</ingredienti>
-			<tempoPreparazione unitaMisura="minuti">30</tempoPreparazione>
+			<tempoPreparazione>30</tempoPreparazione>
 			<procedimento>
 				Preparate un caffe' con la moka, lasciatelo intiepidire e correggetelo col rum. Versatelo in una ciotola abbastanza larga da poterci inzuppare i savoiardi uno ad uno. Adagiate i biscotti in una vaschetta di plastica (in commercio troverete facilmente quelle fatte apposta per il tiramisù) foderando completamente il fondo.
 				Sbattete i tuorli delle uova con metà dello zucchero, aggiungete il mascarpone e mescolate con un cucchiaio di legno fino ad ottenere un composto ben amalgamato.
@@ -91,7 +91,7 @@
 				Con l’aiuto di sagome di cartone potete decorare a piacimento la superficie del dolce, anche con scritte di auguri.
 			</procedimento>
 		</ricetta>
-  		<ricetta>
+  		<ricetta IDCode="3">
 			<nomePiatto>Pasta con crema ai carciofi</nomePiatto>
 			<categoria>Primo</categoria>
 			<autore>WWW.MISYA.INFO</autore>
@@ -122,7 +122,7 @@
 				<ingr>pepe</ingr>
 			  	<ingr>1/2 limone</ingr>
 			</ingredienti>
-			<tempoPreparazione unitaMisura="minuti">20</tempoPreparazione>
+			<tempoPreparazione>20</tempoPreparazione>
 			<procedimento>
 			Pulite i carciofi. Poi tagliateli a spicchietti, e metteteli in acqua
 			  e limone per 30 minuti. Tritate la cipolla e mettetela nella padella
@@ -136,6 +136,36 @@
 			  aggiungendo prezzemolo tritato e cubetti di pancetta croccanti
 			</procedimento>
 		</ricetta>
+		<ricetta IDCode="4">
+			<nomePiatto>Spaghetti aglio, olio e peperoncino</nomePiatto>
+			<categoria>Primo</categoria>
+			<autore>buttalapasta.it</autore>
+			<descrizione>
+			Gli spaghetti, aglio, olio e peperoncino sono un gustoso e facilissimo primo piatto. Su questa ricetta "internazionale" ci sono molte "scuole di pensiero". C'è chi asserisce che ci vuole il formaggio, e chi lo vieta assolutamente, qualcuno asserisce che l'aglio deve essere messo a pezzi grossi, mentre c'è chi lo trita, oppure chi lo schiaccia, e poi c'è anche chi aggiunge il prezzemolo. Scopri allora la ricetta originale, e mi raccomando, utilizzate gli spaghetti numero 5, perchè restano al dente più a lungo.
+			</descrizione>
+			<imgPiatto>spaghettioliopeperoncino.jpg</imgPiatto>
+			<difficolta>1</difficolta>
+			<quantePersone>4</quantePersone>
+			<ingredienti>
+				<ingr>400 Gr Spaghetti Numero 5</ingr>
+				<ingr>2 Spicchi Di Aglio</ingr>
+				<ingr>Peperoncino Piccante Q.B.</ingr>
+				<ingr>1 Mazzetto Di Prezzemolo</ingr>
+				<ingr>Olio Evo Q.B.</ingr>
+				<ingr>Sale Q.B.</ingr>
+			</ingredienti>
+			<tempoPreparazione>15</tempoPreparazione>
+			<procedimento>
+			Mettere a bollire l’acqua salata per la pasta.
+			Sbucciare l'aglio, tagliarlo in verticale ed eliminare il germe al centro, quindi tagliare in due ogni metà.
+			In una padella versare l’olio unite l’aglio, facendolo rosolare a fuoco medio e stando attenti a non bruciarlo.
+			Aggiungere il peperoncino e mescolate.
+			Spegnere la fiamma ed eliminate l’aglio.
+			Cuocere gli spaghetti scolandoli prima che siano cotti, e conservare un bicchiere di acqua della cottura.
+			Rovesciare gli spaghetti nella pentola con l’olio, e rimettere sul fuoco la padella aggiungendo poco per volta l’acqua di cottura, mecsolando fino a fine cottura.
+			Portare in tavola gli spaghetti aggiungendo il prezzemolo fresco.
+			</procedimento>
+		</ricetta>
 	</ricetteDB>
 
-<!-- by Carlo  Last Update 12/04/2016 -->
+<!-- by Luca  Last Update 15/04/2016 -->

@@ -17,16 +17,24 @@ elementFormDefault="qualified">
 			<xsd:element name="cognome" type="xsd:string"/>  <!--non sono sicuro dei tipi forse si può fare meglio-->
 			<xsd:element name="datanascita" type="xsd:date"/>
 			<xsd:element name="mail" type="xsd:string"/>
-			<xsd:element name="pwd" type="xsd:string"/>
-			<xsd:element name="nomeutente" type="xsd:string"/> <!---->
+			<xsd:element name="password" type="passwordtype"/>
+			<xsd:element name="username" type="xsd:string"/> <!---->
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
 </xsd:element>
 
+
+<xsd:simpletype name="passwordtype">
+	<xsd:restriction base="xsd:string">
+		<xsd:minLenght value="6"/>
+		<xsd:maxLenght value="12"/>
+	</xsd:restriction>
+	</xsd:simpletype>
+
 <!--
-dare un occhiata al targetnamespace e a gli altri attributi
+dare un occhiata al targetnamespace e a gli altri attributi e sopreattutto al tipo passwordtype
 -->
 
 </xsd:schema>
-<!-- by carlo Last Update 12/04/2016-->
+<!-- by carlo Last Update 18/04/2016-->

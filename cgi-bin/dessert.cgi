@@ -1,6 +1,5 @@
 #!/usr/bin/perl -w
-#last update by luca 16/04/2016
-#tutta la parte html che stampa è da rivedere!
+
 # librerie: servono tutte?
 use strict;
 use CGI qw(:standard);
@@ -22,10 +21,10 @@ print "
 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
 <head>
-    <title>Dessert - 2Forchette</title>
-    <meta name=\"title\" content=\"2forchette - Progetto di Tecnlogie web\"/>
+    <title>Dessert</title>
+    <meta name=\"title\" content=\"4forchette - Progetto di Tecnlogie web\"/>
     <meta name=\"description\" content=\"Sezione dessert del sito 4forchette\"/>
-    <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
+    <meta name=\"keywords\" content=\"4forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
@@ -40,7 +39,7 @@ print "
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-      <div id=\"banner\"><h1><a href=\"../public_html/index.html\"><span>2FORCHETTE</span></a></h1></div>
+      <div id=\"banner\"><h1><a href=\"index.html\"><span>2FORCHETTE</span></a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
@@ -82,23 +81,24 @@ L’Italia è famosa nel mondo per i numerosi dolci e dessert tipici della tradi
 my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
-my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Dessert']");
+my @cose = $doc->findnodes("/ricetteDB/ricetta[categoria='Dessert']");
 
-foreach my $recipe (@ricette)
+foreach my $thing (@cose)
 {
-	  my $nome = $recipe->findvalue('nomePiatto');
-	  my $id = $recipe->getAttribute('IDCode'); 
-	  my $img = $recipe->findvalue('imgPiatto');
-#qua per ora lascio che metti anche l'immagine però in futuro mi sa che lo togliamo sennò diventa un menù infinito (e ci mette anche tanto a caricarlo)
+      my $bla = $thing->findvalue('nomePiatto');
+  my $id = $thing->getAttribute('IDCode');
+  my $img = $thing->findvalue('imgPiatto');
   print "
-  
-      
+  <div class=\"blocco2\">
+      <ul class=\"lista-menu\">
       <li>
-        <a href=\"page_template.cgi?id=$id\">$nome</a>
-        <div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></div>
+        <a href=\"page_template.cgi?id=$id\">$bla</a>
+        <div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $bla\"/></div>
       </li>
-      
-    ";
+      </ul>
+  </div>
+    <div class=\"allinea\"></div>
+</div>"
 }
 print "
 <!--==============================footer=================================-->

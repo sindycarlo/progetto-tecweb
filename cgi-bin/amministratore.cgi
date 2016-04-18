@@ -10,10 +10,15 @@ use File::Copy;
 use utf8;
 use URI;
 
-# da completare!!!
+# questa è solo una bozza:
+require ('libreria_funzioni.pl');
 
+# controllo se la sessione esiste gia
+my $session = CGI::Session->load() or die $!;
 
-# stampo la prima parte della pagina
+my $auth = $session->param('auth');
+
+# stampo la pagina login:
 print "Content-Type: text/html\n\n";
 
 print "
@@ -59,13 +64,13 @@ print "
     <div class=\"info\">
     <p>Tutti i campi contrassegnati da asterisco (*) sono obbligatori.</p></div>
     <div class=\"box-contact\">
-    <form id=\"contact-form\" action=\"\" method=\"post\"><!--da sistemare-->
+    <form id=\"contact-form\" action=\"./controlloaccesso.cgi\" method=\"post\" onsubmit=\"return  valida_campi()\"><!--da sistemare-->
       <div id=\"fieldset\">
         <div class=\"colonna1\">
           <div>
             <div class=\"form-txt\"><span xml:lang=\"en\">Username *</span></div>
             <label class=\"name\">
-              <input type=\"text\" name=\"nr_author\" title=\"inserisci il tuo nome qui\"/>
+              <input type=\"text\" name=\"username\" id=\"username\" title=\"inserisci qui il tuo username\"/>
              </label>
             <div class=\"allinea\"></div>
           </div>
@@ -75,13 +80,13 @@ print "
           <div>
             <div class=\"form-txt\"><span xml:lang=\"en\">Password *</span></div>
             <label class=\"email\">
-              <input type=\"text\" name=\"nr_email\"  title=\"inserisci il tuo indirizzo email\"/>
+              <input type=\"password\" name=\"password\" id=\"password\" title=\"inserisci qui la tua password\"/>
               </label>
             <div class=\"allinea\"></div>
           </div>
             <div class=\"allinea\"></div>
          </div>
-         <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"accedi\"/></div><div class=\"button\"><input type=\"reset\" value=\"reset\"/></div></div>
+         <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Inserisci\"/></div><div class=\"button\"><input type=\"reset\" value=\"reset\"/></div></div>
       </div>
     </form>
     </div>

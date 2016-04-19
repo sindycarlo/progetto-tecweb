@@ -1,0 +1,11 @@
+quello che devi fare per testare se ste pagine funzionano è:
+
+1 caricarle i due file nella cartella cgi-bin
+
+2 cambiare il collegamento della home in modo tale che punti a proponiricetta.cgi (e non .html sennò ritorni alla pagina vecchia) p.s. non credo sia proprio necessario che questa pagina sia cgi, mi sa che potevo lasciarla html ma intanto è solo una prova
+
+3 controllare che ci siano cose.xml e .xsd nella cartella data sul server perchè li uso nell'esempio
+
+4 provare se funziona cosi: vai nella pagina, usi il form (in teoria dovrebbero esserci tre campi, te scrivi qualcosa (uno dei tre forse è un numero, se ti da errore controlla l'xsd o cambialo), poi premi invia, in teoria non dovrebbe succedere niente, po però vai nel file cose.xml e se il programma funziona dovresti vedere un nuovo oggetto <thing> con i dati che hai messo)
+
+se tutto funziona (difficile perchè sicuramente avrò fatto qualche errorino di sintassi quindi dovrai riguardarti il codice bene) dimmelo e siamo contenti, se qualcosa non funziona, vedi se riesci a capire dove è l'errore altrimenti telefonami

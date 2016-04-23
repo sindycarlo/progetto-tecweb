@@ -351,8 +351,8 @@ border-radius:1.125em;
 }
 
 .colonna1{width:100%;}
-
-
+.Td {clear:both;height: 7em;}
+.Td label{max-width:15em;}
 .box-contact .button
 {
 

@@ -350,11 +350,16 @@ border-radius:1.125em;
 
 }
 
-.colonna1,.colonna2{float:left;width:20.125em;}
-.colonna2{float:right}
+.colonna1{width:100%;}
 
 
-.box-contact .button{margin-top:0.125em}
+.box-contact .button
+{
+
+margin-top: 2.125em;
+width: 200px;
+padding-left: 4.5em;
+}
 #contact-form {
   position: relative;
   vertical-align: top;
@@ -375,12 +380,6 @@ border-radius:1.125em;
   overflow: hidden;
   display: block;
   float: left;
-  width: 100%;
-}
-#contact-form .message {
-  min-height: 13.313em;
-  display: block;
-  font-size:1.0em;
   width: 100%;
 }
 #contact-form input,
@@ -524,8 +523,7 @@ height:31px;
 }
 
 
-.colonna1,.colonna2{float:left;width:auto;}
-.colonna2{float:left;padding-top:1em;}
+.colonna1{float:left;width:auto;}
 
 .contenitore .blocco2{
 	clear:left;

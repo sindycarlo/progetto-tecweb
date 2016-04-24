@@ -53,9 +53,9 @@ print "
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
 <head>
   <title>Admin Login</title>
-  <meta name=\"title\" content=\"4forchette - Progetto di Tecnlogie web\"/>
-    <meta name=\"description\" content=\"Login Area amministrativa del sito 4forchette\"/>
-    <meta name=\"keywords\" content=\"4forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
+  <meta name=\"title\" content=\"2forchette - Progetto di Tecnlogie web\"/>
+    <meta name=\"description\" content=\"Login Area amministrativa del sito 2forchette\"/>
+    <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
@@ -99,7 +99,7 @@ print "
           <div id=\"inline\">
 
           <p>             
-            <span>4Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
+            <span>2Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
            </p>
       <p> 
       <a href=\"http://validator.w3.org/check?uri=referer\"><img

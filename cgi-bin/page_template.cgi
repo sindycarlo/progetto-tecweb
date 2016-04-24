@@ -40,9 +40,9 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
 <head>
     <title>$titolo - 2Forchette.it</title>
-    <meta name=\"title\" content=\"4forchette - Progetto di Tecnlogie web\"/>
+    <meta name=\"title\" content=\"2forchette - Progetto di Tecnlogie web\"/>
     <meta name=\"description\" content=\"Ricetta risotto con gamberi\"/>
-    <meta name=\"keywords\" content=\"4forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
+    <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
@@ -86,21 +86,21 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
 <p>$ing</p>
       <ul class=\"list\">";
 
-#per ora niente ingredienti
-#foreach my $ingredienti ($thing)
-#{
+#stampo ingredienti in lista:
+foreach my $ingredienti ($thing)
+{
       
 	#$id=$ingredienti->findvalue('ingr');
 
-  #print "
+  print "
   
       
-   #   <li>
-   #   <p>$id</p>
-   #   </li>
+      <li>
+      <p>$id</p>
+      </li>
       
-  #  ";
-#}        
+    ";
+}        
 
 
   print  "</ul>
@@ -127,7 +127,7 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
 	  <div class=\"main\">
           <div id=\"inline\">
          	<p>             
-            <span>4Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
+            <span>2Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
        	   </p>
 			<p> 
     	<a href=\"http://validator.w3.org/check?uri=referer\"><img

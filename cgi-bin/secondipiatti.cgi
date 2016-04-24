@@ -24,7 +24,7 @@ print "
 <head>
     <title>Secondi piatti - 2Forchette</title>
     <meta name=\"title\" content=\"2forchette - Progetto di Tecnlogie web\"/>
-    <meta name=\"description\" content=\"Sezione secondi piatti del sito 4forchette\"/>
+    <meta name=\"description\" content=\"Sezione secondi piatti del sito 2forchette\"/>
     <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
@@ -111,7 +111,7 @@ foreach my $recipe (@ricette)
           <div id=\"inline\">
 
           <p>
-            <span>4Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
+            <span>2Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
            </p>
       <p>
       <a href=\"http://validator.w3.org/check?uri=referer\"><img

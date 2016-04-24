@@ -20,7 +20,7 @@
 <div id="header">
   <div class="main">
     <div class="intestazione">
-      <div id="banner"><h1><a href="index.html"> <span xml:lang="en">2FORCHETTE</span> </a></h1></div>
+      <div id="banner"><h1><a href="index.html">2FORCHETTE</a></h1></div>
       <div class="header-menu">
         <div id="nav">
           <a href="index.html"><span>HOME</span></a>
@@ -45,41 +45,41 @@
   <div class="main">
     <h1>Informazioni</h1>
          <div class="info"><p>Se vuoi diventare anche tu uno chef inviaci la tua ricetta e noi la valuteremo. Tra tutte le ricette che ci saranno inviate sceglieremo la migliore. Puoi essere anche tu il vincitore!</p>
-         <p>Invia un'email. Tutti i campi contrassegnati da asterisco (*) sono obbligatori.</p></div>
-
+         <p>tutti i campi sono da compilare, abbiamo bisogno di tutte le informazioni sulla tua ricetta.</p>
+         </div>
     <div class="allinea"></div>
   <div class="box-contact">
     <h1>Inviaci la tua ricetta</h1>
-    <form id="contact-form" action="index.html" method="post"><!--da sistemare-->
+    <form id="contact-form" action="index.html" method="post"><!--luca credo tu possa iniziare a lavorare con il perl su questa pagina-->
       <div id="fieldset">
         <div class="colonna1">
           <div>
-            <div class="form-txt">Nome piatto *</div>
+            <div class="form-txt">Nome piatto </div>
             <label>
               <input type="text" name="n_piatto" title="inserisci il nome del tuo piatto"/>
              </label>
           </div>
           <div>
-            <div class="form-txt">Autore *</div>
+            <div class="form-txt">Autore </div>
             <label>
               <input type="text" name="n_author"  title="inserisci il nome dell'autore"/>
               </label>
           </div>
           <div>
-            <div class="form-txt">Breve descrizione *</div>
+            <div class="form-txt">Breve descrizione </div>
             <label class="message">
               <textarea rows="20" cols="60"> </textarea>
               </label>
           </div>
           <div class="Td">
-            <div class="form-txt">Tempo di preparazione *</div>
+            <div class="form-txt">Tempo di preparazione </div>
             <label class="name">
               <input type="text" name="t_preparazione" title="tempo di preparazione"/>
             </label>
           <div>
-            <div class="form-txt">Difficoltà *</div>
+            <div class="form-txt">Difficoltà </div>
             <label class="name">
-              <select  name="nr_difficulty">
+              <select  name="n_difficoltà">
                 <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -88,34 +88,45 @@
           </div>
           </div>
           <div>
-            <div class="form-txt">Numero persone *</div>
+            <div class="form-txt">Numero persone </div>
             <label class="name">
               <input type="text" name="n_ingredienti" title="per quante persone"/>
              </label>
           </div>
           <div>
-            <div class="form-txt">Carica un'immagine *</div>
+            <div class="form-txt">Carica un'immagine </div>
             <label class="name">
               <input type="file" name="n_immagine" title="immagine di presentazione"/>
              </label>
           </div>
+              <div>
+            <div class="form-txt">Categoria </div>
+            <label class="name">
+              <select  name="n_categoria">
+                <option value="1">Primi</option>
+                  <option value="2">Secondi</option>
+                  <option value="3">Antipasti</option>
+                  <option value="4">Dessert</option>
+              </select>
+            </label>
+          </div>
           <div>
-            <div class="form-txt">Ingredienti *</div>
+            <div class="form-txt">Ingredienti </div>
             <label class="name">
               <input type="text" name="n_ingredienti" title="quanti ingredienti"/>
              </label>
           </div>
            <div>
-            <div class="form-txt">Procedimento *</div>
+            <div class="form-txt">Procedimento </div>
             <label class="message">
-              <textarea rows="20" cols="60"> </textarea>
+              <textarea rows="20" cols="60"></textarea>
               </label>
           </div>
         <div class="buttons"><div class="button"><input type="submit"/></div><div class="button"><input type="reset"/></div>
         </div>
       </div>
+        </div>
     </form>
-  </div>
   </div>
   </div>
   </div>

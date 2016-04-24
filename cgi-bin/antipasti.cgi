@@ -112,7 +112,7 @@ foreach my $recipe (@ricette)
           <div id=\"inline\">
 
           <p>
-            <span>4Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
+            <span>2Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
            </p>
       <p>
       <a href=\"http://validator.w3.org/check?uri=referer\"><img

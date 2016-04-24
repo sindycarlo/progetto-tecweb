@@ -442,6 +442,7 @@ height:31px;
 	.main {
 	width:auto;
 	}
+    
 	.header-menu {
 		text-align: center;
 		width:100%;
@@ -514,6 +515,13 @@ height:31px;
     border-radius:1.125em;
 	box-shadow:0 0 0.188em #c5c2a9;
 
+}
+.box-contact .button
+{
+
+margin-top: 2.125em;
+width: 200px;
+    padding-left: 0;
 }
 .buttons{
 	float:left;

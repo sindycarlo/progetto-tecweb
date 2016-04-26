@@ -25,6 +25,9 @@ img {
 	vertical-align:top;
 	width:100%;
 }
+.contenitore h1 {
+	text-align: center;
+}
 
 a{
 	color: #343434;
@@ -403,7 +406,7 @@ padding-left: 4.5em;
   overflow: auto;
 }
 
-.form-txt{padding-bottom:0.125em}
+.form-txt{padding-bottom:0.125em;padding-top: 1em;}
 .button-ricetta{overflow:hidden;}
 .button a{float:left;margin-right:3.750em}
 

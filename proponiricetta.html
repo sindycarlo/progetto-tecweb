@@ -46,14 +46,20 @@
     <h1>Informazioni</h1>
          <div class="info"><p>Se vuoi diventare anche tu uno chef inviaci la tua ricetta e noi la valuteremo. Tra tutte le ricette che ci saranno inviate sceglieremo la migliore. Puoi essere anche tu il vincitore!</p>
          <p>tutti i campi sono da compilare, abbiamo bisogno di tutte le informazioni sulla tua ricetta.</p>
+         <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+         <!--da qualche parte precisare che gli ingredienti vanno inseriti uno a uno e poi si deve andare caporiga-->
          </div>
     <div class="allinea"></div>
   <div class="box-contact">
     <h1>Inviaci la tua ricetta</h1>
-    <form id="contact-form" action="index.html" method="post"><!--luca credo tu possa iniziare a lavorare con il perl su questa pagina-->
-      <div id="fieldset">
-        <div class="colonna1">
-          <div>
+    <form id="contact-form" action="../cgi-bin/handle_proposta.cgi" method="post">
+      <div id="fieldset"> <!--ti scrivo le cose da rivedere sul css: qua fieldset comprende tutto,
+							ma perchè non hai usato il classico tag <fieldset>? -->
+        <div class="colonna1"> <!--anche colonna1 comprende tutto!! da eliminare o questo o fieldset
+									altrimenti viene interpretato facilmente come un residuo di copiatura
+									anche "colonna1" non capisco il senso del nome
+									non credo sia necessario, va integrato in fieldset-->
+          <div> <!-- qua c'è un div senza classe e anche dopo ne usi, come mai? (non ricordo la sintassi esatta magari sbaglio io)-->
             <div class="form-txt">Nome piatto </div>
             <label>
               <input type="text" name="n_piatto" title="inserisci il nome del tuo piatto"/>
@@ -62,24 +68,25 @@
           <div>
             <div class="form-txt">Autore </div>
             <label>
-              <input type="text" name="n_author"  title="inserisci il nome dell'autore"/>
+              <input type="text" name="n_author" title="inserisci il nome dell'autore"/>
               </label>
           </div>
           <div>
             <div class="form-txt">Breve descrizione </div>
             <label class="message">
-              <textarea rows="20" cols="60"> </textarea>
+              <textarea rows="20" cols="60" name="n_desc">bla bla bla</textarea>
               </label>
           </div>
           <div class="Td">
-            <div class="form-txt">Tempo di preparazione e Difficoltà</div>
+            <div class="form-txt">Tempo di preparazione </div> <!-- credo sia questa la classe che si deve "sdoppiare" -->
             <label class="name">
-              <input type="text" name="t_preparazione" title="tempo di preparazione"/>
+              <input type="text" name="n_tempo" title="tempo di preparazione"/>
             </label>
           <div>
+            <div class="form-txt">Difficoltà </div>
             <label class="name">
-              <select  name="n_difficoltà">
-                <option value="1">1</option>
+              <select  name="n_difficolta">	<!-- cambiato nome in n_difficolta, meglio non usare accenti -->
+                <option value="1">1</option> <!-- questi devo ancora vedere come memorizzarli ma non dovrebbe essere difficile -->
                   <option value="2">2</option>
                   <option value="3">3</option>
               </select>
@@ -118,7 +125,7 @@
            <div>
             <div class="form-txt">Procedimento </div>
             <label class="message">
-              <textarea rows="20" cols="60"></textarea>
+              <textarea rows="20" cols="60" name="n_proc"> per prima cosa ... </textarea>
               </label>
           </div>
         <div class="buttons"><div class="button"><input type="submit"/></div><div class="button"><input type="reset"/></div>
@@ -157,4 +164,4 @@
 </body>
 </html>
 
-
+<!-- Last Update by Luca 26/04/2016 -->

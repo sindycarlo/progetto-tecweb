@@ -14,8 +14,6 @@ use POSIX;
 use URI;
 use utf8;
 
-
-
 my $cgi = CGI->new(); # create new CGI object
 
 my $data_piatto = $cgi->param('n_piatto');
@@ -99,4 +97,4 @@ my $data_proc = $cgi->param('n_proc');
 
         print "Location:proponiricetta.cgi\n\n";
 
-# Last Update by Luca 26/04/2016
+# Last Update by Luca 27/04/2016

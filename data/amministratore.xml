@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
-<amministratori xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="amministratori.xsd"><!-- non so bene che valori bisogna sostiture in questi attributi -->
-	<amministratore>
-		<nome>Luca</nome>
-		<cognome>Alessio</cognome>
-		<dataNascita>25/05/1994</dataNascita> <!-- non ricordo il formato xml cmq il tipo date c'è -->
-		<mail>lucaalessio1994@gmail.com</mail> <!-- o <login></login> -->
-		<password>progtecweb</password>
-		<username>4ForchetteFan</username> <!-- o lasciamo nome e cognome? -->
-		<!-- <altro>...non credo serva altro (?)...</altro> -->
-	</amministratore>
-</amministratori>
+<ricetteDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" amministratore.xsd">
+	<login>admin</login>
+	<password>admin</password>
+</amministratore>
 
-<!-- by Carlo  Last Update 12/04/2016 -->
+<!-- by Luca Last Update 28/04/2016 -->

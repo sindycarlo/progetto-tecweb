@@ -39,10 +39,10 @@ print <<EOF;
         <!-- spostato nav dentro-->
           <a href="../index.html"><span xml:lang="en">HOME</span></a>
           <a class="active">PROPONI UNA RICETTA</a>
-          <a href="../ricettagiorno.html">RICETTA DEL GIORNO</a> <!-- da fare -->
+          <a href="../ricettagiorno.html">RICETTA DEL GIORNO</a>
           <a href="../contatti.html">CONTATTACI</a>
       </div>
-      <!-- <div class="allinea"></div> -->
+      <div class="allinea"></div>
     <div id='breadcrumb'>
         <p>Ti trovi in: 
 		<a href="index.html"><span xml:lang="en">Home</span></a><span>&gt;</span>
@@ -61,16 +61,12 @@ print <<EOF;
          <p>tutti i campi sono da compilare, abbiamo bisogno di tutte le informazioni sulla tua ricetta.</p>
          <!--da qualche parte precisare che gli ingredienti vanno inseriti uno a uno e poi si deve andare caporiga-->
          </div>
-    <!-- <div class="allinea"></div> -->
+     <div class="allinea"></div>
   <div class="box-contact">
     <h1>Inviaci la tua ricetta</h1>
     <form id="contact-form" action="handle_proposta.cgi" method="post">
       <div id="fieldset"> <!-- <fieldset> non è accettato da html5 -->
-       <!-- <div class="colonna1"> --> <!--anche colonna1 comprende tutto!! da eliminare o questo o fieldset
-									altrimenti viene interpretato facilmente come un residuo di copiatura
-									anche "colonna1" non capisco il senso del nome
-									non credo sia necessario, va integrato in fieldset-->
-          
+
             <div class="form-txt">Nome piatto </div>
             <label>
               <input type="text" name="n_piatto" title="Inserisci il nome del tuo piatto"/>
@@ -89,12 +85,11 @@ print <<EOF;
               </label>
 
           <div class="Td"> <!-- sarebbe meglio un nome diverso e si mette al posto di form-txt -->
-            <div class="form-txt">Tempo di preparazione </div>
+            <div class="form-txt">Tempo di preparazione e Difficolta</div>
             <label>
               <input type="text" name="n_tempo" title="Inserisci il tempo di preparazione"/>
            </label>
      
-            <div class="form-txt">Difficoltà </div>
             <label>
               <select  name="n_difficolta">	
                 <option value="1">1</option> 
@@ -104,13 +99,14 @@ print <<EOF;
             </label>
           </div>
 
-          
+
     <div class="form-txt">Numero persone </div> <!-- classe speciale per renderlo più piccolo anche questo -->
             <label>
               <input type="text" name="n_persone" title="Inserisci il numero di persone"/>
              </label>
-          
-          
+
+
+
             <div class="form-txt">Carica un'immagine </div>
             <label>
               <input type="file" name="n_immagine" title="Carica un'immagine di presentazione"/>
@@ -120,8 +116,8 @@ print <<EOF;
             <div class="form-txt">Categoria </div>
             <label>
               <select  name="n_categoria">
-                <option value="Primi">Primi</option>
-                  <option value="Secondi">Secondi</option>
+                <option value="Primo">Primi</option>
+                  <option value="Secondo">Secondi</option>
                   <option value="Antipasti">Antipasti</option>
                   <option value="Dessert">Dessert</option>
               </select>
@@ -137,7 +133,7 @@ print <<EOF;
               <textarea rows="20" cols="60" name="n_proc" placeholder="Spiega come prepare il tuo manicaretto..."></textarea>
               </label>
 
-        <div class="buttons"> <!-- da ristrutturare in un modo meno contorto -->
+        <div class="buttons">
 		<div class="button">
 			<input type="submit"/>
 		</div>
@@ -145,7 +141,6 @@ print <<EOF;
 		<input type="reset"/>
 	</div>
         </div>
-      <!-- </div> -->
         </div>
     </form>
   </div>
@@ -158,7 +153,7 @@ print <<EOF;
           <div id="inline">
 
          	<p>             
-            <span>2Forchette</span> - Mangia sano e vivi male
+            <span>2Forchette</span> -copyright 2016 CARLO&LUCA produzione riservata - P.IVA 0838456799
        	       </p>
 	<p> 
     	<a href="http://validator.w3.org/check?uri=referer"><img

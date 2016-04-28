@@ -2,19 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it"> 
 <head>
   <title>Contattaci</title>
-  <meta name="title" content="4forchette - Progetto di Tecnlogie web"/>
-    <meta name="description" content="Sezione contatti del sito 4forchette"/>
+  <meta name="title" content="2forchette - Contatti"/>
+    <meta name="description" content="Sezione contatti del sito 2forchette"/>
     <meta name="keywords" content="4forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo"/>
     <meta name="language" content="italian it"/>
     <meta name="author" content="Carlo Sindico ,Luca Alessio"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!--css-->
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="css/print.css" type="text/css" media="print"/>
 </head>
 <body>
-<div><a class="salta-main" href="#footer"><span>Salta al contenuto</span></a></div>
+<div><a class="salta-main" href="#contact-form"><span>Salta al contenuto</span></a></div>
 <!--==============================header=================================-->
 <div id="header">
   <div class="main">
@@ -23,7 +22,7 @@
       <div class="header-menu">
         <div id="nav">
           <a href="index.html"><span xml:lang="en">HOME</span></a>
-          <a href="proponiricetta.html">PROPONI UNA RICETTA</a>          
+          <a href="../cgi-bin/proponiricetta.html">PROPONI UNA RICETTA</a>          
           <a href="ricettagiorno.html">RICETTA DEL GIORNO</a>
           <a class="active">CONTATTACI</a>
         </div>
@@ -44,41 +43,29 @@
   <div class="main">
     <h1>Modulo contatti</h1>
     <div class="info">
-    <p>Invia un'email. Tutti i campi contrassegnati da asterisco (*) sono obbligatori.</p></div>
+    <p>Invia un'email.</p></div>
     <div class="box-contact">
-    <form id="contact-form" action="index.html" method="post">
+    <form id="contact-form" action="index.html" method="post"><!--tutto questo è provvisioro-->
       <div id="fieldset">
-        <div class="colonna1">
-          <div>
-            <div class="form-txt">Il tuo nome *</div>
-            <label class="name">
+
+            <div class="form-txt">Il tuo nome </div>
+            <label>
               <input type="text" name="nr_author" title="inserisci il tuo nome qui"/>
              </label>
-            <div class="allinea"></div>
-          </div>
-          <div>
-            <div class="allinea"></div>
-          </div>
-          <div>
-            <div class="form-txt"><span xml:lang="en">Email *</span></div>
+
+            <div class="form-txt"><span xml:lang="en">Email </span></div>
             <label class="email">
               <input type="text" name="nr_email"  title="inserisci il tuo indirizzo email"/>
               </label>
-            <div class="allinea"></div>
-          </div>
-            <div class="allinea"></div>
-         </div>
-        <div class="colonna2">
-          <div>
+
             <div class="form-txt">Inserire un messaggio *</div>
             <label class="message">
               <textarea rows="20" cols="60"></textarea>
               </label>
             <div class="allinea"></div>
           </div>
-        </div>
+        
         <div class="buttons"><div class="button"><input type="submit"/></div><div class="button"><input type="reset"/></div></div>
-      </div>
     </form>
     </div>
       </div>
@@ -89,7 +76,7 @@
 	  <div class="main">
           <div id="inline">
          	<p>             
-            <span>4Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
+            <span>4Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
        	   </p>
 			<p> 
     	<a href="http://validator.w3.org/check?uri=referer"><img
@@ -104,7 +91,6 @@
         alt="CSS Valido!"/></a>				
           </p>
           </div>
-		<div class="allinea"></div>
 	  </div>
 	</div>
 </body>

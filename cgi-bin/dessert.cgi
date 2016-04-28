@@ -75,7 +75,9 @@ L’Italia è famosa nel mondo per i numerosi dolci e dessert tipici della tradi
     <div class=\"allinea\"></div>    
         
     </div>
-      <div class=\"contenitore\">";
+      <div class=\"contenitore\">
+       <div class=\"blocco2\">
+       <ul class=\"lista-menu\">";
 
 
 my $file = "../data/4forchette.xml";
@@ -89,18 +91,21 @@ foreach my $thing (@cose)
   my $id = $thing->getAttribute('IDCode');
   my $img = $thing->findvalue('imgPiatto');
   print "
-  <div class=\"blocco2\">
-      <ul class=\"lista-menu\">
+ 
+      
       <li>
         <a href=\"page_template.cgi?id=$id\">$bla</a>
         <div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $bla\"/></div>
       </li>
-      </ul>
-  </div>
-    <div class=\"allinea\"></div>
-</div>"
+      
+"
 }
 print "
+</ul>
+  </div>
+  </div>
+    <div class=\"allinea\"></div>
+    </div>
 <!--==============================footer=================================-->
 <div id=\"footer\">
     <div class=\"main\">

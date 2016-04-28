@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+﻿#!/usr/bin/perl -w
 #last update by luca 16/04/2016
 #tutta la parte html che stampa è da rivedere!
 # librerie: servono tutte?
@@ -65,7 +65,7 @@ print "
     <div class=\"main\">
  <h2>Antipasti</h2>
     
-    <div class=\"box-img\"><img src=\"images/antipasti.jpg\" alt=\"immagine che descrive verdure grigliate\"/></div>
+    <div class=\"box-img\"><img src=\"../images/antipasti.jpg\" alt=\"immagine che descrive verdure grigliate\"/></div>
     <div>
         <p>
 Nella cucina italiana un posto di rilievo è occupato dagli antipasti che non possono assolutamente mancare. Specchio delle varie regioni italiane, l’antipasto è sempre in sintonia con le altre pietanza, viene pensato per deliziare gli ospiti e non deve essere mai essere abbondante. Gli antipasti cambiano a seconda delle regioni: se in quelle che si affacciano sul mare sarà più facile trovare una buona impepata di cozze, in regioni come Umbria, Abruzzo o Toscana troveremo antipasti ricchi di affettati e formaggi o antipasti dal gusto più deciso e sfizioso come i famosi crostini toscani. Non mancano gli involtini di lattuga o delle ottime torte salate.
@@ -99,7 +99,7 @@ foreach my $recipe (@ricette)
         <div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></div>
       </li>
       
-    ";
+    "
 }
 
   print "</ul></div></div>

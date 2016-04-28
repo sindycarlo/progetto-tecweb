@@ -83,7 +83,7 @@ Nella cucina italiana un posto di rilievo è occupato dagli antipasti che non po
 my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
-my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Antipasto']");
+my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Antipasti']");
 
 foreach my $recipe (@ricette)
 {

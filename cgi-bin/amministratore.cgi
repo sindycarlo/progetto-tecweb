@@ -61,31 +61,20 @@ print "
 <div id=\"content\">
   <div class=\"main\">
     <h2>Login</h2>
-    <div class=\"info\">
-    <p>Tutti i campi contrassegnati da asterisco (*) sono obbligatori.</p></div>
     <div class=\"box-contact\">
     <form id=\"contact-form\" action=\"./controlloaccesso.cgi\" method=\"post\" onsubmit=\"return  valida_campi()\"><!--da sistemare-->
       <div id=\"fieldset\">
-        <div class=\"colonna1\">
-          <div>
-            <div class=\"form-txt\"><span xml:lang=\"en\">Username *</span></div>
-            <label class=\"name\">
+
+            <div class=\"form-txt\"><span xml:lang=\"en\">Username </span></div>
+            <label>
               <input type=\"text\" name=\"username\" id=\"username\" title=\"inserisci qui il tuo username\"/>
              </label>
-            <div class=\"allinea\"></div>
-          </div>
-          <div>
-            <div class=\"allinea\"></div>
-          </div>
-          <div>
-            <div class=\"form-txt\"><span xml:lang=\"en\">Password *</span></div>
-            <label class=\"email\">
+
+            <div class=\"form-txt\"><span xml:lang=\"en\">Password </span></div>
+            <label>
               <input type=\"password\" name=\"password\" id=\"password\" title=\"inserisci qui la tua password\"/>
               </label>
-            <div class=\"allinea\"></div>
-          </div>
-            <div class=\"allinea\"></div>
-         </div>
+
          <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Inserisci\"/></div><div class=\"button\"><input type=\"reset\" value=\"reset\"/></div></div>
       </div>
     </form>
@@ -99,7 +88,7 @@ print "
           <div id=\"inline\">
 
           <p>             
-            <span>2Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
+            <span>2Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
            </p>
       <p> 
       <a href=\"http://validator.w3.org/check?uri=referer\"><img
@@ -114,7 +103,6 @@ print "
         alt=\"CSS Valido!\"/></a>       
           </p>
           </div>
-    <div class=\"allinea\"></div>
     </div>
   </div>
 </body>

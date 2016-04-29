@@ -35,26 +35,24 @@ my $tempo=$ric->findvalue('tempoPreparazione');
 
 my @nodes =$doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $id]/ingredienti/ingr");
 
-# nelle parti stampate ci sono molte cose da rivedere ma lo faremo più avanti quando siamo sicuri funzioni tutto
 print "Content-Type: text/html\n\n";
 
 print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
 <head>
     <title>$titolo - 2Forchette.it</title>
-    <meta name=\"title\" content=\"4forchette - Progetto di Tecnlogie web\"/>
-    <meta name=\"description\" content=\"Ricetta risotto con gamberi\"/>
-    <meta name=\"keywords\" content=\"4forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
+    <meta name=\"title\" content=\"2forchette - $titolo\"/>
+    <meta name=\"description\" content=\"$titolo\"/>
+    <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
-    <!--css-->
     <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
     <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
 </head>
 <body>
-<div><a class=\"salta-main\" href=\"#footer\"><span>Salta al contenuto</span></a></div>
+<div><a class=\"salta-main\" href=\".list\"><span>Salta al contenuto</span></a></div>
 <!--==============================header=================================-->
 <div id=\"header\">
   <div class=\"main\">
@@ -63,7 +61,7 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a  href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
-          <a href=\"../proponiricetta.html\">PROPONI UNA RICETTA</a>
+          <a href=\"./cgi-bin/proponiricetta.cgi\">PROPONI UNA RICETTA</a>
           <a href=\"../ricettagiorno.html\">RICETTA DEL GIORNO</a>
           <a href=\"../contatti.html\">CONTATTACI</a>
         </div>
@@ -126,7 +124,7 @@ foreach my $node (@nodes)
 	  <div class=\"main\">
           <div id=\"inline\">
          	<p>             
-            <span>4Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
+            <span>2Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
        	   </p>
 			<p> 
     	<a href=\"http://validator.w3.org/check?uri=referer\"><img
@@ -146,4 +144,4 @@ foreach my $node (@nodes)
 </body>
 </html>
 ";
-#last update by Carlo 15/04/2016
+#last update by Carlo 28/04/2016

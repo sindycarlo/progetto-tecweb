@@ -23,19 +23,18 @@ print "
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\">
 <head>
     <title>Secondi piatti - 2Forchette</title>
-    <meta name=\"title\" content=\"2forchette - Progetto di Tecnlogie web\"/>
+    <meta name=\"title\" content=\"2forchette - Secondi piatti\"/>
     <meta name=\"description\" content=\"Sezione secondi piatti del sito 2forchette\"/>
     <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
-    <!--css-->
     <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
     <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
 </head>
 <body>
-<div><a class=\"salta-main\" href=\"#footer\"><span>Salta al contenuto</span></a></div>
+<div><a class=\"salta-main\" href=\".blocco2\"><span>Salta al contenuto</span></a></div>
 <!--==============================header=================================-->
 <div id=\"header\">
   <div class=\"main\">
@@ -44,7 +43,7 @@ print "
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
-          <a href=\"../proponiricetta.html\">PROPONI UNA RICETTA</a>
+          <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
           <a href=\"../ricettagiorno.html\">RICETTA DEL GIORNO</a>
           <a href=\"../contatti.html\">CONTATTACI</a>
         </div>
@@ -64,13 +63,13 @@ print "
 <div id=\"content\">
     <div class=\"main\">
     <h2>Secondi piatti</h2>
-<div class=\"box-img\"><img src=\"images/arrosto.jpg\" alt=\"immagine che descrive l'arrosto\"/></div>
+<div class=\"box-img\"><img src=\"../images/arrosto.jpg\" alt=\"immagine che descrive l'arrosto\"/></div>
     <div>
         <p>
 
 Da sempre, nella nostra cucina, i secondi piatti rivestono un ruolo importante. Che sia a pranzo o a cena, un buon secondo è considerato indispensabile per un pasto completo, nutrizionalmente bilanciato, che permetta di soddisfare anche il palato. Divisi in quattro categorie – secondi a base di carne, a base di pesce, a base di verdure e a base mista – i secondi piatti si prestano molto bene anche a essere considerati piatti unici, soprattutto se abbinati a un contorno, e sono ideali anche durante le diete. Tante le ricette che spaziano dalla cotoletta alla milanese al pollo alla cacciatore o all’anatra all’arancia. Non mancano i salumi o il pesce.
 </p>
-    </div>          
+    </div>
     <div class=\"allinea\"></div>
 
     </div>
@@ -87,17 +86,17 @@ my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Secondo']");
 foreach my $recipe (@ricette)
 {
       my $nome = $recipe->findvalue('nomePiatto');
-  my $id = $recipe->getAttribute('IDCode'); 
+  my $id = $recipe->getAttribute('IDCode');
 	my $img = $recipe->findvalue('imgPiatto');
 #qua per ora lascio che metti anche l'immagine però in futuro mi sa che lo togliamo sennò diventa un menù infinito (e ci mette anche tanto a caricarlo)
   print "
-  
-      
+
+
       <li>
         <a href=\"page_template.cgi?id=$id\">$nome</a>
         <div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></div>
       </li>
-      
+
     ";
 }
 
@@ -111,7 +110,7 @@ foreach my $recipe (@ricette)
           <div id=\"inline\">
 
           <p>
-            <span>2Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
+            <span>2Forchette</span> -copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
            </p>
       <p>
       <a href=\"http://validator.w3.org/check?uri=referer\"><img

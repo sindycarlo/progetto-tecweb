@@ -224,6 +224,9 @@ background: rgba(255,255,255,.9);
 color: black;
 
 }
+#nav a{
+	background-color: #eee6d8;
+}
 .active {
 	background: rgba(255,255,255,.9);
 	color: black;

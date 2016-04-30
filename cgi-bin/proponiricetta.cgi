@@ -59,6 +59,12 @@ print <<EOF;
     <h1>Informazioni</h1>
          <div class="info"><p>Se vuoi diventare anche tu uno chef inviaci la tua ricetta e noi la valuteremo. Tra tutte le ricette che ci saranno inviate sceglieremo la migliore. Puoi essere anche tu il vincitore!</p>
          <p>tutti i campi sono da compilare, abbiamo bisogno di tutte le informazioni sulla tua ricetta.</p>
+         <p>N.B. ATTUALMENTE I SEGUENTI CAMPI NON FUNZIONANO PER I SEGUENTI MOTIVI</p>
+         <ul>
+         	<li>Ingredienti: non sappiamo ancora bene come salvarli</li>
+         	<li>Immagine: credo di aver capito come implementarlo ma devo ancora farlo</li>
+         	<li>Numero persone: mi sono scordato di scriverlo nel codice, rimedierò finita la parte admin (o correggilo te se hai voglia)</li>
+         </ul>
          <!--da qualche parte precisare che gli ingredienti vanno inseriti uno a uno e poi si deve andare caporiga-->
          </div>
      <div class="allinea"></div>

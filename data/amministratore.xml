@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
-<ricetteDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" amministratore.xsd">
+<amministratore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" amministratore.xsd">
 	<login>admin</login>
 	<password>admin</password>
 </amministratore>
 
-<!-- by Luca Last Update 28/04/2016 -->
+<!-- by Luca Last Update 30/04/2016 -->

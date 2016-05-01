@@ -16,6 +16,8 @@ use utf8;
 
 my $cgi = CGI->new(); # create new CGI object
 
+my $directory_img="";
+
 my $data_piatto = $cgi->param('n_piatto');
 my $data_author = $cgi->param('n_author');
 my $data_desc = $cgi->param('n_desc');
@@ -23,7 +25,7 @@ my $data_tempo = $cgi->param('n_tempo');
 #salto ingredienti per ora
 my $data_difficolta = $cgi->param('n_difficolta');
 #salto anche immagine
-#mi sono scordato numero persone
+my $data_Persone = $cgi->param('n_persone');
 my $data_categoria = $cgi->param('n_categoria');
 my $data_proc = $cgi->param('n_proc');
 
@@ -75,6 +77,10 @@ my $data_proc = $cgi->param('n_proc');
 	my $difficolta = XML::LibXML::Element->new('difficolta');
 	$difficolta->appendText($data_difficolta);
 	$thing->appendChild($difficolta);
+
+	my $persone = XML::LibXML::Element->new('quantePersone');
+	$persone->appendText($data_Persone);
+	$thing->appendChild($persone);
 
 	my $categoria = XML::LibXML::Element->new('categoria');
 	$categoria->appendText($data_categoria);

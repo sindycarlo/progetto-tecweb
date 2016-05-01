@@ -16,7 +16,8 @@ use utf8;
 
 my $cgi = CGI->new(); # create new CGI object
 
-my $directory_img="";
+#percorso dove upload immagini form
+my $directory_img="/public_html/images";
 
 my $data_piatto = $cgi->param('n_piatto');
 my $data_author = $cgi->param('n_author');
@@ -24,7 +25,23 @@ my $data_desc = $cgi->param('n_desc');
 my $data_tempo = $cgi->param('n_tempo');
 #salto ingredienti per ora
 my $data_difficolta = $cgi->param('n_difficolta');
-#salto anche immagine
+
+#operazioni per fare upload e save dell'immagine:
+my $data_immagine = $cgi->param('n_immagine');
+$data_immagine=~s/.*[\/\\](.*)/$1/;
+my $upload_file=$cgi->upload('n_immagine');
+
+open UPLOADFILE,">$directory_img/$data_immagine";
+binmode UPLOADFILE;
+
+while ( <$upload_file> )
+{ 
+  print UPLOADFILE; 
+}
+close UPLOADFILE;
+
+print $cgi->header();
+
 my $data_Persone = $cgi->param('n_persone');
 my $data_categoria = $cgi->param('n_categoria');
 my $data_proc = $cgi->param('n_proc');
@@ -81,6 +98,10 @@ my $data_proc = $cgi->param('n_proc');
 	my $persone = XML::LibXML::Element->new('quantePersone');
 	$persone->appendText($data_Persone);
 	$thing->appendChild($persone);
+
+	my $immagine = XML::LibXML::Element->new('imgPiatto');
+	$immagine->appendText($data_immagine);
+	$thing->appendChild($immagine);
 
 	my $categoria = XML::LibXML::Element->new('categoria');
 	$categoria->appendText($data_categoria);

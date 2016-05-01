@@ -1,6 +1,5 @@
 #!/usr/bin/perl -w
 
-# servono tutte ste librerie?
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -10,46 +9,69 @@ use XML::LibXML;
 use File::Copy;
 use File::Basename; # serve per uploadare i file
 use Time::localtime; # per conoscere la data corrente
+use CGI::Pretty qw(:html3);
 use POSIX;
 use URI;
 use utf8;
 
 my $cgi = CGI->new(); # create new CGI object
 
-#percorso dove upload immagini form
-my $directory_img="/public_html/images";
+my $err_msg="";
 
+# definisco la dimensione massima del file uploadato (5Mb)
+$CGI::POST_MAX = 1024 * 5000;
+
+# espressione regolare per il file immagine
+my $file_er = "a-zA-Z0-9_.-";
+my $upload_dir = "../images";
+
+my $filename = $cgi->param('n_immagine');
 my $data_piatto = $cgi->param('n_piatto');
 my $data_author = $cgi->param('n_author');
 my $data_desc = $cgi->param('n_desc');
 my $data_tempo = $cgi->param('n_tempo');
 #salto ingredienti per ora
 my $data_difficolta = $cgi->param('n_difficolta');
-
-#operazioni per fare upload e save dell'immagine:
-my $data_immagine = $cgi->param('n_immagine');
-$data_immagine=~s/.*[\/\\](.*)/$1/;
-my $upload_file=$cgi->upload('n_immagine');
-
-open UPLOADFILE,">$directory_img/$data_immagine";
-binmode UPLOADFILE;
-
-while ( <$upload_file> )
-{ 
-  print UPLOADFILE; 
-}
-close UPLOADFILE;
-
-print $cgi->header();
-
 my $data_Persone = $cgi->param('n_persone');
 my $data_categoria = $cgi->param('n_categoria');
 my $data_proc = $cgi->param('n_proc');
 
-#ho preso i dati che ha inserito l'utente (ATTENZIONE CHE NON SONO PARSATI MA PER ORA TENIAMO COSI)
 
+chomp $filename;
+# faccio il parsing dell'immagine per estrarre il nome
+my ($nome, $path, $estensione) = fileparse($filename, '\..*');
 
-	my $file = "../data/4forchette.xml";
+# controllo le estensioni del file
+if (($estensione =~ /.png/i) || ($estensione =~ /.jpg/i) || ($estensione =~ /.jpeg/i) || ($estensione =~ /.gif/i)){
+	# estensione valida
+	$filename = $nome . $estensione;
+	$filename =~ tr/ /_/;
+	$filename =~ s/[^$file_er]//g;
+	
+	if($filename =~ /^([$file_er]+)$/){
+		
+		$filename = $1;
+	}
+	else{
+		# stampo pagina di errore
+		$err_msg = "Il nome del file contiene caratteri che non sono ammessi.";
+		&errore($err_msg);
+exit;
+	}
+	
+	my $file_up = $cgi->upload("n_immagine");
+	
+	# carico l'immagine nella cartella img
+	open (UPLOADFILE, ">../public_html/images/$filename") or die "$!";
+	binmode UPLOADFILE;
+	
+	while( <$file_up> ){
+		print UPLOADFILE;
+	}
+	close UPLOADFILE;
+	
+	#ho preso i dati che ha inserito l'utente (ATTENZIONE CHE NON SONO PARSATI MA PER ORA TENIAMO COSI)
+my $file = "../data/4forchette.xml";
 	
 	# creazione oggetto parser
 	my $parser = XML::LibXML->new();
@@ -99,9 +121,9 @@ my $data_proc = $cgi->param('n_proc');
 	$persone->appendText($data_Persone);
 	$thing->appendChild($persone);
 
-	my $immagine = XML::LibXML::Element->new('imgPiatto');
-	$immagine->appendText($data_immagine);
-	$thing->appendChild($immagine);
+	my $imm = XML::LibXML::Element->new('imgPiatto');
+		$imm->appendText($filename);
+		$thing->appendChild($imm);
 
 	my $categoria = XML::LibXML::Element->new('categoria');
 	$categoria->appendText($data_categoria);
@@ -123,5 +145,11 @@ my $data_proc = $cgi->param('n_proc');
 	close(OUT);
 
         print "Location:proponiricetta.cgi\n\n";
-
-# Last Update by Luca 27/04/2016
+	
+}
+else{
+	# estensione non valida
+	# stampo pagina di errore
+	$err_msg = "L'estensione del file non è valida.";
+	&errore($err_msg);
+}

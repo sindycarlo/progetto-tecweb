@@ -267,6 +267,7 @@ color: black;
 }
 .blocco1 a{
 	text-decoration: underline;
+	display: block;
 }
  .blocco1 a:visited {
 	color:#800080;
@@ -282,6 +283,7 @@ color: black;
 .lista-menu a:visited{color:#800080;}
 .lista-menu a{
 	text-decoration: underline;
+	display: block;
 }
 .lista-menu .box-img {
 width:100%;
@@ -491,7 +493,10 @@ height:31px;
 
 /*--------------CONTENT--------------*/
 
-.lista-menu li{width:auto;}
+.lista-menu li{
+
+width:auto;
+}
 
 .contenitore .blocco1 {
 	clear:both;

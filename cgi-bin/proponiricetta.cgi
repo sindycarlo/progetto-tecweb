@@ -39,7 +39,7 @@ print <<EOF;
         <!-- spostato nav dentro-->
           <a href="../index.html"><span xml:lang="en">HOME</span></a>
           <a class="active">PROPONI UNA RICETTA</a>
-          <a href="../ricettagiorno.html">RICETTA DEL GIORNO</a>
+          <a href="ricettagiorno.cgi">RICETTA DEL GIORNO</a>
           <a href="../contatti.html">CONTATTACI</a>
       </div>
       <div class="allinea"></div>
@@ -59,18 +59,12 @@ print <<EOF;
     <h1>Informazioni</h1>
          <div class="info"><p>Se vuoi diventare anche tu uno chef inviaci la tua ricetta e noi la valuteremo. Tra tutte le ricette che ci saranno inviate sceglieremo la migliore. Puoi essere anche tu il vincitore!</p>
          <p>tutti i campi sono da compilare, abbiamo bisogno di tutte le informazioni sulla tua ricetta.</p>
-         <p>N.B. ATTUALMENTE I SEGUENTI CAMPI NON FUNZIONANO PER I SEGUENTI MOTIVI</p>
-         <ul>
-         	<li>Ingredienti: non sappiamo ancora bene come salvarli</li>
-         	<li>Immagine: credo di aver capito come implementarlo ma devo ancora farlo</li>
-         	<li>Numero persone: mi sono scordato di scriverlo nel codice, rimedierò finita la parte admin (o correggilo te se hai voglia)</li>
-         </ul>
          <!--da qualche parte precisare che gli ingredienti vanno inseriti uno a uno e poi si deve andare caporiga-->
          </div>
      <div class="allinea"></div>
   <div class="box-contact">
     <h1>Inviaci la tua ricetta</h1>
-    <form id="contact-form" action="handle_proposta.cgi" method="post">
+    <form id="contact-form" action="handle_proposta.cgi" method="post" enctype="multipart/form-data">
       <div id="fieldset"> <!-- <fieldset> non è accettato da html5 -->
 
             <div class="form-txt">Nome piatto </div>
@@ -113,9 +107,9 @@ print <<EOF;
 
 
 
-            <div class="form-txt">Carica un'immagine </div>
+            <div class="form-txt">Carica un immagine </div>
             <label>
-              <input type="file" name="n_immagine" title="Carica un'immagine di presentazione"/>
+              <input type="file" name="immagine" title="Carica un immagine di presentazione"/>
              </label>
           
              
@@ -131,7 +125,7 @@ print <<EOF;
 
             <div class="form-txt">Ingredienti </div>
             <label>
-              <input type="text" name="n_ingredienti" title="quanti ingredienti"/>
+              <textarea rows="20" cols="60" name="n_ingr"></textarea>
              </label>
 
             <div class="form-txt">Procedimento </div>
@@ -179,6 +173,6 @@ print <<EOF;
 </body>
 </html>
 
-<!-- Last Update by Luca & Carlo 28/04/2016 -->
+<!-- Last Update by Luca & Carlo 2/05/2016 -->
 
 EOF

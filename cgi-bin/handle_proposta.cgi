@@ -14,34 +14,32 @@ use POSIX;
 use URI;
 use utf8;
 
-my $cgi = CGI->new(); # create new CGI object
-
-my $err_msg="";
-
 # definisco la dimensione massima del file uploadato (5Mb)
 $CGI::POST_MAX = 1024 * 5000;
 
-# espressione regolare per il file immagine
 my $file_er = "a-zA-Z0-9_.-";
 my $upload_dir = "../images";
 
-my $filename = $cgi->param('n_immagine');
+
+my $cgi = CGI->new(); # create new CGI object
+
+my $filename = $cgi->param('immagine');
 my $data_piatto = $cgi->param('n_piatto');
 my $data_author = $cgi->param('n_author');
 my $data_desc = $cgi->param('n_desc');
 my $data_tempo = $cgi->param('n_tempo');
-#salto ingredienti per ora
+my $data_ingr = $cgi->param('n_ingr');
 my $data_difficolta = $cgi->param('n_difficolta');
 my $data_Persone = $cgi->param('n_persone');
 my $data_categoria = $cgi->param('n_categoria');
 my $data_proc = $cgi->param('n_proc');
 
-
 chomp $filename;
 # faccio il parsing dell'immagine per estrarre il nome
 my ($nome, $path, $estensione) = fileparse($filename, '\..*');
 
-# controllo le estensioni del file
+
+
 if (($estensione =~ /.png/i) || ($estensione =~ /.jpg/i) || ($estensione =~ /.jpeg/i) || ($estensione =~ /.gif/i)){
 	# estensione valida
 	$filename = $nome . $estensione;
@@ -54,24 +52,23 @@ if (($estensione =~ /.png/i) || ($estensione =~ /.jpg/i) || ($estensione =~ /.jp
 	}
 	else{
 		# stampo pagina di errore
-		$err_msg = "Il nome del file contiene caratteri che non sono ammessi.";
+		my $err_msg = "Il nome del file contiene caratteri che non sono ammessi.";
 		&errore($err_msg);
 exit;
 	}
-	
-	my $file_up = $cgi->upload("n_immagine");
-	
-	# carico l'immagine nella cartella img
+	my $file_up = $cgi->upload("immagine");
+
+		# carico l'immagine nella cartella img
 	open (UPLOADFILE, ">../public_html/images/$filename") or die "$!";
 	binmode UPLOADFILE;
-	
+
 	while( <$file_up> ){
 		print UPLOADFILE;
 	}
 	close UPLOADFILE;
-	
+
 	#ho preso i dati che ha inserito l'utente (ATTENZIONE CHE NON SONO PARSATI MA PER ORA TENIAMO COSI)
-my $file = "../data/4forchette.xml";
+	my $file = "../data/4forchette.xml";
 	
 	# creazione oggetto parser
 	my $parser = XML::LibXML->new();
@@ -122,7 +119,7 @@ my $file = "../data/4forchette.xml";
 	$thing->appendChild($persone);
 
 	my $imm = XML::LibXML::Element->new('imgPiatto');
-		$imm->appendText($filename);
+		$imm->appendText("$filename");
 		$thing->appendChild($imm);
 
 	my $categoria = XML::LibXML::Element->new('categoria');
@@ -132,7 +129,19 @@ my $file = "../data/4forchette.xml";
 	my $proc = XML::LibXML::Element->new('procedimento');
 	$proc->appendText($data_proc);
 	$thing->appendChild($proc);
+ 
+	my $ingredienti = XML::LibXML::Element->new('ingredienti');
 
+	my %arrayingr = split /[;]/, $data_ingr;
+
+	foreach my $sticazzi (%arrayingr)
+	{
+		my $newing = XML::LibXML::Element->new('ingr');
+		$newing->appendText($sticazzi);
+		$ingredienti->appendChild($newing);
+	}
+
+	$thing->appendChild($ingredienti);
 #	ho finito di creare il nodo
 #	lo inserisco nel mio alberello natalizio xml
 	
@@ -140,16 +149,12 @@ my $file = "../data/4forchette.xml";
 	
 	$ricette->appendChild($thing);
 	
-	open(OUT,">$file") or die $!;
+	open(OUT,">$file") or die;
 	print OUT $doc->toString;
 	close(OUT);
 
         print "Location:proponiricetta.cgi\n\n";
 	
 }
-else{
-	# estensione non valida
-	# stampo pagina di errore
-	$err_msg = "L'estensione del file non è valida.";
-	&errore($err_msg);
-}
+
+#LAST UPDATE BY LUCA 02/05/2016

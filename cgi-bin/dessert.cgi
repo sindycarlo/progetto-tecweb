@@ -82,22 +82,22 @@ L’Italia è famosa nel mondo per i numerosi dolci e dessert tipici della tradi
 my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
-my @cose = $doc->findnodes("/ricetteDB/ricetta[categoria='Dessert']");
+my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Dessert']");
 
-foreach my $thing (@cose)
+foreach my $recipe (@ricette)
 {
-      my $bla = $thing->findvalue('nomePiatto');
-  my $id = $thing->getAttribute('IDCode');
-  my $img = $thing->findvalue('imgPiatto');
-  print "
-
-
-      <li>
-        <a href=\"page_template.cgi?id=$id\">$bla</a>
-        <div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $bla\"/></div>
-      </li>
-
-"
+    my $allowed=$recipe->getAttribute('accepted');
+	if($allowed=="1")
+  	{
+		my $nome = $recipe->findvalue('nomePiatto');
+	  	my $id = $recipe->getAttribute('IDCode');
+	 	my $img = $recipe->findvalue('imgPiatto');
+  		print "
+      		<li>
+       			<a href=\"page_template.cgi?id=$id\">$nome</a>
+       			<div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></div>
+     		</li>";
+	}
 }
 print "
 </ul>

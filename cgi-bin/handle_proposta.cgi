@@ -91,7 +91,8 @@ exit;
 	else{
 		$id=0;
 	}
-	$thing->setAttribute("IDCode", $id+1); 
+	$thing->setAttribute("IDCode", $id+1);
+	$thing->setAttribute("accepted","0");
 
 
 	my $piatto = XML::LibXML::Element->new('nomePiatto');

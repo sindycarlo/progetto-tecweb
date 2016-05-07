@@ -74,20 +74,37 @@ my @ricette = $doc->findnodes("/ricetteDB/ricetta");
 
 foreach my $recipe (@ricette)
 {
-	  my $nome = $recipe->findvalue('nomePiatto');
+	 my $allowed=$recipe->getAttribute('accepted');
+	if($allowed=="1")
+	{
+  	my $nome = $recipe->findvalue('nomePiatto');
 	  my $id = $recipe->getAttribute('IDCode');
-  print "
-
-
-      <li>
-        <a href=\"page_template.cgi?id=$id\">$nome</a> <a href=\"delete_ricetta.cgi?id=$id\">ELIMINA</a>
-      </li>
-
+  	print "
+      	<li>
+      	  <a href=\"page_template.cgi?id=$id\">$nome</a> <a href=\"delete_ricetta.cgi?id=$id\">ELIMINA</a>
+   	   </li>
     ";
+	}
 }
 
-print  "</ul> <h3>Ricette proposte</h3>
-	<p>lo farò a breve, meglio se lo faccio in una pagina apparte?</p>
+print  "</ul> <h3>Ricette proposte</h3>";
+
+foreach my $recipe (@ricette)
+{
+	 my $allowed=$recipe->getAttribute('accepted');
+	if($allowed=="0")
+	{
+  	my $nome = $recipe->findvalue('nomePiatto');
+	  my $id = $recipe->getAttribute('IDCode');
+  	print "
+      	<li>
+      	  <a href=\"page_template.cgi?id=$id\">$nome</a> <a href=\"accept_ricetta.cgi?id=$id\">ACCETTA</a> <a href=\"delete_ricetta.cgi?id=$id\">RIFIUTA</a>
+   	   </li>
+    ";
+	}
+}
+
+print "
 	</div>
 </div>
 

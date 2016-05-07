@@ -85,19 +85,18 @@ my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Secondo']");
 
 foreach my $recipe (@ricette)
 {
-      my $nome = $recipe->findvalue('nomePiatto');
-  my $id = $recipe->getAttribute('IDCode');
-	my $img = $recipe->findvalue('imgPiatto');
-#qua per ora lascio che metti anche l'immagine però in futuro mi sa che lo togliamo sennò diventa un menù infinito (e ci mette anche tanto a caricarlo)
-  print "
-
-
-      <li>
-        <a href=\"page_template.cgi?id=$id\">$nome</a>
-        <div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></div>
-      </li>
-
-    ";
+    my $allowed=$recipe->getAttribute('accepted');
+	if($allowed=="1")
+  	{
+		my $nome = $recipe->findvalue('nomePiatto');
+	  	my $id = $recipe->getAttribute('IDCode');
+	 	my $img = $recipe->findvalue('imgPiatto');
+  		print "
+      		<li>
+       			<a href=\"page_template.cgi?id=$id\">$nome</a>
+       			<div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></div>
+     		</li>";
+	}
 }
 
   print "</ul></div></div>

@@ -28,10 +28,11 @@
 			<xsd:element name="procedimento" type="xsd:string"/>			
 		</xsd:sequence>
 		<xsd:attribute name="IDCode" type="xsd:integer"/>
+		<xsd:attribute name="accepted" type="xsd:integer"/>
 	</xsd:complexType>
 </xsd:element>
 
 <xsd:element name="ingr" type="xsd:string"/>
 
 </xsd:schema>
-<!-- by Alessio Luca Last Update 14/04/2016-->
+<!-- by Alessio Luca Last Update 07/05/2016 aggiunto attributo accepted-->

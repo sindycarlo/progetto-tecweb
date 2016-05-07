@@ -80,7 +80,7 @@ foreach my $recipe (@ricette)
 
 
       <li>
-        <a href=\"page_template.cgi?id=$id\">$nome</a> <a href=\"\">ELIMINA</a>
+        <a href=\"page_template.cgi?id=$id\">$nome</a> <a href=\"delete_ricetta.cgi?id=$id\">ELIMINA</a>
       </li>
 
     ";
@@ -117,11 +117,4 @@ print  "</ul> <h3>Ricette proposte</h3>
   </div>
 </body>
 </html>";
-
-
-
-
-
-
-
-
+#Last update 07/05/2016 by Luca

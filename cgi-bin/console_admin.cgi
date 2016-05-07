@@ -1,0 +1,127 @@
+#!/usr/bin/perl -w
+
+#questa pagina è stata riciclata da secondipiatti.cgi, se vedi cose che non servono toglile pure
+
+# librerie: servono tutte?
+use strict;
+use CGI qw(:standard);
+use CGI::Carp qw(fatalsToBrowser);
+use CGI::Session;
+use XML::LibXML;
+use File::Copy;
+use utf8;
+use URI;
+
+# salto la parte delle sessioni/cookie/ecc per ora
+
+
+# stampo la prima parte della pagina
+print "Content-Type: text/html\n\n";
+
+
+print "
+<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\">
+<head>
+    <title>Secondi piatti - 2Forchette</title>
+    <meta name=\"title\" content=\"2forchette - Secondi piatti\"/>
+    <meta name=\"description\" content=\"Sezione secondi piatti del sito 2forchette\"/>
+    <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
+    <meta name=\"language\" content=\"italian it\"/>
+    <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
+    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
+    <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
+    <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
+</head>
+<body>
+<div><a class=\"salta-main\" href=\".blocco2\"><span>Salta al contenuto</span></a></div>
+<!--==============================header=================================-->
+<div id=\"header\">
+  <div class=\"main\">
+    <div class=\"intestazione\">
+      <div id=\"banner\"><h1><a href=\"index.html\"> <span>2FORCHETTE</span></a></h1></div>
+      <div class=\"header-menu\">
+        <div id=\"nav\">
+          <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
+          <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
+          <a href=\"../ricettagiorno.html\">RICETTA DEL GIORNO</a>
+          <a href=\"../contatti.html\">CONTATTACI</a>
+        </div>
+      </div>
+      <div class=\"allinea\"></div>
+            <div id='breadcrumb'>
+        <p>Ti trovi in:
+      <a href=\"../index.html\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
+      Primi piatti
+      </p>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!--==============================content=================================-->
+<div id=\"content\">
+    <div class=\"main\">
+    <h2>Lato Amministrativo</h2>
+		<p>Qui puoi vedere tutte le ricette attualmente presenti all'interno del sito. L'amministratore ha la possibilità di rimuovere le ricette ritenute obsolete, aggiungere quelle proposte dagli utenti e regolare quali ricette saranno in evidenza nella home page.</p>
+	<h3>Elenco ricette presenti</h3> <ul>";
+
+my $file = "../data/4forchette.xml";
+my $parser = XML::LibXML->new();
+my $doc = $parser->parse_file($file);
+my @ricette = $doc->findnodes("/ricetteDB/ricetta");
+
+foreach my $recipe (@ricette)
+{
+	  my $nome = $recipe->findvalue('nomePiatto');
+	  my $id = $recipe->getAttribute('IDCode');
+  print "
+
+
+      <li>
+        <a href=\"page_template.cgi?id=$id\">$nome</a> <a href=\"\">ELIMINA</a>
+      </li>
+
+    ";
+}
+
+print  "</ul> <h3>Ricette proposte</h3>
+	<p>lo farò a breve, meglio se lo faccio in una pagina apparte?</p>
+	</div>
+</div>
+
+<!--==============================footer=================================-->
+<div id=\"footer\">
+    <div class=\"main\">
+          <div id=\"inline\">
+
+          <p>
+            <span>2Forchette</span> -copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
+           </p>
+      <p>
+      <a href=\"http://validator.w3.org/check?uri=referer\"><img
+      src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
+
+        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
+        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\"
+            alt=\"CSS Valido!\"/></a>
+
+        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
+        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
+        alt=\"CSS Valido!\"/></a>
+          </p>
+          </div>
+    <div class=\"allinea\"></div>
+    </div>
+  </div>
+</body>
+</html>";
+
+
+
+
+
+
+
+

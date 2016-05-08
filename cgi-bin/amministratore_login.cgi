@@ -1,40 +1,14 @@
 #!/usr/bin/perl -w
 
 use strict;
-use warnings;
-use CGI;
+use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
 use CGI::Session;
 use XML::LibXML;
+use File::Copy;
+use utf8;
+use URI;
 
-#FILE DA RIVEDERE PROFONDAMENTE, PER ADESSO IL FORM FUNZIONA MA FA SCHIFO STO CODICE
-
-my $q = new CGI;
-my $session = CGI::Session->load();
-
-#if(!($session->is_empty())) { # Sessione già aperta
- #  print "Location: www.facebook.com\n\n";
-#}
-
-#else { # Nessuna sessione
-
-      
-      my $username = $q->param('username');
-      my $password = $q->param('password');
-
-      my $doc = XML::LibXML->new()->parse_file('../data/amministratore.xml'); 
-      
-      if ($doc->findnodes("amministratore[login/text()='$username' and password/text()='$password']")->size eq 1) 
-	{      
-	#da gestire interamente come funzionano le sessioni         
-	#my $session = new CGI::Session(undef, $q, {Directory=>File::Spec->tmpdir});
-         #my $session = new CGI::Session();
-         #$session->expire('60m');
-         #$session->param('username', $username);
-         print $session->header(-location=>"console_admin.cgi");
-      }
-      
-#}
 
 # stampo la pagina login:
 
@@ -53,8 +27,8 @@ print "
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
     <!--css-->
-    <link rel=\"stylesheet\" href=\"./css/style.css\" type=\"text/css\" media=\"screen\"/>
-    <link rel=\"stylesheet\" href=\"./css/print.css\" type=\"text/css\" media=\"print\"/>
+    <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
+    <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
 </head>
 <body>
 <div><a class=\"salta-main\" href=\"#footer\"><span>Salta al contenuto</span></a></div>
@@ -65,16 +39,16 @@ print "
      <div id=\"banner\"><h1><a href=\"index.html\"> <span>2FORCHETTE</span> </a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
-          <a href=\"index.html\"><span xml:lang=\"en\">HOME</span></a>
-          <a href=\"./cgi-bin/proponiricetta.cgi\">PROPONI UNA RICETTA</a>          
-          <a href=\"ricettagiorno.html\">RICETTA DEL GIORNO</a>
-          <a href=\"contatti.html\">CONTATTACI</a>
+          <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
+          <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>          
+          <a href=\"ricettagiorno.cgi\">RICETTA DEL GIORNO</a>
+          <a href=\"../contatti.html\">CONTATTACI</a>
         </div>
       </div>
       <div class=\"allinea\"></div>
     <div id='breadcrumb'>
         <p>Ti trovi in:
-      <a href=\"index.html\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
+      <a href=\"../index.html\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
       Admin Login
       </p>
     </div> 
@@ -86,7 +60,7 @@ print "
   <div class=\"main\">
     <h2>Login Area Amministrativa</h2>
     <div class=\"box-contact\">
-    <form id=\"contact-form\" method=\"post\">
+    <form id=\"contact-form\" action=\"controllo_login.cgi\" method=\"post\">
       <div id=\"fieldset\">
 
             <div class=\"form-txt\"><span xml:lang=\"en\">Username </span></div>

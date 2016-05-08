@@ -24,8 +24,8 @@ print "
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\">
 <head>
     <title>Secondi piatti - 2Forchette</title>
-    <meta name=\"title\" content=\"2forchette - Secondi piatti\"/>
-    <meta name=\"description\" content=\"Sezione secondi piatti del sito 2forchette\"/>
+    <meta name=\"title\" content=\"2forchette - Gestione ricette\"/>
+    <meta name=\"description\" content=\"Sezione Gestione ricette del sito 2forchette\"/>
     <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
@@ -35,7 +35,7 @@ print "
     <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
 </head>
 <body>
-<div><a class=\"salta-main\" href=\".blocco2\"><span>Salta al contenuto</span></a></div>
+<div><a class=\"salta-main\" href=\"#footer\"><span>Salta al contenuto</span></a></div>
 <!--==============================header=================================-->
 <div id=\"header\">
   <div class=\"main\">
@@ -45,7 +45,7 @@ print "
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
-          <a href=\"../ricettagiorno.html\">RICETTA DEL GIORNO</a>
+          <a href=\"ricettagiorno.cgi\">RICETTA DEL GIORNO</a>
           <a href=\"../contatti.html\">CONTATTACI</a>
         </div>
       </div>
@@ -53,7 +53,8 @@ print "
             <div id='breadcrumb'>
         <p>Ti trovi in:
       <a href=\"../index.html\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
-      Primi piatti
+      <a href=\"amministratore_login.cgi\">Amministratore login</a><span>&gt;</span>
+      <span xml:lang=\"en\">Console Amministratore</span>
       </p>
     </div>
     </div>
@@ -64,8 +65,8 @@ print "
 <div id=\"content\">
     <div class=\"main\">
     <h2>Lato Amministrativo</h2>
-		<p>Qui puoi vedere tutte le ricette attualmente presenti all'interno del sito. L'amministratore ha la possibilità di rimuovere le ricette ritenute obsolete, aggiungere quelle proposte dagli utenti e regolare quali ricette saranno in evidenza nella home page.</p>
-	<h3>Elenco ricette presenti</h3> <ul>";
+		<p>Qui puoi vedere tutte le ricette attualmente presenti all'interno del sito. L'amministratore ha la possibilita' di rimuovere le ricette ritenute obsolete, aggiungere quelle proposte dagli utenti e regolare quali ricette saranno in evidenza nella home page.</p>
+	<h3>Elenco ricette presenti</h3><ul class=\"list\">";
 
 my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
@@ -74,38 +75,38 @@ my @ricette = $doc->findnodes("/ricetteDB/ricetta");
 
 foreach my $recipe (@ricette)
 {
-	 my $allowed=$recipe->getAttribute('accepted');
-	if($allowed=="1")
-	{
-  	my $nome = $recipe->findvalue('nomePiatto');
-	  my $id = $recipe->getAttribute('IDCode');
-  	print "
-      	<li>
-      	  <a href=\"page_template.cgi?id=$id\">$nome</a> <a href=\"delete_ricetta.cgi?id=$id\">ELIMINA</a>
-   	   </li>
+   my $allowed=$recipe->getAttribute('accepted');
+  if($allowed=="1")
+  {
+    my $nome = $recipe->findvalue('nomePiatto');
+    my $id = $recipe->getAttribute('IDCode');
+    print "
+        <li>
+          <a href=\"page_template.cgi?id=$id\">$nome</a> <a href=\"delete_ricetta.cgi?id=$id\">ELIMINA</a>
+       </li>
     ";
-	}
+  }
 }
 
 print  "</ul> <h3>Ricette proposte</h3>";
 
 foreach my $recipe (@ricette)
 {
-	 my $allowed=$recipe->getAttribute('accepted');
-	if($allowed=="0")
-	{
-  	my $nome = $recipe->findvalue('nomePiatto');
-	  my $id = $recipe->getAttribute('IDCode');
-  	print "
-      	<li>
-      	  <a href=\"page_template.cgi?id=$id\">$nome</a> <a href=\"accept_ricetta.cgi?id=$id\">ACCETTA</a> <a href=\"delete_ricetta.cgi?id=$id\">RIFIUTA</a>
-   	   </li>
+   my $allowed=$recipe->getAttribute('accepted');
+  if($allowed=="0")
+  {
+    my $nome = $recipe->findvalue('nomePiatto');
+    my $id = $recipe->getAttribute('IDCode');
+    print "
+        <li>
+          <a href=\"page_template.cgi?id=$id\">$nome</a> <a href=\"accept_ricetta.cgi?id=$id\">ACCETTA</a> <a href=\"delete_ricetta.cgi?id=$id\">RIFIUTA</a>
+       </li>
     ";
-	}
+  }
 }
 
 print "
-	</div>
+  </div>
 </div>
 
 <!--==============================footer=================================-->

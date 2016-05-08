@@ -61,8 +61,8 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a  href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
-          <a href=\"./cgi-bin/proponiricetta.cgi\">PROPONI UNA RICETTA</a>
-          <a href=\"../ricettagiorno.html\">RICETTA DEL GIORNO</a>
+          <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
+          <a href=\"ricettagiorno.cgi\">RICETTA DEL GIORNO</a>
           <a href=\"../contatti.html\">CONTATTACI</a>
         </div>
       </div>
@@ -70,6 +70,7 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
         <div id='breadcrumb'>
         <p>Ti trovi in:
       <a href=\"../index.html\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
+      <a href=\"$cat.cgi\">$cat</a><span>&gt;</span>
       $titolo
       </p>
     </div>
@@ -144,4 +145,4 @@ foreach my $node (@nodes)
 </body>
 </html>
 ";
-#last update by Carlo 28/04/2016
+#last update by Carlo 8/05/2016

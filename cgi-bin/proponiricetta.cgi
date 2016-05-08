@@ -45,7 +45,7 @@ print <<EOF;
       <div class="allinea"></div>
     <div id='breadcrumb'>
         <p>Ti trovi in: 
-		<a href="index.html"><span xml:lang="en">Home</span></a><span>&gt;</span>
+		<a href="../index.html"><span xml:lang="en">Home</span></a><span>&gt;</span>
 	      Proponi una ricetta
       </p>
     </div> 
@@ -58,8 +58,8 @@ print <<EOF;
   <div class="main">
     <h1>Informazioni</h1>
          <div class="info"><p>Se vuoi diventare anche tu uno chef inviaci la tua ricetta e noi la valuteremo. Tra tutte le ricette che ci saranno inviate sceglieremo la migliore. Puoi essere anche tu il vincitore!</p>
-         <p>tutti i campi sono da compilare, abbiamo bisogno di tutte le informazioni sulla tua ricetta.</p>
-         <!--da qualche parte precisare che gli ingredienti vanno inseriti uno a uno e poi si deve andare caporiga-->
+         <p>Tutti i campi sono da compilare, abbiamo bisogno di tutte le informazioni sulla tua ricetta.</p>
+         <p>Attenzione! Sono supportati i formati jpg,png,jpeg per le immagini di presentazione e la dimensione non deve superare i 5mb</p>
          </div>
      <div class="allinea"></div>
   <div class="box-contact">
@@ -84,12 +84,15 @@ print <<EOF;
               <textarea rows="20" cols="60" name="n_desc" placeholder="Descrivi brevemente la tua prelibatezza..."></textarea>
               </label>
 
-          <div class="Td"> <!-- sarebbe meglio un nome diverso e si mette al posto di form-txt -->
-            <div class="form-txt">Tempo di preparazione e Difficolta</div>
+          <div class="Td">
+          <div class="td">
+            <div class="form-txt">Tempo di preparazione</div>
             <label>
               <input type="text" name="n_tempo" title="Inserisci il tempo di preparazione"/>
            </label>
-     
+           </div>
+             <div class="td">
+            <div class="form-txt">Difficolta</div>
             <label>
               <select  name="n_difficolta">	
                 <option value="1">1</option> 
@@ -97,14 +100,14 @@ print <<EOF;
                   <option value="3">3</option>
               </select>
             </label>
-          </div>
-
-
-    <div class="form-txt">Numero persone </div> <!-- classe speciale per renderlo più piccolo anche questo -->
+            </div>
+             <div class="td">
+           <div class="form-txt">Numero persone </div>
             <label>
               <input type="text" name="n_persone" title="Inserisci il numero di persone"/>
              </label>
-
+             </div>
+          </div>
 
 
             <div class="form-txt">Carica un immagine </div>
@@ -125,7 +128,7 @@ print <<EOF;
 
             <div class="form-txt">Ingredienti </div>
             <label>
-              <textarea rows="20" cols="60" name="n_ingr"></textarea>
+              <textarea rows="20" cols="60" name="n_ingr" placeholder="inserisci ciascun ingrediente con il ;"></textarea>
              </label>
 
             <div class="form-txt">Procedimento </div>

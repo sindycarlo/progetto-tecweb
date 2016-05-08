@@ -23,7 +23,7 @@
         <div id="nav">
           <a href="index.html"><span xml:lang="en">HOME</span></a>
           <a href="./cgi-bin/proponiricetta.cgi">PROPONI UNA RICETTA</a>          
-          <a href="ricettagiorno.html">RICETTA DEL GIORNO</a>
+          <a href="./cgi-bin/ricettagiorno.cgi">RICETTA DEL GIORNO</a>
           <a class="active">CONTATTACI</a>
         </div>
       </div>
@@ -43,29 +43,29 @@
   <div class="main">
     <h1>Modulo contatti</h1>
     <div class="info">
-    <p>Invia un'email</p></div>
+    <p>Inviaci un'email e noi ti risponderemo il prima possibile, (descrivi in maniera precisa il problema).</p></div>
     <div class="box-contact">
-    <form id="contact-form" action="index.html" method="post"><!--tutto questo è provvisioro-->
+    <form id="contact-form" action="./cgi-bin/sendmail.cgi" method="post"><!--tutto questo è provvisioro-->
       <div id="fieldset">
 
             <div class="form-txt">Il tuo nome </div>
             <label>
-              <input type="text" name="nr_nome" title="inserisci il tuo nome qui"/>
+              <input type="text" name="nome" title="inserisci il tuo nome qui"/>
              </label>
 
             <div class="form-txt"><span xml:lang="en">Email </span></div>
             <label class="email">
-              <input type="text" name="nr_email"  title="inserisci il tuo indirizzo email"/>
+              <input type="text" name="email"  title="inserisci il tuo indirizzo email"/>
               </label>
 
             <div class="form-txt">Inserire un messaggio </div>
             <label class="message">
-              <textarea rows="20" cols="60"></textarea>
+              <textarea name="question" rows="20" cols="60"></textarea>
               </label>
             <div class="allinea"></div>
           
         
-        <div class="buttons"><div class="button"><input type="submit"/></div><div class="button"><input type="reset"/></div></div>
+        <div class="buttons"><div class="button"><input type="submit" value="Send mail"/></div><div class="button"><input type="reset"/></div></div>
         </div>
     </form>
     </div>

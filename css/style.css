@@ -9,6 +9,12 @@
 #err_login {
 	color:red;
 }
+#err_email {
+	color:red;
+}
+
+
+/*--------------------------------------*/
 
 a, body, div, form, 
 h1, h2, h3, header, html,

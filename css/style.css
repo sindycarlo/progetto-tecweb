@@ -3,6 +3,13 @@
 }
 
 /*---------------------------RESET FLOAT----------------------*/
+
+
+/*---------CSS PER JAVASCRIPT-----------*/
+#err_login {
+	color:red;
+}
+
 a, body, div, form, 
 h1, h2, h3, header, html,
 i, img,
@@ -143,7 +150,6 @@ font-style:normal;}
 	
 
 
-
 /*===========struttura globale============== */
 
 
@@ -173,16 +179,18 @@ font-style:normal;}
 	 background-color: #FFE4C4;
 }
 
-#banner {
 
+#banner h1 {
+	font-family: Dafunk;
+}
+
+#banner {
+	
+	
 	width:30%;
 	float:left;
 }
-#banner img{
 
-	margin:0.1em;
-
-}
 
 .allinea {
 	clear:left;
@@ -285,9 +293,7 @@ color: black;
 	text-decoration: underline;
 	display: block;
 }
-.lista-menu .box-img {
-width:100%;
-}
+
 .side-bar{
 width:17.5em;
 float:left;
@@ -358,8 +364,17 @@ border-radius:1.125em;
 
 }
 
-.Td {clear:both;height: 7em;}
-.Td label{max-width:15em;}
+.Td {clear:both;height: 20em;}
+.td {height:7em;}
+.Td label {
+  max-width: 4.375em;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  display: inline;
+  float: left;
+  width: 100%;
+}
 .box-contact .button
 {
 
@@ -402,7 +417,7 @@ padding-left: 4.5em;
   float: left;
 }
 #contact-form input {
-  height: 1.5em;
+  height: 2.4em;
 }
 #contact-form textarea { 
   height: 18.5em;

@@ -59,7 +59,7 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-      <div id=\"banner\"><h1><a href=\"index.html\"> <span>2FORCHETTE</span></a></h1></div>
+      <div id=\"banner\"><h1><a href=\"../index.html\"> <span>2FORCHETTE</span></a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a  href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
@@ -147,4 +147,4 @@ foreach my $node (@nodes)
 </html>
 ";
 
-#last update by Carlo 2/05/2016
+#last update by Carlo 10/05/2016

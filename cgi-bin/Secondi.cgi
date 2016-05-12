@@ -34,25 +34,25 @@ print "
     <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
 </head>
 <body>
-<div><a class=\"salta-main\" href=\".blocco2\"><span>Salta al contenuto</span></a></div>
+<div><a class=\"salta-main\" href=\"#footer\"><span>Salta al contenuto</span></a></div>
 <!--==============================header=================================-->
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-      <div id=\"banner\"><h1><a href=\"index.html\"> <span>2FORCHETTE</span></a></h1></div>
+      <div id=\"banner\"><h1><a href=\"../index.html\"> <span>2FORCHETTE</span></a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
-          <a href=\"../ricettagiorno.html\">RICETTA DEL GIORNO</a>
-          <a href=\"../contatti.html\">CONTATTACI</a>
+          <a href=\"cercaricetta.cgi\">CERCA RICETTA</a>
+          <a href=\"contatti.cgi\">CONTATTACI</a>
         </div>
       </div>
       <div class=\"allinea\"></div>
             <div id='breadcrumb'>
         <p>Ti trovi in:
       <a href=\"../index.html\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
-      Primi piatti
+      Secondi piatti
       </p>
     </div>
     </div>

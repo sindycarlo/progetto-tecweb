@@ -62,7 +62,7 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
         <div id=\"nav\">
           <a  href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
-          <a href=\"ricettagiorno.cgi\">RICETTA DEL GIORNO</a>
+          <a href=\"cercaricetta.cgi\">CERCA RICETTA</a>
           <a href=\"../contatti.html\">CONTATTACI</a>
         </div>
       </div>

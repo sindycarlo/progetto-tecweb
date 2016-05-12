@@ -192,8 +192,8 @@ print "
         <!-- spostato nav dentro-->
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a class=\"active\">PROPONI UNA RICETTA</a>
-          <a href=\"ricettagiorno.cgi\">RICETTA DEL GIORNO</a>
-          <a href=\"../contatti.html\">CONTATTACI</a>
+          <a href=\"cercaricetta.cgi\">CERCA RICETTA</a>
+          <a href=\"contatti.cgi\">CONTATTACI</a>
       </div>
       <div class=\"allinea\"></div>
     <div id='breadcrumb'>

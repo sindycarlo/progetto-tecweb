@@ -26,9 +26,9 @@ print "
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
-    <!--css-->
     <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
     <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
+     <script type=\"text/javascript\" src=\"../js/login_control.js\"></script>
 </head>
 <body>
 <div><a class=\"salta-main\" href=\"#footer\"><span>Salta al contenuto</span></a></div>
@@ -36,13 +36,13 @@ print "
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-     <div id=\"banner\"><h1><a href=\"index.html\"> <span>2FORCHETTE</span> </a></h1></div>
+     <div id=\"banner\"><h1><a href=\"../index.html\"> <span>2FORCHETTE</span> </a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>          
-          <a href=\"ricettagiorno.cgi\">RICETTA DEL GIORNO</a>
-          <a href=\"../contatti.html\">CONTATTACI</a>
+          <a href=\"cercaricetta.cgi\">CERCA RICETTA</a>
+          <a href=\"contatti.cgi\">CONTATTACI</a>
         </div>
       </div>
       <div class=\"allinea\"></div>
@@ -60,17 +60,18 @@ print "
   <div class=\"main\">
     <h2>Login Area Amministrativa</h2>
     <div class=\"box-contact\">
-    <form id=\"contact-form\" action=\"controllo_login.cgi\" method=\"post\">
+    <form id=\"contact-form\" action=\"controllo_login.cgi\" method=\"post\" onsubmit=\"return valida_campi()\">
+      
+<p id=\"err_login\"></p>
       <div id=\"fieldset\">
-
             <div class=\"form-txt\"><span xml:lang=\"en\">Username </span></div>
             <label>
-              <input type=\"text\" name=\"username\" id=\"login_submit\" title=\"inserisci qui il tuo username\" required/>
+              <input type=\"text\" name=\"username\" id=\"username\" title=\"inserisci qui il tuo username\"/>
              </label>
 
             <div class=\"form-txt\"><span xml:lang=\"en\">Password </span></div>
             <label>
-              <input type=\"password\" name=\"password\" id=\"password_submit\" title=\"inserisci qui la tua password\" required/>
+              <input type=\"password\" name=\"password\" id=\"password\" title=\"inserisci qui la tua password\"/>
               </label>
 
          <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Inserisci\"/></div><div class=\"button\"><input type=\"reset\" value=\"reset\"/></div></div>

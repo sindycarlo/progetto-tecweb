@@ -26,6 +26,7 @@ print <<EOF;
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="../css/print.css" type="text/css" media="print"/>
+    <script type="text/javascript" src="../js/proponi_ricetta.js"></script>
 </head>
 
 <body>
@@ -39,8 +40,8 @@ print <<EOF;
         <!-- spostato nav dentro-->
           <a href="../index.html"><span xml:lang="en">HOME</span></a>
           <a class="active">PROPONI UNA RICETTA</a>
-          <a href="ricettagiorno.cgi">RICETTA DEL GIORNO</a>
-          <a href="../contatti.html">CONTATTACI</a>
+          <a href="cercaricetta.cgi">CERCA RICETTA</a>
+          <a href="contatti.cgi">CONTATTACI</a>
       </div>
       <div class="allinea"></div>
     <div id='breadcrumb'>
@@ -64,31 +65,31 @@ print <<EOF;
      <div class="allinea"></div>
   <div class="box-contact">
     <h1>Inviaci la tua ricetta</h1>
-    <form id="contact-form" action="handle_proposta.cgi" method="post" enctype="multipart/form-data">
+    <form id="contact-form" action="handle_proposta.cgi" method="post" enctype="multipart/form-data" onsubmit="return valida_campi()">
       <div id="fieldset"> <!-- <fieldset> non è accettato da html5 -->
 
             <div class="form-txt">Nome piatto </div>
             <label>
-              <input type="text" name="n_piatto" title="Inserisci il nome del tuo piatto"/>
+              <input type="text" name="n_piatto" id="n_piatto"title="Inserisci il nome del tuo piatto"/>
              </label>
 
           
             <div class="form-txt">Autore </div>
             <label>
-              <input type="text" name="n_author" title="Inserisci il nome dell'autore"/>
+              <input type="text" name="n_author" id="n_author" title="Inserisci il nome dell'autore"/>
               </label>
           
           
             <div class="form-txt">Breve descrizione </div>
             <label class="message">
-              <textarea rows="20" cols="60" name="n_desc" placeholder="Descrivi brevemente la tua prelibatezza..."></textarea>
+              <textarea rows="20" cols="60" name="n_desc" id="n_desc"placeholder="Descrivi brevemente la tua prelibatezza..."></textarea>
               </label>
 
           <div class="Td">
           <div class="td">
             <div class="form-txt">Tempo di preparazione</div>
             <label>
-              <input type="text" name="n_tempo" title="Inserisci il tempo di preparazione"/>
+              <input type="text" name="n_tempo" id="n_tempo" title="Inserisci il tempo di preparazione"/>
            </label>
            </div>
              <div class="td">
@@ -104,7 +105,7 @@ print <<EOF;
              <div class="td">
            <div class="form-txt">Numero persone </div>
             <label>
-              <input type="text" name="n_persone" title="Inserisci il numero di persone"/>
+              <input type="text" name="n_persone" id="n_persone"title="Inserisci il numero di persone"/>
              </label>
              </div>
           </div>
@@ -133,7 +134,7 @@ print <<EOF;
 
             <div class="form-txt">Procedimento </div>
             <label class="message">
-              <textarea rows="20" cols="60" name="n_proc" placeholder="Spiega come prepare il tuo manicaretto..."></textarea>
+              <textarea rows="20" cols="60" name="n_proc" id="n_proc" placeholder="Spiega come prepare il tuo manicaretto..."></textarea>
               </label>
 
         <div class="buttons">
@@ -145,6 +146,7 @@ print <<EOF;
 	</div>
         </div>
         </div>
+        <span><p id="err_login"></p><span>
     </form>
   </div>
   </div>

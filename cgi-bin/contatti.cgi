@@ -40,12 +40,12 @@ print "
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-     <div id=\"banner\"><h1><a href=\"index.html\"> <span>2FORCHETTE</span> </a></h1></div>
+     <div id=\"banner\"><h1><a href=\"../index.html\"> <span>2FORCHETTE</span> </a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>          
-          <a href=\"ricettagiorno.cgi\">RICETTA DEL GIORNO</a>
+          <a href=\"cercaricetta.cgi\">CERCA RICETTA</a>
           <a class=\"active\">CONTATTACI</a>
         </div>
       </div>
@@ -63,27 +63,28 @@ print "
 <!--==============================content=================================-->
 <div id=\"content\">
   <div class=\"main\">
-    <h1>Modulo contatti</h1>
+    <h2>Modulo contatti</h2>
     <div class=\"info\">
+    <span>ATTENZIONE WORK IN PROGRESS.Il modulo potrebbe non funzionare. ci dispiace per l'inconveniente.</span>
     <p>Inviaci un'email e noi ti risponderemo il prima possibile, (descrivi in maniera precisa il problema).</p></div>
     <div class=\"box-contact\">
-    <form id=\"contact-form\" action=\"sendmail.cgi\" method=\"post\" enctype=\"multipart/form-data\" onsubmit=\"return valida_campi()\">
+    <form id=\"contact-form\" action=\"mailto:sindycarlo\@gmail.com\" method=\"post\" enctype=\"text/plain\" onsubmit=\"return valida_campi()\">
     <span><p id=\"err_email\"></p></span>
       <div id=\"fieldset\">
 
             <div class=\"form-txt\">Il tuo nome </div>
             <label>
-              <input type=\"text\" name=\"nome\" id=\"nome\" title=\"inserisci il tuo nome qui\"/>
+              <input type=\"text\" name=\"subject\" title=\"inserisci il tuo nome qui\"/>
              </label>
 
             <div class=\"form-txt\"><span xml:lang=\"en\">Email </span></div>
             <label class=\"email\">
-              <input type=\"text\" name=\"email\" id=\"email\" title=\"inserisci il tuo indirizzo email\"/>
+              <input type=\"text\" name=\"from\"  title=\"inserisci il tuo indirizzo email\"/>
               </label>
 
             <div class=\"form-txt\">Inserire un messaggio </div>
             <label class=\"message\">
-              <textarea name=\"question\" id=\"question\" rows=\"20\" cols=\"60\"></textarea>
+              <textarea name=\"body\"  rows=\"20\" cols=\"60\"></textarea>
               </label>
             <div class=\"allinea\"></div>
           
@@ -99,11 +100,17 @@ print "
 <!--==============================footer=================================-->
 <div id=\"footer\">
 	  <div class=\"main\">
+	  <div class=\"informazioni\">
+	  <h3>Per ulteriori informazioni:</h3>
+	   	<p>Tel.: 0434368081</p>
+		<p>Mail: sindycarlo\@gmail.com</p>
+   		<p>3347421208 (Sindico Carlo)</p>
+	  </div>
           <div id=\"inline\">
          	<p>             
             <span>2Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
        	   </p>
-			<p> 
+	<p> 
     	<a href=\"http://validator.w3.org/check?uri=referer\"><img
      	src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
 
@@ -114,7 +121,7 @@ print "
         <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
         <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
         alt=\"CSS Valido!\"/></a>				
-          </p>
+        </p>
           </div>
 	  </div>
 	</div>

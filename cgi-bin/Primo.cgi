@@ -38,13 +38,13 @@ print "
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-      <div id=\"banner\"><h1><a href=\"index.html\"> <span>2FORCHETTE</span></a></h1></div>
+      <div id=\"banner\"><h1><a href=\"../index.html\"> <span>2FORCHETTE</span></a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
-          <a href=\"../cgi-bin/proponiricetta.cgi\">PROPONI UNA RICETTA</a>
-          <a href=\"../ricettagiorno.html\">RICETTA DEL GIORNO</a>
-          <a href=\"../contatti.html\">CONTATTACI</a>
+          <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
+          <a href=\"cercaricetta.cgi\">CARCA RICETTA</a>
+          <a href=\"contatti.cgi\">CONTATTACI</a>
         </div>
       </div>
       <div class=\"allinea\"></div>

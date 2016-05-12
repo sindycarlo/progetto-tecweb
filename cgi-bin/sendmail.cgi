@@ -1,11 +1,5 @@
-
-
-
-
-
 #!/usr/bin/perl -w
-
-# librerie: servono tutte?
+ 
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -14,28 +8,23 @@ use XML::LibXML;
 use File::Copy;
 use utf8;
 use URI;
+use Email::Valid;
 
 
+my $to = 'sindycarlo@gmail.com';
+my $from = '';
+my $subject = 'Test Email';
+my $message = '<h1>This is test email sent by Perl Script</h1>';
+ 
+open(MAIL, "|/usr/local/lib/sendmail -t");
+ 
+# Email Header
+print MAIL "To: $to\n";
+print MAIL "From: $from\n";
+print MAIL "Subject: $subject\n\n";
+print MAIL "Content-type: text/html\n";
+# Email Body
+print MAIL $message;
 
-
-use CGI;
-my $q = new CGI;
-
-my $sendmailpath = "/usr/lib/sendmail";
-my $myemail = "sindycarlo\@gmail.com";
-my $name = $q->param("name");
-my $email = $q->param("email");
-my $message = $q->param("question");
-
-
-
-
-
-open(MAIL, "| $sendmailpath -t");
-
-print MAIL "To: $myemail\n";
-print MAIL "Reply: $email\n";
-print MAIL "Subject:Webmail $name\n\n";
-print MAIL "$message";
-close MAIL; 
-
+close(MAIL);
+print "Email Sent Successfully\n";

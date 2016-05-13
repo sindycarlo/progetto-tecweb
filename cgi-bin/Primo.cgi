@@ -43,7 +43,7 @@ print "
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
-          <a href=\"cercaricetta.cgi\">CARCA RICETTA</a>
+          <a href=\"cercaricetta.cgi\">CERCA RICETTA</a>
           <a href=\"contatti.cgi\">CONTATTACI</a>
         </div>
       </div>

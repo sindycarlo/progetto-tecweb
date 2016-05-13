@@ -93,7 +93,7 @@ print <<EOF;
            </label>
            </div>
              <div class="td">
-            <div class="form-txt">Difficolta</div>
+            <div class="form-txt">Difficolta'</div>
             <label>
               <select  name="n_difficolta">	
                 <option value="1">1</option> 
@@ -139,7 +139,7 @@ print <<EOF;
 
         <div class="buttons">
 		<div class="button">
-			<input type="submit"/>
+			<input type="submit" value="Invia"/>
 		</div>
 	<div class="button">
 		<input type="reset"/>

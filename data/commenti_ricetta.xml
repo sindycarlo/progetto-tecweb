@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" commenti_ricetta.xsd">
+	<commento id="1"><user>Thomas </user><datacommento>2016-5-13</datacommento><testo>Salve,&#13;
+ho un dubbio da porvi, non so bene le dosi di zucchero e farina per fare il mascarpone. ho bisogno del vostro aiuto!! i miei parenti arrivano stasera!:(</testo><email>thomas@gmail.com</email></commento><commento id="2"><user>Carla</user><datacommento>2016-5-13</datacommento><testo>ciao a tutti, volevo proporvi di aggiungere piu' ricette su dolci e antipasti, quelle che ci sono sono gustose e veloci da preparare, ma ho bisogno di qualche novita' per sfiziare i miei figliuoli grazie.</testo><email>Carla@hotmail.it</email></commento></commenti>

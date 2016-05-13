@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+
+	elementFormDefault="qualified" >
+	
+	<xsd:element name="commenti" type="Tcommenti"/>
+  
+	<!-- definisco Tcommenti -->
+	<xsd:complexType name="Tcommenti">
+    <xsd:sequence maxOccurs="unbounded">
+      <xsd:element name="commento" type="Tcommento"/>
+    </xsd:sequence>
+	</xsd:complexType>
+
+	<!-- definisco Tcommento -->
+	<xsd:complexType name="Tcommento">
+		<xsd:sequence>
+			<xsd:element name="user" type="xsd:string"/>
+			<xsd:element name="datacommento" type="xsd:string"/>
+			<xsd:element name="testo" type="xsd:string"/>
+      <xsd:element name="email" type="xsd:string"/>
+		</xsd:sequence>
+ <xsd:attribute name="id" type="Tid" use="required"/>
+	</xsd:complexType>
+  
+  <!-- definisco Tid -->
+  <xsd:simpleType name="Tid">
+    <xsd:restriction base="xsd:positiveInteger">
+      <xsd:minInclusive value="1"/>
+      <xsd:maxInclusive value="999999"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+</xsd:schema>

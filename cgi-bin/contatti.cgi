@@ -13,6 +13,15 @@ use HTML::Parser;
 use HTML::Entities;
 
 
+# recupero dal file commenti.xml i dati dei commenti.
+my $file = "../data/commenti_ricetta.xml";
+
+# creazione oggetto parser
+my $parser = XML::LibXML->new();
+
+# apertura file e lettura input
+my $doc = $parser->parse_file($file);
+
 
 # stampo la pagina
 print "Content-type:text/html\n\n";
@@ -32,7 +41,7 @@ print "
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
     <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
     <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
-    <script type=\"text/javascript\" src=\"../js/check_mail.js\"></script>
+    <script type=\"text/javascript\" src=\"../js/valida_commento.js\"></script>
 </head>
 <body>
 <div><a class=\"salta-main\" href=\"#contact-form\"><span>Salta al contenuto</span></a></div>
@@ -63,33 +72,58 @@ print "
 <!--==============================content=================================-->
 <div id=\"content\">
   <div class=\"main\">
-    <h2>Modulo contatti</h2>
+  <div class=\"commenti\">
+  <h2>Commenti:</h2>
+";
+
+# estrazione dei commenti
+my @commenti = $doc->findnodes("/commenti/commento");
+
+# stampa dei commenti
+foreach my $commento (@commenti){
+	my $user = decode_entities($commento->findvalue('user'));
+	my $datac = $commento->findvalue('datacommento');
+	my $testo = decode_entities($commento->findvalue('testo'));
+        my $id = $commento->getAttribute('id');
+        my $mail =decode_entities($commento->findvalue('email'));
+	
+	print "
+				<span>Commento di : <strong>$user</strong></span>
+				<span >Scritto il : <strong>$datac</strong></span>
+				<p>$testo</p>";
+	
+}
+
+
+print"</div><h2>Modulo commento</h2>
     <div class=\"info\">
-    <span>ATTENZIONE WORK IN PROGRESS.Il modulo potrebbe non funzionare. ci dispiace per l'inconveniente.</span>
-    <p>Inviaci un'email e noi ti risponderemo il prima possibile, (descrivi in maniera precisa il problema).</p></div>
+    <span>ATTENZIONE WORK IN PROGRESS.Il modulo potrebbe non funzionare. ci dispiace per l'inconveniente.</span></div>
     <div class=\"box-contact\">
-    <form id=\"contact-form\" action=\"mailto:sindycarlo\@gmail.com\" method=\"post\" enctype=\"text/plain\" onsubmit=\"return valida_campi()\">
-    <span><p id=\"err_email\"></p></span>
+    <form id=\"contact-form\" action=\"inserisci_commento.cgi\" method=\"post\" onsubmit=\"return valida_commento()\">
+    <span><p id=\"err_commento\"></p></span>
       <div id=\"fieldset\">
 
             <div class=\"form-txt\">Il tuo nome </div>
             <label>
-              <input type=\"text\" name=\"subject\" title=\"inserisci il tuo nome qui\"/>
+              <input type=\"text\" name=\"user\" id=\"user\" title=\"inserisci il tuo nome qui\"/>
              </label>
 
-            <div class=\"form-txt\"><span xml:lang=\"en\">Email </span></div>
+		 <div class=\"form-txt\">Inserisci un commento </div>
+            <label class=\"message\">
+              <textarea name=\"commento\" id=\"form_commento\" rows=\"20\" cols=\"60\"></textarea>
+              </label>
+            
+
+
+            <div class=\"form-txt\"><span xml:lang=\"en\">Email (utilizzata da noi amministratori per ricontattarti) </span></div>
             <label class=\"email\">
-              <input type=\"text\" name=\"from\"  title=\"inserisci il tuo indirizzo email\"/>
+              <input type=\"text\" name=\"email\" id=\"email\"  title=\"inserisci il tuo indirizzo email\"/>
               </label>
 
-            <div class=\"form-txt\">Inserire un messaggio </div>
-            <label class=\"message\">
-              <textarea name=\"body\"  rows=\"20\" cols=\"60\"></textarea>
-              </label>
-            <div class=\"allinea\"></div>
+     <div class=\"allinea\"></div>
           
         
-        <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Send mail\"/></div><div class=\"button\"><input type=\"reset\"/></div></div>
+        <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Inserisci\"/></div><div class=\"button\"><input type=\"reset\"/></div></div>
         </div>
         
     </form>

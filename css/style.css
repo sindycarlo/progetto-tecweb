@@ -12,6 +12,10 @@
 #err_email {
 	color:red;
 }
+#err_commento {
+    color:red;
+    
+}
 
 
 /*--------------------------------------*/
@@ -220,7 +224,6 @@ float: left;
 
 .header-menu{
 width: 70%;
-text-align: right;
 }
 
 #nav>a{
@@ -443,6 +446,9 @@ padding-left: 4.5em;
 	padding:1.938em 0 1.250em;
 	background: #eb5e4b;
 
+}
+.informazioni {
+text-align:center;
 }
 #footer #inline p{
 	text-align: center;

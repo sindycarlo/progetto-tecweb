@@ -105,6 +105,26 @@ foreach my $recipe (@ricette)
   }
 }
 
+
+print "<h3>Commenti</h3>";
+my $file = "../data/commenti_ricetta.xml";
+my $parser = XML::LibXML->new();
+my $doc = $parser->parse_file($file);
+my @commento = $doc->findnodes("/commenti/commento");
+
+foreach my $comm (@commento)
+{
+
+    my $nomeuser = $comm->findvalue('user');
+    my $id = $comm->getAttribute('id');
+    print "
+        <li>
+          <a href=\"contatti.cgi\"><span>Autore del commento:</span> $nomeuser</a> <a href=\"delete_commento.cgi?id=$id\">ELIMINA COMMENTO</a>
+       </li>
+    ";
+}
+
+
 print "
   </div>
 </div>

@@ -66,7 +66,7 @@ print "
     <div class=\"main\">
     <h2>Lato Amministrativo</h2>
 		<p>Qui puoi vedere tutte le ricette attualmente presenti all'interno del sito. L'amministratore ha la possibilita' di rimuovere le ricette ritenute obsolete, aggiungere quelle proposte dagli utenti e regolare quali ricette saranno in evidenza nella home page.</p>
-	<h3>Elenco ricette presenti</h3><ul class=\"list\">";
+	<h3>Elenco ricette presenti</h3>";
 
 my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
@@ -82,13 +82,13 @@ foreach my $recipe (@ricette)
     my $id = $recipe->getAttribute('IDCode');
     print "
         <li>
-          <a href=\"page_template.cgi?id=$id\">$nome</a> <a href=\"delete_ricetta.cgi?id=$id\">ELIMINA</a>
+          <a href=\"page_template.cgi?id=$id\">$nome</a><a href=\"delete_ricetta.cgi?id=$id\"><input type=\"submit\" value=\"ELIMINA\"</input></a>
        </li>
     ";
   }
 }
 
-print  "</ul> <h3>Ricette proposte</h3>";
+print  "<h3>Ricette proposte</h3>";
 
 foreach my $recipe (@ricette)
 {
@@ -99,7 +99,7 @@ foreach my $recipe (@ricette)
     my $id = $recipe->getAttribute('IDCode');
     print "
         <li>
-          <a href=\"page_template.cgi?id=$id\">$nome</a> <a href=\"accept_ricetta.cgi?id=$id\">ACCETTA</a> <a href=\"delete_ricetta.cgi?id=$id\">RIFIUTA</a>
+          <a href=\"page_template.cgi?id=$id\">$nome</a> <a href=\"accept_ricetta.cgi?id=$id\"><input type=\"submit\" value=\"ACCETTA\"</input></a> <a href=\"delete_ricetta.cgi?id=$id\"><input type=\"submit\" value=\"RIFIUTA\"</input></a>
        </li>
     ";
   }
@@ -119,7 +119,7 @@ foreach my $comm (@commento)
     my $id = $comm->getAttribute('id');
     print "
         <li>
-          <a href=\"contatti.cgi\"><span>Autore del commento:</span> $nomeuser</a> <a href=\"delete_commento.cgi?id=$id\">ELIMINA COMMENTO</a>
+          <a href=\"contatti.cgi\"><span>Autore del commento: $nomeuser</a> <a href=\"delete_commento.cgi?id=$id\"><input type=\"submit\" value=\"ELIMINA COMMENTO\"</input></a>
        </li>
     ";
 }
@@ -155,4 +155,4 @@ print "
   </div>
 </body>
 </html>";
-#Last update 07/05/2016 by Luca
+#Last update 15/05/2016 by Carlo

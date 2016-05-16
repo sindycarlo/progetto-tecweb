@@ -1,8 +1,6 @@
 #!/usr/bin/perl -w
 
-#questa pagina è stata riciclata da secondipiatti.cgi, se vedi cose che non servono toglile pure
 
-# librerie: servono tutte?
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -12,7 +10,7 @@ use File::Copy;
 use utf8;
 use URI;
 
-# salto la parte delle sessioni/cookie/ecc per ora
+#MANCANO SESSIONI E COOKIES!
 
 
 # stampo la prima parte della pagina
@@ -24,8 +22,8 @@ print "
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\">
 <head>
     <title>Secondi piatti - 2Forchette</title>
-    <meta name=\"title\" content=\"2forchette - Gestione ricette\"/>
-    <meta name=\"description\" content=\"Sezione Gestione ricette del sito 2forchette\"/>
+    <meta name=\"title\" content=\"2forchette - Console admin\"/>
+    <meta name=\"description\" content=\"Sezione Console admin del sito 2forchette\"/>
     <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
@@ -40,7 +38,7 @@ print "
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-      <div id=\"banner\"><h1><a href=\"../index.html\"> <span>2FORCHETTE</span></a></h1></div>
+      <div id=\"banner\"><h1><a href=\"../index.html\">2FORCHETTE</a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
@@ -53,8 +51,8 @@ print "
             <div id='breadcrumb'>
         <p>Ti trovi in:
       <a href=\"../index.html\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
-      <a href=\"amministratore_login.cgi\">Amministratore login</a><span>&gt;</span>
-      <span xml:lang=\"en\">Console Amministratore</span>
+      <a href=\"amministratore_login.cgi\"><span xml:lang=\"en\">Admin login</span></a><span>&gt;</span>
+      <span xml:lang=\"en\">Console Admin</span>
       </p>
     </div>
     </div>
@@ -65,7 +63,7 @@ print "
 <div id=\"content\">
     <div class=\"main\">
     <h2>Lato Amministrativo</h2>
-		<p>Qui puoi vedere tutte le ricette attualmente presenti all'interno del sito. L'amministratore ha la possibilita' di rimuovere le ricette ritenute obsolete, aggiungere quelle proposte dagli utenti e regolare quali ricette saranno in evidenza nella home page.</p>
+		<p>Qui puoi vedere tutte le ricette attualmente presenti all'interno del sito. L'amministratore ha la possibilita' di rimuovere le ricette ritenute obsolete, aggiungere quelle proposte dagli utenti e regolare quali ricette saranno in evidenza nella home page. Per quanto riguarda i commenti l'amministratore ha la possibilita' di controllare ed eventualmente eliminare i commenti, della Sezione Contatti, che sono inappropriati.</p>
 	<h3>Elenco ricette presenti</h3>";
 
 my $file = "../data/4forchette.xml";
@@ -155,4 +153,4 @@ print "
   </div>
 </body>
 </html>";
-#Last update 15/05/2016 by Carlo
+#Last update 16/05/2016 by Carlo

@@ -1,6 +1,8 @@
 #!/usr/bin/perl -w
 
 
+#CGI CERCA RICETTA ANCORA PROVVISORIA!
+
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -22,7 +24,7 @@ print "
 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
 <head>
-  <title>Contattaci</title>
+  <title>Cerca ricetta</title>
   <meta name=\"title\" content=\"2forchette - Cerca ricetta\"/>
     <meta name=\"description\" content=\"Sezione Cerca ricetta del sito 2forchette\"/>
     <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
@@ -70,7 +72,7 @@ print "
      <form id=\"contact-form\" action=\"\" method=\"post\">
       <div id=\"fieldset\"> <!-- <fieldset> non è accettato da html5 -->
 
-            <div class=\"form-txt\">Cerca</div>
+            <div class=\"form-txt\">Nome ricetta</div>
             <label>
               <input type=\"text\" name=\"n_search\" id=\"n_search\"title=\"Inserisci la keyworld per il tuo piatto\"/>
              </label>

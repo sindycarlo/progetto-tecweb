@@ -1,7 +1,5 @@
 #!/usr/bin/perl -w
 
-# file che controlla l'inserimento commenti
-# carico le librerie
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);

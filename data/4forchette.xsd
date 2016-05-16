@@ -28,7 +28,7 @@
 			<xsd:element name="procedimento" type="xsd:string"/>			
 		</xsd:sequence>
 		<xsd:attribute name="accepted" type="xsd:integer"/> 
-		<xsd:attribute name="IDCode" type="xsd:integer"/>
+		<xsd:attribute name="IDCode" type="xsd:integer"  use="required"/>
 	</xsd:complexType>
 </xsd:element>
 

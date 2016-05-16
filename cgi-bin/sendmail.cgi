@@ -1,6 +1,9 @@
 #!/usr/bin/perl -w
 
 
+
+#FILE PROVVISORIO! NON UTILIZZABILE!
+
 use strict;
 use warnings;
 use CGI qw(:standard);
@@ -25,4 +28,5 @@ my %mail = (
 
 
 sendmail(%mail) || print "Error: $Mail::Sendmail::error\n";
+
 

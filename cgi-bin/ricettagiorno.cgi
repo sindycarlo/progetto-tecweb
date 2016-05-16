@@ -26,7 +26,6 @@ my $autore=$ric->findvalue('autore');
 my $descrizione=$ric->findvalue('descrizione');
 my $imgpiatto=$ric->findvalue('imgPiatto');
 my $quantepers=$ric->findvalue('quantePersone');
-#my $ingredienti=$ric->findvalue("ingredienti");
 my $procedimento=$ric->findvalue('procedimento');
 my $diff=$ric->findvalue('difficolta');
 my $cat=$ric->findvalue('categoria');
@@ -59,12 +58,12 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-      <div id=\"banner\"><h1><a href=\"../index.html\"> <span>2FORCHETTE</span></a></h1></div>
+      <div id=\"banner\"><h1><a href=\"../index.html\">2FORCHETTE</a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a  href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
-          <a class=\"active\">RICETTA DEL GIORNO</a>
+          <a class=\"active\">CERCA RICETTA</a>
           <a href=\"../contatti.html\">CONTATTACI</a>
         </div>
       </div>
@@ -147,4 +146,4 @@ foreach my $node (@nodes)
 </html>
 ";
 
-#last update by Carlo 10/05/2016
+#last update by Carlo 16/05/2016

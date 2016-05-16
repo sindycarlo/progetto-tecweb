@@ -1,6 +1,7 @@
 #!/usr/bin/perl -w
 
-# servono tutte ste librerie?
+#NON SO SE QUESTO CGI DEBBA ANCORA ESSERE UTILIZZATO!
+
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -36,4 +37,5 @@ else
 	print "Location:...\n\n";
 }
 
-# Last Update by Luca 26/04/2016
+# Last Update by Carlo 16/05/2016
+#eliminare librerie inutili

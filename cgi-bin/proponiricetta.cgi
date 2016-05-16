@@ -178,6 +178,7 @@ print <<EOF;
 </body>
 </html>
 
-<!-- Last Update by Luca & Carlo 2/05/2016 -->
-
 EOF
+#Last Update by  Carlo 16/05/2016
+#eliminare librerie inutili
+

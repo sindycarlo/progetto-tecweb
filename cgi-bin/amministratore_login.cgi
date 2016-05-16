@@ -19,7 +19,7 @@ print "
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
 <head>
   <title>Admin Login</title>
-  <meta name=\"title\" content=\"2forchette - Progetto di Tecnlogie web\"/>
+  <meta name=\"title\" content=\"2forchette - Login Area amministrativa\"/>
     <meta name=\"description\" content=\"Login Area amministrativa del sito 2forchette\"/>
     <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
@@ -36,7 +36,7 @@ print "
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-     <div id=\"banner\"><h1><a href=\"../index.html\"> <span>2FORCHETTE</span> </a></h1></div>
+     <div id=\"banner\"><h1><a href=\"../index.html\">2FORCHETTE</a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>

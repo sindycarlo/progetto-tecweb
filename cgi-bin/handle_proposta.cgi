@@ -1,13 +1,7 @@
 #!/usr/bin/perl -w
 
 
-
-
-#bisogna inserire controlli per i campi se si scrive qualcosa di sbagliato!
-#il resto sembra ok. Luca dai un occhiata!
-
-
-
+#DA VERIFICARE LA PARTE DI UPLOAD IMMAGINE!
 
 use strict;
 use CGI qw(:standard);
@@ -211,7 +205,6 @@ print "
   <div class=\"main\">
     <h1>Informazioni</h1>
          <div class=\"info\"><p>Ricetta inviata con successo! In Attesa di approvazione da parte dell'amministratore</p>
-         <!--da qualche parte precisare che gli ingredienti vanno inseriti uno a uno e poi si deve andare caporiga-->
          </div>
   </div>
   </div>
@@ -296,7 +289,7 @@ print "
 <div id=\"content\">
   <div class=\"main\">
     <h1>Informazioni</h1>
-         <div class=\"info\"><p>Formato immagine non supportato!</p>
+         <div class=\"info\"><p> >Immagine non presente o formato immagine non supportato!</p>
          </div>
   </div>
   </div>

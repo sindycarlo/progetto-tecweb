@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 
-# librerie: servono tutte?
+
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -10,8 +10,7 @@ use File::Copy;
 use utf8;
 use URI;
 
-# salto la parte delle sessioni/cookie/ecc per ora
-
+# mancano le sessioni e i cookies!
 
 # stampo la prima parte della pagina
 print "Content-Type: text/html\n\n";
@@ -33,12 +32,12 @@ print "
     <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
 </head>
 <body>
-<div><a class=\"salta-main\" href=\".blocco2\"><span>Salta al contenuto</span></a></div>
+<div><a class=\"salta-main\" href=\".lista-menu\"><span>Salta al contenuto</span></a></div>
 <!--==============================header=================================-->
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-      <div id=\"banner\"><h1><a href=\"../index.html\"><span>2FORCHETTE</span></a></h1></div>
+      <div id=\"banner\"><h1><a href=\"../index.html\">2FORCHETTE</a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
@@ -131,7 +130,8 @@ print "
 </body>
 </html>";
 
-
+#Last update by Carlo 16/05/2016
+#eliminare librerie inutili
 
 
 

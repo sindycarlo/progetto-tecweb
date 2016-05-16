@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 
-# librerie: servono tutte?
+
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -26,7 +26,6 @@ my $autore=$ric->findvalue('autore');
 my $descrizione=$ric->findvalue('descrizione');
 my $imgpiatto=$ric->findvalue('imgPiatto');
 my $quantepers=$ric->findvalue('quantePersone');
-#my $ingredienti=$ric->findvalue("ingredienti");
 my $procedimento=$ric->findvalue('procedimento');
 my $diff=$ric->findvalue('difficolta');
 my $cat=$ric->findvalue('categoria');
@@ -57,7 +56,7 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-      <div id=\"banner\"><h1><a href=\"index.html\"> <span>2FORCHETTE</span></a></h1></div>
+      <div id=\"banner\"><h1><a href=\"index.html\">2FORCHETTE</a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a  href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
@@ -145,4 +144,5 @@ foreach my $node (@nodes)
 </body>
 </html>
 ";
-#last update by Carlo 8/05/2016
+#last update by Carlo 16/05/2016
+#eliminare librerie inutili

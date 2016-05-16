@@ -1,6 +1,5 @@
 #!/usr/bin/perl -w
-#last update by carlo 28/04/2016
-# librerie: servono tutte?
+
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -10,7 +9,7 @@ use File::Copy;
 use utf8;
 use URI;
 
-# salto la parte delle sessioni/cookie/ecc per ora
+#mancano sessioni e cookies!
 
 
 # stampo la prima parte della pagina
@@ -38,7 +37,7 @@ print "
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-      <div id=\"banner\"><h1><a href=\"../index.html\"> <span>2FORCHETTE</span></a></h1></div>
+      <div id=\"banner\"><h1><a href=\"../index.html\">2FORCHETTE</a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>

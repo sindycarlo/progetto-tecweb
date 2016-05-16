@@ -1,7 +1,5 @@
 #!/usr/bin/perl -w
-#last update by luca 16/04/2016
-#tutta la parte html che stampa è da rivedere!
-# librerie: servono tutte?
+
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -11,7 +9,7 @@ use File::Copy;
 use utf8;
 use URI;
 
-# salto la parte delle sessioni/cookie/ecc per ora
+# mancano sessioni e cookies!
 
 
 # stampo la prima parte della pagina
@@ -34,12 +32,12 @@ print "
     <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
 </head>
 <body>
-<div><a class=\"salta-main\" href=\"#footer\"><span>Salta al contenuto</span></a></div>
+<div><a class=\"salta-main\" href=\".lista-menu\"><span>Salta al contenuto</span></a></div>
 <!--==============================header=================================-->
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-      <div id=\"banner\"><h1><a href=\"../index.html\"> <span>2FORCHETTE</span></a></h1></div>
+      <div id=\"banner\"><h1><a href=\"../index.html\">2FORCHETTE</a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
@@ -130,6 +128,8 @@ foreach my $recipe (@ricette)
 </body>
 </html>";
 
+#Last update by Carlo 16/05/2016
+#eliminare librerie inutili
 
 
 

@@ -73,6 +73,7 @@
 			\textsc{\Large Dati login:}\\[0.3cm]
 			\textsc{ Username:Admin}\\[0.1mm]
 			\textsc{ Password:Admin}\\[0.1mm]
+			
 		\vfill
 	\end{titlepage}
 	
@@ -94,8 +95,42 @@
 	\end{itemize}
 		\section{Utenti destinatari}
 		\begin{itemize}
-			\item
+			\item Il sito 
 		\end{itemize}
+		\section{Accessibilit\`a}
+		\subsection{Separazione tra struttura,presentazione e comportamento}
+		\begin{itemize}
+			\item Per una maggiore accessibilità al sito da parte di utenti disabili e per favorire gli algoritmi dei motori di ricerca si è deciso di separarae la struttura dalla presentazione e dal comportamento.
+			Infatti il contenuto del sito è rapprentato dai file HTML e CGI, i quali richiamano i fogli di stile CSS e si utilizzano (anche in questo caso attraverso percorsi esterni), esternamente controlli in JavaScript in particolare per la compilazione dei form. Tuttavi il contenuto rimane accessibile anche se JavaScript è disabilitato.(da verificare!!)
+			
+			Tutto il codice è stato scritto secondo le raccomandazioni W3C,con opportuna validazione di esso.
+		\end{itemize}
+			\subsection{Colori}
+			\begin{itemize}
+				\item Si è scelto uno schema di colori non particolarmente vivace (arancione opaco,bianco sporco,nero);Non sono colori di base, ma comunque la lettura dei testi risulta accessibile.Bisogna ricordare che si tratta di un sito di cucina e quindi l'utente si aspetta dei colori vivaci adatti al tipo di sito.(da rivedere!!).Inoltre i link sono sempre sottolineati, e diventano del colore standard quando vengono cliccati.
+				Di seguito sono riportate le visualizzazioni del sito attraverso alcuni disturbi visivi:
+				
+			
+			\begin{figure}[ht!]
+				\centering
+				\includegraphics[width=100mm]{test1}
+				\caption{vedi file test1.png}
+			\end{figure}
+
+				\begin{figure}[ht!]
+					\centering
+					\includegraphics[width=100mm]{test2}
+					\caption{vedi file test2.png}
+				\end{figure}
+			\end{itemize}
+			\subsection{Tag meta}
+			\begin{itemize}
+				\item Sono stati inseriti per ogni pagina i tag meta: title, description,keywords,language,author,content-type.
+				il tag title descrive la pagina corrente dal particolare al generale.Il tag description da una descrizione del contenuto del sito, il tag language indica che il sito è stato interamente scritto in italiano. Compaiono però alcune parole inglesi che sono state segnalate agli screenreader attraverso il tag "span xml:lang=en" segnalando la lingua con cui leggere correttamente i vocaboli. 
+			\end{itemize}
+			
+				
+		
 	
 	
 \end{document}

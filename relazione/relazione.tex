@@ -89,9 +89,9 @@
 	\begin{itemize}
 		\item Il progetto si propone di offrire  alla maggior parte degli utenti  un sito che ha come contenuto un insieme di ricette. 
 			
-		Il sito ha un scopo principalmente informativo, infatti riporta tutte le informazioni reltaive a ciascuna ricetta. Le ricette sono classificate in Primi piatti, Secondi piatti, Antipasti e Dessert. L'utente ha la possibilità di proporre una nuova ricetta compilando un apposito form, e un lato amministratore ha il pieno controllo nell'accettare o rifiutare le ricette proposte. Si è trovato utile inserire una sezione commenti, che permette all'utente di chiedere ulteriori informazioni e inviare feedback scrivendo direttamente nel sito, e l'amministratore ha la possibilità di rimuovere i commenti inopportuni.
+		Il sito ha un scopo principalmente informativo, infatti riporta tutte le informazioni reltaive a ciascuna ricetta. Le ricette sono classificate in Primi piatti, Secondi piatti, Antipasti e Dessert. L'utente ha la possibilit\'a di proporre una nuova ricetta compilando un apposito form, e un lato amministratore ha il pieno controllo nell'accettare o rifiutare le ricette proposte. Si \'e trovato utile inserire una sezione commenti, che permette all'utente di chiedere ulteriori informazioni e inviare feedback scrivendo direttamente nel sito, e l'amministratore ha la possibilit\'a di rimuovere i commenti inopportuni.
 		
-		Il sito è stato creato con lo scopo di essere visualizzato in internet, quindi si è data importanza alla presentazione e alla sua usabilità, rispettando lo standard W3C. Infatti si è data particolare attenzione nella separazione tra struttura presentazione e comportamento con le regole di accessibilità richieste.
+		Il sito \'e stato creato con lo scopo di essere visualizzato in internet, quindi si \'e data importanza alla presentazione e alla sua usabilit\'a, rispettando lo standard W3C. Infatti si \'e data particolare attenzione nella separazione tra struttura presentazione e comportamento con le regole di accessibilit\'a richieste.
 	\end{itemize}
 		\section{Utenti destinatari}
 		\begin{itemize}
@@ -100,14 +100,14 @@
 		\section{Accessibilit\`a}
 		\subsection{Separazione tra struttura,presentazione e comportamento}
 		\begin{itemize}
-			\item Per una maggiore accessibilità al sito da parte di utenti disabili e per favorire gli algoritmi dei motori di ricerca si è deciso di separarae la struttura dalla presentazione e dal comportamento.
-			Infatti il contenuto del sito è rapprentato dai file HTML e CGI, i quali richiamano i fogli di stile CSS e si utilizzano (anche in questo caso attraverso percorsi esterni), esternamente controlli in JavaScript in particolare per la compilazione dei form. Tuttavi il contenuto rimane accessibile anche se JavaScript è disabilitato.(da verificare!!)
+			\item Per una maggiore accessibilit\'a al sito da parte di utenti disabili e per favorire gli algoritmi dei motori di ricerca si \'e deciso di separarare la struttura dalla presentazione e dal comportamento.
+			Infatti il contenuto del sito \'e rapprentato dai file HTML e CGI, i quali richiamano i fogli di stile CSS e si utilizzano (anche in questo caso attraverso percorsi esterni), esternamente controlli in JavaScript in particolare per la compilazione dei form. Tuttavi il contenuto rimane accessibile anche se JavaScript \'e disabilitato.(da verificare!!)
 			
-			Tutto il codice è stato scritto secondo le raccomandazioni W3C,con opportuna validazione di esso.
+			Tutto il codice \'e stato scritto secondo le raccomandazioni W3C,con opportuna validazione di esso.
 		\end{itemize}
 			\subsection{Colori}
 			\begin{itemize}
-				\item Si è scelto uno schema di colori non particolarmente vivace (arancione opaco,bianco sporco,nero);Non sono colori di base, ma comunque la lettura dei testi risulta accessibile.Bisogna ricordare che si tratta di un sito di cucina e quindi l'utente si aspetta dei colori vivaci adatti al tipo di sito.(da rivedere!!).Inoltre i link sono sempre sottolineati, e diventano del colore standard quando vengono cliccati.
+				\item Si \'e scelto uno schema di colori non particolarmente vivace (arancione opaco,bianco sporco,nero);Non sono colori di base, ma comunque la lettura dei testi risulta accessibile.Bisogna ricordare che si tratta di un sito di cucina e quindi l'utente si aspetta dei colori vivaci adatti al tipo di sito.(da rivedere!!).Inoltre i link sono sempre sottolineati, e diventano del colore standard quando vengono cliccati.
 				Di seguito sono riportate le visualizzazioni del sito attraverso alcuni disturbi visivi:
 				
 			
@@ -126,33 +126,33 @@
 			\subsection{Tag meta}
 			\begin{itemize}
 				\item Sono stati inseriti per ogni pagina i tag meta: title, description,keywords,language,author,content-type.
-				il tag title descrive la pagina corrente dal particolare al generale.Il tag description da una descrizione del contenuto del sito, il tag language indica che il sito è stato interamente scritto in italiano. Compaiono però alcune parole inglesi che sono state segnalate agli screenreader attraverso il tag "span xml:lang=en" segnalando la lingua con cui leggere correttamente i vocaboli. 
+				il tag title descrive la pagina corrente dal particolare al generale.Il tag description da una descrizione del contenuto del sito, il tag language indica che il sito \'e stato interamente scritto in italiano. Compaiono per\'o alcune parole inglesi che sono state segnalate agli screenreader attraverso il tag "span xml:lang=en" segnalando la lingua con cui leggere correttamente i vocaboli. 
 			\end{itemize}
 			\subsection{Screen reader}
 			\begin{itemize}
-				\item Ogni foto ha il suo attributo alt che descrive ciò che l'immagine ritrae.
+				\item Ogni foto ha il suo attributo alt che descrive ci\'o che l'immagine ritrae.
 				Si è evitato di utilizzare immagini per visualizzare il testo, quindi il contenuto informativo rimane accessibile anche quando fallisce il caricamento delle immagini o del CSS.
 			\end{itemize}
 			\section{Usabilit\`a}
 			\begin{itemize}
 				\item Per l'usabilit\`a del sito si è fatta attenzione ad inserire le 6W del giornalismo:
 				
-				What?: Un utente appena entra nella home capisce subito che si tratta di un sito di ricette, dalla barra dei menù (Proponi ricetta, Cerca ricetta), e dal contenuto in primo piano che mette in evidenza alcune ricette proposte.
+				What?: Un utente appena entra nella home capisce subito che si tratta di un sito di ricette, dalla barra dei men\'u (Proponi ricetta, Cerca ricetta), e dal contenuto in primo piano che mette in evidenza alcune ricette proposte.
 				
-				Who?: A chi è rivolto il sito? Il sito grazie alle immagini si capisce che è dedicato a mamme e pap\`a
+				Who?: A chi \'e rivolto il sito? Il sito grazie alle immagini si capisce che \'e dedicato a mamme e pap\`a
 				che vogliono preparare una gustosa ricetta per i propri figli.
 				
-				Where?: Nonnostante il sito non abbia una propria locazione, già nella home nel footer sono elencati i nomi degli amministratori del sito.Per maggiore visibilit\`a, è stata inserita una pagina CONTATTACI dove oltre ala sezione commenti, sono specificati gli indirizzi email e numero di telefono degli amministratori. 
+				Where?: Nonnostante il sito non abbia una propria locazione, gi\'a  nel footer di ogni pagina sono presenti informazioni riguardo gli amministratori e il sito.Per maggiore visibilit\`a, \'e stata inserita una pagina CONTATTACI dove oltre ala sezione commenti, sono specificati gli indirizzi email e numero di telefono degli amministratori. 
 				
 				When?: ..........
 				
-				Why?: Perchè un utente dovrebbe rimanere nel sito o dovrebbe ritornarci? Il sito è principalmente espositivo,(gli utenti possono liberamente visualizzare le ricette), si è cercato di renderlo più interessante, aggiungendo una sezione proponi ricetta (l'utente ha la possibilità di inserire la propria ricetta), e anche una sezione commenti.
+				Why?: Perch\'e un utente dovrebbe rimanere nel sito o dovrebbe ritornarci? Il sito \'e principalmente espositivo,(gli utenti possono liberamente visualizzare le ricette), si \'e cercato di renderlo pi\'u interessante, aggiungendo una sezione proponi ricetta (l'utente ha la possibilit\'a di inserire la propria ricetta), e anche una sezione commenti.
 				
-				How?: La barra di navigazione mostra tutte le sezioni principali del sito alle quali un utente può accedere.
+				How?: La barra di navigazione mostra tutte le sezioni principali del sito alle quali un utente pu\'o accedere.
 				
-				Nella barra menù è sempre evidenziata la voce della pagina in cui ci troviamo (DA SISTEMARE),e si vede attraverso una diversa colorazione dei link in quali altre pagine si è stati. il testo è sottolineato, per evidenziare il fatto che sono link.
+				Nella barra men\'u \'e sempre evidenziata la voce della pagina in cui ci troviamo (DA SISTEMARE),e si vede attraverso una diversa colorazione dei link in quali altre pagine si \'e stati. il testo \'e sottolineato, per evidenziare il fatto che sono link.
 				
-				Breadcrumbs: Affinchè l'utente non si perda mai all'interno del sito, è stato ripirtato sotto la barra di navigazione, il percorso che si è effettuato dall'home page.
+				Breadcrumbs: Affinch\'e l'utente non si perda mai all'interno del sito, \'e stato riportato sotto la barra di navigazione, il percorso che si \'e effettuato dall'home page.
 				
 			\end{itemize}
 			\section{Gerarchia dei file}
@@ -164,6 +164,28 @@
 				➔ css: cartella contenente i file .css;
 				➔ img: cartella contenente tutte le foto del sito;
 				➔ js: cartella contenente i vari script realizzati in JavaScript.
+			\end{itemize}
+			\section{Struttura}
+			\begin{itemize}
+				\item Nella cartella public-html si trovano i file delle pagine statiche html.
+				Le pagine web del progetto sono state realizzate interamente secondo lo standard XHTML 1.0 Strict. Di seguito sono elenate le pagine statiche del sito:
+				\begin{itemize} \item index.html: \'e la pagina principale del sito, la Homepage.
+					\end{itemize}
+				
+				\'E importante fare notare che la maggior parte delle pagine sono dinamiche scritte in Perl.(scelta che \'e stata fatta all'inizio).
+				Nella cartella cgi-bin invece abbiamo le pagine dinamiche .cgi:
+				\begin{itemize} \item proponiricetta.cgi: \'e la pagina nella quale l'utente ha la possibilit\'a di inviare la propria ricetta.
+				\end{itemize}
+				\begin{itemize} \item cercaricetta.cgi: \'e la pagina nella quale l'utente ha la possibilit\'a di cercare la ricetta che gli interessa.
+				\end{itemize}
+				\begin{itemize} \item proponiricetta.cgi: \'e la pagina nella quale l'utente ha la possibilit\'a di inviare la propria ricetta.
+				\end{itemize}
+				\begin{itemize} \item proponiricetta.cgi: \'e la pagina nella quale l'utente ha la possibilit\'a di inviare la propria ricetta.
+				\end{itemize}
+				\begin{itemize} \item proponiricetta.cgi: \'e la pagina nella quale l'utente ha la possibilit\'a di inviare la propria ricetta.
+				\end{itemize}
+				
+				
 			\end{itemize}
 			
 				

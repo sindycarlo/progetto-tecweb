@@ -306,7 +306,7 @@ color: black;
 .side-bar{
 width:17.5em;
 float:left;
-margin:1.250em 1.250em 0 -1.875em;
+margin:0 1.250em 1em -1.875em;
 padding-left:1em;
 background: #F8F8FF;
 border-radius:1.125em;

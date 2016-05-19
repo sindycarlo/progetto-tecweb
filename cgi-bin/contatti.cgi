@@ -97,7 +97,7 @@ foreach my $commento (@commenti){
 
 print"</div><h2>Modulo commento</h2>
     <div class=\"info\">
-    <span>ATTENZIONE WORK IN PROGRESS.Il modulo potrebbe non funzionare. ci dispiace per l'inconveniente.</span></div>
+    <span>Sezione dedicata ai commenti. Potete lasciare un commento, e la vostra email se volete essere ricontattati.</span></div>
     <div class=\"box-contact\">
     <form id=\"contact-form\" action=\"inserisci_commento.cgi\" method=\"post\" onsubmit=\"return valida_commento()\">
     <span><p id=\"err_commento\"></p></span>
@@ -123,7 +123,7 @@ print"</div><h2>Modulo commento</h2>
      <div class=\"allinea\"></div>
           
         
-        <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Inserisci\"/></div><div class=\"button\"><input type=\"reset\"/></div></div>
+        <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Invia\"/></div><div class=\"button\"><input type=\"reset\"/></div></div>
         </div>
         
     </form>
@@ -136,7 +136,7 @@ print"</div><h2>Modulo commento</h2>
 	  <div class=\"main\">
 	  <div class=\"informazioni\">
 	  <h3>Per ulteriori informazioni:</h3>
-	   	<p>Tel.: 0434368081</p>
+	   	<p>Mail: lucalessio\@gmail.com</p>
 		<p>Mail: sindycarlo\@gmail.com</p>
    		<p>3347421208 (Sindico Carlo)</p>
 	  </div>

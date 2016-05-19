@@ -191,7 +191,7 @@ font-style:normal;}
 
 
 #banner h1 {
-	font-family: Dafunk;
+	font-family:"DJB Holly Jolly B'Golly";
 }
 
 #banner {
@@ -373,8 +373,8 @@ border-radius:1.125em;
 
 }
 
-.Td {clear:both;height: 20em;}
-.td {height:7em;}
+.Td {clear:both;height:auto;}
+.td {height:auto;width:auto;display:inline-block;padding-right:1em;}
 .Td label {
   max-width: 4.375em;
   position: relative;

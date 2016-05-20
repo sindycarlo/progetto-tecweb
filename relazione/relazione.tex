@@ -119,8 +119,7 @@
 
 				\begin{figure}[ht!]
 					\centering
-					\includegraphics[width=100mm]{test2}
-					\caption{vedi file test2.png}
+					\includegraphics[width=100mm]{test2}					\caption{vedi file test2.png}
 				\end{figure}
 			\end{itemize}
 			\subsection{Tag meta}
@@ -208,6 +207,28 @@
 				print.css: modella lo stile di stampa delle pagine del sito.(particolare attenzione si \'e data alla stampa delle pagine delle ricette).
 				\end{itemize}
 			\section{Comportamento}
+			\begin{itemize}
+				\item Nel programmare il sito si \'e cercato per quanto possibile di fornire all'utente semplicit\'a, cercando di essere il meno invasivi possibile, per dare una migliore usabilit\'a al sito oltre che una presentazione migliore.
+				
+				Si \'e fatto uso della tecnologia JavaScript e si \'e cercato di non usare framework o altre tecnologie pi\'u invasive.
+				
+				JavaScript \'e stato utilizzato per eseguire i controlli sui form, oltre ovviamente all'utilizzo di Perl, questa combinazione \'e dettata dall'esigenza di fornire una risposta pi\'u immediata all'utente. Anche senza Javascript comunque non vi \'e la possibilit\'a che siano memorizzati dati con caratteri che compromettono la validazione del sito o che siano vuoti dove il campo invece non debba esserlo.
+				Anche se JavaScript non è comunque necessario per il corretto funzionamento del sito, migliora
+				l'usabilità generale, in quanto oltre a dare una risposta più immediata, visualizza anche una breve
+				descrizione di ciò che si vuole sia inserito nel campo, quindi è presente un avviso che invita ad
+				attivarlo implementato tramite tag noscript nei form dove esso è di utilità.
+				JavaScript esegue quindi i controlli che sono più di interesse per l'utente, atti soprattutto a verificare
+				se un campo è vuoto, e l'output di queste valutazioni è visualizzato in uno spazio apposito vicino al
+				campo che ha generato l'errore.
+				Si è  deciso di non  ricorrere il meno possibile agli alert di JavaScript, in quanto essi sono finestre
+				popup, che sono odiate dagli utenti web e il cui utilizzo estensivo quindi avrebbe compromesso
+				fortemente l'usabilità e l'attrattiva del sito.
+				
+				
+				Si è scelto di attivare questi controlli in reazione all'evento onsubmit, in quanto permette un
+				fallback semplicissimo in caso JavaScript non sia supportato. Quindi tutte le funzioni ritornano il
+				valore false se i controlli non sono superati e true se invece sono stati superati tutti i controlli.	
+			\end{itemize}
 			
 			
 			

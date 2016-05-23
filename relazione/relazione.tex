@@ -227,9 +227,29 @@
 				
 				Si è scelto di attivare questi controlli in reazione all'evento onsubmit, in quanto permette un
 				fallback semplicissimo in caso JavaScript non sia supportato. Quindi tutte le funzioni ritornano il
-				valore false se i controlli non sono superati e true se invece sono stati superati tutti i controlli.	
+				valore false se i controlli non sono superati e true se invece sono stati superati tutti i controlli.
+				
+				Le funzioni sono contenute nei file:
+				\begin{itemize}
+					\item proponiricetta.js, che esegue i controlli relativi ai campi, non effettua controlli sull'immagine in quanto la gestione di tale parte \'e affidata al Perl.
+				\end{itemize}
+				\begin{itemize}
+					\item validacommento.js, che esegue controlli relativi ai campi, e scrive del testo di aiuto se sono sbagliati. Controlla che il formato mail sia valido, se inserita. Questo ultimo controllo non viene eseguito dal Perl, in quanto si tratta di un campo facoltativo e quindi un'email non corretta non genere alcun tipo di problema. 
+				\end{itemize}
+				\begin{itemize}
+					\item logincontrol.js, che esegue i controlli sui campi e verifica che non siano vuoti.
+				\end{itemize}	
 			\end{itemize}
+		
+		\section{Gestione dei dati}
+		\begin{itemize}
+			\item Il sito presenta due tipi di contenuto che posso essere modificati.
+			Tutti quanti possono scrivere commenti, e proporre ricette. Non \'e necessaria l'autenticazione per fare queste due operazioni, in quanto si \'e ritenuto che dover far registrare un utente solo per avere la possibilit\'a di inserire un commento o proporre una ricetta era una richiesta eccessiva, che impattava l'usabilit\'a e che sarebbe malvista dagli pubblico.D'altronde la ricetta che \'e proposta dall'utente non viene subito resa visibile, ma passa sotto il controllo dell'amministratore prima di essere pubblicata.
+			Per i commenti il pubblico deve fornire un nome per identificarsi.
 			
+			
+			Agli utenti autorizzati (l'amministratore del sito) \'e invece concessa la possibilit\'a di rimuovere oppure accettare le ricette proposte, e di rimuovere i commenti inappropriati.
+		\end{itemize}
 			
 			
 			

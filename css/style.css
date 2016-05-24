@@ -177,7 +177,7 @@ font-style:normal;}
 	position: relative;
 	z-index:99;
 	height:9.375em;
-	background: #eb5e4b;
+	background: #f6c1bc;
 
 }
 
@@ -236,20 +236,21 @@ padding: 0 1em;
 border-radius:1em;
 box-shadow:0 0 0.188em #c5c2a9;
 }
-#nav>a:hover{
-background: rgba(255,255,255,.9);
-color: black;
 
-}
-#nav a{
+
+#nav a {
 	background-color: #eee6d8;
 }
-.active {
-	background: rgba(255,255,255,.9);
-	color: black;
+
+#nav a:visited {
+	color:#620062;
 }
-#nav>a:visited {
-	color:#800080;
+#nav a:hover {
+	background-color: white;
+}
+
+#nav .active {
+	background-color: white;
 }
 
 /*===== content =====*/
@@ -406,6 +407,7 @@ padding-left: 4.5em;
 }
 #contact-form label {
   min-height: 3.375em;
+  min-width:7em;
   position: relative;
   margin: 0;
   overflow: hidden;
@@ -444,7 +446,7 @@ padding-left: 4.5em;
 #footer {
 	position:relative;
 	padding:1.938em 0 1.250em;
-	background: #eb5e4b;
+	background: #f6c1bc;
 
 }
 .informazioni {

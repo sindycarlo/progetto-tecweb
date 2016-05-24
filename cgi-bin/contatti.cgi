@@ -123,7 +123,7 @@ print"</div><h2>Modulo commento</h2>
      <div class=\"allinea\"></div>
           
         
-        <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Invia\"/></div><div class=\"button\"><input type=\"reset\"/></div></div>
+        <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Submit\"/></div><div class=\"button\"><input type=\"reset\" value=\"reset\"/></div></div>
         </div>
         
     </form>

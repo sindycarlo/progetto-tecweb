@@ -82,7 +82,7 @@ print <<EOF;
           
             <div class="form-txt">Breve descrizione </div>
             <label class="message">
-              <textarea rows="20" cols="60" name="n_desc" id="n_desc"placeholder="Descrivi brevemente la tua prelibatezza..."></textarea>
+              <textarea rows="20" cols="60" name="n_desc" id="n_desc"></textarea>
               </label>
 
           <div class="Td">
@@ -93,7 +93,7 @@ print <<EOF;
            </label>
            </div>
              <div class="td">
-            <div class="form-txt">Difficolta'</div>
+            <div class="form-txt">Difficolta</div>
             <label>
               <select  name="n_difficolta">	
                 <option value="1">1</option> 
@@ -108,16 +108,8 @@ print <<EOF;
               <input type="text" name="n_persone" id="n_persone"title="Inserisci il numero di persone"/>
              </label>
              </div>
-          </div>
-
-
-            <div class="form-txt">Carica un immagine </div>
-            <label>
-              <input type="file" name="immagine" title="Carica un immagine di presentazione"/>
-             </label>
-          
-             
-            <div class="form-txt">Categoria </div>
+             <div class="td">
+             <div class="form-txt">Categoria </div>
             <label>
               <select  name="n_categoria">
                 <option value="Primo">Primi</option>
@@ -126,23 +118,32 @@ print <<EOF;
                   <option value="Dessert">Dessert</option>
               </select>
             </label>
+            </div>
+          </div>
 
-            <div class="form-txt">Ingredienti </div>
+
+            <div class="form-txt">Carica un immagine </div>
             <label>
-              <textarea rows="20" cols="60" name="n_ingr" placeholder="inserisci ciascun ingrediente con il ;"></textarea>
+              <input type="file" name="immagine" title="Carica un immagine di presentazione"/>
+             </label>
+          
+
+            <div class="form-txt">Ingredienti (inserisci ciascun ingrediente con il ;)</div>
+            <label>
+              <textarea rows="20" cols="60" name="n_ingr"></textarea>
              </label>
 
             <div class="form-txt">Procedimento </div>
             <label class="message">
-              <textarea rows="20" cols="60" name="n_proc" id="n_proc" placeholder="Spiega come prepare il tuo manicaretto..."></textarea>
+              <textarea rows="20" cols="60" name="n_proc" id="n_proc"></textarea>
               </label>
 
         <div class="buttons">
 		<div class="button">
-			<input type="submit" value="Invia"/>
+			<input type="submit" value="Submit"/>
 		</div>
 	<div class="button">
-		<input type="reset"/>
+		<input type="reset" value="reset"/>
 	</div>
         </div>
         </div>

@@ -74,7 +74,7 @@ print "
               <input type=\"password\" name=\"password\" id=\"password\" title=\"inserisci qui la tua password\"/>
               </label>
 
-         <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Invia\"/></div><div class=\"button\"><input type=\"reset\" value=\"reset\"/></div></div>
+         <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Submit\"/></div><div class=\"button\"><input type=\"reset\" value=\"reset\"/></div></div>
       </div>
     </form>
     </div>

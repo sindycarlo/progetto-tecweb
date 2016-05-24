@@ -11,7 +11,7 @@ function valida_campi(){
    var tempo=document.getElementById("n_tempo").value;
    var numpersone=document.getElementById("n_persone").value;
    var procedura=document.getElementById("n_proc").value;
-         
+  var areaIngredienti = document.getElementById("n_ingr").value;     
 
 
 ///verifico che i campi non abbiano caratteri speciali:
@@ -34,8 +34,19 @@ function valida_campi(){
    				document.getElementById(errore).innerHTML = "tutti i campi sono obbligatori*";
            	return false;
    			}
-   			else {//tutti i controlli sono stati effettuati
-   					return true;
+   			else {//tutti i controlli sono stati effettuati tranne quello dei ;
+   			          var arrayIngredienti = areaIngredienti.value.split("\n");
+                  for(var i=0; i<arrayIngredienti.length; i++)
+                  {
+                    	var currentIng = arrayIngredienti[i];
+                    	var ultimoChar = currentIng.charAt(currentIng.length - 1);
+                    	if(ultimoChar != ";")
+                    	{
+                      		document.getElementById(errore).innerHTML = "campo ingredienti errato, controlla di aver aggiunto un ; al termine di ogni riga!";
+                        	return false;
+                    	}	
+                  } 
+   				      	return true;
    			}
 
 

@@ -7,13 +7,13 @@
 
 /*---------CSS PER JAVASCRIPT-----------*/
 #err_login {
-	color:red;
+	color:black;
 }
 #err_email {
-	color:red;
+	color:black;
 }
 #err_commento {
-    color:red;
+    color:black;
     
 }
 
@@ -126,6 +126,7 @@ body {
 	line-height:1.500em;
 	width:100%;
 	margin:auto;
+
 }
 
 
@@ -133,7 +134,11 @@ body {
 
 a {
 	color:black;
-	text-decoration: none;
+	text-decoration: underline;
+}
+
+a:visited {
+	color:#600060;
 }
 
 
@@ -177,7 +182,8 @@ font-style:normal;}
 	position: relative;
 	z-index:99;
 	height:9.375em;
-	background: #f6c1bc;
+	background-color: #3aa9fe;
+
 
 }
 
@@ -186,12 +192,19 @@ font-style:normal;}
 
 #content {
 	position:relative;
-	 background-color: #FFE4C4;
+	background-color: #b5defd;
+
 }
 
 
 #banner h1 {
 	font-family:"DJB Holly Jolly B'Golly";
+}
+#banner a{
+	text-decoration: none;
+}
+#banner a:visited {
+	color:black;
 }
 
 #banner {
@@ -212,7 +225,7 @@ font-style:normal;}
 	height:3em;
 }
 #breadcrumb a:visited{
-	color:#800080;
+	color:#600060;
 }
 
 
@@ -243,7 +256,10 @@ box-shadow:0 0 0.188em #c5c2a9;
 }
 
 #nav a:visited {
-	color:#620062;
+	color:black;
+}
+#nav a{
+	text-decoration: none;
 }
 #nav a:hover {
 	background-color: white;
@@ -288,7 +304,7 @@ box-shadow:0 0 0.188em #c5c2a9;
 	display: block;
 }
  .blocco1 a:visited {
-	color:#800080;
+	color:#600060;
 }
 
 
@@ -298,11 +314,13 @@ box-shadow:0 0 0.188em #c5c2a9;
 	color:#343434;
 	font-size:1.250em;
 	line-height:1.5em;}
-.lista-menu a:visited{color:#800080;}
+.lista-menu a:visited{color:#600060;}
 .lista-menu a{
 	text-decoration: underline;
 	display: block;
 }
+
+
 
 .side-bar{
 width:17.5em;
@@ -325,7 +343,7 @@ border-radius:1.125em;
 	text-decoration: underline;
 }
 
-.sottomenu a:visited{color:#800080;}
+.sottomenu a:visited{color:#600060;}
 .sottomenu div {
     float:left;
     width:33%;
@@ -446,7 +464,8 @@ padding-left: 4.5em;
 #footer {
 	position:relative;
 	padding:1.938em 0 1.250em;
-	background: #f6c1bc;
+	background-color: #3aa9fe;
+
 
 }
 .informazioni {

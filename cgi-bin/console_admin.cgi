@@ -64,7 +64,7 @@ print "
     <div class=\"main\">
     <h2>Lato Amministrativo</h2>
 		<p>Qui puoi vedere tutte le ricette attualmente presenti all'interno del sito. L'amministratore ha la possibilita' di rimuovere le ricette ritenute obsolete, aggiungere quelle proposte dagli utenti e regolare quali ricette saranno in evidenza nella home page. Per quanto riguarda i commenti l'amministratore ha la possibilita' di controllare ed eventualmente eliminare i commenti, della Sezione Contatti, che sono inappropriati.</p>
-	<h3>Elenco ricette presenti</h3>";
+	<h3>Elenco ricette presenti</h3><div class=\"list-recipes-pres\"><ul>";
 
 my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
@@ -79,14 +79,17 @@ foreach my $recipe (@ricette)
     my $nome = $recipe->findvalue('nomePiatto');
     my $id = $recipe->getAttribute('IDCode');
     print "
+    
         <li>
-          <a href=\"page_template.cgi?id=$id\">$nome</a><a href=\"delete_ricetta.cgi?id=$id\"><input type=\"submit\" value=\"ELIMINA\"</input></a>
+          <p><a href=\"delete_ricetta.cgi?id=$id\"><input type=\"submit\" value=\"ELIMINA\"></input></a></p><p><a href=\"page_template.cgi?id=$id\">$nome</a></p>
        </li>
+
     ";
   }
 }
+print"</ul></div>";
 
-print  "<h3>Ricette proposte</h3>";
+print  "<h3>Ricette proposte</h3><div class=\"list-recipes\"><ul>";
 
 foreach my $recipe (@ricette)
 {
@@ -97,14 +100,15 @@ foreach my $recipe (@ricette)
     my $id = $recipe->getAttribute('IDCode');
     print "
         <li>
-          <a href=\"page_template.cgi?id=$id\">$nome</a> <a href=\"accept_ricetta.cgi?id=$id\"><input type=\"submit\" value=\"ACCETTA\"</input></a> <a href=\"delete_ricetta.cgi?id=$id\"><input type=\"submit\" value=\"RIFIUTA\"</input></a>
+           <p><a href=\"accept_ricetta.cgi?id=$id\"><input type=\"submit\" value=\"ACCETTA\"></input></a></p><p><a href=\"delete_ricetta.cgi?id=$id\"><input type=\"submit\" value=\"RIFIUTA\"></input></a></p><p><a href=\"page_template.cgi?id=$id\">$nome</a></p>
        </li>
     ";
   }
+  else{ print"<li><p>nessuna ricetta</p></li>";}
 }
+print"</ul></div>";
 
-
-print "<h3>Commenti</h3>";
+print "<h3>Commenti</h3><div class=\"list-commenti\"><ul>";
 my $file = "../data/commenti_ricetta.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
@@ -116,14 +120,17 @@ foreach my $comm (@commento)
     my $nomeuser = $comm->findvalue('user');
     my $id = $comm->getAttribute('id');
     print "
+
         <li>
-          <a href=\"contatti.cgi\"><span>Autore del commento: $nomeuser</a> <a href=\"delete_commento.cgi?id=$id\"><input type=\"submit\" value=\"ELIMINA COMMENTO\"</input></a>
+          <p><a href=\"delete_commento.cgi?id=$id\"><input type=\"submit\" value=\"ELIMINA COMMENTO\"></input></a></p><p><a href=\"contatti.cgi\"><span>Autore del commento: $nomeuser</span></a></p>
        </li>
     ";
 }
 
 
 print "
+	</ul>
+	</div>
   </div>
 </div>
 
@@ -153,4 +160,4 @@ print "
   </div>
 </body>
 </html>";
-#Last update 16/05/2016 by Carlo
+#Last update 26/05/2016 by Carlo

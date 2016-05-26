@@ -128,9 +128,9 @@ print <<EOF;
              </label>
           
 
-            <div class="form-txt">Ingredienti (inserisci ciascun ingrediente con il ;)</div>
+            <div class="form-txt">Ingredienti (inserisci ciascun ingrediente con un ; finale per ogni riga)</div>
             <label>
-              <textarea rows="20" cols="60" name="n_ingr"></textarea>
+              <textarea rows="20" cols="60" id="n_ingr" name="n_ingr"></textarea>
              </label>
 
             <div class="form-txt">Procedimento </div>
@@ -147,7 +147,7 @@ print <<EOF;
 	</div>
         </div>
         </div>
-        <span><p id="err_login"></p><span>
+        <span><p id="err_proponi"></p><span>
     </form>
   </div>
   </div>
@@ -180,6 +180,4 @@ print <<EOF;
 </html>
 
 EOF
-#Last Update by  Carlo 16/05/2016
-#eliminare librerie inutili
-
+#Last Update by Luca 26/05/2016

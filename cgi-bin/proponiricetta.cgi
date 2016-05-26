@@ -66,11 +66,13 @@ print <<EOF;
   <div class="box-contact">
     <h1>Inviaci la tua ricetta</h1>
     <form id="contact-form" action="handle_proposta.cgi" method="post" enctype="multipart/form-data" onsubmit="return valida_campi()">
+    
+    <p id="err_proponi"></p>
       <div id="fieldset"> <!-- <fieldset> non è accettato da html5 -->
 
             <div class="form-txt">Nome piatto </div>
             <label>
-              <input type="text" name="n_piatto" id="n_piatto"title="Inserisci il nome del tuo piatto"/>
+              <input type="text" name="n_piatto" id="n_piatto" title="Inserisci il nome del tuo piatto"/>
              </label>
 
           
@@ -89,7 +91,7 @@ print <<EOF;
           <div class="td">
             <div class="form-txt">Tempo di preparazione</div>
             <label>
-              <input type="text" name="n_tempo" id="n_tempo" title="Inserisci il tempo di preparazione"/>
+              <input type="text" name="n_tempo" id="n_tempo" title=" Inserisci il tempo di preparazione"/>
            </label>
            </div>
              <div class="td">
@@ -105,7 +107,7 @@ print <<EOF;
              <div class="td">
            <div class="form-txt">Numero persone </div>
             <label>
-              <input type="text" name="n_persone" id="n_persone"title="Inserisci il numero di persone"/>
+              <input type="text" name="n_persone" id="n_persone" title="Inserisci il numero di persone"/>
              </label>
              </div>
              <div class="td">
@@ -128,9 +130,9 @@ print <<EOF;
              </label>
           
 
-            <div class="form-txt">Ingredienti (inserisci ciascun ingrediente con un ; finale per ogni riga)</div>
+            <div class="form-txt">Ingredienti (inserisci ciascun ingrediente con il ; finale per ogni riga)</div>
             <label>
-              <textarea rows="20" cols="60" id="n_ingr" name="n_ingr"></textarea>
+              <textarea rows="20" cols="60" name="n_ingr" id="n_ingr"></textarea>
              </label>
 
             <div class="form-txt">Procedimento </div>
@@ -147,7 +149,6 @@ print <<EOF;
 	</div>
         </div>
         </div>
-        <span><p id="err_proponi"></p><span>
     </form>
   </div>
   </div>
@@ -159,7 +160,7 @@ print <<EOF;
           <div id="inline">
 
          	<p>             
-            <span>2Forchette</span> -copyright 2016 CARLO&LUCA produzione riservata - P.IVA 0838456799
+            <span>2Forchette</span> -copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
        	       </p>
 	<p> 
     	<a href="http://validator.w3.org/check?uri=referer"><img
@@ -180,4 +181,6 @@ print <<EOF;
 </html>
 
 EOF
-#Last Update by Luca 26/05/2016
+#Last Update by  Carlo 16/05/2016
+#eliminare librerie inutili
+

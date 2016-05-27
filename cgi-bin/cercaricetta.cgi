@@ -1,24 +1,29 @@
 #!/usr/bin/perl -w
 
-
-#CGI CERCA RICETTA ANCORA PROVVISORIA!
-
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
 use CGI::Session;
+use CGI::Cookie;
 use XML::LibXML;
 use File::Copy;
-use utf8;
+use File::Basename; # serve per uploadare i file
+use Time::localtime; # per conoscere la data corrente
+use CGI::Pretty qw(:html3);
+use POSIX;
 use URI;
-use HTML::Parser;
-use HTML::Entities;
+use utf8;
 
+my $cgi = CGI->new(); # create new CGI object
 
+my $parametro = $cgi->param('search_parameter');
+my $file = "../data/4forchette.xml";
+my $parser = XML::LibXML->new();
+my $doc = $parser->parse_file($file);
+my @ricette = $doc->findnodes("/ricetteDB/ricetta");
 
 # stampo la pagina
 print "Content-type:text/html\n\n";
-
 
 print "
 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
@@ -64,66 +69,35 @@ print "
 <!--==============================content=================================-->
 <div id=\"content\">
   <div class=\"main\">
-    <h2>Cerca ricetta</h2>
-    <div class=\"info\">
-    <span>ATTENZIONE WORK IN PROGRESS.Il modulo potrebbe non funzionare. ci dispiace per l'inconveniente.</span>
-    <p>Il modulo puo' essere utilizzato per cercare una ricetta che vi interessa o vi piacerebbe consultare.</p></div>
-    <div class=\"box-search\">
-     <form id=\"search-form\" action=\"\" method=\"post\">
-      <div id=\"fieldset\"> 
-
-            <div class=\"search\">
-            <div class=\"form-txt\">Nome ricetta</div>
-            <label>
-              <input type=\"text\" name=\"n_search\" id=\"n_search\"title=\"Inserisci la keyworld per il tuo piatto\"/>
-             </label>
-             </div>
-
-             <div class=\"search\">
-            <div class=\"form-txt\">Difficolta'</div>
-            <label>
-              <select  name=\"n_difficolta\">	
-                <option value=\"1\">1</option> 
-                  <option value=\"2\">2</option>
-                  <option value=\"3\">3</option>
-              </select>
-            </label>
-            </div>
-      
-
-            <div class=\"search\">
-            <div class=\"form-txt\">Categoria </div>
-            <label>
-              <select  name=\"n_categoria\">
-                <option value=\"Primo\">Primi</option>
-                  <option value=\"Secondo\">Secondi</option>
-                  <option value=\"Antipasti\">Antipasti</option>
-                  <option value=\"Dessert\">Dessert</option>
-              </select>
-            </label>
-            </div>
-
-        <div class=\"search\">
-        <div class=\"buttons\">
-		<div class=\"button\">
-			<input type=\"submit\" value=\"Cerca\"/>
-		</div>
-        </div>
-        </div>
-
-
-        </div>
-    </form>
-    </div>
-      </div>
+    <h2>Risultati ricerca per \"$parametro\"</h2><ul>";
     
-  </div>
+my $empty = 0;
+
+foreach my $recipe (@ricette)
+{
+	my $nome = $recipe->findvalue("nomePiatto");
+	my $allowed = $recipe->getAttribute('accepted');
+	if ( index($nome, $parametro) != -1 and $allowed == "1") #cerco ricette che nel nome contengono il testo immesso dall'utente ma che sono anche state approvate dall'amministratore
+	{
+		my $id = $recipe->getAttribute('IDCode');
+		print "<li><p><a href=\"page_template.cgi?id=$id\">$nome</a></p></li>";
+		$empty = 1;
+	}
+}
+
+if ($empty == 0)
+{
+	print"<li>Siamo spiacenti, nessuna ricetta presente nel sito soddisfa i criteri di ricerca :(</li>";
+}
+
+print"</ul></div>
+</div>
 <!--==============================footer=================================-->
 <div id=\"footer\">
 	  <div class=\"main\">
           <div id=\"inline\">
          	<p>             
-            <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
+            <span>2Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
        	   </p>
 	<p> 
     	<a href=\"http://validator.w3.org/check?uri=referer\"><img
@@ -143,3 +117,6 @@ print "
 </body>
 </html>
 ";
+
+#Last Update by Luca 27/05/2016
+

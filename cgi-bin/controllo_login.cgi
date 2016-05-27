@@ -48,14 +48,13 @@ print "
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
 <head>
   <title>Admin Login</title>
-  <meta name=\"title\" content=\"2forchette - Progetto di Tecnologie web\"/>
+  <meta name=\"title\" content=\"2forchette - Errore\"/>
     <meta name=\"description\" content=\"Errore login del sito 2forchette\"/>
     <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
-    <!--css-->
     <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
     <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
     
@@ -71,7 +70,9 @@ print "
       <div class=\"allinea\"></div>
     <div id='breadcrumb'>
         <p>Ti trovi in:
-      <a><span>Errore</span></a>
+        <a href=\"../index.html\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
+    <a href=\"amministratore_login.cgi\">Amministratore login</a><span>&gt;</span>
+    Errore
       </p>
     </div> 
     </div>
@@ -81,9 +82,9 @@ print "
 <!--==============================content=================================-->
 <div id=\"content\">
   <div class=\"main\">
-    <h2>Login</h2>
+    <h1>Errore</h1>
     <div class=\"box-contact\">
-    <span lang=\"en\">Password</span> sbagliata o vuota, riprova di nuovo <a href=\"amministratore_login.cgi\"><span lang=\"en\">Login</span></a>
+    <p><span lang=\"en\">Password</span> sbagliata o vuota, riprova di nuovo!</p><a href=\"amministratore_login.cgi\"><span lang=\"en\">Login</span></a>
     </div>
       </div>
     
@@ -94,7 +95,7 @@ print "
           <div id=\"inline\">
 
           <p>             
-            <span>2Forchette</span> - Via Molinari 63, 33170, Milano- p. iva 02768250152
+            <span>2Forchette</span> -copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
            </p>
       <p> 
       <a href=\"http://validator.w3.org/check?uri=referer\"><img
@@ -109,7 +110,7 @@ print "
         alt=\"CSS Valido!\"/></a>       
           </p>
           </div>
-    <div class=\"allinea\"></div>
+    
     </div>
   </div>
 </body>";

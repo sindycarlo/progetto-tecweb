@@ -70,12 +70,14 @@ my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 my @ricette = $doc->findnodes("/ricetteDB/ricetta");
+my $empty=0;
 
 foreach my $recipe (@ricette)
 {
    my $allowed=$recipe->getAttribute('accepted');
   if($allowed=="1")
   {
+    $empty=1;
     my $nome = $recipe->findvalue('nomePiatto');
     my $id = $recipe->getAttribute('IDCode');
     print "
@@ -87,15 +89,20 @@ foreach my $recipe (@ricette)
     ";
   }
 }
+if($empty == 0)
+ {print "<li><p>Nessun ricetta presente</p></li>";}
 print"</ul></div>";
 
 print  "<h3>Ricette proposte</h3><div class=\"list-recipes\"><ul>";
+
+ $empty = 0;
 
 foreach my $recipe (@ricette)
 {
    my $allowed=$recipe->getAttribute('accepted');
   if($allowed=="0")
   {
+    $empty = 1;
     my $nome = $recipe->findvalue('nomePiatto');
     my $id = $recipe->getAttribute('IDCode');
     print "
@@ -104,10 +111,15 @@ foreach my $recipe (@ricette)
        </li>
     ";
   }
-  else{ print"<li><p>nessuna ricetta</p></li>";}
+  
 }
+
+if($empty == 0)
+ {print "<li><p>Nessun ricetta</p></li>";}
+
 print"</ul></div>";
 
+$empty=0;
 print "<h3>Commenti</h3><div class=\"list-commenti\"><ul>";
 my $file = "../data/commenti_ricetta.xml";
 my $parser = XML::LibXML->new();
@@ -119,6 +131,7 @@ foreach my $comm (@commento)
 
     my $nomeuser = $comm->findvalue('user');
     my $id = $comm->getAttribute('id');
+    $empty=1;
     print "
 
         <li>
@@ -126,7 +139,8 @@ foreach my $comm (@commento)
        </li>
     ";
 }
-
+if($empty == 0)
+ {print "<li><p>Nessun commento</p></li>";}
 
 print "
 	</ul>

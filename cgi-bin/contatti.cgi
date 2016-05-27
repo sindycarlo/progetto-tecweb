@@ -85,8 +85,6 @@ foreach my $commento (@commenti){
 	my $datac = $commento->findvalue('datacommento');
 	my $testo = decode_entities($commento->findvalue('testo'));
         my $id = $commento->getAttribute('id');
-        my $mail =decode_entities($commento->findvalue('email'));
-	
 	print "
 				<span>Commento di : <strong>$user</strong></span>
 				<span >Scritto il : <strong>$datac</strong></span>
@@ -97,7 +95,7 @@ foreach my $commento (@commenti){
 
 print"</div><h2>Modulo commento</h2>
     <div class=\"info\">
-    <span>Sezione dedicata ai commenti. Potete lasciare un commento, e la vostra email se volete essere ricontattati.</span></div>
+    <span>Sezione dedicata ai commenti. Potete lasciare un commento.</span></div>
     <div class=\"box-contact\">
     <form id=\"contact-form\" action=\"inserisci_commento.cgi\" method=\"post\" onsubmit=\"return valida_commento()\">
     <span><p id=\"err_commento\"></p></span>
@@ -111,13 +109,6 @@ print"</div><h2>Modulo commento</h2>
 		 <div class=\"form-txt\">Inserisci un commento </div>
             <label class=\"message\">
               <textarea name=\"commento\" id=\"form_commento\" rows=\"20\" cols=\"60\"></textarea>
-              </label>
-            
-
-
-            <div class=\"form-txt\"><span xml:lang=\"en\">Email (utilizzata da noi amministratori per ricontattarti) </span></div>
-            <label class=\"email\">
-              <input type=\"text\" name=\"email\" id=\"email\"  title=\"inserisci il tuo indirizzo email\"/>
               </label>
 
      <div class=\"allinea\"></div>

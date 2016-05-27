@@ -67,7 +67,7 @@ print <<EOF;
     <h1>Inviaci la tua ricetta</h1>
     <form id="contact-form" action="handle_proposta.cgi" method="post" enctype="multipart/form-data" onsubmit="return valida_campi()">
     
-    <p id="err_proponi"></p>
+    
       <div id="fieldset"> <!-- <fieldset> non è accettato da html5 -->
 
             <div class="form-txt">Nome piatto </div>
@@ -140,6 +140,8 @@ print <<EOF;
               <textarea rows="20" cols="60" name="n_proc" id="n_proc"></textarea>
               </label>
 
+              
+
         <div class="buttons">
 		<div class="button">
 			<input type="submit" value="Submit"/>
@@ -149,6 +151,7 @@ print <<EOF;
 	</div>
         </div>
         </div>
+        <p id="err_proponi"></p>
     </form>
   </div>
   </div>

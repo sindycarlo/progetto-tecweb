@@ -166,13 +166,5 @@
 			Portare in tavola gli spaghetti aggiungendo il prezzemolo fresco.
 			</procedimento>
 		</ricetta>
-	<ricetta IDCode="6" accepted="1"><nomePiatto>Pasta alla pasta</nomePiatto><autore>Luca</autore><descrizione>Upload di prova</descrizione><tempoPreparazione>15</tempoPreparazione><difficolta>1</difficolta><quantePersone>4</quantePersone><imgPiatto>p.jpg</imgPiatto><categoria>Primo</categoria><procedimento>Spero funzioni tutto!</procedimento><ingredienti><ingr>pasta</ingr><ingr>&#13;
-pomodoro</ingr><ingr>&#13;
-ingrediente3</ingr><ingr>&#13;
-ingrediente4</ingr><ingr>&#13;
-bla bla bla</ingr><ingr>&#13;
-aaaaaaaaaa</ingr></ingredienti></ricetta><ricetta IDCode="8" accepted="1"><nomePiatto>panino all'odio</nomePiatto><autore>gilbo baggins</autore><descrizione>very buono</descrizione><tempoPreparazione>50</tempoPreparazione><difficolta>2</difficolta><quantePersone>1</quantePersone><imgPiatto>food.jpg</imgPiatto><categoria>Antipasti</categoria><procedimento>bla bla bla random input spero che funzioni</procedimento><ingredienti><ingr>&#13;
-follia</ingr><ingr>&#13;
-tecweb</ingr><ingr>pazzia</ingr><ingr>&#13;
-cattiveria</ingr></ingredienti></ricetta></ricetteDB>
+	</ricetteDB>
 <!-- by Alessio Luca Last Update 07/05/2016 aggiunto attributo accepted-->

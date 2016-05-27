@@ -18,7 +18,6 @@ my $cgi = CGI->new();#creo nuovo oggetto cgi
 
 my $user = $cgi->param('user');
 my $comm = $cgi->param('commento');
-my $email = $cgi->param('email');
 
 	my $file = "../data/commenti_ricetta.xml";
 	
@@ -64,9 +63,6 @@ $id=0;
 	$testo->appendText($comm);
 	$commento->appendChild($testo);
 	
-	my $mail = XML::LibXML::Element->new('email');
-	$mail->appendText($email);
-	$commento->appendChild($mail);
 	
 	my $commenti = $doc->findnodes("/commenti")->get_node(1);
 	

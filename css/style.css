@@ -1,19 +1,22 @@
  #footer, #header, #nav, #content{
 	display: block;
 }
+.html{
+	background-color: #3aa9fe;
+}
 
 /*---------------------------RESET FLOAT----------------------*/
 
 
 /*---------CSS PER JAVASCRIPT-----------*/
 #err_login {
-	color:black;
+	color:#b10c00;
 }
-#err_email {
-	color:black;
+#err_proponi {
+	color:#b10c00;
 }
 #err_commento {
-    color:black;
+    color:#b10c00;
     
 }
 
@@ -134,7 +137,8 @@ body {
 
 a {
 	color:black;
-	text-decoration: underline;
+	
+	
 }
 
 a:visited {
@@ -201,6 +205,7 @@ font-style:normal;}
 	font-family:"DJB Holly Jolly B'Golly";
 }
 #banner a{
+	
 	text-decoration: none;
 }
 #banner a:visited {
@@ -320,6 +325,23 @@ box-shadow:0 0 0.188em #c5c2a9;
 	display: block;
 }
 
+.list-recipes-pres p{
+display:inline;}
+
+.link{
+text-decoration:none;
+}
+
+.list-recipes p{
+display:inline;
+}
+
+
+.list-commenti p{
+display:inline;
+}
+
+
 
 
 .side-bar{
@@ -374,6 +396,7 @@ border-radius:1.125em;
 	display:inline-block;
 	padding:0.5em 1em;
 }
+
 .buttons {
 	float:left;
 	position:relative;
@@ -385,12 +408,73 @@ border-radius:1.125em;
 .box-contact{
 	background:white;
 	width:44.750em;
-	margin:3.750em auto 3.750em;
+	margin:2.750em auto 1.750em;
 	padding:0 2.5em 3.188em;
     border-radius:1.125em;
 	box-shadow:0 0 0.188em #c5c2a9;
 
 }
+
+#search-form {
+	position: relative;
+	vertical-align: top;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+}
+.box-search {
+	background:white;
+	margin:2.750em auto 1.750em;
+	padding:0 2.5em 3.188em;
+    border-radius:1.125em;
+	box-shadow:0 0 0.188em #c5c2a9;
+}
+
+.search {
+	height:auto;width:auto;display:inline-block;padding-right:5em;
+}
+.search label {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  display: inline;
+  float: left;
+  width: 100%;
+}
+
+#serch-form #fieldset {
+  border: none;
+  padding-top: 2em;
+  width: 100%;
+  overflow: hidden;
+}
+
+#search-form input,
+#search-form textarea {
+  margin: 0;
+  display: block;
+  line-height: 1.5em;
+  color: #343434;
+  background: #e8e7de;
+  width: 94%;
+  border: 0.063em solid #d1cfbd;
+  box-shadow: none;
+  float: left;
+}
+#search-form input {
+  height: 2.4em;
+}
+#search-form textarea { 
+  height: 18.5em;
+  resize: none;
+  overflow: auto;
+}
+
+#search-form .button {
+	padding-top: 2.5em;
+	width: 6em;
+}
+
 
 .Td {clear:both;height:auto;}
 .td {height:auto;width:auto;display:inline-block;padding-right:1em;}

@@ -41,7 +41,7 @@ print "
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-     <div id=\"banner\"><h1><a href=\"index.html\"> <span>2FORCHETTE</span> </a></h1></div>
+     <div id=\"banner\"><h1><a href=\"../index.html\"> <span>2FORCHETTE</span> </a></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
@@ -68,20 +68,18 @@ print "
     <div class=\"info\">
     <span>ATTENZIONE WORK IN PROGRESS.Il modulo potrebbe non funzionare. ci dispiace per l'inconveniente.</span>
     <p>Il modulo puo' essere utilizzato per cercare una ricetta che vi interessa o vi piacerebbe consultare.</p></div>
-    <div class=\"box-contact\">
-     <form id=\"contact-form\" action=\"\" method=\"post\">
-      <div id=\"fieldset\"> <!-- <fieldset> non è accettato da html5 -->
+    <div class=\"box-search\">
+     <form id=\"search-form\" action=\"\" method=\"post\">
+      <div id=\"fieldset\"> 
 
+            <div class=\"search\">
             <div class=\"form-txt\">Nome ricetta</div>
             <label>
               <input type=\"text\" name=\"n_search\" id=\"n_search\"title=\"Inserisci la keyworld per il tuo piatto\"/>
              </label>
-             
-            <div class=\"form-txt\">Tempo di preparazione</div>
-            <label>
-              <input type=\"text\" name=\"n_tempo\" id=\"n_tempo\" title=\"Inserisci il tempo di preparazione\"/>
-           </label>
+             </div>
 
+             <div class=\"search\">
             <div class=\"form-txt\">Difficolta'</div>
             <label>
               <select  name=\"n_difficolta\">	
@@ -90,8 +88,10 @@ print "
                   <option value=\"3\">3</option>
               </select>
             </label>
-
+            </div>
       
+
+            <div class=\"search\">
             <div class=\"form-txt\">Categoria </div>
             <label>
               <select  name=\"n_categoria\">
@@ -101,15 +101,17 @@ print "
                   <option value=\"Dessert\">Dessert</option>
               </select>
             </label>
+            </div>
 
+        <div class=\"search\">
         <div class=\"buttons\">
 		<div class=\"button\">
 			<input type=\"submit\" value=\"Cerca\"/>
 		</div>
-	<div class=\"button\">
-		<input type=\"reset\"/>
-	</div>
         </div>
+        </div>
+
+
         </div>
     </form>
     </div>
@@ -121,7 +123,7 @@ print "
 	  <div class=\"main\">
           <div id=\"inline\">
          	<p>             
-            <span>2Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
+            <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
        	   </p>
 	<p> 
     	<a href=\"http://validator.w3.org/check?uri=referer\"><img

@@ -18,7 +18,6 @@
 			<xsd:element name="user" type="xsd:string"/>
 			<xsd:element name="datacommento" type="xsd:string"/>
 			<xsd:element name="testo" type="xsd:string"/>
-      <xsd:element name="email" type="xsd:string"/>
 		</xsd:sequence>
  <xsd:attribute name="id" type="Tid" use="required"/>
 	</xsd:complexType>

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
 <commenti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" commenti_ricetta.xsd">
-</commenti>
+<commento id="1"><user>Carlo &amp; Luca</user><datacommento>2016-5-28</datacommento><testo>salve a tutti,&#13;
+pubblichiamo questo commento per avvisare tutti i visitatori che il sito e' ormai completo.&#13;
+"grazie perl'attenzione"</testo></commento></commenti>

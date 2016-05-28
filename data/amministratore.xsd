@@ -5,7 +5,7 @@ elementFormDefault="qualified" >
 <xsd:element name="amministratore">
 	<xsd:complexType>
 		<xsd:sequence>
-			<xsd:element name="login" type="xsd:string"/>
+			<xsd:element name="username" type="xsd:string"/>
 			<xsd:element name="password" type="PWType"/>
 		</xsd:sequence>
 	</xsd:complexType>

@@ -10,10 +10,6 @@ use File::Copy;
 use utf8;
 use URI;
 
-#MANCANO SESSIONI E COOKIES!
-
-
-# stampo la prima parte della pagina
 print "Content-Type: text/html\n\n";
 
 
@@ -43,8 +39,11 @@ print "
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
-          <a href=\"cercaricetta.cgi\">CERCA RICETTA</a>
           <a href=\"contatti.cgi\">CONTATTACI</a>
+<form id=\"search_bar\" method=\"get\" action=\".cercaricetta.cgi\">
+						<input type=\"text\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
+						<input type=\"submit\" value=\"Cerca\">
+					</form>
         </div>
       </div>
       <div class=\"allinea\"></div>
@@ -154,7 +153,7 @@ print "
           <div id=\"inline\">
 
           <p>
-            <span>2Forchette</span> -copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
+            <span>2Forchette</span> -copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
            </p>
       <p>
       <a href=\"http://validator.w3.org/check?uri=referer\"><img

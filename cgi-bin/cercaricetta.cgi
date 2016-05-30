@@ -80,7 +80,7 @@ foreach my $recipe (@ricette)
 {
 	my $nome = $recipe->findvalue("nomePiatto");
 	my $allowed = $recipe->getAttribute('accepted');
-	if ( index($nome, $parametro) != -1 and $allowed == "1") #cerco ricette che nel nome contengono il testo immesso dall'utente ma che sono anche state approvate dall'amministratore
+	if ( index(lc $nome,lc $parametro) != -1 and $allowed == "1") #cerco ricette che nel nome contengono il testo immesso dall'utente ma che sono anche state approvate dall'amministratore
 	{
 		my $id = $recipe->getAttribute('IDCode');
 		print "<li><p><a href=\"page_template.cgi?id=$id\">$nome</a></p></li>";
@@ -121,5 +121,5 @@ print"</ul></div>
 </html>
 ";
 
-#Last Update by Luca 27/05/2016
+#Last Update by Luca 30/05/2016
 

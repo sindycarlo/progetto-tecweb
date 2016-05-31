@@ -41,8 +41,11 @@ print "
         <div id=\"nav\">
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
-          <a href=\"cercaricetta.cgi\">CERCA RICETTA</a>
           <a href=\"contatti.cgi\">CONTATTACI</a>
+          <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+				<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
+				<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\">
+	      </form>
         </div>
       </div>
       <div class=\"allinea\"></div>

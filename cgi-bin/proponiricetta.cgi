@@ -45,9 +45,11 @@ print <<EOF;
           <a class="active">PROPONI UNA RICETTA</a>
           <a href="contatti.cgi">CONTATTACI</a>
           <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
-				<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
-				<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\">
-	      </form>
+          <div>
+				  <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
+				  <input type=\"submit\" value=\"Cerca\" class=\"tfbutton\"/>
+          </div>
+	       </form>
       </div>
       <div class="allinea"></div>
     <div id='breadcrumb'>
@@ -76,7 +78,7 @@ print <<EOF;
 
             <div class="form-txt">Nome piatto </div>
             <label>
-              <input type="text" name="n_piatto" id="n_piatto"title="Inserisci il nome del tuo piatto"/>
+              <input type="text" name="n_piatto" id="n_piatto" title="Inserisci il nome del tuo piatto"/>
              </label>
 
           
@@ -111,7 +113,7 @@ print <<EOF;
              <div class="td">
            <div class="form-txt">Numero persone</div>
             <label>
-              <input type="text" name="n_persone" id="n_persone"title="Inserisci il numero di persone"/>
+              <input type="text" name="n_persone" id="n_persone" title="Inserisci il numero di persone"/>
              </label>
              </div>
              <div class="td">
@@ -153,7 +155,7 @@ print <<EOF;
 	</div>
         </div>
         </div>
-        <span><p id="err_proponi"></p><span>
+        <p id="err_proponi"></p>
     </form>
   </div>
   </div>
@@ -163,7 +165,6 @@ EOF
 
 if($auth eq "amministratoreautenticato")
 {
-	print "Content-Type: text/html\n\n";
 	#footer con admin loggato
 	print"<!--==============================footer=================================-->
 <div id=\"footer\">
@@ -194,7 +195,7 @@ if($auth eq "amministratoreautenticato")
 }
 else
 {
-	print "Content-Type: text/html\n\n";
+
     #footer senza admin loggato
     print"
 <!--==============================footer=================================-->

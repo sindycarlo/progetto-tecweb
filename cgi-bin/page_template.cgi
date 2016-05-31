@@ -28,7 +28,7 @@ my $diff=$ric->findvalue('difficolta');
 my $cat=$ric->findvalue('categoria');
 my $tempo=$ric->findvalue('tempoPreparazione');
 
-my @ingredients =$doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $id]/ingredienti/ingr");
+my @ingredients =$doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $id]/ingredienti/ingr/text()");
 
 print "Content-Type: text/html\n\n";
 
@@ -57,8 +57,13 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
         <div id=\"nav\">
           <a  href=\"menu.cgi\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
-          <a href=\"cercaricetta.cgi\">CERCA RICETTA</a>
           <a href=\"contatti.cgi\">CONTATTACI</a>
+          <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+            <div>
+            <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
+            <input type=\"submit\" value=\"Cerca\" class=\"tfbutton\"/>
+            </div>
+          </form>
         </div>
       </div>
       <div class=\"allinea\"></div>

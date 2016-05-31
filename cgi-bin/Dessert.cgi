@@ -43,8 +43,10 @@ print "
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
           <a href=\"contatti.cgi\">CONTATTACI</a>
           <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
-				<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
-				<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\">
+          <div>
+				  <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
+				  <input type=\"submit\" value=\"Cerca\" class=\"tfbutton\"/>
+          </div>
 	      </form>
         </div>
       </div>
@@ -85,6 +87,8 @@ my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Dessert']");
 
+my $isempty=0;
+
 foreach my $recipe (@ricette)
 {
     my $allowed=$recipe->getAttribute('accepted');
@@ -93,13 +97,16 @@ foreach my $recipe (@ricette)
 		my $nome = $recipe->findvalue('nomePiatto');
 	  	my $id = $recipe->getAttribute('IDCode');
 	 	my $img = $recipe->findvalue('imgPiatto');
+    $isempty=1;
   		print "
       		<li>
        			<a href=\"page_template.cgi?id=$id\">$nome</a>
-       			<a href=\"page_template.cgi?id=$id\"><div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></div></a>
+       			<div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></div>
      		</li>";
 	}
 }
+if($isempty==0){print "<li><div class=\"search-box\"><strong>Nessuna ricetta</strong></div></li>";}
+
 print "
 </ul>
   </div>

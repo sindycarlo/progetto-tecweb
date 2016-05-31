@@ -56,8 +56,10 @@ print "
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>          
           <a class=\"active\">CONTATTACI</a>
           <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
-				<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
-				<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\">
+          		<div>
+				<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
+				<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\"/>
+				</div>
 	      </form>
         </div>
       </div>
@@ -103,7 +105,7 @@ print"</div><h2>Modulo commento</h2>
     <span>Sezione dedicata ai commenti. Potete lasciare un commento.</span></div>
     <div class=\"box-contact\">
     <form id=\"contact-form\" action=\"inserisci_commento.cgi\" method=\"post\" onsubmit=\"return valida_commento()\">
-    <span><p id=\"err_commento\"></p></span>
+    <p id=\"err_commento\"></p>
       <div id=\"fieldset\">
             <div class=\"form-txt\">Il tuo nome </div>
             <label>
@@ -113,9 +115,7 @@ print"</div><h2>Modulo commento</h2>
             <label class=\"message\">
               <textarea name=\"commento\" id=\"form_commento\" rows=\"20\" cols=\"60\"></textarea>
               </label>
-     <div class=\"allinea\"></div>
-          
-        
+     <div class=\"allinea\"></div>   
         <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Submit\"/></div><div class=\"button\"><input type=\"reset\" value=\"reset\"/></div></div>
         </div>
         
@@ -165,7 +165,7 @@ else
           <div id=\"inline\">
 
           <p>
-            <span>2Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
+            <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
            </p>
       <p>
       <a href=\"http://validator.w3.org/check?uri=referer\"><img

@@ -1,6 +1,5 @@
 #!/usr/bin/perl -w
 
-
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -24,5 +23,6 @@ open(OUT,">$file") or die $!;
 print OUT $doc->toString;
 close(OUT);			
 print "Location:console_admin.cgi\n\n";
-#Last update 07/05/2016 by Luca
-#eliminare librerie inutili
+#Last update 31/05/2016 by Luca
+
+#manca da gestire l'eliminazione dell'immagine collegata alla ricetta perchè resta nel server

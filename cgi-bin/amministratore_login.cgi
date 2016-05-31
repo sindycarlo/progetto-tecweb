@@ -23,7 +23,7 @@ print "
 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\">
 <head>
-    <title>Secondi piatti - 2Forchette</title>
+    <title>Console admin - 2Forchette</title>
     <meta name=\"title\" content=\"2forchette - Console admin\"/>
     <meta name=\"description\" content=\"Sezione Console admin del sito 2forchette\"/>
     <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
@@ -46,10 +46,10 @@ print "
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
           <a href=\"contatti.cgi\">CONTATTACI</a>
-<form id=\"search_bar\" method=\"get\" action=\".cercaricetta.cgi\">
-						<input type=\"text\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
-						<input type=\"submit\" value=\"Cerca\">
-					</form>
+            <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+            <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
+            <input type=\"submit\" value=\"Cerca\" class=\"tfbutton\">
+          </form>
         </div>
       </div>
       <div class=\"allinea\"></div>
@@ -172,8 +172,11 @@ print "
         <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
         alt=\"CSS Valido!\"/></a>
           </p>
+           <p>
+          ACCESSO EFFETTUTATO COME ADMIN:
+          <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">logout</span></button></a>
+          </p>
           </div>
-    <div class=\"allinea\"></div>
     </div>
   </div>
 </body>
@@ -217,10 +220,10 @@ print "
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>          
           <a href=\"contatti.cgi\">CONTATTACI</a>
- <form id=\"search_bar\" method=\"get\" action=\"cercaricetta.cgi\">
-						<input type=\"text\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
-						<input type=\"submit\" value=\"Cerca\">
-					</form>
+             <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+            <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
+            <input type=\"submit\" value=\"Cerca\" class=\"tfbutton\">
+          </form>
         </div>
       </div>
       <div class=\"allinea\"></div>

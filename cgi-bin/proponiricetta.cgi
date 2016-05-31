@@ -47,9 +47,9 @@ print <<EOF;
           <a href="../index.html"><span xml:lang="en">HOME</span></a>
           <a class="active">PROPONI UNA RICETTA</a>
           <a href="contatti.cgi">CONTATTACI</a>
-<form id=\"search_bar\" method=\"get\" action=\"cercaricetta.cgi\">
-						<input type=\"text\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
-						<input type=\"submit\" value=\"Cerca\">
+                              <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+						<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
+						<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\">
 					</form>
       </div>
       <div class="allinea"></div>
@@ -77,7 +77,7 @@ print <<EOF;
     <form id="contact-form" action="handle_proposta.cgi" method="post" enctype="multipart/form-data" onsubmit="return valida_campi()">
     
     
-      <div id="fieldset"> <!-- <fieldset> non è accettato da html5 -->
+      <div id="fieldset">
 
             <div class="form-txt">Nome piatto </div>
             <label>
@@ -228,9 +228,9 @@ print <<EOF;
           <a href="../index.html"><span xml:lang="en">HOME</span></a>
           <a class="active">PROPONI UNA RICETTA</a>
           <a href="contatti.cgi">CONTATTACI</a>
-<form id=\"search_bar\" method=\"get\" action=\"cercaricetta.cgi\">
-						<input type=\"text\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
-						<input type=\"submit\" value=\"Cerca\">
+                              <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+						<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
+						<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\">
 					</form>
       </div>
       <div class="allinea"></div>

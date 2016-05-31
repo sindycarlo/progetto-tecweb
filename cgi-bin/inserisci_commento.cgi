@@ -13,11 +13,17 @@ use POSIX;
 use URI;
 use utf8;
 
+require ('funzioni.pl');
+
 my $cgi = CGI->new();#creo nuovo oggetto cgi
 
 
 my $user = $cgi->param('user');
 my $comm = $cgi->param('commento');
+
+$user = traduci($user);
+$comm = traduci($comm);
+
 
 	my $file = "../data/commenti_ricetta.xml";
 	

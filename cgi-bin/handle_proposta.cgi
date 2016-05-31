@@ -8,6 +8,7 @@ use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
 use CGI::Session;
 use CGI::Cookie;
+
 use XML::LibXML;
 use File::Copy;
 use File::Basename; # serve per uploadare i file
@@ -24,7 +25,7 @@ my $auth = $session->param('auth');
 
 
 #includo funzione.cgi
-require ('funzioni.cgi');
+require ('funzioni.pl');
 
 # definisco la dimensione massima del file uploadato (5Mb)
 $CGI::POST_MAX = 1024 * 5000;
@@ -45,6 +46,26 @@ my $data_difficolta = $cgi->param('n_difficolta');
 my $data_Persone = $cgi->param('n_persone');
 my $data_categoria = $cgi->param('n_categoria');
 my $data_proc = $cgi->param('n_proc');
+
+$data_piatto = traduci($data_piatto);
+$data_author = traduci($data_author);
+$data_tempo = traduci($data_tempo);
+$data_ingr = traduci($data_ingr);
+$data_Persone = traduci($data_Persone);
+$data_proc = traduci($data_proc);
+
+#sostituzione dei caratteri speciali con caratteri safe che non danno problemi:
+my $sostMinore="&lt;";
+my $sostMaggiore="&gt;";
+$data_piatto=~ s/</$sostMinore/g | s/>/$sostMaggiore/g;
+$filename=~ s/</$sostMinore/g | s/>/$sostMaggiore/g;
+$data_author=~ s/</$sostMinore/g | s/>/$sostMaggiore/g;
+$data_desc=~ s/</$sostMinore/g | s/>/$sostMaggiore/g;
+$data_tempo=~ s/</$sostMinore/g | s/>/$sostMaggiore/g;
+$data_ingr=~ s/</$sostMinore/g | s/>/$sostMaggiore/g;
+$data_Persone=~ s/</$sostMinore/g | s/>/$sostMaggiore/g;
+$data_proc=~ s/</$sostMinore/g | s/>/$sostMaggiore/g;
+
 
 
 
@@ -157,8 +178,10 @@ if (($estensione =~ /.png/i) || ($estensione =~ /.jpg/i) || ($estensione =~ /.jp
 	open(OUT,">$file") or die;
 	print OUT $doc->toString;
 	close(OUT);
-
+if($auth eq "amministratoreautenticato")
+	{
      # stampo la pagina invio ricetta avvenuto con successo
+	
 print "Content-type:text/html\n\n";
 
 print "
@@ -189,9 +212,9 @@ print "
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a class=\"active\">PROPONI UNA RICETTA</a>
           <a href=\"contatti.cgi\">CONTATTACI</a>
-<form id=\"search_bar\" method=\"get\" action=\"cercaricetta.cgi\">
-						<input type=\"text\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
-						<input type=\"submit\" value=\"Cerca\">
+                              <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+						<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
+						<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\">
 					</form>
       </div>
       <div class=\"allinea\"></div>
@@ -211,6 +234,99 @@ print "
     <h1>Informazioni</h1>
           <div class=\"box-contact\">
           <p>Ricetta inviata con successo! In Attesa di approvazione da parte dell'amministratore</p><a href=\"proponiricetta.cgi\">Torna alla pagina precedente</a>
+  		  </div>
+  </div>
+  </div>
+
+<!--==============================footer=================================-->
+<div id=\"footer\">
+	  <div class=\"main\">
+          <div id=\"inline\">
+
+         	<p>             
+            <span>2Forchette</span> -copyright 2016 CARLO&LUCA produzione riservata - P.IVA 0838456799
+       	       </p>
+	<p> 
+    	<a href=\"http://validator.w3.org/check?uri=referer\"><img
+     	src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
+
+        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
+      	<img src=\"http://jigsaw.w3.org/css-validator/images/vcss\"
+            alt=\"CSS Valido!\"/></a>
+        						
+        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
+        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
+        alt=\"CSS Valido!\"/></a>				
+          </p>
+           <p>
+          ACCESSO EFFETTUTATO COME ADMIN:
+          <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">logout</span></button></a>
+          </p>
+          </div>
+	  </div>
+	</div>
+</body>
+</html>
+
+<!-- Last Update by Luca & Carlo 2/05/2016 -->
+
+";
+}
+if($auth ne "amministratoreautenticato")
+	{
+		print "Content-type:text/html\n\n";
+
+		print "
+<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
+<head>
+    <title>Proponi una ricetta</title>
+    <meta name=\"title\" content=\"2forchette - Proponi una ricetta\"/>
+    <meta name=\"description\" content=\"Sezione proponi una ricetta del sito 2forchette\"/>
+    <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
+    <meta name=\"language\" content=\"italian it\"/>
+    <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
+    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
+    <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
+    <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
+</head>
+
+<body>
+<div><a class=\"salta-main\" href=\"#contact-form\"><span>Salta al contenuto</span></a></div>
+<!--==============================header=================================-->
+<div id=\"header\">
+  <div class=\"main\">
+    <div class=\"intestazione\">
+      <div id=\"banner\"><h1><a href=\"../index.html\">2FORCHETTE</a></h1></div>
+      <div class=\"header-menu\" id=\"nav\">
+        <!-- spostato nav dentro-->
+          <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
+          <a class=\"active\">PROPONI UNA RICETTA</a>
+          <a href=\"contatti.cgi\">CONTATTACI</a>
+                              <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+						<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
+						<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\">
+					</form>
+      </div>
+      <div class=\"allinea\"></div>
+    <div id='breadcrumb'>
+        <p>Ti trovi in: 
+		<a href=\"index.html\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
+	      Proponi una ricetta
+      </p>
+    </div> 
+    </div>
+  </div>
+</div>
+
+<!--==============================content=================================-->
+<div id=\"content\">
+  <div class=\"main\">
+    <h1>Informazioni</h1>
+          <div class=\"box-contact\">
+          <p>Ricetta inviata con successo! In Attesa di approvazione da parte dell'amministratore</p><a href=\"proponiricetta.cgi\">Torna alla pagina precedente</a>
+  </div>
   </div>
   </div>
 
@@ -243,6 +359,7 @@ print "
 <!-- Last Update by Luca & Carlo 2/05/2016 -->
 
 ";
+	}
 	
 }
 else {

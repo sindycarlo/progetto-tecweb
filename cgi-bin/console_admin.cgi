@@ -40,9 +40,9 @@ print "
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
           <a href=\"contatti.cgi\">CONTATTACI</a>
-<form id=\"search_bar\" method=\"get\" action=\".cercaricetta.cgi\">
-						<input type=\"text\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
-						<input type=\"submit\" value=\"Cerca\">
+             <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+						<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
+						<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\">
 					</form>
         </div>
       </div>
@@ -50,7 +50,6 @@ print "
             <div id='breadcrumb'>
         <p>Ti trovi in:
       <a href=\"../index.html\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
-      <a href=\"amministratore_login.cgi\"><span xml:lang=\"en\">Admin login</span></a><span>&gt;</span>
       <span xml:lang=\"en\">Console Admin</span>
       </p>
     </div>
@@ -167,8 +166,11 @@ print "
         <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
         alt=\"CSS Valido!\"/></a>
           </p>
-          </div>
-    <div class=\"allinea\"></div>
+          <p>
+          ACCESSO EFFETTUTATO COME ADMIN:
+          <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">logout</span></button></a>
+          </p>
+      </div>
     </div>
   </div>
 </body>

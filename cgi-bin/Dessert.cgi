@@ -51,9 +51,9 @@ print "
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
           <a href=\"contatti.cgi\">CONTATTACI</a>
-<form id=\"search_bar\" method=\"get\" action=\"cercaricetta.cgi\">
-						<input type=\"text\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
-						<input type=\"submit\" value=\"Cerca\">
+                                        <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+						<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
+						<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\">
 					</form>
         </div>
       </div>
@@ -176,9 +176,9 @@ print "
           <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
           <a href=\"contatti.cgi\">CONTATTACI</a>
-<form id=\"search_bar\" method=\"get\" action=\"cercaricetta.cgi\">
-						<input type=\"text\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
-						<input type=\"submit\" value=\"Cerca\">
+                                        <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+						<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
+						<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\">
 					</form>
         </div>
       </div>

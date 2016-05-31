@@ -107,7 +107,6 @@ print "
    
 if($auth eq "amministratoreautenticato")
 {
-	print "Content-Type: text/html\n\n";
 	#footer con admin loggato
 	print"<!--==============================footer=================================-->
 <div id=\"footer\">
@@ -138,7 +137,6 @@ if($auth eq "amministratoreautenticato")
 }
 else
 {
-	print "Content-Type: text/html\n\n";
     #footer senza admin loggato
     print"
 <!--==============================footer=================================-->

@@ -129,6 +129,8 @@ body {
 	line-height:1.500em;
 	width:100%;
 	margin:auto;
+	background-color:#3aa9fe;
+	background-repeat: repeat;
 
 }
 
@@ -137,6 +139,7 @@ body {
 
 a {
 	color:black;
+	font-size: 1.2em;
 	
 	
 }
@@ -175,7 +178,7 @@ font-style:normal;}
 .main {
 	margin: 0 auto;
 	position: relative;
-	width: 58.750em;}
+	width: 70.750em;}
 
 
 /* Header */
@@ -185,7 +188,6 @@ font-style:normal;}
 	padding:0;
 	position: relative;
 	z-index:99;
-	height:9.375em;
 	background-color: #3aa9fe;
 
 
@@ -215,7 +217,7 @@ font-style:normal;}
 #banner {
 	
 	
-	width:30%;
+	width:18em;
 	float:left;
 }
 
@@ -295,14 +297,16 @@ box-shadow:0 0 0.188em #c5c2a9;
 	box-shadow:0 0 0.188em #c5c2a9;
 	display:inline-block;
 	margin-bottom:1.250em;
-
+	max-width:30em;
 	}
-.box-img img{	
+
+.lista-menu .box-img img{	
 	border-radius:0.438em;
 	width:100%;
 	min-height: 100px;
 	min-width: 200px;
 	max-width: 500px;
+	max-height:140px;
 }
 .blocco1 a{
 	text-decoration: underline;
@@ -327,6 +331,9 @@ box-shadow:0 0 0.188em #c5c2a9;
 
 .list-recipes-pres p{
 display:inline;}
+.list-recipes-pres li{
+margin-bottom:2em;
+}
 
 .link{
 text-decoration:none;
@@ -335,10 +342,16 @@ text-decoration:none;
 .list-recipes p{
 display:inline;
 }
+.list-recipes li{
+margin-bottom:2em;
+}
 
 
 .list-commenti p{
 display:inline;
+}
+.list-commenti li{
+margin-bottom:2em;
 }
 
 
@@ -414,66 +427,55 @@ border-radius:1.125em;
 	box-shadow:0 0 0.188em #c5c2a9;
 
 }
-
-#search-form {
-	position: relative;
-	vertical-align: top;
-	z-index: 1;
-	margin: 0;
-	padding: 0;
+.search-box{
+background: white;
+width: auto;
+margin: 2.750em auto 1.750em;
+padding: 2.5em 2.5em 3.188em;
+border-radius: 1.125em;
+box-shadow: 0 0 0.188em #c5c2a9;
 }
-.box-search {
-	background:white;
-	margin:2.750em auto 1.750em;
-	padding:0 2.5em 3.188em;
-    border-radius:1.125em;
-	box-shadow:0 0 0.188em #c5c2a9;
+#nav #tfsearch {
+	background-color:#eee6d8;
 }
 
-.search {
-	height:auto;width:auto;display:inline-block;padding-right:5em;
-}
-.search label {
-  position: relative;
-  margin: 0;
-  overflow: hidden;
-  display: inline;
-  float: left;
-  width: 100%;
-}
+#tfsearch{
+position: relative;
+display: inline-block;
+font-size: 0.9em;
+line-height: 40px;
+margin-top:1em;
+padding: 0 1em;
+border-radius:1em;
+box-shadow:0 0 0.188em #c5c2a9;
 
-#serch-form #fieldset {
-  border: none;
-  padding-top: 2em;
-  width: 100%;
-  overflow: hidden;
 }
+.tftextinput{
+		margin: 0;
+		padding: 5px 15px;
+		font-size:14px;
+		border:1px solid #0076a3; border-right:0px;
+		width:11em;
 
-#search-form input,
-#search-form textarea {
-  margin: 0;
-  display: block;
-  line-height: 1.5em;
-  color: #343434;
-  background: #e8e7de;
-  width: 94%;
-  border: 0.063em solid #d1cfbd;
-  box-shadow: none;
-  float: left;
-}
-#search-form input {
-  height: 2.4em;
-}
-#search-form textarea { 
-  height: 18.5em;
-  resize: none;
-  overflow: auto;
-}
+	}
+	.tfbutton {
+		margin: 0;
+		padding: 5px 15px;
+		font-size:14px;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		border-radius:1em;
+		box-shadow:0 0 0.188em #c5c2a9;
+		background: #0095cd;
 
-#search-form .button {
-	padding-top: 2.5em;
-	width: 6em;
-}
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background: #007ead;
+	}
+
 
 
 .Td {clear:both;height:auto;}
@@ -539,6 +541,10 @@ padding-left: 4.5em;
 }
 
 .form-txt{padding-bottom:0.125em;padding-top: 1em;}
+#contact-form  select {
+width: 5em;
+height: 2.5em;
+}
 .button-ricetta{overflow:hidden;}
 .button a{float:left;margin-right:3.750em}
 
@@ -754,6 +760,10 @@ text-align: center;
 	height:50px;
 	margin-left: 1em;
 }
+.tftextinput{
+	float:left;
+	margin-top:0.3em;
+}
 
 #nav{
 overflow: hidden;
@@ -804,7 +814,18 @@ text-align: center;
 .lista-menu .box-img{
 	width:auto;
 	}
-
+.list-recipes-pres p{
+display:block;
+padding-bottom:0;
+}
+.list-recipes p{
+display:block;
+padding-bottom:0;
+}
+.list-commenti p{
+display:block;
+padding-bottom:0;
+}
 .info {
 
 	max-width:17em;

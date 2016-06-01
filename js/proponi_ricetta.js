@@ -1,10 +1,5 @@
-
 function valida_campi(){
-
-
-
-
-  //se settati svuoto gli span di errore
+	//se settati svuoto gli span di errore
 	if (document.getElementById("err_proponi") !== "") {
 	    document.getElementById("err_proponi").innerHTML = "";
 	}
@@ -15,43 +10,44 @@ function valida_campi(){
 	var numpersone = document.getElementById("n_persone").value;
 	var procedimento = document.getElementById("n_proc").value;
 
-//controllo se ciasscun campo è vuoto oppure ci sono degli spazi:	
+	//controllo se ciasscun campo è vuoto oppure ci sono degli spazi:	
 
 	if(!nomepiatto.replace(/^\s+/g, '').length) {
-            document.getElementById("err_proponi").innerHTML = "Il campo  nome piatto e' obbligatorio*";
+            document.getElementById("err_proponi").innerHTML = "Il campo  \"Nome piatto\" e' obbligatorio!";
 	    document.getElementById("err_proponi").focus();
-	    
 	    return false;
 	} 
+	
 	if (!nomeauthore.replace(/^\s+/g, '').length) {
-            document.getElementById("err_proponi").innerHTML = "Il campo autore e' obbligatorio*";
+            document.getElementById("err_proponi").innerHTML = "Il campo \"Autore\" e' obbligatorio!";
 	    document.getElementById("err_proponi").focus();
-	    
 	    return false;
 	}
+	
 	if (!descrizione.replace(/^\s+/g, '').length) {
-            document.getElementById("err_proponi").innerHTML = "Il campo descrizione e' obbligatorio*";
+            document.getElementById("err_proponi").innerHTML = "Il campo \"Descrizione\" e' obbligatorio!";
 	    document.getElementById("err_proponi").focus();
 	    return false;
 	}
+	
 	if (!tempoprep.replace(/^\s+/g, '').length) {
-            document.getElementById("err_proponi").innerHTML = "Il campo tempo preparazione e' obbligatorio*";
+            document.getElementById("err_proponi").innerHTML = "Il campo \"Tempo di Preparazione\" e' obbligatorio!";
 	    document.getElementById("err_proponi").focus();
 	    return false;
 	}
+	
 	if (!numpersone.replace(/^\s+/g, '').length) {
-            document.getElementById("err_proponi").innerHTML = "Il campo numero persone e' obbligatorio*";
+            document.getElementById("err_proponi").innerHTML = "Il campo \"Numero Persone\" e' obbligatorio!";
 	    document.getElementById("err_proponi").focus();
 	    return false;
 	}
+	
 	if (!procedimento.replace(/^\s+/g, '').length) {
-            document.getElementById("err_proponi").innerHTML = "Il campo procedimento e' obbligatorio*";
+            document.getElementById("err_proponi").innerHTML = "Il campo \"Procedimento\" e' obbligatorio!";
 	    document.getElementById("err_proponi").focus();
 	    return false;
 	}
-
- 	 	 
- 	 
+	
 	var areaIngredienti = document.getElementById("n_ingr").value;
 	var arrayIngredienti = areaIngredienti.split("\n");
 	var arrayLength = arrayIngredienti.length;
@@ -63,21 +59,13 @@ function valida_campi(){
 		var ultimoChar = currentIng.charAt(rigaLength - 1);
 		if(ultimoChar != ";")
 		{	
-			document.getElementById("err_proponi").innerHTML = "campo ingredienti errato, controlla di aver aggiunto un ; al termine di ogni riga!";
+			document.getElementById("err_proponi").innerHTML = "Il campo \"Ingredienti\" è errato! Controlla di aver aggiunto un ; al termine di ogni riga!";
 			document.getElementById("err_proponi").focus();
 			return false;
 		}	
 	} 
- 	 
- 	 
-
-	 { 
-            return true;
-	}
+ 	
+        return true;
 }
- 
-
-
-
-   
-
+//Last update by Luca 01/06/2016
+//Solo correzioni minori (pulizia del codice)

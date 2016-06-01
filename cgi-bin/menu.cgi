@@ -152,6 +152,7 @@ if(scalar(@ricette)>=3) #mostro ricette casuali solo se ne ho abbastanza
 		  <a href=\"Dessert.cgi\">Continua a leggere i dessert</a></div>
 	  </div>
 	  <div class=\"allinea\"></div>
+
 	</div>
 ";
 
@@ -161,25 +162,29 @@ if(scalar(@ricette)>=3) #mostro ricette casuali solo se ne ho abbastanza
 	#footer con admin loggato
 	print"<!--==============================footer=================================-->
 <div id=\"footer\">
+   <a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
     <div class=\"main\">
           <div id=\"inline\">
           <p>
             <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
-           </p>
-      <p>
-      <a href=\"http://validator.w3.org/check?uri=referer\"><img
-      src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
-        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\"
+         </p>
+         <p>
+         <a href=\"http://validator.w3.org/check?uri=referer\"><img
+      		src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
+         <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
+       	 <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\"
             alt=\"CSS Valido!\"/></a>
-        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
-        alt=\"CSS Valido!\"/></a>
-          </p>
-             <p>
+         <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
+         <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
+        	alt=\"CSS Valido!\"/></a>
+         </p>
+         <p>
+          <a href=\"amministratore_login.cgi\">Admin</a>
+         </p>
+         <p>
           ACCESSO EFFETTUTATO COME ADMIN:
           <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">logout</span></button></a>
-          </p>
+         </p>
           </div>
     </div>
   </div>
@@ -192,9 +197,9 @@ else
     print"
 <!--==============================footer=================================-->
 <div id=\"footer\">
+   <a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
     <div class=\"main\">
           <div id=\"inline\">
-
           <p>
             <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
            </p>
@@ -209,6 +214,9 @@ else
         <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
         <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
         alt=\"CSS Valido!\"/></a>
+          </p>
+           <p>
+          <a href=\"amministratore_login.cgi\">Admin</a>
           </p>
           </div>
     </div>

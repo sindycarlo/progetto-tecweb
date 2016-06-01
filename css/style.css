@@ -21,6 +21,18 @@
 }
 
 
+/*---------CSS PER  UP-----------*/
+#up {
+text-align: center;
+padding-bottom: 0.5em;
+padding-top: 0.5em;
+border-bottom: 2px solid;
+border-bottom-color: white;
+display: inline-block;
+width: 100%;
+text-decoration: none;
+}
+
 /*--------------------------------------*/
 
 a, body, div, form, 
@@ -556,7 +568,6 @@ height: 2.5em;
 
 #footer {
 	position:relative;
-	padding:1.938em 0 1.250em;
 	background-color: #3aa9fe;
 
 

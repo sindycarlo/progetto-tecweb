@@ -99,7 +99,7 @@ foreach my $recipe (@ricette)
     $isempty=1;
   		print "
       		<li>
-       			<a href=\"page_template.cgi?id=$id\">$nome</a>
+       			<a class=\"title\" href=\"page_template.cgi?id=$id\">$nome</a>
        			<div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></div>
      		</li>";
 	}

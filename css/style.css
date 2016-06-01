@@ -304,10 +304,10 @@ box-shadow:0 0 0.188em #c5c2a9;
 .lista-menu .box-img img{	
 	border-radius:0.438em;
 	width:100%;
-	min-height: 100px;
+	min-height:200px;
 	min-width: 200px;
 	max-width: 500px;
-	max-height:140px;
+	max-height:500px;
 }
 .info {
 	width:auto;
@@ -561,7 +561,9 @@ height: 2.5em;
 
 
 }
-
+.informazioni {
+text-align:center;
+}
 #footer #inline p{
 	text-align: center;
 	padding-left: 0;
@@ -592,6 +594,7 @@ height:31px;
 	.header-menu {
 		text-align: center;
 		width:100%;
+		margin-left: 0;
 	}
 	#banner {
 	width:100%;
@@ -625,7 +628,8 @@ height:31px;
 	}
 
 	#breadcrumb{
-	height:2em;
+	height:auto;
+	width:auto;
 	padding-left: 0.8em;
 }
 /*---------------------------------------*/

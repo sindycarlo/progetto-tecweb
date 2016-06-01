@@ -17,12 +17,13 @@ my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 my $id = $cgi->param('id');
 my $ric = $doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $id]")->get_node(1);
+my $imgpath=$ric->findvalue('imgPiatto');
+$imgpath = "../images"+$imgpath; #non so se serve sta cosa ma penso di si cosi sa dove deve lavorare
 my $parent = $ric->parentNode;
 $parent->removeChild($ric);
+unlink $imgpath;
 open(OUT,">$file") or die $!;
 print OUT $doc->toString;
 close(OUT);			
 print "Location:console_admin.cgi\n\n";
-#Last update 31/05/2016 by Luca
-
-#manca da gestire l'eliminazione dell'immagine collegata alla ricetta perchè resta nel server
+#Last update by Luca 01/06/2016

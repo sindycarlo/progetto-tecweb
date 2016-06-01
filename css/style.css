@@ -71,7 +71,9 @@ p {
 	font-size: 100%;
 }
 
-
+.title {
+	height:3em;
+}
 
 /* Contenitori
 ----------------------------------------------------------------------------------------------------*/
@@ -318,8 +320,8 @@ box-shadow:0 0 0.188em #c5c2a9;
 	width:100%;
 	min-height:200px;
 	min-width: 200px;
-	max-width: 500px;
-	max-height:500px;
+	max-width: 300px;
+	max-height:300px;
 }
 .info {
 	width:auto;
@@ -436,7 +438,7 @@ border-radius:1.125em;
 .box-contact{
 	background:white;
 	width:44.750em;
-	margin:2.750em auto 1.750em;
+	margin:2.750em 0 1.750em;
 	padding:0 2.5em 3.188em;
     border-radius:1.125em;
 	box-shadow:0 0 0.188em #c5c2a9;
@@ -445,7 +447,7 @@ border-radius:1.125em;
 .search-box{
 background: white;
 width: auto;
-margin: 2.750em auto 1.750em;
+margin: 2.750em 0 1.750em;
 padding: 2.5em 2.5em 3.188em;
 border-radius: 1.125em;
 box-shadow: 0 0 0.188em #c5c2a9;

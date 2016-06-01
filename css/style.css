@@ -292,7 +292,7 @@ box-shadow:0 0 0.188em #c5c2a9;
 /*===== content =====*/
 
 #content{
-	padding:0 0 2.750em;
+	padding:0 0 3.750em;
 
 }
 
@@ -571,6 +571,7 @@ height: 2.5em;
 	background-color: #3aa9fe;
 
 
+
 }
 .informazioni {
 text-align:center;
@@ -623,9 +624,7 @@ height:31px;
 	width: auto;
 	height:auto;
 	}
-	#content {
-    padding: 0 0 0.750em;
-	}
+
 
 
 	.intestazione{padding:1.313em 0 0;height:auto;}
@@ -646,6 +645,9 @@ height:31px;
 /*---------------------------------------*/
 
 /*--------------CONTENT--------------*/
+	#content {
+    padding: 0 0 3.750em;
+	}
 
 .lista-menu li{
 

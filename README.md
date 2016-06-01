@@ -14,6 +14,7 @@ REVISIONE CODICE
   * funzioni (capire se serve)
   * inserisci_commento (interamente)
   * logout (credo vada bene così)
+  * gestire caratteri speciali. (ho notato che nella pagina commenti funziona. invece nelle altre no)(controllare xml)
 
 da ora in poi teniamo in questo file una lista delle cose che rimangono da fare
 tipo relazione... controllare che tutti i link funzionino...

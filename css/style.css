@@ -152,7 +152,6 @@ a:visited {
 h1,h2,h3{
 	font-family: 'PT Serif Caption', serif;
 	font-weight:normal;
-	color:#343434;
 	font-size:2.188em;
 	line-height:2.375em;	
 	text-shadow:0 0.063em 0.125em #c5c2a9;
@@ -205,19 +204,19 @@ font-style:normal;}
 
 #banner h1 {
 	font-family:"DJB Holly Jolly B'Golly";
+	font-size:2.7em;
 }
 #banner a{
 	
 	text-decoration: none;
+	font-size:1em;
 }
 #banner a:visited {
 	color:black;
 }
 
 #banner {
-	
-	
-	width:18em;
+
 	float:left;
 }
 
@@ -240,6 +239,8 @@ font-style:normal;}
 position: relative;
 color: #FFCC33;
 float: left;
+margin-top:0.9em;
+margin-left:0.5em;
 }
 
 .header-menu{
@@ -308,6 +309,9 @@ box-shadow:0 0 0.188em #c5c2a9;
 	max-width: 500px;
 	max-height:140px;
 }
+.info {
+	width:auto;
+}
 .blocco1 a{
 	text-decoration: underline;
 	display: block;
@@ -360,7 +364,6 @@ margin-bottom:2em;
 .side-bar{
 width:17.5em;
 float:left;
-margin:0 1.250em 1em -1.875em;
 padding-left:1em;
 background: #F8F8FF;
 border-radius:1.125em;
@@ -558,9 +561,7 @@ height: 2.5em;
 
 
 }
-.informazioni {
-text-align:center;
-}
+
 #footer #inline p{
 	text-align: center;
 	padding-left: 0;
@@ -576,7 +577,7 @@ height:31px;
 
 /*-----------media-query------------*/
 
-@media (max-width: 890px)  {
+@media (max-width: 990px)  {
 
 /*---------------HEADER-------------*/
 	#header {	
@@ -756,9 +757,7 @@ text-align: center;
 	height:auto;
 }
 #banner {
-	width:250px;
-	height:50px;
-	margin-left: 1em;
+	width:100%;
 }
 .tftextinput{
 	float:left;
@@ -777,6 +776,7 @@ border-bottom: solid 1px rgba(255,255,255,.1);
 .header-menu{
 width: 100%;
 text-align: center;
+margin:0;
 }
 
 #breadcrumb {

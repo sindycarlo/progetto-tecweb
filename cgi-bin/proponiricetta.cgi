@@ -168,6 +168,7 @@ if($auth eq "amministratoreautenticato")
 	#footer con admin loggato
 	print"<!--==============================footer=================================-->
 <div id=\"footer\">
+<a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
     <div class=\"main\">
           <div id=\"inline\">
           <p>
@@ -200,6 +201,7 @@ else
     print"
 <!--==============================footer=================================-->
 <div id=\"footer\">
+<a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
     <div class=\"main\">
           <div id=\"inline\">
 

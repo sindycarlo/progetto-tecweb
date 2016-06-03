@@ -89,8 +89,8 @@ foreach my $commento (@commenti){
 	my $user = decode_entities($commento->findvalue('user'));
 	my $datac = $commento->findvalue('datacommento');
 	my $testo = decode_entities($commento->findvalue('testo'));
-        my $id = $commento->getAttribute('id');
-        my $mail =decode_entities($commento->findvalue('email'));
+    my $id = $commento->getAttribute('id');
+
 	
 	print "
 				<span>Commento di : <strong>$user</strong></span>
@@ -130,6 +130,7 @@ print"</div><h2>Modulo commento</h2>
 	#footer con admin loggato
 	print"<!--==============================footer=================================-->
 <div id=\"footer\">
+<a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
     <div class=\"main\">
           <div id=\"inline\">
           <p>
@@ -161,6 +162,7 @@ else
     print"
 <!--==============================footer=================================-->
 <div id=\"footer\">
+<a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
     <div class=\"main\">
           <div id=\"inline\">
 

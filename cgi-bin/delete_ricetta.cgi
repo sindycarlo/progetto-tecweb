@@ -18,7 +18,7 @@ my $doc = $parser->parse_file($file);
 my $id = $cgi->param('id');
 my $ric = $doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $id]")->get_node(1);
 my $imgpath=$ric->findvalue('imgPiatto');
-$imgpath = "../images"+$imgpath; #non so se serve sta cosa ma penso di si cosi sa dove deve lavorare
+$imgpath = "../images/"+$imgpath; #non so se serve sta cosa ma penso di si cosi sa dove deve lavorare
 my $parent = $ric->parentNode;
 $parent->removeChild($ric);
 unlink $imgpath;

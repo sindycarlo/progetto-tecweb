@@ -6,11 +6,19 @@ use CGI::Carp qw(fatalsToBrowser);
 use CGI::Session;
 use XML::LibXML;
 use File::Copy;
+use HTML::Entities;
 use utf8;
 use URI;
 
+require ('funzioni.pl');
+
 my $cgi = new CGI;
 my $id = $cgi->param('id');
+
+# controllo se la sessione esiste gia
+my $session = CGI::Session->load() or die $!;
+
+my $auth = $session->param('auth');
 
 my $file ="../data/4forchette.xml";
 my $parser = XML::LibXML->new();
@@ -28,7 +36,16 @@ my $diff=$ric->findvalue('difficolta');
 my $cat=$ric->findvalue('categoria');
 my $tempo=$ric->findvalue('tempoPreparazione');
 
+decode_entities($titolo);
+decode_entities($autore);
+decode_entities($descrizione);
+decode_entities($quantepers);
+decode_entities($procedimento);
+decode_entities($tempo);
+
+
 my @ingredients =$doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $id]/ingredienti/ingr/text()");
+
 
 print "Content-Type: text/html\n\n";
 
@@ -111,10 +128,48 @@ foreach my $singleing (@ingredients)
     </div>
     <div class=\"allinea\"></div>
   </div>
-</div>
+</div>";
 
-<!--==============================footer=================================-->
+
+if($auth eq "amministratoreautenticato")
+{
+	#footer con admin loggato
+print "<!--==============================footer=================================-->
 <div id=\"footer\">
+<a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
+	  <div class=\"main\">
+          <div id=\"inline\">
+         	<p>             
+            <span>2Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
+       	   </p>
+			<p> 
+    	<a href=\"http://validator.w3.org/check?uri=referer\"><img
+     	src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
+
+        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
+      	<img src=\"http://jigsaw.w3.org/css-validator/images/vcss\"
+            alt=\"CSS Valido!\"/></a>
+        						
+        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
+        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
+        alt=\"CSS Valido!\"/></a>				
+          </p>
+          <p>
+          ACCESSO EFFETTUTATO COME ADMIN:
+          <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">logout</span></button></a>
+          </p>
+          </div>
+	  </div>
+	</div>
+</body>
+</html>
+";
+}
+else {
+	#footer senza admin loggato
+	print "<!--==============================footer=================================-->
+<div id=\"footer\">
+<a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
 	  <div class=\"main\">
           <div id=\"inline\">
          	<p>             
@@ -138,5 +193,6 @@ foreach my $singleing (@ingredients)
 </body>
 </html>
 ";
-#last update by Luca 31/05/2016
-#manca da mettere a posto il footer
+}
+#last update by Carlo 1/06/2016
+#bug fix risolti

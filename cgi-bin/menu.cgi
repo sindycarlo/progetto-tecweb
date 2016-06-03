@@ -5,6 +5,7 @@ use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
 use CGI::Session;
 use XML::LibXML;
+use HTML::Entities;
 use File::Copy;
 use utf8;
 use URI;
@@ -93,6 +94,7 @@ if(scalar(@ricette)>=3) #mostro ricette casuali solo se ne ho abbastanza
 	my $rand1 = $allid[rand @allid];
 	my $ric1 = $doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $rand1]")->get_node(1);
 	my $titolo1=$ric1->findvalue('nomePiatto');
+	decode_entities($titolo1);
 	my $img1=$ric1->findvalue('imgPiatto');
 	my $rand2 = $allid[rand @allid];
 	while($rand2 == $rand1) #per evitare doppioni
@@ -102,6 +104,7 @@ if(scalar(@ricette)>=3) #mostro ricette casuali solo se ne ho abbastanza
 	my $ric2 = $doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $rand2]")->get_node(1);
 	my $titolo2=$ric2->findvalue('nomePiatto');
 	my $img2=$ric2->findvalue('imgPiatto');
+	decode_entities($titolo2);
 	my $rand3 = $allid[rand @allid];
 	while($rand3 == $rand1 or $rand3 == $rand2) #per evitare doppioni
 	{
@@ -109,20 +112,21 @@ if(scalar(@ricette)>=3) #mostro ricette casuali solo se ne ho abbastanza
 	}
 	my $ric3 = $doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $rand3]")->get_node(1);
 	my $titolo3=$ric3->findvalue('nomePiatto');
+	decode_entities($titolo3);
 	my $img3=$ric3->findvalue('imgPiatto');
 
 	print"
 		<ul class=\"lista-menu\">			
 		<li>
-			<a href=\"page_template.cgi?id=$rand1\">$titolo1</a>
+			<a class=\"title\" href=\"page_template.cgi?id=$rand1\">$titolo1</a>
 			<div class=\"box-img\"><img src=\"../images/$img1\" alt=\"immagine che descrive $titolo1\"/></div>
 		</li>
 		<li>
-			<a href=\"page_template.cgi?id=$rand2\">$titolo2</a>
+			<a class=\"title\" href=\"page_template.cgi?id=$rand2\">$titolo2</a>
 			<div class=\"box-img\"><img src=\"../images/$img2\" alt=\"immagine che descrive $titolo2\"/></div>
 		</li>
 		<li>
-			<a href=\"page_template.cgi?id=$rand3\">$titolo3</a>
+			<a class=\"title\" href=\"page_template.cgi?id=$rand3\">$titolo3</a>
 			<div class=\"box-img\"><img src=\"../images/$img3\" alt=\"immagine che descrive $titolo3\"/></div>
 		</li>
 		</ul>

@@ -5,6 +5,7 @@ use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
 use CGI::Session;
 use XML::LibXML;
+use HTML::Entities;
 use File::Copy;
 use utf8;
 use URI;
@@ -95,6 +96,7 @@ foreach my $recipe (@ricette)
 	if($allowed=="1")
   	{
 		my $nome = $recipe->findvalue('nomePiatto');
+		decode_entities($nome);
 	  	my $id = $recipe->getAttribute('IDCode');
 	 	my $img = $recipe->findvalue('imgPiatto');
     $isempty=1;
@@ -118,6 +120,7 @@ print "
 	#footer con admin loggato
 	print"<!--==============================footer=================================-->
 <div id=\"footer\">
+<a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
     <div class=\"main\">
           <div id=\"inline\">
           <p>
@@ -149,6 +152,7 @@ else
     print"
 <!--==============================footer=================================-->
 <div id=\"footer\">
+<a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
     <div class=\"main\">
           <div id=\"inline\">
 

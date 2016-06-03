@@ -4,15 +4,20 @@ use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
 use CGI::Session;
+use CGI::Cookie;
 use XML::LibXML;
+use HTML::Entities;
 use File::Copy;
-use utf8;
+use File::Basename; # serve per uploadare i file
+use Time::localtime; # per conoscere la data corrente
+use CGI::Pretty qw(:html3);
+use POSIX;
 use URI;
-
+use utf8;
+# controllo se la sessione esiste gia
 my $session = CGI::Session->load() or die $!;
 
 my $auth = $session->param('auth');
-
 my $cgi = CGI->new(); # create new CGI object
 
 my $parametro = $cgi->param('search_parameter');
@@ -21,6 +26,9 @@ my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 my @ricette = $doc->findnodes("/ricetteDB/ricetta");
 
+
+
+
 # stampo la pagina
 print "Content-type:text/html\n\n";
 
@@ -28,10 +36,10 @@ print "
 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
 <head>
-  <title>Cerca ricetta - 2Forchette </title>
-  <meta name=\"title\" content=\"2Forchette - Cerca ricetta\"/>
+  <title>Cerca ricetta</title>
+  <meta name=\"title\" content=\"2forchette - Cerca ricetta\"/>
     <meta name=\"description\" content=\"Sezione Cerca ricetta del sito 2forchette\"/>
-    <meta name=\"keywords\" content=\"2Forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
+    <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
@@ -80,6 +88,7 @@ my $empty = 0;
 foreach my $recipe (@ricette)
 {
 	my $nome = $recipe->findvalue("nomePiatto");
+	decode_entities($nome);
 	my $allowed = $recipe->getAttribute('accepted');
 	if ( index(lc $nome, lc $parametro) != -1 and $allowed == "1") #cerco ricette che nel nome contengono il testo immesso dall'utente ma che sono anche state approvate dall'amministratore
 	{
@@ -103,6 +112,7 @@ print"</ul></div></div>
 	#footer con admin loggato
 	print"<!--==============================footer=================================-->
 <div id=\"footer\">
+<a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
     <div class=\"main\">
           <div id=\"inline\">
           <p>
@@ -134,6 +144,7 @@ else
     print"
 <!--==============================footer=================================-->
 <div id=\"footer\">
+<a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
     <div class=\"main\">
           <div id=\"inline\">
 
@@ -158,4 +169,6 @@ else
 </body>
 </html>";
 }
-#Last Update by Luca 01/06/2016
+#Last Update by Carlo 1/06/2016
+#bug fix risolti
+

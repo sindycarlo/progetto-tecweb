@@ -101,7 +101,8 @@ p {
 
 
 .contenitore .blocco1 {
-	width:18.750em;
+	width:45%;
+
 }
 
 .contenitore .blocco2 .lista-menu{
@@ -595,7 +596,7 @@ height:31px;
 
 /*-----------media-query------------*/
 
-@media (max-width: 990px)  {
+@media ( max-width: 990px)  {
 
 /*---------------HEADER-------------*/
 	#header {	
@@ -654,13 +655,15 @@ height:31px;
 	}
 
 .lista-menu li{
-
-width:auto;
+padding-left: 5%;
+width: 45%;
+float: left;
 }
 
 .contenitore .blocco1 {
-	display:block;
-	width:auto;
+	padding-left: 2.1%;
+	width:45%;
+
 }
 
 .contenitore .blocco2 .lista-menu {
@@ -729,14 +732,19 @@ margin:1.250em 0 0;
 }
 /*---------------------------------*/
 }
-@media (min-width:330px) and (max-width: 500px) {
+@media (min-width:330px) and (max-width: 630px) {
 
 .lista-menu li {
     float: left;
     width: auto;
 }
-.lista-menu .box-img {
-	width:90%;
+.lista-menu .box-img img {
+    border-radius: 0.438em;
+    width: 100%;
+    min-height: 200px;
+    min-width: 200px;
+    max-width: 300px;
+    max-height: 200px;
 }
 
 .contenitore .blocco1 {
@@ -807,8 +815,10 @@ margin:0;
     padding-left: 0;
 }
 /*-----CONTENT------*/
-.lista-menu {
-	padding-left:0;
+.lista-menu li{
+	padding-left:1.5em;
+	float:left;
+	width:auto;
 }
 .lista-menu a{
 	display:block;

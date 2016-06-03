@@ -28,6 +28,7 @@ padding-bottom: 0.5em;
 padding-top: 0.5em;
 border-bottom: 2px solid;
 border-bottom-color: white;
+border-top:2px solid white;
 display: inline-block;
 width: 100%;
 text-decoration: none;
@@ -202,6 +203,7 @@ font-style:normal;}
 	position: relative;
 	z-index:99;
 	background-color: #3aa9fe;
+	border-bottom:2px solid white;
 
 
 }
@@ -278,13 +280,14 @@ box-shadow:0 0 0.188em #c5c2a9;
 }
 
 #nav a:visited {
-	color:black;
+	color:#600060;
 }
 #nav a{
 	text-decoration: none;
 }
 #nav a:hover {
 	background-color: white;
+	
 }
 
 #nav .active {
@@ -321,7 +324,7 @@ box-shadow:0 0 0.188em #c5c2a9;
 	min-height:200px;
 	min-width: 200px;
 	max-width: 300px;
-	max-height:300px;
+	max-height:200px;
 }
 .info {
 	width:auto;
@@ -338,7 +341,6 @@ box-shadow:0 0 0.188em #c5c2a9;
 .lista-menu{overflow:hidden;margin-left:-1.563em;padding-top:1.563em;}
 .lista-menu li{float:left;width:15.875em;padding-left:2em;}
 .lista-menu a{
-	color:#343434;
 	font-size:1.250em;
 	line-height:1.5em;}
 .lista-menu a:visited{color:#600060;}
@@ -657,7 +659,6 @@ width:auto;
 }
 
 .contenitore .blocco1 {
-	clear:both;
 	display:block;
 	width:auto;
 }
@@ -672,7 +673,11 @@ width:auto;
 	width:auto;
 	float:left;
 	}
-
+.lista-menu .box-img img {
+    border-radius: 0.438em;
+    width: 100%;
+	
+}
 .box-contact{
 	
 	background:#fff;
@@ -697,7 +702,6 @@ width: 200px;
 	position: relative;
 	padding-top:1em;
 }
-
 
 
 .contenitore .blocco2{

@@ -81,14 +81,15 @@ p {
 .contenitore {
 	margin-left: auto;
 	margin-right: auto;
-	width: 60em;
+	width: 70%;
 }
 
 /* Griglie
 ----------------------------------------------------------------------------------------------------*/
 
 .blocco1,
-.blocco2{
+.blocco2
+.blocco3{
 	
 	float: left;
 	position: relative;
@@ -104,12 +105,16 @@ p {
 	width:45%;
 
 }
-
+.contenitore .blocco3 {
+ width:58%;
+ float:left;
+ margin-left:2em;
+}
 .contenitore .blocco2 .lista-menu{
-	width:58.750em;
+	width:auto;
 }
 .contenitore .blocco2{
-	width:38em;
+	width:auto;
 }
 
 
@@ -325,7 +330,7 @@ box-shadow:0 0 0.188em #c5c2a9;
 	min-height:200px;
 	min-width: 200px;
 	max-width: 300px;
-	max-height:200px;
+	max-height:300px;
 }
 .info {
 	width:auto;
@@ -665,6 +670,10 @@ float: left;
 	width:45%;
 
 }
+.contenitore .blocco3 {
+	width:40%;
+	float:left;
+}
 
 .contenitore .blocco2 .lista-menu {
     width: auto;
@@ -713,7 +722,6 @@ width: 200px;
 }
 
 .side-bar{
-width:19.5em;
  vertical-align: middle;
  margin-top:3em;
 margin-left:1.5em;
@@ -732,7 +740,7 @@ margin:1.250em 0 0;
 }
 /*---------------------------------*/
 }
-@media (min-width:330px) and (max-width: 630px) {
+@media (max-width: 630px) {
 
 .lista-menu li {
     float: left;
@@ -745,6 +753,9 @@ margin:1.250em 0 0;
     min-width: 200px;
     max-width: 300px;
     max-height: 200px;
+}
+h2 {
+font-size:1.3em;
 }
 
 .contenitore .blocco1 {
@@ -763,8 +774,8 @@ overflow: hidden;
 padding: 0 1em;
 display: block;
 border-bottom: solid 1px rgba(255,255,255,.1);
-
 }
+
 .header-menu{
 width: 100%;
 text-align: center;
@@ -774,9 +785,21 @@ text-align: center;
 	margin-left: 1.5em;
 	margin-right:1.5em;
 }
+.contenitore .blocco3 {
+	width:48%;
+	float:left;
+	margin-left:1em;
+}
+.side-bar{
+width:40%;
+ vertical-align: middle;
+ margin-top:3em;
+margin-left:0.6em;;
+
+}
 }
 
-@media (max-width: 330px) {
+@media (max-width: 340px) {
 
 /*--------HEADER-------*/
 
@@ -833,11 +856,19 @@ margin:0;
 .contenitore .blocco2 {
 	width:auto;
 }
+.contenitore .blocco3 {
+	width:auto;
+	margin:0;
+}
 .contenitore .blocco1{
 	width:auto;
 }
 .contenitore .side-bar{
-	max-width:17em;
+	width:90%;
+	margin-left:0.7em;
+}
+h2 {
+	font-size:2em;
 }
 .box-contact{
 	

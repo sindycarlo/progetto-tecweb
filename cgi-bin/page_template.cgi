@@ -100,7 +100,7 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
   <div class=\"contenitore\">
         <h1>$titolo</h1>
     <div class=\"side-bar\">
-      <h1>INGREDIENTI</h1>
+      <h2>INGREDIENTI</h2>
       <div id=\"num-pers\">(per $quantepers persone)</div>
       <ul class=\"list\">";
 
@@ -115,7 +115,7 @@ foreach my $singleing (@ingredients)
 
   print  "</ul>
     </div>
-    <div class=\"blocco2\">  
+    <div class=\"blocco3\">  
 	<p><strong>Autore:</strong> $autore</p> <p><strong>Categoria:</strong> $cat</p>
 <p>$descrizione</p>
     <div class=\"allinea\"></div>

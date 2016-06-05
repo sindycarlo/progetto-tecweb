@@ -905,6 +905,12 @@ margin:1.25em 0 0;
 	text-align: center;
 	padding-left: 0;
 }
-
+@media all and (min-width:1900px)
+{
+    body{
+        margin: 0 auto; 
+        width: 1900px;
+    }
+}
 
 }

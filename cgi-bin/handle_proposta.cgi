@@ -46,12 +46,12 @@ my $data_Persone = $cgi->param('n_persone');
 my $data_categoria = $cgi->param('n_categoria');
 my $data_proc = $cgi->param('n_proc');
 
-$data_piatto = trim(traduci($data_piatto));
-$data_desc = trim(traduci($data_desc));
-$data_author = trim(traduci($data_author));
-$data_tempo = trim(traduci($data_tempo));
-$data_Persone = trim(traduci($data_Persone));
-$data_proc = trim(traduci($data_proc));
+$data_piatto = removewhitespace(convertstring($data_piatto));
+$data_desc = removewhitespace(convertstring($data_desc));
+$data_author = removewhitespace(convertstring($data_author));
+$data_tempo = removewhitespace(convertstring($data_tempo));
+$data_Persone = removewhitespace(convertstring($data_Persone));
+$data_proc = removewhitespace(convertstring($data_proc));
 
 
 

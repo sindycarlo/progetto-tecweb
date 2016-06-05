@@ -3,9 +3,9 @@
 use HTML::Parser;
 use HTML::Entities;
 use utf8;
-sub  trim { my $s = shift; $s =~ s/^\s+|\s+$//g; return $s };
+sub  removewhitespace{ my $s = shift; $s =~ s/^\s+|\s+$//g; return $s };
 
-sub traduci() {
+sub convertstring() {
 	my $string = shift;
   	$string = encode_entities($string, '<>&"');
 	$string = encode_entities($string);

@@ -21,8 +21,8 @@ my $cgi = CGI->new();#creo nuovo oggetto cgi
 my $user = $cgi->param('user');
 my $comm = $cgi->param('commento');
 
-$user = trim(traduci($user));
-$comm = trim(traduci($comm));
+$user = removewhitespace(convertstring($user));
+$comm = removewhitespace(convertstring($comm));
 
 
 	my $file = "../data/commenti_ricetta.xml";

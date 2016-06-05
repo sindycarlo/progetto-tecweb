@@ -16,7 +16,10 @@ my $auth = $session->param('auth');
 
 if ($auth eq "amministratoreautenticato")
 {
-    print "Location: console_admin.cgi\n\n";
+
+    use CGI;
+    my $query=new CGI;
+    print $query->redirect('http://localhost:30080/tecweb/~csindico/cgi-bin/console_admin.cgi');
 }
 if($auth ne "amministratoreautenticato")
 {

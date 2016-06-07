@@ -9,11 +9,7 @@ use XML::LibXML;
 use File::Copy;
 use URI;
 
-
-	#controllo se la sessione esiste già:
-	my $session = CGI::Session->load() or die $!;
-	
-	#elimino la sessione:
-	  $session->delete();
-	  
-	  print "Location: menu.cgi\n\n";
+my $session = CGI::Session->load() or die $!;
+$session->delete();
+print "Location: menu.cgi\n\n";
+#Last Update by Luca e Carlo 07/06/2016

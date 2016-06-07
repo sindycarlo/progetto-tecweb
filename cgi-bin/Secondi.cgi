@@ -84,7 +84,7 @@ Da sempre, nella nostra cucina, i secondi piatti rivestono un ruolo importante. 
 my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
-my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Secondo']");
+my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Secondi']");
 
 my $isempty=0;
 

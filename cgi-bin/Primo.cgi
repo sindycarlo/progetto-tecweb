@@ -85,7 +85,7 @@ Fiore all’occhiello della cucina italiana, i primi piatti sono indiscussi prot
 my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
-my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Primo']");
+my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Primi']");
 
 my $isempty=0;
 

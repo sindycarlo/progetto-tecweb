@@ -65,10 +65,18 @@ print <<EOF;
 <!--==============================content=================================-->
 <div id="content">
   <div class="main">
-    <h1>Informazioni</h1>
-         <div class="info"><p>Se vuoi diventare anche tu uno chef inviaci la tua ricetta e noi la valuteremo. Tra tutte le ricette che ci saranno inviate sceglieremo la migliore. Puoi essere anche tu il vincitore!</p>
-         <p>Tutti i campi sono da compilare, abbiamo bisogno di tutte le informazioni sulla tua ricetta.</p>
-         <p>Attenzione! Sono supportati i formati jpg,png,jpeg per le immagini di presentazione e la dimensione non deve superare i 5mb</p>
+    <h1>Proponi una ricetta!</h1>
+        <div class="info">
+         <p>Sai preparare qualche prelibatezza unica? Insegnalo anche a noi!</p>
+		 <p>Compila il seguente modulo per inviarci la tua ricetta!</p>
+		 <p>(N.B. L'amministratore ha bisogno di tempo per leggere e approvare tutte le vostre leccornie, la pubblicazione sul sito non sara' istantanea!)</p>
+         <h3>ATTENZIONE!</h3>
+         <ul style="list-style-type:square">
+			<li><p>Tutti i campi vanno compilati, abbiamo bisogno di tutte le informazioni possibili sulla tua ricetta!</p></li>
+			<li><p>E' necessaria un'immagine, anche l'occhio vuole la sua parte! Al momento sono supportati i formati .jpg, .png, e .jpeg.</p></li>
+			<li><p>La dimensione dell' immagine non deve superare i 5 MB.</p></li>
+			<li><p>E' necessario rispettare una precisa sintassi per l'inserimento degli ingredienti: dopo ogni singolo ingrediente inserisci un ";" (punto e virgola) e vai a capo!</p></li>
+		 </ul>
          </div>
      <div class="allinea"></div>
   <div class="box-contact">
@@ -206,7 +214,7 @@ else
           <div id=\"inline\">
 
           <p>
-            <span>2Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
+            <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
            </p>
       <p>
       <a href=\"http://validator.w3.org/check?uri=referer\"><img
@@ -229,3 +237,4 @@ else
 
 #Last update by Luca 31/05/2016
 #bug fix generale
+

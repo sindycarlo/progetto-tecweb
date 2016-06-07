@@ -128,8 +128,8 @@ print <<EOF;
              <div class="form-txt">Categoria</div>
             <label>
               <select  name="n_categoria">
-                <option value="Primo">Primi</option>
-                  <option value="Secondo">Secondi</option>
+                <option value="Primi">Primi</option>
+                  <option value="Secondi">Secondi</option>
                   <option value="Antipasti">Antipasti</option>
                   <option value="Dessert">Dessert</option>
               </select>
@@ -235,6 +235,5 @@ else
 </html>";
 }
 
-#Last update by Luca 31/05/2016
-#bug fix generale
+#Last update by Luca 07/06/2016
 

@@ -49,8 +49,9 @@ print"
                     <a href=\"contatti.cgi\">CONTATTACI</a>
   	                    <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
   	                    <div>
+  	                    <a>
 						<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
-						<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\"/>
+						<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\"/></a>
 						</div>
 					</form>
                 </div>
@@ -116,20 +117,25 @@ if(scalar(@ricette)>=3) #mostro ricette casuali solo se ne ho abbastanza
 	my $img3=$ric3->findvalue('imgPiatto');
 
 	print"
-		<ul class=\"lista-menu\">			
+		<div class=\"ricette\">
+		<ul class=\"lista-menu\">	
+
 		<li>
+
 			<a class=\"title\" href=\"page_template.cgi?id=$rand1\">$titolo1</a>
-			<div class=\"box-img\"><img src=\"../images/$img1\" alt=\"immagine che descrive $titolo1\"/></div>
+			<img src=\"../images/$img1\" alt=\"immagine che descrive $titolo1\"/>
 		</li>
 		<li>
 			<a class=\"title\" href=\"page_template.cgi?id=$rand2\">$titolo2</a>
-			<div class=\"box-img\"><img src=\"../images/$img2\" alt=\"immagine che descrive $titolo2\"/></div>
+			<img src=\"../images/$img2\" alt=\"immagine che descrive $titolo2\"/>
 		</li>
 		<li>
 			<a class=\"title\" href=\"page_template.cgi?id=$rand3\">$titolo3</a>
-			<div class=\"box-img\"><img src=\"../images/$img3\" alt=\"immagine che descrive $titolo3\"/></div>
+			<img src=\"../images/$img3\" alt=\"immagine che descrive $titolo3\"/>
 		</li>
 		</ul>
+		</div>
+		
 			
 	    ";
 }
@@ -140,23 +146,42 @@ if(scalar(@ricette)>=3) #mostro ricette casuali solo se ne ho abbastanza
 	  </div>
 	  <div class=\"allinea\"></div>
 	  <div class=\"contenitore\">
+
+
 		<div class=\"blocco1\">
-		  <h2><span>PRIMI</span> PIATTI </h2>
-		  <div  class=\"box-img\"><img src=\"../images/primopiatto.jpg\" alt=\"immagine che descrive risotto allo zafferano\"/></div> 
-		  <a href=\"Primo.cgi\">Continua a leggere i primi</a>
+
+		  <div  class=\"box-img\">
+		  <h2><span>PRIMI</span> PIATTI</h2>
+		  <a href=\"Primo.cgi\">
+		  <img src=\"../images/primopiatto.jpg\" alt=\"immagine che descrive risotto allo zafferano\"/> 
+		  Continua a leggere i primi</a></div>
+
+
+		  <div  class=\"box-img\">
 		  <h2><span>ANTIPASTI</span>SALATI</h2>
-		  <div  class=\"box-img\"><img src=\"../images/antipasti.jpg\" alt=\"immagine che descrive verdure grigliate\"/></div> 
-		  <a href=\"Antipasti.cgi\">Continua a leggere gli antipasti</a></div>
+		  <a href=\"Antipasti.cgi\">
+		  <img src=\"../images/antipasti.jpg\" alt=\"immagine che descrive verdure grigliate\"/> 
+		  Continua a leggere gli antipasti</a></div>
+
+		  </div>
+
 		<div  class=\"blocco1\">
+
+			<div class=\"box-img\">
 		  <h2><span>SECONDI</span>PIATTI</h2>
-		  <div class=\"box-img\"><img src=\"../images/secondopiatto.jpg\" alt=\"immagine che descrive carne di manzo con patate\"/></div>
-		  <a href=\"Secondi.cgi\">Continua a leggere i secondi</a>
+		  <a href=\"Secondi.cgi\">
+		  <img src=\"../images/secondopiatto.jpg\" alt=\"immagine che descrive carne di manzo con patate\"/>
+		  Continua a leggere i secondi</a></div>
+
+
+		  <div  class=\"box-img\">
 		  <h2><span>DESSERT</span>DOLCI</h2>
-		  <div  class=\"box-img\"><img src=\"../images/dessert.jpg\" alt=\"immagine che descrive crostata alla vaniglia con ciliege\"/></div>
-		  <a href=\"Dessert.cgi\">Continua a leggere i dessert</a></div>
+		  <a href=\"Dessert.cgi\">
+		  <img src=\"../images/dessert.jpg\" alt=\"immagine che descrive crostata alla vaniglia con ciliege\"/>
+		  Continua a leggere i dessert</a></div>
 	  </div>
 	  <div class=\"allinea\"></div>
-
+	  </div>
 	</div>
 ";
 

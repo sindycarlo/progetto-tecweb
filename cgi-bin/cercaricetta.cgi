@@ -80,6 +80,7 @@ print "
 
 <!--==============================content=================================-->
 <div id=\"content\">
+<div class=\"full\">
   <div class=\"main\">
     <h2>Risultati ricerca per \"$parametro\"</h2><div class=\"search-box\"><ul>";
     
@@ -103,7 +104,7 @@ if ($empty == 0)
 	print"<li>Siamo spiacenti, nessuna ricetta presente nel sito soddisfa i criteri di ricerca :(</li>";
 }
 
-print"</ul></div></div>
+print"</ul></div></div></div>
 </div>";
 
 
@@ -149,7 +150,7 @@ else
           <div id=\"inline\">
 
           <p>
-            <span>2Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
+            <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
            </p>
       <p>
       <a href=\"http://validator.w3.org/check?uri=referer\"><img

@@ -69,6 +69,7 @@ if($auth eq "amministratoreautenticato")
 	print "
 	<!--==============================content=================================-->
 	<div id=\"content\">
+	<div class=\"full\">
 		<div class=\"main\">
 		<h2>Lato Amministrativo</h2>
 			<p>Qui puoi vedere tutte le ricette attualmente presenti all'interno del sito. L'amministratore ha la possibilita' di rimuovere le ricette ritenute obsolete, aggiungere quelle proposte dagli utenti e regolare quali ricette saranno in evidenza nella home page. Per quanto riguarda i commenti l'amministratore ha la possibilita' di controllare ed eventualmente eliminare i commenti, della Sezione Contatti, che sono inappropriati.</p>
@@ -158,6 +159,7 @@ if($auth eq "amministratoreautenticato")
 		</ul>
 		</div>
 	  </div>
+	</div>
 	</div>
 
 	<!--==============================footer=================================-->

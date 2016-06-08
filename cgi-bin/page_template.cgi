@@ -97,6 +97,7 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
 
 <!--==============================content=================================-->
 <div id=\"content\">
+<div class=\"full\">
   <div class=\"contenitore\">
         <h1>$titolo</h1>
     <div class=\"side-bar\">
@@ -127,6 +128,7 @@ foreach my $singleing (@ingredients)
      </div>
     </div>
     <div class=\"allinea\"></div>
+  </div>
   </div>
 </div>";
 

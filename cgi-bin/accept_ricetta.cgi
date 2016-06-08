@@ -1,5 +1,6 @@
 #!/usr/bin/perl -w
 
+# questo file è finito, resta solo da togliere le librerie inutili
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -22,4 +23,4 @@ open(OUT,">$file") or die $!;
 print OUT $doc->toString;
 close(OUT);			
 print "Location:console_admin.cgi\n\n";
-#Last update 31/05/2016 by Luca
+#Last update 07/05/2016 by Luca

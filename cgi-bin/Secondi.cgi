@@ -64,6 +64,7 @@ print "
 
 <!--==============================content=================================-->
 <div id=\"content\">
+ <div class=\"full\">
     <div class=\"main\">
     <h2>Secondi piatti</h2>
 <div class=\"box-img\"><img src=\"../images/arrosto.jpg\" alt=\"immagine che descrive l'arrosto\"/></div>
@@ -107,7 +108,7 @@ foreach my $recipe (@ricette)
 }
 if($isempty==0){print "<li><div class=\"search-box\"><strong>Nessuna ricetta</strong></div></li>";}
 
-  print "</ul></div></div>
+  print "</ul></div></div></div>
     <div class=\"allinea\"></div>
 </div>";
 

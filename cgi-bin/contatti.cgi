@@ -77,6 +77,7 @@ print "
 
 <!--==============================content=================================-->
 <div id=\"content\">
+<div class=\"full\">
   <div class=\"main\">
   <div class=\"commenti\">
   <h2>Commenti:</h2>
@@ -122,6 +123,7 @@ print"</div><h2>Modulo commento</h2>
         
     </form>
     </div>
+      </div>
       </div>
     
   </div>";

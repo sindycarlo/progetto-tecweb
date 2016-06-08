@@ -64,6 +64,7 @@ print "
 
 <!--==============================content=================================-->
 <div id=\"content\">
+<div class=\"full\">
     <div class=\"main\">
     <h2>Primi piatti</h2>
 
@@ -110,7 +111,7 @@ foreach my $recipe (@ricette)
 }
 if($isempty==0){print "<li><div class=\"search-box\"><strong>Nessuna ricetta</strong></div></li>";}
 
-  print "</ul></div></div>
+  print "</ul></div></div></div>
     <div class=\"allinea\"></div>
 </div>";
 

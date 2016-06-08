@@ -189,11 +189,13 @@ if (($estensione =~ /.png/i) || ($estensione =~ /.jpg/i) || ($estensione =~ /.jp
 
 	<!--==============================content=================================-->
 	<div id=\"content\">
+	<div class=\"full\">
 	  <div class=\"main\">
 		<h1>Informazioni</h1>
 			  <div class=\"box-contact\">
 			  <p>Ricetta inviata con successo! In Attesa di approvazione da parte dell'amministratore</p><a href=\"proponiricetta.cgi\">Torna alla pagina precedente</a>
 			  </div>
+	  </div>
 	  </div>
 	  </div>
 	";		

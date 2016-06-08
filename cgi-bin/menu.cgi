@@ -69,6 +69,7 @@ print"
 	  </div>
 	<!--==============================content=================================-->
 	<div id=\"content\">
+	<div class=\"full\">
 	  <div class=\"contenitore\">
 		<div class=\"blocco2\">
 		  ";
@@ -184,6 +185,7 @@ if(scalar(@ricette)>=3) #mostro ricette casuali solo se ne ho abbastanza
 	  </div>
 	  <div class=\"allinea\"></div>
 	  </div>
+	</div>
 	</div>
 ";
 

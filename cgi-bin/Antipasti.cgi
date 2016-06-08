@@ -66,6 +66,7 @@ print "
 
 <!--==============================content=================================-->
 <div id=\"content\">
+ <div class=\"full\">
     <div class=\"main\">
     <h2>Antipasti salati</h2>
 
@@ -113,7 +114,7 @@ print "
 </ul>
   </div>
   </div>
-    <div class=\"allinea\"></div>
+    <div class=\"allinea\"></div></div>
     </div>";
    
 if($auth eq "amministratoreautenticato")

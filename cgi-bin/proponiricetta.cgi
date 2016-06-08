@@ -65,6 +65,7 @@ print <<EOF;
 
 <!--==============================content=================================-->
 <div id="content">
+<div class="full">
   <div class="main">
     <h1>Proponi una ricetta!</h1>
         <div class="info">
@@ -167,6 +168,7 @@ print <<EOF;
         </div>
         <p id="err_proponi"></p>
     </form>
+  </div>
   </div>
   </div>
   </div>

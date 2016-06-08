@@ -74,6 +74,7 @@ print "
 </div>
 <!--==============================content=================================-->
 <div id=\"content\">
+<div class=\"full\">
   <div class=\"main\">
     <h2>Login Area Amministrativa</h2>
     <div class=\"box-contact\">
@@ -95,6 +96,7 @@ print "
       </div>
     </form>
     </div>
+      </div>
       </div>
     
   </div>

@@ -73,9 +73,6 @@ p {
 	font-size: 100%;
 }
 
-.title {
-	height:3em;
-}
 
 /* Contenitori
 ----------------------------------------------------------------------------------------------------*/
@@ -326,6 +323,17 @@ box-shadow:0 0 0.188em #c5c2a9;
 	margin-bottom:1.250em;
 	max-width:30em;
 	}
+	.box-img-lista {
+	padding:0.625em;
+	background:#fff;
+    border-radius:1em;
+	box-shadow:0 0 0.188em #c5c2a9;
+	display:inline-block;
+	margin-bottom:1.250em;
+	max-width:30em;
+	}
+
+
 
 .ricette {
 
@@ -342,10 +350,10 @@ box-shadow:0 0 0.188em #c5c2a9;
 .lista-menu  img{	
 	border-radius:0.438em;
 	width:100%;
-	min-height:200px;
-	min-width: 200px;
-	max-width: 300px;
-	max-height:200px;
+    min-height: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    max-height: 200px;
 }
 .info {
 	width:auto;
@@ -358,9 +366,15 @@ box-shadow:0 0 0.188em #c5c2a9;
 	color:#600060;
 }
 
+.lista-menu .box-img-lista:hover{
+	box-shadow:10px 10px 5px #888888;
+}
+.blocco1 .box-img:hover{
+	box-shadow:10px 10px 5px #888888;
+}
 
 .lista-menu{overflow:hidden;padding-top:1.563em;}
-.lista-menu li{float:left;width:13em;padding-left:4.3em;}
+.lista-menu li{float:left;width:14em;padding-left:4.3em;}
 .lista-menu a{
 	font-size:1.250em;
 	line-height:1.5em;}
@@ -715,6 +729,11 @@ float: left;
     width: 100%;
 	
 }
+.lista-menu  img{	
+
+    max-height: 100px;
+    max-width:100%;
+}
 .box-contact{
 	
 	background:#fff;
@@ -882,13 +901,13 @@ margin:0;
 }
 /*-----CONTENT------*/
 .lista-menu li{
-	padding-left:1.5em;
+	padding-left:0.3em;
 	float:left;
-	width:auto;
+	width:100%;
 }
 .lista-menu a{
 	display:block;
-	width: 10em;
+	width: 100%;
 }
 .blocco1.thumbnail {
 	clear:both;
@@ -918,8 +937,11 @@ h2 {
 	max-width:15.750em;
 	margin-left: 0.8em;
 }
+.box-img-lista{
+	width:90%;
+}
 .lista-menu .box-img{
-	width:auto;
+	width:100%;
 	}
 .list-recipes-pres p{
 display:block;
@@ -948,12 +970,6 @@ margin:1.25em 0 0;
 	text-align: center;
 	padding-left: 0;
 }
-@media all and (min-width:1900px)
-{
-    body{
-        margin: 0 auto; 
-        width: 1900px;
-    }
-}
+
 
 }

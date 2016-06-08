@@ -140,7 +140,7 @@ print "<!--==============================footer=================================
 	  <div class=\"main\">
           <div id=\"inline\">
          	<p>             
-            <span>2Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
+            <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
        	   </p>
 			<p> 
     	<a href=\"http://validator.w3.org/check?uri=referer\"><img
@@ -173,7 +173,7 @@ else {
 	  <div class=\"main\">
           <div id=\"inline\">
          	<p>             
-            <span>2Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
+            <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
        	   </p>
 			<p> 
     	<a href=\"http://validator.w3.org/check?uri=referer\"><img

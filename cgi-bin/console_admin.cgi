@@ -23,7 +23,6 @@ print "
     <title>Console admin - 2Forchette</title>
     <meta name=\"title\" content=\"2forchette - Console admin\"/>
     <meta name=\"description\" content=\"Sezione Console admin del sito 2forchette\"/>
-    <meta http-equiv=\"refresh\" content=\"30\"/>
     <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
@@ -47,8 +46,8 @@ print "
           	
              <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
              			<div>
-						<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
-						<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\"/>
+						<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" title=\"searchinput\" size=\"30\" maxlength=\"30\"/>
+						<input type=\"submit\" value=\"Cerca\" title=\"searchbutton\" class=\"tfbutton\"/>
 						</div>
 					</form>
 					

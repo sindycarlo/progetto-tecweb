@@ -27,6 +27,7 @@ print <<EOF;
     <meta name="author" content="Carlo Sindico ,Luca Alessio"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="Content-Script-Type" content="text/javascript"/>
     <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="../css/print.css" type="text/css" media="print"/>
     <script type="text/javascript" src="../js/proponi_ricetta.js"></script>
@@ -46,8 +47,8 @@ print <<EOF;
           <a href="contatti.cgi">CONTATTACI</a>
           <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
           <div>
-				  <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
-				  <input type=\"submit\" value=\"Cerca\" class=\"tfbutton\"/>
+				  <input type=\"text\" class=\"tftextinput\" title=\"searchinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
+				  <input type=\"submit\" value=\"Cerca\" title=\"searchbutton\"  class=\"tfbutton\"/>
           </div>
 	       </form>
       </div>
@@ -70,8 +71,8 @@ print <<EOF;
          <p>Sai preparare qualche prelibatezza unica? Insegnalo anche a noi!</p>
 		 <p>Compila il seguente modulo per inviarci la tua ricetta!</p>
 		 <p>(N.B. L'amministratore ha bisogno di tempo per leggere e approvare tutte le vostre leccornie, la pubblicazione sul sito non sara' istantanea!)</p>
-         <h3>ATTENZIONE!</h3>
-         <ul style="list-style-type:square">
+         <h2>ATTENZIONE!</h2>
+         <ul>
 			<li><p>Tutti i campi vanno compilati, abbiamo bisogno di tutte le informazioni possibili sulla tua ricetta!</p></li>
 			<li><p>E' necessaria un'immagine, anche l'occhio vuole la sua parte! Al momento sono supportati i formati .jpg, .png, e .jpeg.</p></li>
 			<li><p>La dimensione dell' immagine non deve superare i 5 MB.</p></li>
@@ -85,74 +86,75 @@ print <<EOF;
       <div id="fieldset">
 
             <div class="form-txt">Nome piatto </div>
-            <label>
+            
               <input type="text" name="n_piatto" id="n_piatto" title="Inserisci il nome del tuo piatto"/>
-             </label>
+             
 
           
             <div class="form-txt">Autore </div>
-            <label>
+            
               <input type="text" name="n_author" id="n_author" title="Inserisci il nome dell'autore"/>
-              </label>
+              
           
           
             <div class="form-txt">Breve descrizione </div>
-            <label class="message">
+              
               <textarea rows="20" cols="60" name="n_desc" id="n_desc"></textarea>
-              </label>
+              
 
           <div class="Td">
           <div class="td">
             <div class="form-txt">Tempo (minuti)</div>
-            <label>
+            
               <input type="text" name="n_tempo" id="n_tempo" title="Inserisci il tempo di preparazione"/>
-           </label>
+           
            </div>
              <div class="td">
             <div class="form-txt">Difficolta'</div>
-            <label>
-              <select  name="n_difficolta">	
+            
+              <select  name="n_difficolta" title="n_difficolta">	
                 <option value="1">1</option> 
                   <option value="2">2</option>
                   <option value="3">3</option>
               </select>
-            </label>
+            
             </div>
              <div class="td">
            <div class="form-txt">Numero persone</div>
-            <label>
+            
               <input type="text" name="n_persone" id="n_persone" title="Inserisci il numero di persone"/>
-             </label>
+             
              </div>
              <div class="td">
              <div class="form-txt">Categoria</div>
-            <label>
-              <select  name="n_categoria">
+            
+              <select  name="n_categoria" title="n_categoria">
                 <option value="Primi">Primi</option>
                   <option value="Secondi">Secondi</option>
                   <option value="Antipasti">Antipasti</option>
                   <option value="Dessert">Dessert</option>
               </select>
-            </label>
+            
             </div>
           </div>
 
 
             <div class="form-txt">Carica un immagine </div>
-            <label>
+            
               <input type="file" name="immagine" title="Carica un immagine di presentazione"/>
-             </label>
+            
           
 
             <div class="form-txt">Ingredienti (ogni ingrediente deve terminare con il simbolo ; ed essere in una riga a se' stante)</div>
-            <label>
+            
               <textarea rows="20" cols="60" id="n_ingr" name="n_ingr"></textarea>
-             </label>
+             
 
             <div class="form-txt">Procedimento </div>
-            <label class="message">
+             
               <textarea rows="20" cols="60" name="n_proc" id="n_proc"></textarea>
-              </label>
+              
+              
 
         <div class="buttons">
 		<div class="button">

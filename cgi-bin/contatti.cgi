@@ -38,6 +38,7 @@ print "
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
+      <meta http-equiv=\"Content-Script-Type\" content=\"text/javascript\"/>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
     <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
     <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
@@ -57,8 +58,8 @@ print "
           <a class=\"active\">CONTATTACI</a>
           <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
           		<div>
-				<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
-				<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\"/>
+				<input type=\"text\" class=\"tftextinput\" title=\"searchinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
+				<input type=\"submit\" value=\"Cerca\" title=\"searchbutton\" class=\"tfbutton\"/>
 				</div>
 	      </form>
         </div>
@@ -108,13 +109,13 @@ print"</div><h2>Modulo commento</h2>
     <p id=\"err_commento\"></p>
       <div id=\"fieldset\">
             <div class=\"form-txt\">Il tuo nome </div>
-            <label>
+            
               <input type=\"text\" name=\"user\" id=\"user\" title=\"inserisci il tuo nome qui\"/>
-             </label>
+             
 		 <div class=\"form-txt\">Inserisci un commento </div>
-            <label class=\"message\">
-              <textarea name=\"commento\" id=\"form_commento\" rows=\"20\" cols=\"60\"></textarea>
-              </label>
+           
+              <textarea name=\"commento\" id=\"commento\" rows=\"20\" cols=\"60\"></textarea>
+              
      <div class=\"allinea\"></div>   
         <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Submit\"/></div><div class=\"button\"><input type=\"reset\" value=\"reset\"/></div></div>
         </div>
@@ -167,7 +168,7 @@ else
           <div id=\"inline\">
 
           <p>
-            <span>2Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
+            <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
            </p>
       <p>
       <a href=\"http://validator.w3.org/check?uri=referer\"><img

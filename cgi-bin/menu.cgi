@@ -50,8 +50,8 @@ print"
   	                    <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
   	                    <div>
   	                    <a>
-						<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
-						<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\"/></a>
+						<input type=\"text\" class=\"tftextinput\" title=\"searchinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
+						<input type=\"submit\" value=\"Cerca\" title=\"searchbutton\" class=\"tfbutton\"/></a>
 						</div>
 					</form>
                 </div>
@@ -117,24 +117,26 @@ if(scalar(@ricette)>=3) #mostro ricette casuali solo se ne ho abbastanza
 	my $img3=$ric3->findvalue('imgPiatto');
 
 	print"
-		<div class=\"ricette\">
+
 		<ul class=\"lista-menu\">	
 
 		<li>
-
-			<a class=\"title\" href=\"page_template.cgi?id=$rand1\">$titolo1</a>
-			<img src=\"../images/$img1\" alt=\"immagine che descrive $titolo1\"/>
+			<div class=\"box-img-lista\">
+			<a class=\"title\" href=\"page_template.cgi?id=$rand1\">$titolo1
+			<img src=\"../images/$img1\" alt=\"immagine che descrive $titolo1\"/></a></div>
 		</li>
 		<li>
-			<a class=\"title\" href=\"page_template.cgi?id=$rand2\">$titolo2</a>
-			<img src=\"../images/$img2\" alt=\"immagine che descrive $titolo2\"/>
+			<div class=\"box-img-lista\">
+			<a class=\"title\" href=\"page_template.cgi?id=$rand2\">$titolo2
+			<img src=\"../images/$img2\" alt=\"immagine che descrive $titolo2\"/></a></div>
 		</li>
 		<li>
-			<a class=\"title\" href=\"page_template.cgi?id=$rand3\">$titolo3</a>
-			<img src=\"../images/$img3\" alt=\"immagine che descrive $titolo3\"/>
+			<div class=\"box-img-lista\">
+			<a class=\"title\" href=\"page_template.cgi?id=$rand3\">$titolo3
+			<img src=\"../images/$img3\" alt=\"immagine che descrive $titolo3\"/></a></div>
 		</li>
 		</ul>
-		</div>
+
 		
 			
 	    ";

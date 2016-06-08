@@ -32,7 +32,7 @@ print "
     <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
 </head>
 <body>
-<div><a class=\"salta-main\" href=\".lista-menu\"><span>Salta al contenuto</span></a></div>
+<div><a class=\"salta-main\" href=\"#footer\"><span>Salta al contenuto</span></a></div>
 <!--==============================header=================================-->
 <div id=\"header\">
   <div class=\"main\">
@@ -45,8 +45,8 @@ print "
           <a href=\"contatti.cgi\">CONTATTACI</a>
           <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
           <div>
-				  <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
-				  <input type=\"submit\" value=\"Cerca\" class=\"tfbutton\"/>
+				  <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" title=\"searchinput\" size=\"30\" maxlength=\"30\"/>
+				  <input type=\"submit\" value=\"Cerca\" title=\"searchbutton\" class=\"tfbutton\"/>
           </div>
 	      </form>
         </div>
@@ -102,8 +102,9 @@ foreach my $recipe (@ricette)
     $isempty=1;
   		print "
       		<li>
-       			<a class=\"title\" href=\"page_template.cgi?id=$id\">$nome</a>
-       			<div class=\"box-img\"><img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></div>
+            <div class=\"box-img-lista\">
+       			<a class=\"title\" href=\"page_template.cgi?id=$id\">$nome
+       			<img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></a></div>
      		</li>";
 	}
 }
@@ -157,7 +158,7 @@ else
           <div id=\"inline\">
 
           <p>
-            <span>2Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
+            <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
            </p>
       <p>
       <a href=\"http://validator.w3.org/check?uri=referer\"><img

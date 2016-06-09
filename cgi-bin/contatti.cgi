@@ -107,13 +107,12 @@ print"</div><h2>Modulo commento</h2>
     <span>Sezione dedicata ai commenti. Potete lasciare un commento.</span></div>
     <div class=\"box-contact\">
     <form id=\"contact-form\" action=\"inserisci_commento.cgi\" method=\"post\" onsubmit=\"return valida_commento()\">
-    <p id=\"err_commento\"></p>
       <div id=\"fieldset\">
-            <div class=\"form-txt\">Il tuo nome </div>
+            <div class=\"form-txt\">Il tuo nome <span id=\"err_user\"></span></div>
             
               <input type=\"text\" name=\"user\" id=\"user\" title=\"inserisci il tuo nome qui\"/>
              
-		 <div class=\"form-txt\">Inserisci un commento </div>
+		 <div class=\"form-txt\">Inserisci un commento <span id=\"err_commento\"></span></div>
            
               <textarea name=\"commento\" id=\"commento\" rows=\"20\" cols=\"60\"></textarea>
               

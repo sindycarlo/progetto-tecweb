@@ -45,6 +45,12 @@ $data_Persone = removewhitespace(convertstring($data_Persone));
 $data_proc = removewhitespace(convertstring($data_proc));
 
 chomp $filename;
+#controlli perl:
+
+
+
+
+
 
 my ($nome, $path, $estensione) = fileparse($filename, '..*');
 

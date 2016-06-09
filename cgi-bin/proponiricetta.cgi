@@ -86,26 +86,26 @@ print <<EOF;
     <form id="contact-form" action="handle_proposta.cgi" method="post" enctype="multipart/form-data" onsubmit="return valida_campi()">
       <div id="fieldset">
 
-            <div class="form-txt">Nome piatto </div>
+            <div class="form-txt">Nome piatto<span id="err_piatto"></span></div>
             
               <input type="text" name="n_piatto" id="n_piatto" title="Inserisci il nome del tuo piatto"/>
              
 
           
-            <div class="form-txt">Autore </div>
+            <div class="form-txt">Autore <span id="err_author"></span></div>
             
               <input type="text" name="n_author" id="n_author" title="Inserisci il nome dell'autore"/>
               
           
           
-            <div class="form-txt">Breve descrizione </div>
+            <div class="form-txt">Breve descrizione <span id="err_descrizione"></span></div>
               
               <textarea rows="20" cols="60" name="n_desc" id="n_desc"></textarea>
               
 
           <div class="Td">
           <div class="td">
-            <div class="form-txt">Tempo (minuti)</div>
+            <div class="form-txt">Tempo (minuti) <span id="err_tempo"></span></div>
             
               <input type="text" name="n_tempo" id="n_tempo" title="Inserisci il tempo di preparazione"/>
            
@@ -121,7 +121,7 @@ print <<EOF;
             
             </div>
              <div class="td">
-           <div class="form-txt">Numero persone</div>
+           <div class="form-txt">Numero persone<span id="err_pers"></span></div>
             
               <input type="text" name="n_persone" id="n_persone" title="Inserisci il numero di persone"/>
              
@@ -146,12 +146,12 @@ print <<EOF;
             
           
 
-            <div class="form-txt">Ingredienti (ogni ingrediente deve terminare con il simbolo ; ed essere in una riga a se' stante)</div>
+            <div class="form-txt">Ingredienti (ogni ingrediente deve terminare con il simbolo ; ed essere in una riga a se' stante) <span id="err_ingr"></span></div>
             
               <textarea rows="20" cols="60" id="n_ingr" name="n_ingr"></textarea>
              
 
-            <div class="form-txt">Procedimento </div>
+            <div class="form-txt">Procedimento <span id="err_proc"></span></div>
              
               <textarea rows="20" cols="60" name="n_proc" id="n_proc"></textarea>
               
@@ -166,7 +166,6 @@ print <<EOF;
 	</div>
         </div>
         </div>
-        <p id="err_proponi"></p>
     </form>
   </div>
   </div>

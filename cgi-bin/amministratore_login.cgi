@@ -79,15 +79,13 @@ print "
     <h2>Login Area Amministrativa</h2>
     <div class=\"box-contact\">
     <form id=\"contact-form\" action=\"controllo_login.cgi\" method=\"post\" onsubmit=\"return valida_campi()\">
-      
-<p id=\"err_login\"></p>
       <div id=\"fieldset\">
-            <div class=\"form-txt\"><span xml:lang=\"en\">Username </span></div>
+            <div class=\"form-txt\"><span xml:lang=\"en\">Username <span id=\"err_username\"></span></span></div>
             
               <input type=\"text\" name=\"username\" id=\"username\" title=\"inserisci qui il tuo username\"/>
              
 
-            <div class=\"form-txt\"><span xml:lang=\"en\">Password </span></div>
+            <div class=\"form-txt\"><span xml:lang=\"en\">Password <span id=\"err_password\"></span></span></div>
             
               <input type=\"password\" name=\"password\" id=\"password\" title=\"inserisci qui la tua password\"/>
               

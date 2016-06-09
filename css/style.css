@@ -9,14 +9,50 @@
 
 
 /*---------CSS PER JAVASCRIPT-----------*/
-#err_login {
+#err_username {
 	color:#b10c00;
+	display:block;
 }
-#err_proponi {
+#err_password {
 	color:#b10c00;
+	display:block;
 }
+#err_piatto {
+	color:#b10c00;
+	display:block;
+}
+#err_author {
+	color:#b10c00;
+	display:block;
+}
+#err_descrizione {
+	color:#b10c00;
+	display:block;
+}
+#err_tempo{
+	color:#b10c00;
+	display:block;
+}
+#err_pers {
+	color:#b10c00;
+	display:block;
+}
+#err_ingr {
+	color:#b10c00;
+	display:block;
+}
+#err_proc {
+	color:#b10c00;
+	display:block;
+}
+#err_user{
+	color:#b10c00;
+    display:block;
+}
+
 #err_commento {
     color:#b10c00;
+    display:block;
     
 }
 
@@ -116,7 +152,9 @@ p {
 	width:auto;
 	padding-top:1em;
 }
-
+.full .main {
+	width:60%;
+}
 
 /*==========regole accessibilità================*/
 a.salta-main {
@@ -474,7 +512,7 @@ border-radius:1.125em;
 
 .box-contact{
 	background:white;
-	width:44.750em;
+	width:90%;
 	margin:2.750em 0 1.750em;
 	padding:0 2.5em 3.188em;
     border-radius:1.125em;
@@ -641,6 +679,9 @@ height:31px;
 	.main {
 	width:auto;
 	}
+	.full .main {
+		width:60%;
+	}
     
 	.header-menu {
 		text-align: center;
@@ -650,12 +691,6 @@ height:31px;
 	#banner {
 	width:100%;
 	text-align:center;
-	}
-	#content .main {
-	margin: 0 auto;
-	position: relative;
-	width: auto;
-	height:auto;
 	}
 	#footer .main {
 	margin: 0 auto;
@@ -734,17 +769,6 @@ float: left;
     max-height: 100px;
     max-width:100%;
 }
-.box-contact{
-	
-	background:#fff;
-    max-width:30em;
-	margin:1.750em auto 1.750em;
-	padding:0 1.5em 1.188em;
-	background:#fff;
-    border-radius:1.125em;
-	box-shadow:0 0 0.188em #c5c2a9;
-
-}
 .box-contact .button
 {
 
@@ -801,7 +825,9 @@ margin:1.250em 0 0;
 h2 {
 font-size:1.3em;
 }
-
+.full .main {
+	width:100%;
+}
 .contenitore .blocco1 {
     clear: both;
     display: block;

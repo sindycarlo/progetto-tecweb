@@ -1,22 +1,27 @@
 function valida_commento(){
 
 
-	//se settati svuoto gli span di errore
-	if (document.getElementById("err_commento") !== "") {
-	    document.getElementById("err_commento").innerHTML = "";
-	}
+	var err_user;
+	var err_commento;
 
-	var commento = document.getElementById("form_commento").value;	
+	var commento = document.getElementById("commento").value;	
         var nome=document.getElementById("user").value;
 
         
 	//Effettua il controllo sui campi, se sono vuoti o composti da soli spazi
-	if (!commento.replace(/^\s+/g, '').length  || !nome.replace(/^\s+/g, '').length || (commento === "Inserisci un commento")) {
-            document.getElementById("err_commento").innerHTML = "Il campo nome e il commento sono obbligatori*";
-	    document.getElementById("form_commento").focus();
-	    document.getElementById("form_commento").select();
+	if (!nome.replace(/^\s+/g, '').length ){
+            document.getElementById("err_user").innerHTML = "Il campo nome è obbligatorio*";
+	    document.getElementById("user").focus();
 	    return false;
+	}else
+	if(!commento.replace(/^\s+/g, '').length){
+		      document.getElementById("err_commento").innerHTML = "Il campo commento è obbligatorio*";
+	    document.getElementById("commento").focus();
+	    return false;
+	
 	}
+
+
 	else { 
             return true;
 	}

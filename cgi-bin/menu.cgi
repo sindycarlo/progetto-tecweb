@@ -38,35 +38,32 @@ print"
 	<div><a class=\"salta-main\" href=\"#footer\"><span>Salta al contenuto</span></a></div>
 		 	
 	<!--==============================header=================================-->
-	<div id=\"header\">
-	  <div class=\"main\">
-		<div class=\"intestazione\">
-		  <div id=\"banner\"><h1>2FORCHETTE</h1></div>
-            <div class=\"header-menu\">
-                <div id=\"nav\">
-                    <a class=\"active\"><span xml:lang=\"en\">HOME</span></a>
-                    <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
-                    <a href=\"contatti.cgi\">CONTATTACI</a>
-  	                    <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
-  	                    <div>
-  	                    <a>
-						<input type=\"text\" class=\"tftextinput\" title=\"searchinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
-						<input type=\"submit\" value=\"Cerca\" title=\"searchbutton\" class=\"tfbutton\"/></a>
-						</div>
-					</form>
-                </div>
-            </div>
-
+<div id=\"header\">
+  <div class=\"main\">
+    <div class=\"intestazione\">
+     <div id=\"banner\"><h1><a href=\"../index.html\"> <span>2FORCHETTE</span> </a></h1></div>
+      <div class=\"header-menu\">
+        <div id=\"nav\">
+          <a class=\"active\"><span xml:lang=\"en\">HOME</span></a>
+          <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>          
+          <a href=\"contatti.cgi\">CONTATTACI</a>
+          <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+          		<div>
+				<input type=\"text\" class=\"tftextinput\" title=\"searchinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
+				<input type=\"submit\" value=\"Cerca\" title=\"searchbutton\" class=\"tfbutton\"/>
+				</div>
+	      </form>
+        </div>
+      </div>
+      <div class=\"allinea\"></div>
+    <div id='breadcrumb'>
+        <p>Ti trovi in:
+      	Home
+      </p>
+    </div> 
     </div>
-		  <div class=\"allinea\"></div>
-		  <div id='breadcrumb'>
-		  	<p>Ti trovi in:
-			<a><span  xml:lang=\"en\">Home</span></a></p>
-		</div> 
-		  <div class=\"allinea\"></div>
-		   
-		</div>
-	  </div>
+  </div>
+</div>
 	<!--==============================content=================================-->
 	<div id=\"content\">
 	<div class=\"full\">

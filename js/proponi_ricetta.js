@@ -1,12 +1,5 @@
 function valida_campi(){
 
-	var err_piatto;
-	var err_author;
-	var err_descrizione;
-	var err_tempo;
-	var err_pers;
-	var err_proc;
-	var err_ingr;
 
 	var nomepiatto = document.getElementById("n_piatto").value;	
 	var nomeauthore = document.getElementById("n_author").value;

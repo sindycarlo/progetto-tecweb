@@ -368,6 +368,10 @@ img {
 .blocco1 .box-img:hover{
 	box-shadow:10px 10px 5px #888888;
 }
+.blocco1 .box-img img {
+	height:300px;
+	max-width:410px;
+}
 
 .lista-menu{overflow:hidden;padding-top:1.563em;}
 
@@ -685,7 +689,7 @@ height:31px;
 	}
 
 .lista-menu li{
-	width:17em;
+	padding-left:3.5em;
 	float: left;
 }
 .ricette {

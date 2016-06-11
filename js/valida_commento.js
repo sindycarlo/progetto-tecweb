@@ -1,8 +1,6 @@
 function valida_commento(){
 
 
-	var err_user;
-	var err_commento;
 
 	var commento = document.getElementById("commento").value;	
         var nome=document.getElementById("user").value;

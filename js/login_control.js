@@ -2,8 +2,6 @@
 function valida_campi(){
 
 
-	var err_username;
-	var err_password;
 
 
 	var username = document.getElementById("username").value;	

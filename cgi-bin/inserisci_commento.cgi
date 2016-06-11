@@ -24,6 +24,11 @@ my $comm = $cgi->param('commento');
 $user = removewhitespace(convertstring($user));
 $comm = removewhitespace(convertstring($comm));
 
+#controlli sulla form:
+#da gestire
+
+
+
 
 	my $file = "../data/commenti_ricetta.xml";
 	

@@ -41,7 +41,7 @@ print"
 <div id=\"header\">
   <div class=\"main\">
     <div class=\"intestazione\">
-     <div id=\"banner\"><h1><a href=\"../index.html\"> <span>2FORCHETTE</span> </a></h1></div>
+     <div id=\"banner\"><h1> <span>2FORCHETTE</span></h1></div>
       <div class=\"header-menu\">
         <div id=\"nav\">
           <a class=\"active\"><span xml:lang=\"en\">HOME</span></a>
@@ -68,86 +68,7 @@ print"
 	<div id=\"content\">
 	<div class=\"full\">
 	  <div class=\"contenitore\">
-		<div class=\"blocco2\">
-		  ";
-
-my $file = "../data/4forchette.xml";
-my $parser = XML::LibXML->new();
-my $doc = $parser->parse_file($file);
-my @ricette = $doc->findnodes("/ricetteDB/ricetta");
-
-if(scalar(@ricette)>=3) #mostro ricette casuali solo se ne ho abbastanza
-{
-	my @allid;
-	#prima rempio un array con tutte le id
-	foreach my $recipe (@ricette)
-	{
-		my $allowed = $recipe->getAttribute('accepted');
-		if($allowed == "1")
-		{
-			my $id = $recipe->getAttribute('IDCode');
-			push(@allid,$id);
-		}
-	}
-	#poi ne estraggo tre casuali
-	my $rand1 = $allid[rand @allid];
-	my $ric1 = $doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $rand1]")->get_node(1);
-	my $titolo1=$ric1->findvalue('nomePiatto');
-	decode_entities($titolo1);
-	my $img1=$ric1->findvalue('imgPiatto');
-	my $rand2 = $allid[rand @allid];
-	while($rand2 == $rand1) #per evitare doppioni
-	{
-		$rand2 = $allid[rand @allid];
-	}
-	my $ric2 = $doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $rand2]")->get_node(1);
-	my $titolo2=$ric2->findvalue('nomePiatto');
-	my $img2=$ric2->findvalue('imgPiatto');
-	decode_entities($titolo2);
-	my $rand3 = $allid[rand @allid];
-	while($rand3 == $rand1 or $rand3 == $rand2) #per evitare doppioni
-	{
-		$rand3 = $allid[rand @allid];
-	}
-	my $ric3 = $doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $rand3]")->get_node(1);
-	my $titolo3=$ric3->findvalue('nomePiatto');
-	decode_entities($titolo3);
-	my $img3=$ric3->findvalue('imgPiatto');
-
-	print"
-
-		<ul class=\"lista-menu\">	
-
-		<li>
-			<div class=\"box-img-lista\">
-			<a class=\"title\" href=\"page_template.cgi?id=$rand1\">$titolo1
-			<img src=\"../images/$img1\" alt=\"immagine che descrive $titolo1\"/></a></div>
-		</li>
-		<li>
-			<div class=\"box-img-lista\">
-			<a class=\"title\" href=\"page_template.cgi?id=$rand2\">$titolo2
-			<img src=\"../images/$img2\" alt=\"immagine che descrive $titolo2\"/></a></div>
-		</li>
-		<li>
-			<div class=\"box-img-lista\">
-			<a class=\"title\" href=\"page_template.cgi?id=$rand3\">$titolo3
-			<img src=\"../images/$img3\" alt=\"immagine che descrive $titolo3\"/></a></div>
-		</li>
-		</ul>
-
-		
-			
-	    ";
-}
-#else niente, ho troppe poche ricette, non le mostro nella home
-		
-		  print"
-		</div>
-	  </div>
-	  <div class=\"allinea\"></div>
-	  <div class=\"contenitore\">
-
-
+		<h2>Le categorie:</h2>		 
 		<div class=\"blocco1\">
 
 		  <div  class=\"box-img\">
@@ -182,15 +103,102 @@ if(scalar(@ricette)>=3) #mostro ricette casuali solo se ne ho abbastanza
 	  </div>
 	  <div class=\"allinea\"></div>
 	  </div>
-	</div>
-	</div>
+
+
 ";
+
+
+
+my $file = "../data/4forchette.xml";
+my $parser = XML::LibXML->new();
+my $doc = $parser->parse_file($file);
+my @ricette = $doc->findnodes("/ricetteDB/ricetta");
+
+if(scalar(@ricette)>=4) #mostro ricette casuali solo se ne ho abbastanza
+{
+	my @allid;
+	#prima rempio un array con tutte le id
+	foreach my $recipe (@ricette)
+	{
+		my $allowed = $recipe->getAttribute('accepted');
+		if($allowed == "1")
+		{
+			my $id = $recipe->getAttribute('IDCode');
+			push(@allid,$id);
+		}
+	}
+	#poi ne estraggo 4 casuali
+	my $rand1 = $allid[rand @allid];
+	my $ric1 = $doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $rand1]")->get_node(1);
+	my $titolo1=$ric1->findvalue('nomePiatto');
+	decode_entities($titolo1);
+	my $img1=$ric1->findvalue('imgPiatto');
+	my $rand2 = $allid[rand @allid];
+	while($rand2 == $rand1) #per evitare doppioni
+	{
+		$rand2 = $allid[rand @allid];
+	}
+	my $ric2 = $doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $rand2]")->get_node(1);
+	my $titolo2=$ric2->findvalue('nomePiatto');
+	my $img2=$ric2->findvalue('imgPiatto');
+	decode_entities($titolo2);
+	my $rand3 = $allid[rand @allid];
+	while($rand3 == $rand1 or $rand3 == $rand2) #per evitare doppioni
+	{
+		$rand3 = $allid[rand @allid];
+	}
+	my $ric3 = $doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $rand3]")->get_node(1);
+	my $titolo3=$ric3->findvalue('nomePiatto');
+	decode_entities($titolo3);
+	my $img3=$ric3->findvalue('imgPiatto');
+
+
+	my $rand4 = $allid[rand @allid];
+	while($rand4 == $rand1 or $rand4 == $rand2 or $rand4==$rand3) #per evitare doppioni
+	{
+		$rand4 = $allid[rand @allid];
+	}
+	my $ric4 = $doc->findnodes("/ricetteDB/ricetta[\@\IDCode = $rand4]")->get_node(1);
+	my $titolo4=$ric4->findvalue('nomePiatto');
+	decode_entities($titolo4);
+	my $img4=$ric4->findvalue('imgPiatto');
+
+
+	print"
+			
+			<div class=\"contenitore\">
+			<h3>I nostri consigli:</h3>
+			<div class=\"blocco1\">
+			<div class=\"box-img\">
+			<a class=\"title\" href=\"page_template.cgi?id=$rand1\">$titolo1
+			<img src=\"../images/$img1\" alt=\"immagine che descrive $titolo1\"/></a></div></div>
+
+			<div class=\"blocco1\">
+			<div class=\"box-img\">
+			<a class=\"title\" href=\"page_template.cgi?id=$rand2\">$titolo2
+			<img src=\"../images/$img2\" alt=\"immagine che descrive $titolo2\"/></a></div></div>
+			
+			<div class=\"blocco1\">
+			<div class=\"box-img\">
+			<a class=\"title\" href=\"page_template.cgi?id=$rand3\">$titolo3
+			<img src=\"../images/$img3\" alt=\"immagine che descrive $titolo3\"/></a></div></div>
+			
+			<div class=\"blocco1\">
+			<div class=\"box-img\">
+			<a class=\"title\" href=\"page_template.cgi?id=$rand4\">$titolo4
+			<img src=\"../images/$img4\" alt=\"immagine che descrive $titolo4\"/></a></div></div>
+			</div>
+		
+			
+	    ";
+}
 
 
 	 if($auth eq "amministratoreautenticato")
 {
 	#footer con admin loggato
-	print"<!--==============================footer=================================-->
+	print"  <div class=\"allinea\"></div></div></div>
+	<!--==============================footer=================================-->
 <div id=\"footer\">
    <a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
     <div class=\"main\">
@@ -224,7 +232,7 @@ if(scalar(@ricette)>=3) #mostro ricette casuali solo se ne ho abbastanza
 else
 {
     #footer senza admin loggato
-    print"
+    print"  <div class=\"allinea\"></div></div></div>
 <!--==============================footer=================================-->
 <div id=\"footer\">
    <a href=\"#header\"><span id=\"up\">TORNA SU</span></a>

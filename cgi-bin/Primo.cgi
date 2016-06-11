@@ -80,8 +80,7 @@ Fiore all’occhiello della cucina italiana, i primi piatti sono indiscussi prot
     </div>
 
       <div class=\"contenitore\">
-        <div class=\"blocco2\">
-          <ul class=\"lista-menu\">";
+          ";
 
 my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
@@ -102,16 +101,17 @@ foreach my $recipe (@ricette)
     decode_entities($nome);
     $isempty=1;
   		print "
-      		<li>
-            <div class=\"box-img-lista\">
+      		
+		<div class=\"blocco1\">
+                <div class=\"box-img\">
        			<a class=\"title\" href=\"page_template.cgi?id=$id\">$nome
-       			<img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></a></div>
-     		</li>";
+       			<img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></a></div></div>
+     		  ";
 	}
 }
-if($isempty==0){print "<li><div class=\"search-box\"><strong>Nessuna ricetta</strong></div></li>";}
+if($isempty==0){print "<div class=\"search-box\"><strong>Nessuna ricetta</strong></div>";}
 
-  print "</ul></div></div></div>
+  print "</div></div>
     <div class=\"allinea\"></div>
 </div>";
 

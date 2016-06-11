@@ -92,7 +92,7 @@ print <<EOF;
              
 
           
-            <div class="form-txt">Autore <span id="err_author"></span></div>
+            <div class="form-txt">Autore<span id="err_author"></span></div>
             
               <input type="text" name="n_author" id="n_author" title="Inserisci il nome dell'autore"/>
               
@@ -135,12 +135,11 @@ print <<EOF;
                   <option value="Antipasti">Antipasti</option>
                   <option value="Dessert">Dessert</option>
               </select>
-            
             </div>
           </div>
 
 
-            <div class="form-txt">Carica un immagine </div>
+            <div class="form-txt">Carica un immagine</div>
             
               <input type="file" name="immagine" title="Carica un immagine di presentazione"/>
             

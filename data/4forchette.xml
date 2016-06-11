@@ -1,60 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
 <ricetteDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" 4forchette.xsd">
-		<ricetta IDCode="1" accepted="1">
-			<nomePiatto>Risotto agli asparagi</nomePiatto>
-			<categoria>Primo</categoria>
-			<autore>WWW.MISYA.INFO</autore>
-			<descrizione>
-				Il risotto agli asparagi e' una tipica ricetta primaverile,la prima ricetta con
-				gli asparagi che trovate sul mio blog e questo perche' sono i nemici giurati di
-				mio marito, odia gli asparagi piu' di quanto non odi i carciofi e ho detto tutto!
-				Indovinate invece chi e' un'estimatrice degli asparagi? La mia piccola
-				meraviglia, che ha apprezzato e ha condiviso con me il mio piatto di risotto
-				agli asparagi, e queste sono soddisfazioni. Non so dalle vostre parti, ma qui a
-				Napoli, o almeno a casa mia, gli asparagi non sono cosi' radicati nelle nostre
-				abitudini alimentari quindi ho iniziato con una cosa semplice come il risotto
-				per poi preparare piu' in la' qualche altra cosina piu' sfiziosa. Bene, io vi
-				saluto e vi auguro una buona giornata, bacibaci
-			</descrizione>
-			<imgPiatto>risottoasparagi.jpg</imgPiatto>
-			<difficolta>1</difficolta>
-			<quantePersone>4</quantePersone>
-			<ingredienti>
-				<ingr>300 gr di riso</ingr>
-				<ingr>400 gr di asparagi</ingr>
-				<ingr>1 litro di brodo vegetale</ingr>
-				<ingr>1 scalogno</ingr>
-				<ingr>vino bianco</ingr>
-				<ingr>40 gr di parmigiano</ingr>
-				<ingr>30 gr di burro</ingr>
-				<ingr>olio di oliva</ingr>
-				<ingr>sale</ingr>
-				<ingr>pepe bianco</ingr>
-			</ingredienti>
-			<tempoPreparazione>20</tempoPreparazione>
-			<procedimento>
-				Pulite gli asparagi e una volta
-				mondati lessateli in acqua appena salata per 5 minuti.
-				Scolateli e tagliateli a pezzetti avendo cura di tenere da parte alcune punte
-				per la decorazione finale del piatto.
-				Nell'acqua in cui avrete cotto gli asparagi, aggiungete un dado vegetale (io uso
-				quello fatto in casa) cosi' da ottenere il brodo che vi servira' durante la cottura.
-				Tritate lo scalogno finemente, mettetelo in una casseruola con l'olio e fatelo
-				appassire
-				Aggiungete il riso e fatelo tostare per un paio di minuti
-				Quindi aggiungete il vino bianco e lasciatelo sfumate.
-				Aggiungete il brodo vegetale un mestolo per volta aggiungendolo man mano fino a
-				cuocere completamente il riso.
-				A meta' cottura del risotto, aggiungete gli asparagi, aggiustate di sale e
-				mescolare
-				A fine cottura spegnete la fiamma e mantecate il risotto aggiungete burro e
-				parmigiano
-				Lasciar riposare il risotto agli asparagi un paio di minuti prima di servirlo
-				guarnendo il piatto con pepe bianco e le punte degli asparagi che avevate tenuto
-				da parte.
-			</procedimento>
-		</ricetta>
+		
 		<ricetta IDCode="2" accepted="1">
 			<nomePiatto>Tiramisu'</nomePiatto>
 			<categoria>Dessert</categoria>
@@ -91,80 +38,91 @@
 				Con l’aiuto di sagome di cartone potete decorare a piacimento la superficie del dolce, anche con scritte di auguri.
 			</procedimento>
 		</ricetta>
-  		<ricetta IDCode="3" accepted="1">
-			<nomePiatto>Pasta con crema ai carciofi</nomePiatto>
-			<categoria>Primo</categoria>
-			<autore>WWW.MISYA.INFO</autore>
-			<descrizione>
-			Buondì, questa domenica vi propongo la pasta con crema di carciofi e pancetta croccante,
-			un primo piatto che adoro ma che non preparo quasi mai perché Ivano detesta i carciofi.
-			Ma quando a pranzo trovo la giusta compagnia, questo e’ uno dei modi di utilizzare i carciofi che preferisco
-		        e ho scoperto che la pasta condita con la crema di carciofi piace anche alla piccola.
-			Amiche spero che abbiate trascorso un buon San Valentino e di essere riuscita anche quest’anno a darvi
-		        qualche spunto in più in cucina, noi ieri sera alla fine, dopo una giornata fuori casa,
-			abbiamo cenato con pizza, birra e baci perugina 😉 Oggi, vista la pioggia, siamo casalinghi,
-			per il momento siamo ancora a letto a vedere i cartoni animati, quindi vi lascio alla ricetta di oggi
-			e vado a spupazzarmi i miei amori. Buona domenica a chi passa si qui
-			</descrizione>
-			<imgPiatto>cremacarciofi.jpg</imgPiatto>
-			<difficolta>2</difficolta>
-			<quantePersone>4</quantePersone>
-			<ingredienti>
-				<ingr>4 carciofi</ingr>
-				<ingr>320gr di pasta</ingr>
-				<ingr>1/2 cipolla</ingr>
-				<ingr>200ml di brodo vegetale</ingr>
-				<ingr>25gr di parmiggiano</ingr>
-				<ingr>50gr di pancetta</ingr>
-				<ingr>prezzemolo</ingr>
-				<ingr>olio di oliva</ingr>
-				<ingr>sale</ingr>
-				<ingr>pepe</ingr>
-			  	<ingr>1/2 limone</ingr>
-			</ingredienti>
-			<tempoPreparazione>20</tempoPreparazione>
-			<procedimento>
-			Pulite i carciofi. Poi tagliateli a spicchietti, e metteteli in acqua
-			  e limone per 30 minuti. Tritate la cipolla e mettetela nella padella
-			  con l'olio, poi aggiungete i carciofi, salate
-			  e fate insaporire per qualche minuto. Aggiungete il prezzemolo,
-			  coprite con il brodo e fate cuocere con il coperchio per 10 minuti circa.
-			  Frullate tutto con un mixer poi aggiungete il parmiggiano.
-			  Nel frattempo cuocete la pasta in abbondante acqua salata, scolate al dente
-			  e versante in padella con il condimento.
-			  Rosolate i cubetti di pancetta in padella,servite la pasta con crema di carciofi nei piatti
-			  aggiungendo prezzemolo tritato e cubetti di pancetta croccanti
-			</procedimento>
-		</ricetta>
-		<ricetta IDCode="4" accepted="1">
-			<nomePiatto>Spaghetti aglio, olio e peperoncino</nomePiatto>
-			<categoria>Primo</categoria>
-			<autore>buttalapasta.it</autore>
-			<descrizione>
-			Gli spaghetti, aglio, olio e peperoncino sono un gustoso e facilissimo primo piatto. Su questa ricetta "internazionale" ci sono molte "scuole di pensiero". C'è chi asserisce che ci vuole il formaggio, e chi lo vieta assolutamente, qualcuno asserisce che l'aglio deve essere messo a pezzi grossi, mentre c'è chi lo trita, oppure chi lo schiaccia, e poi c'è anche chi aggiunge il prezzemolo. Scopri allora la ricetta originale, e mi raccomando, utilizzate gli spaghetti numero 5, perchè restano al dente più a lungo.
-			</descrizione>
-			<imgPiatto>spaghettioliopeperoncino.jpg</imgPiatto>
-			<difficolta>1</difficolta>
-			<quantePersone>4</quantePersone>
-			<ingredienti>
-				<ingr>400 Gr Spaghetti Numero 5</ingr>
-				<ingr>2 Spicchi Di Aglio</ingr>
-				<ingr>Peperoncino Piccante Q.B.</ingr>
-				<ingr>1 Mazzetto Di Prezzemolo</ingr>
-				<ingr>Olio Evo Q.B.</ingr>
-				<ingr>Sale Q.B.</ingr>
-			</ingredienti>
-			<tempoPreparazione>15</tempoPreparazione>
-			<procedimento>
-			Mettere a bollire l’acqua salata per la pasta.
-			Sbucciare l'aglio, tagliarlo in verticale ed eliminare il germe al centro, quindi tagliare in due ogni metà.
-			In una padella versare l’olio unite l’aglio, facendolo rosolare a fuoco medio e stando attenti a non bruciarlo.
-			Aggiungere il peperoncino e mescolate.
-			Spegnere la fiamma ed eliminate l’aglio.
-			Cuocere gli spaghetti scolandoli prima che siano cotti, e conservare un bicchiere di acqua della cottura.
-			Rovesciare gli spaghetti nella pentola con l’olio, e rimettere sul fuoco la padella aggiungendo poco per volta l’acqua di cottura, mecsolando fino a fine cottura.
-			Portare in tavola gli spaghetti aggiungendo il prezzemolo fresco.
-			</procedimento>
-		</ricetta>
-	</ricetteDB>
+  		
+		
+	<ricetta IDCode="5" accepted="1"><nomePiatto>torta di fragole e biscotti</nomePiatto><autore>salepepe.it</autore><descrizione>&#13;
+L’Italia è famosa nel mondo per i numerosi dolci e dessert tipici della tradizione. Basta citare il tiramisù, golosità in grado di soddisfare il palato di tutti, il panettone o il pandoro, tipici nel periodo natalizio, o i tradizionali dolci del sud come la pastiera napoletana o la cassata siciliale. Impossibile dimenticare il carnevale, periodo perfetto per preparare ogni tipologia di dolce fritto come frappe o chiacchiere né i dolci al cucchiaio come il biancomangiare o il budino al cioccolato. E se i biscotti meritano un capitolo a parte, la bella stagione è subito sinonimo di gelati artigianali al pistacchio, alla crema o ai gusti più insoliti.</descrizione><tempoPreparazione>60</tempoPreparazione><difficolta>2</difficolta><quantePersone>4</quantePersone><imgPiatto>tortafragole.jpg</imgPiatto><categoria>Dessert</categoria><procedimento>Preparazione della torta di fragole e biscottini&#13;
+&#13;
+1) La lavorazione della ricetta della torta di fragole e biscottini inizia la sera prima con la preparazione della base per la mousse.&#13;
+&#13;
+2) Porta a ebollizione 4 dl di panna in una casseruola, con l’aggiunta di una stecca di vaniglia incisa, poi filtra, scioglici il cioccolato tritato grossolanamente e una volta tiepida mettila in frigorifero per una notte.&#13;
+&#13;
+3) Trascorso il tempo necessario, prendi i biscotti Digestive e sbriciolali in una terrina, poi lavorali insieme al burro morbido.&#13;
+&#13;
+Preparazione della base di torta di fragole e biscottini&#13;
+&#13;
+&#13;
+1) Prendi uno stampo a cerniera foderato con carta da forno e mettici il composto della base di torta alle fragole ben livellato, poi conserva in frigorifero.&#13;
+&#13;
+2) Monta 4 dl di panna fredda per la farcitura, aggiungendo poco alla volta lo zucchero a velo, fino ad avere un composto fermo e sodo.&#13;
+&#13;
+3) Riprendi la base della mousse preparata il giorno prima e monta il mix di panna e cioccolato, poi versalo nello stampo sullo strato di biscotti, stendilo uniformemente con una spatola e riponilo in frigorifero per un'ora circa.&#13;
+&#13;
+4) Sforma la torta, coprila con la panna e allinea i biscotti a sigaretta lungo il bordo. Decora la superficie con fragole, lamponi e biscotti rotondi. Lascia riposare ancora in frigorifero per un'ora e poi servi la torta di fragole e biscottini.</procedimento><ingredienti><ingr>cioccolato 200gr</ingr><ingr>&#13;
+burro 30gr</ingr><ingr>&#13;
+lamponi 200gr</ingr><ingr>&#13;
+zucchero a velo 80gr</ingr><ingr>&#13;
+biscotti 110gr</ingr><ingr>&#13;
+fragole 300gr</ingr></ingredienti></ricetta><ricetta IDCode="7" accepted="1"><nomePiatto>Prova da telefono</nomePiatto><autore>Luca</autore><descrizione>Dovrebbe funzionare tutto</descrizione><tempoPreparazione>40</tempoPreparazione><difficolta>2</difficolta><quantePersone>4</quantePersone><imgPiatto>1465290297464543692556.jpg</imgPiatto><categoria>Antipasti</categoria><procedimento>Bla bla bla</procedimento><ingredienti><ingr>&#13;
+Bestemmie</ingr><ingr/><ingr>Carlo</ingr><ingr>&#13;
+Perl</ingr></ingredienti></ricetta><ricetta IDCode="8" accepted="1"><nomePiatto>Gelato alla vaniglia con marmellata di rovi camemori</nomePiatto><autore>Enrico l&amp;#39;artista</autore><descrizione>Gelato alla vaniglia con marmellata di rovi camemori (more selvatiche)</descrizione><tempoPreparazione>70</tempoPreparazione><difficolta>2</difficolta><quantePersone>4</quantePersone><imgPiatto>gelatoallemore.jpg</imgPiatto><categoria>Dessert</categoria><procedimento>Lavare e pulire i frutti di bosco. Unirli allo zucchero in una padella abbastanza larga. Scuotere ogni tanto la padella, ma non mescolare. Lasciare la padella a raffreddare per due ore.&#13;
+&#13;
+Scaldare a fiamma bassa i frutti di bosco e lasciar sobbollire per 20 minuti. Rimuovere la schiuma.&#13;
+&#13;
+Versare il latte, la panna, i semi di vaniglia ed il baccello in una padella e portare lentamente ad ebollizione. Spegnere la fiamma e lasciar raffreddare per 15 minuti.&#13;
+&#13;
+In una ciotola grande, sbattere i tuorli e lo zucchero per qualche minuto. Rimuovere il baccello di vaniglia dalla padella e versare il composto liquido in quello delle uova, continuando a mescolare. Rimettere il tutto in padella e riscaldare dolcemente, continuare a mescolare e non lasciar bollire. Lasciar raffreddare e procedere a versare il composto nella gelatiera perch&amp;Atilde;&amp;copy; si ghiacci.</procedimento><ingredienti><ingr>&#13;
+24 millilitri di Panna fresca</ingr><ingr>&#13;
+4 Tuorlo d'uovo</ingr><ingr>&#13;
+240 millilitri di Latte intero</ingr><ingr>&#13;
+1.5  Vaniglia, un baccello raschiato</ingr><ingr>450 grammi di More</ingr><ingr>&#13;
+490 grammi di Zucchero</ingr></ingredienti></ricetta><ricetta IDCode="9" accepted="1"><nomePiatto>D&amp;#39;Orata</nomePiatto><autore>Enrico l&amp;#39;artista</autore><descrizione>Filetto di orata marinato in olio al ginger e zafferano al profumo di aglio selvatico su soffice di patate allo Champagne e sale rosso delle Hawaii</descrizione><tempoPreparazione>12</tempoPreparazione><difficolta>3</difficolta><quantePersone>2</quantePersone><imgPiatto>dorata.jpg</imgPiatto><categoria>Secondi</categoria><procedimento>Per la marinatura dell&amp;#39;orata: squamate, eviscerate e sfilettate l&amp;#39;orata, tagliando poi i filetti a tocchetti. Massaggiate l&amp;#39;orata con il sale, il pepe, lo zafferano e i semi di papavero, ricoprite d&amp;#39;olio e lasciate marinare per una notte in frigorifero.&#13;
+&#13;
+Per il soffice di patate allo champagne. In poco olio saltate le patate tagliate a lamelle insieme ai fiori di aglio selvatico. Sfumate con lo champagne, e unite il peperoncino tritato. Portate a cottura allungando con acqua. Salate e pepate abbondantemente.&#13;
+&#13;
+Prepariamo il Soffice: frullatele le patate con il mascarpone, la panna e l&amp;#39;olio extra vergine a filo, fino ad ottenere una purea, se necessario salate e pepate.&#13;
+Per l&amp;#39;orata in oliocottura: trasferite i tocchetti di orata in un pentolino stretto dai bordi alti, coprite con l&amp;#39;olio di marinatura e aggiungetene altro fino a coprirla, se necessario. Aggiungete ancora una manciata di sale affumicato e trasferite sul fuoco a fiamma bassissima, portate a cottura lentamente.&#13;
+&#13;
+Impiattiamo: scaldate a bagnomaria la crema di patate, appena sar&amp;Atilde;&amp;nbsp; ben calda disponetela alla base del piatto. Scolate i filetti d&amp;#39;orata dall&amp;#39;olio di cottura, e con delicatezza ricopriteli con la foglia d&amp;#39;oro. Adagiate i filetti sulla crema soffice di patate. Ultimate con una spolverata di sale rosso delle Hawaii, semi di papavero leggermente tostati e fiori eduli (io ho utilizzato fiori di trifoglio, croccanti freschi e dolciastri, e fiori di aglio selvatico).</procedimento><ingredienti><ingr>300 grammi di Orata selvatica, 2 filetti</ingr><ingr>&#13;
+40 grammi di Mascarpone</ingr><ingr>&#13;
+1 pizzico di Peperoni rossi</ingr><ingr>&#13;
+15 grammi di Aglio, selvatico, mazzetto</ingr><ingr>&#13;
+1 cucchiaio da tavola di Semi di papavero</ingr><ingr>&#13;
+1 bicchiere di Champagne</ingr><ingr>&#13;
+300 grammi di Patate bianche, a lamelle</ingr><ingr>&#13;
+0.7 grammo di Zafferano, 1 bustina</ingr><ingr>&#13;
+1 presa di Fiori eduli</ingr><ingr>&#13;
+2 Foglia d'oro edibile</ingr><ingr>&#13;
+1 presa di Sale Kosher</ingr><ingr>&#13;
+20 grammi di Panna leggera</ingr></ingredienti></ricetta><ricetta IDCode="12" accepted="1"><nomePiatto>tortellini al rag&amp;Atilde;&amp;sup1;</nomePiatto><autore>dadostar</autore><descrizione>Gustosi sformatini di tortellini al rag&amp;Atilde;&amp;sup1;</descrizione><tempoPreparazione>20-40</tempoPreparazione><difficolta>2</difficolta><quantePersone>4</quantePersone><imgPiatto>tortelliniragu.jpg</imgPiatto><categoria>Primi</categoria><procedimento>Cucinate al dente i tortellini in abbondante acqua salata. Scolateli e conditeli con il GranRag&amp;Atilde;&amp;sup1; Star Speck.&#13;
+A parte sbattete le uova con un poco sale e pepe, unite il latte e mescolate.&#13;
+Utilizzate delle formine di silicone monoporzioni, riempitele per 3/4 con i tortellini conditi al GranRag&amp;Atilde;&amp;sup1; Star Speck e poi versate una parte del composto di uova e latte sino a riempire lo stampino.&#13;
+Cuocete in forno caldo a 200&amp;Acirc;&amp;deg; per 15 min. Serviteli caldi o tiepidi eventualmente accompagnati da altro GranRag&amp;Atilde;&amp;sup1; Star Speck per rendere il piatto ancora pi&amp;Atilde;&amp;sup1; saporito.</procedimento><ingredienti><ingr>&#13;
+sale q.b.</ingr><ingr>&#13;
+pepe q.b.</ingr><ingr>250 grammi di tortellini</ingr><ingr>&#13;
+3 uova</ingr><ingr>&#13;
+200 millilitri di latte</ingr><ingr>&#13;
+180 grammi di ragu</ingr></ingredienti></ricetta><ricetta IDCode="13" accepted="1"><nomePiatto>parmigiana di cardi</nomePiatto><autore>dadostar</autore><descrizione>gustosa parmigiana di cardi</descrizione><tempoPreparazione>40-60</tempoPreparazione><difficolta>1</difficolta><quantePersone>4</quantePersone><imgPiatto>parmigianacarde.jpg</imgPiatto><categoria>Secondi</categoria><procedimento>Preparate prima tutti gli ingredienti e incominciate grattugiando il formaggio.&#13;
+&#13;
+&#13;
+Pulite poi i cardi ed eliminate le foglie pi&amp;Atilde;&amp;sup1; dure e i filamenti da tutti i gambi. Metteteli a cuocere in abbondante acqua salata e aceto per almeno 25 min.&#13;
+Scolate i cardi e passateli nel pangrattato. In una pirofila alternate strati di cardi, formaggio grattugiato, basilico e Pummar&amp;Atilde;&amp;sup2; Classica Star. Finite con il sugo e una spolverata di formaggio e infornate a 190&amp;Acirc;&amp;deg; per 20 min. Servite la parmigiana ben calda.</procedimento><ingredienti><ingr>&#13;
+1 mazzetto di basilico</ingr><ingr>&#13;
+2 cucchiai di aceto bianco</ingr><ingr>&#13;
+150 grammi di pangrattato</ingr><ingr>&#13;
+2 cucchiai di olio extra vergine di oliva</ingr><ingr>&#13;
+1 pizzico di sale</ingr><ingr/><ingr>400 grammi di cardi</ingr><ingr>&#13;
+200 grammi di parmigiano</ingr></ingredienti></ricetta><ricetta IDCode="14" accepted="1"><nomePiatto>strudel di radicchio noce e rag&amp;Atilde;&amp;sup1;</nomePiatto><autore>dadostar</autore><descrizione>gustoso strudel di radicchio noce e rag&amp;Atilde;&amp;sup1;</descrizione><tempoPreparazione>20-40</tempoPreparazione><difficolta>1</difficolta><quantePersone>4</quantePersone><imgPiatto>strudelnociragu.jpg</imgPiatto><categoria>Secondi</categoria><procedimento>Pulite il radicchio, lavatelo e affettatelo finemente. Tritate lo scalogno, fatelo rosolare in padella e, dopo pochi minuti, aggiungete il radicchio e sfumate con la birra. Unite l&amp;#39;uvetta precedentemente ammollata e le noci sbriciolate e fate cuocere per pochi minuti. Aggiungete infine il rag&amp;Atilde;&amp;sup1;.&#13;
+&#13;
+&#13;
+Srotolate la pasta sfoglia e ritagliatene dei cerchi di 5 o 6 cm di diametro.&#13;
+&#13;
+&#13;
+Farcite ciascun cerchio con un cucchiaio di composto di radicchio. Richiudete a mezzaluna e con i rebbi di una forchetta premete sulle estremit&amp;Atilde;&amp;nbsp; per impedire che durante la cottura fuoriesca il ripieno. Cuocete le mezzelune in forno caldo a 180&amp;Acirc;&amp;deg; per circa 15 min.</procedimento><ingredienti><ingr>1 rotolo di pasta sfoglia</ingr><ingr>&#13;
+2 teste di radicchio</ingr><ingr>&#13;
+100 grammi di noci</ingr><ingr/><ingr>&#13;
+1 lattina di ragu</ingr><ingr>&#13;
+50 grammi di uvetta</ingr><ingr>&#13;
+1 scalogno</ingr><ingr>&#13;
+1 bicchiere di birra chiara</ingr></ingredienti></ricetta></ricetteDB>
 <!-- by Alessio Luca Last Update 07/05/2016 aggiunto attributo accepted-->

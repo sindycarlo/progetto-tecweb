@@ -58,8 +58,8 @@ print "
           <a class=\"active\">CONTATTACI</a>
           <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
           		<div>
-				<input type=\"text\" class=\"tftextinput\" title=\"searchinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
-				<input type=\"submit\" value=\"Cerca\" title=\"searchbutton\" class=\"tfbutton\"/>
+				<input type=\"text\" class=\"tftextinput\" title=\"inserisci testo qui\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
+				<input type=\"submit\" value=\"Cerca\" title=\"cerca\" class=\"tfbutton\"/>
 				</div>
 	      </form>
         </div>
@@ -109,15 +109,16 @@ print"</div><h2>Modulo commento</h2>
     <form id=\"contact-form\" action=\"inserisci_commento.cgi\" method=\"post\" onsubmit=\"return valida_commento()\">
       <div id=\"fieldset\">
             <div class=\"form-txt\">Il tuo nome <span id=\"err_user\"></span></div>
-            
+			  <label for=\"user\"></label>
               <input type=\"text\" name=\"user\" id=\"user\" title=\"inserisci il tuo nome qui\"/>
              
 		 <div class=\"form-txt\">Inserisci un commento <span id=\"err_commento\"></span></div>
-           
-              <textarea name=\"commento\" id=\"commento\" rows=\"20\" cols=\"60\"></textarea>
+				<label for=\"commento\"></label>
+              <textarea name=\"commento\" id=\"commento\" rows=\"20\" cols=\"60\" title=\"inserisci il commento qui\" ></textarea>
+              
               
      <div class=\"allinea\"></div>   
-        <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Submit\"/></div><div class=\"button\"><input type=\"reset\" value=\"reset\"/></div></div>
+        <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" title=\"Invia dati\" value=\"Submit\"/></div><div class=\"button\"><input type=\"reset\" title=\"resetta form\" value=\"Reset\"/></div></div>
         </div>
         
     </form>

@@ -76,9 +76,9 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
           <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
           <a href=\"contatti.cgi\">CONTATTACI</a>
           <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
-            <div>
-            <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
-            <input type=\"submit\" value=\"Cerca\" class=\"tfbutton\"/>
+	    <div>
+            <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" title=\"inserisci testo qui\" size=\"30\" maxlength=\"30\"/>
+            <input type=\"submit\" value=\"Cerca\" title=\"cerca\" class=\"tfbutton\"/>
             </div>
           </form>
         </div>

@@ -171,10 +171,12 @@ if (($estensione =~ /.png/i) || ($estensione =~ /.jpg/i) || ($estensione =~ /.jp
 			  <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
 			  <a class=\"active\">PROPONI UNA RICETTA</a>
 			  <a href=\"contatti.cgi\">CONTATTACI</a>
-								  <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
-							<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\">
-							<input type=\"submit\" value=\"Cerca\" class=\"tfbutton\">
-						</form>
+			  <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+			  <div>
+				<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" title=\"inserisci testo qui\" size=\"30\" maxlength=\"30\">
+				<input type=\"submit\" value=\"Cerca\" title=\"cerca\" class=\"tfbutton\">
+				</div>
+			  </form>
 		  </div>
 		  <div class=\"allinea\"></div>
 		<div id='breadcrumb'>
@@ -227,6 +229,17 @@ else
 	  <div class=\"main\">
 		<div class=\"intestazione\">
 		  <div id=\"banner\"><h1><a href=\"../index.html\">2FORCHETTE</a></h1></div>
+		    <div class=\"header-menu\" id=\"nav\">
+			  <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
+			  <a class=\"active\">PROPONI UNA RICETTA</a>
+			  <a href=\"contatti.cgi\">CONTATTACI</a>
+			  <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+			  <div>
+				<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" title=\"inserisci testo qui\" size=\"30\" maxlength=\"30\">
+				<input type=\"submit\" value=\"Cerca\" title=\"cerca\" class=\"tfbutton\">
+				</div>
+			  </form>
+		  </div>
 		  <div class=\"allinea\"></div>
 		<div id='breadcrumb'>
 			<p>Ti trovi in: 
@@ -255,7 +268,6 @@ if($auth eq "amministratoreautenticato")
 {
 	print"<!--==============================footer=================================-->
 	<div id=\"footer\">
-	<a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
 		  <div class=\"main\">
 			  <div id=\"inline\">
 				<p>             
@@ -287,7 +299,6 @@ else
 {
 	print"<!--==============================footer=================================-->
 	<div id=\"footer\">
-	<a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
 		  <div class=\"main\">
 			  <div id=\"inline\">
 				<p>             
@@ -311,5 +322,5 @@ else
 	</body>
 	</html>";
 }
-#last update by Luca 07/06/2016
+#last update by Carlo 12/06/2016
 

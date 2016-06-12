@@ -56,8 +56,8 @@ print "
           <a href=\"contatti.cgi\">CONTATTACI</a>
              <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
              <div>
-            <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" title=\"searchinput\" size=\"30\" maxlength=\"30\"/>
-            <input type=\"submit\" value=\"Cerca\" title=\"searchbutton\" class=\"tfbutton\"/>
+            <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" title=\"inserisci testo qui\" size=\"30\" maxlength=\"30\"/>
+            <input type=\"submit\" value=\"Cerca\" title=\"cerca\" class=\"tfbutton\"/>
             </div>
           </form>
         </div>
@@ -81,16 +81,16 @@ print "
     <form id=\"contact-form\" action=\"controllo_login.cgi\" method=\"post\" onsubmit=\"return valida_campi()\">
       <div id=\"fieldset\">
             <div class=\"form-txt\"><span xml:lang=\"en\">Username <span id=\"err_username\"></span></span></div>
-            
+				<label for=\"username\"></label>
               <input type=\"text\" name=\"username\" id=\"username\" title=\"inserisci qui il tuo username\"/>
              
 
             <div class=\"form-txt\"><span xml:lang=\"en\">Password <span id=\"err_password\"></span></span></div>
-            
+            <label for=\"password\"></label>
               <input type=\"password\" name=\"password\" id=\"password\" title=\"inserisci qui la tua password\"/>
               
 
-         <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" value=\"Submit\"/></div><div class=\"button\"><input type=\"reset\" value=\"reset\"/></div></div>
+         <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" title=\"iniva dati\" value=\"Submit\"/></div><div class=\"button\"><input type=\"reset\" title=\"resetta form\" value=\"reset\"/></div></div>
       </div>
     </form>
     </div>

@@ -50,6 +50,19 @@ if($pwd ne $password)
 	  <div class=\"main\">
 		<div class=\"intestazione\">
 		  <div id=\"banner\"><h1><a href=\"../index.html\"> <span>2FORCHETTE</span> </a></h1></div>
+		     <div class=\"header-menu\">
+        <div id=\"nav\">
+          <a href=\"../index.html\"><span xml:lang=\"en\">HOME</span></a>
+          <a href=\"proponiricetta.cgi\">PROPONI UNA RICETTA</a>
+          <a href=\"contatti.cgi\">CONTATTACI</a>
+          <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
+          <div>
+				  <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" title=\"inserisci testo qui\" size=\"30\" maxlength=\"30\"/>
+				  <input type=\"submit\" value=\"Cerca\" title=\"cerca\" class=\"tfbutton\"/>
+          </div>
+	        </form>
+        </div>
+      </div>
 		  <div class=\"allinea\"></div>
 		<div id='breadcrumb'>
 			<p>Ti trovi in:
@@ -114,15 +127,16 @@ else
 		print header(-cookie => [$cookie1,$cookie2]);
 
 		print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
-		<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 		
-		<html>
-		<head>
-		<meta http-equiv=\"refresh\"
-		content=\"0; url=console_admin.cgi\">
-		</head>
-		<body>
-		</body>
-		</html>";
+	<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
+	<head>
+	  <title>Admin Login</title>
+	  <meta name=\"title\" content=\"2forchette - Redirect\"/>
+	  <meta http-equiv=\"refresh\"
+		content=\"0; url=console_admin.cgi\"/>
+	</head>
+	<body>
+	</body>
+	</html>";
 	}
 }
 #Last Update by Luca e Carlo 07/06/2016

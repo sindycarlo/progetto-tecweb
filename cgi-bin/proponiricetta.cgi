@@ -47,8 +47,8 @@ print <<EOF;
           <a href="contatti.cgi">CONTATTACI</a>
           <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
           <div>
-				  <input type=\"text\" class=\"tftextinput\" title=\"searchinput\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
-				  <input type=\"submit\" value=\"Cerca\" title=\"searchbutton\"  class=\"tfbutton\"/>
+				  <input type=\"text\" class=\"tftextinput\" title=\"inserisci testo qui\" name=\"search_parameter\" size=\"30\" maxlength=\"30\"/>
+				  <input type=\"submit\" value=\"Cerca\" title=\"cerca\"  class=\"tfbutton\"/>
           </div>
 	       </form>
       </div>
@@ -87,26 +87,26 @@ print <<EOF;
       <div id="fieldset">
 
             <div class="form-txt">Nome piatto<span id="err_piatto"></span></div>
-            
+              <label for=\"n_piatto\"></label>
               <input type="text" name="n_piatto" id="n_piatto" title="Inserisci il nome del tuo piatto"/>
              
 
           
             <div class="form-txt">Autore<span id="err_author"></span></div>
-            
+              <label for=\"n_author\"></label>
               <input type="text" name="n_author" id="n_author" title="Inserisci il nome dell'autore"/>
               
           
           
             <div class="form-txt">Breve descrizione <span id="err_descrizione"></span></div>
-              
-              <textarea rows="20" cols="60" name="n_desc" id="n_desc"></textarea>
+              <label for=\"n_desc\"></label>
+              <textarea rows="20" cols="60" name="n_desc" id="n_desc" title=\"inserisci una breve descrizione\" ></textarea>
               
 
           <div class="Td">
           <div class="td">
             <div class="form-txt">Tempo (minuti) <span id="err_tempo"></span></div>
-            
+              <label for=\"n_tempo\"></label>
               <input type="text" name="n_tempo" id="n_tempo" title="Inserisci il tempo di preparazione"/>
            
            </div>
@@ -122,7 +122,7 @@ print <<EOF;
             </div>
              <div class="td">
            <div class="form-txt">Numero persone<span id="err_pers"></span></div>
-            
+               <label for=\"n_persone\"></label>
               <input type="text" name="n_persone" id="n_persone" title="Inserisci il numero di persone"/>
              
              </div>
@@ -140,28 +140,28 @@ print <<EOF;
 
 
             <div class="form-txt">Carica un immagine</div>
-            
+              
               <input type="file" name="immagine" title="Carica un immagine di presentazione"/>
             
           
 
             <div class="form-txt">Ingredienti (ogni ingrediente deve terminare con il simbolo ; ed essere in una riga a se' stante) <span id="err_ingr"></span></div>
-            
-              <textarea rows="20" cols="60" id="n_ingr" name="n_ingr"></textarea>
+              <label for=\"n_ingr\"></label>
+              <textarea rows="20" cols="60" id="n_ingr" name="n_ingr" title=\"inserisci ingredienti\"></textarea>
              
 
             <div class="form-txt">Procedimento <span id="err_proc"></span></div>
-             
-              <textarea rows="20" cols="60" name="n_proc" id="n_proc"></textarea>
+             <label for=\"n_proc\"></label>
+              <textarea rows="20" cols="60" name="n_proc" id="n_proc" title=\"inserisci il procedimento\" ></textarea>
               
               
 
         <div class="buttons">
 		<div class="button">
-			<input type="submit" value="Submit"/>
+			<input type="submit" title=\"invia dati\" value="Submit"/>
 		</div>
 	<div class="button">
-		<input type="reset" value="reset"/>
+		<input type="reset" title=\"resetta form\" value="reset"/>
 	</div>
         </div>
         </div>

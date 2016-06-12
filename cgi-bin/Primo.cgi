@@ -45,8 +45,8 @@ print "
           <a href=\"contatti.cgi\">CONTATTACI</a>
           <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
           <div>
-				  <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" title=\"searchinput\" size=\"30\" maxlength=\"30\"/>
-				  <input type=\"submit\" value=\"Cerca\" title=\"searchbutton\" class=\"tfbutton\"/>
+				  <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" title=\"inserisci testo qui\" size=\"30\" maxlength=\"30\"/>
+				  <input type=\"submit\" value=\"Cerca\" title=\"cerca\" class=\"tfbutton\"/>
           </div>
 	        </form>
         </div>

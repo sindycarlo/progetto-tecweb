@@ -46,8 +46,8 @@ print "
           	
              <form id=\"tfsearch\" method=\"get\" action=\"cercaricetta.cgi\">
              			<div>
-						<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" title=\"searchinput\" size=\"30\" maxlength=\"30\"/>
-						<input type=\"submit\" value=\"Cerca\" title=\"searchbutton\" class=\"tfbutton\"/>
+						<input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" title=\"inserisci testo qui\" size=\"30\" maxlength=\"30\"/>
+						<input type=\"submit\" value=\"Cerca\" title=\"cerca\" class=\"tfbutton\"/>
 						</div>
 					</form>
 					
@@ -200,7 +200,7 @@ else
 		<div class=\"main\">
 	   <h1>Errore</h1>
 		<div class=\"box-contact\">
-		<p>Non sei autenticato come amministratore!</p><a href=\"menu.cgi\"><span lang=\"en\">Torna alla homepage</span></a>
+		<p>Non sei autenticato come amministratore!</p><a href=\"menu.cgi\">Torna alla<span lang=\"en\">homepage</span></a>
 		</div>
 		</div>
 	</div>

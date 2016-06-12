@@ -342,14 +342,6 @@ img {
 	border-radius:0.5em;
 }
 
-.lista-menu  img{	
-	border-radius:0.438em;
-	width:100%;
-    min-height: 200px;
-    min-width: 200px;
-    max-width: 200px;
-    max-height: 200px;
-}
 .info {
 	width:auto;
 }
@@ -362,9 +354,6 @@ img {
 	color:#600060;
 }
 
-.lista-menu .box-img-lista:hover{
-	box-shadow:10px 10px 5px #888888;
-}
 .blocco1 .box-img:hover{
 	box-shadow:10px 10px 5px #888888;
 }
@@ -372,18 +361,6 @@ img {
 	height:300px;
 	max-width:410px;
 }
-
-.lista-menu{overflow:hidden;padding-top:1.563em;}
-
-.lista-menu li{float:left;width:14em;padding-left:4.3em;}
-
-.lista-menu a{
-	font-size:1.250em;
-	line-height:1.5em;
-	text-decoration: underline;
-	display: block;
-}
-.lista-menu a:visited{color:#600060;}
 
 
 .list-recipes-pres p{
@@ -411,8 +388,6 @@ display:inline;
 .list-commenti li{
 margin-bottom:2em;
 }
-
-
 
 
 .side-bar{
@@ -538,7 +513,6 @@ box-shadow:0 0 0.188em #c5c2a9;
 .Td {clear:both;height:auto;}
 .td {height:auto;width:auto;display:inline-block;padding-right:1em;}
 .Td label {
-  max-width: 4.375em;
   position: relative;
   margin: 0;
   overflow: hidden;
@@ -567,8 +541,6 @@ padding-left: 4.5em;
   overflow: hidden;
 }
 #contact-form label {
-  min-height: 3.375em;
-  min-width:7em;
   position: relative;
   margin: 0;
   overflow: hidden;
@@ -598,6 +570,7 @@ padding-left: 4.5em;
 }
 
 .form-txt{padding-bottom:0.125em;padding-top: 1em;clear:left;}
+
 #contact-form  select {
 width: 5em;
 height: 2.5em;
@@ -688,21 +661,6 @@ height:31px;
     padding: 0 0 3.750em;
 	}
 
-.lista-menu li{
-	padding-left:3.5em;
-	float: left;
-}
-.ricette {
-
-	background:white;
-	width:85%;
-	margin-left:1.7em;
-	padding:0 2.5em 3.188em;
-    border-radius:1.125em;
-	box-shadow:0 0 0.188em #c5c2a9;
-
-}
-
 .contenitore .blocco1 {
 	padding-left: 2.1%;
 	width:45%;
@@ -719,20 +677,7 @@ height:31px;
 .contenitore {
 	width:auto;
 }
-.lista-menu .box-img{
-	width:auto;
-	float:left;
-	}
-.lista-menu .box-img img {
-    border-radius: 0.438em;
-    width: 100%;
-	
-}
-.lista-menu  img{	
 
-    max-height: 100px;
-    max-width:100%;
-}
 .box-contact .button
 {
 
@@ -759,7 +704,6 @@ margin-left:1.5em;
 
 }
 
-
 .elenco-categorie{
 margin:1.250em 0 0;
 
@@ -773,18 +717,6 @@ margin:1.250em 0 0;
 }
 @media (max-width: 630px) {
 
-.lista-menu li {
-    float: left;
-    width: auto;
-}
-.lista-menu .box-img img {
-    border-radius: 0.438em;
-    width: 100%;
-    min-height: 200px;
-    min-width: 200px;
-    max-width: 300px;
-    max-height: 200px;
-}
 h2 {
 font-size:1.3em;
 }
@@ -830,24 +762,11 @@ width:40%;
 margin-left:0.6em;;
 
 }
-.ricette {
 
-	background:white;
-	width:auto;
-	margin:2.750em 0 1.750em;
-	padding:0 2.5em 3.188em;
-    border-radius:1.125em;
-	box-shadow:0 0 0.188em #c5c2a9;
-
-}
 .box-img{
 	max-width:100%;
 	}
-	.lista-menu  img{	
 
-	max-width: 100%;
-	max-height:100%;
-}
 }
 
 @media (max-width: 390px) {
@@ -888,21 +807,7 @@ margin:0;
     height: auto;
 }
 /*-----CONTENT------*/
-.lista-menu li{
-	padding-left:0.5em;
-	float:left;
-	width:100%;
-}
-.lista-menu a{
-	display:block;
-	width: 100%;
-}
-.blocco1.thumbnail {
-	clear:both;
-	display:block;
-	width:19em;
-	padding-left:0;
-}
+
 .contenitore .blocco2 {
 	width:auto;
 }
@@ -923,12 +828,7 @@ h2,h1,h3{
 	text-align:center;
 }
 
-.box-img-lista{
-	width:90%;
-}
-.lista-menu .box-img{
-	width:100%;
-	}
+
 .list-recipes-pres p{
 display:block;
 padding-bottom:0;

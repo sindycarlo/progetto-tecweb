@@ -596,8 +596,8 @@ text-align:center;
 }
 
 #inline img{
-border:0;
-width:88px;
+border-radius:0;
+width:89px;
 height:31px;
 }
 

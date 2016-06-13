@@ -714,7 +714,7 @@ margin:1.250em 0 0;
 }
 /*---------------------------------*/
 }
-@media (max-width: 630px) {
+@media (max-width: 730px) {
 
 h2 {
 font-size:1.3em;
@@ -763,6 +763,9 @@ margin-left:0.6em;;
 }
 
 .box-img{
+	max-width:100%;
+	}
+	.blocco1 .box-img img{
 	max-width:100%;
 	}
 

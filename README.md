@@ -8,3 +8,4 @@
 * CONTROLLO PERL INPUT (SOSTITUTIVO JS)
 * RELAZIONE
 * CHECK DEI COLORI(quasi completo)(/dobbiamo vederci per controllare)
+* CAMBIARE LOGO DELLA PAGINA

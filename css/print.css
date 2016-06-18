@@ -21,3 +21,5 @@ body {font-size: 12pt;}
 
 /*---------nascondo salta contenuto-----------*/
 a.salta-main{display:none;}
+/*----------nascondo UP-----------------------*/
+#up{display: none;}

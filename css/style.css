@@ -396,35 +396,6 @@ padding-left:1em;
 background: #F8F8FF;
 border-radius:1.125em;
 }	
-.sottomenu{
-    
-    margin:1.563em 0em 3.750em;
-    
-}
-.sottomenu a{
-    color: #003F80;
-    font-size:1.0em;
-}
-.sottomenu a:hover{
-	text-decoration: underline;
-}
-
-.sottomenu a:visited{color:purple;}
-.sottomenu div {
-    float:left;
-    width:33%;
-    padding:0.188em 0.438em;
-    margin-left:0.7em;
-}
-.elenco-categorie{
-width:auto;
-float:left;
-margin:1.250em  0 -1.875em;
-padding:0 0.625em 0.438em 2.5em;
-background:#fff;
-border-radius:1.125em;
-}
-	
 
 .list li {
 	background:url(../images/marker-1.blue.png) no-repeat 0.438em 0.625em;
@@ -511,14 +482,7 @@ box-shadow:0 0 0.188em #c5c2a9;
 
 .Td {clear:both;height:auto;}
 .td {height:auto;width:auto;display:inline-block;padding-right:1em;}
-.Td label {
-  position: relative;
-  margin: 0;
-  overflow: hidden;
-  display: inline;
-  float: left;
-  width: 100%;
-}
+
 .box-contact .button
 {
 
@@ -539,14 +503,7 @@ padding-left: 4.5em;
   width: 100%;
   overflow: hidden;
 }
-#contact-form label {
-  position: relative;
-  margin: 0;
-  overflow: hidden;
-  display: block;
-  float: left;
-  width: 100%;
-}
+
 #contact-form input,
 #contact-form textarea {
   margin: 0;
@@ -587,9 +544,7 @@ height: 2.5em;
 
 
 }
-.informazioni {
-text-align:center;
-}
+
 #footer #inline p{
 	text-align: center;
 	padding-left: 0;
@@ -703,10 +658,7 @@ margin-left:1.5em;
 
 }
 
-.elenco-categorie{
-margin:1.250em 0 0;
 
-}
 /*----------FOOTER-----------*/
 #footer #inline p{
 	text-align: center;
@@ -886,10 +838,6 @@ text-align: center;
 	margin-left: 2em;
 }
 
-.elenco-categorie{
-margin:1.25em 0 0;
-
-}
 /*---------FOOTER-------*/
 #footer #inline p{
 	text-align: center;

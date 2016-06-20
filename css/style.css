@@ -75,7 +75,18 @@ nav,
 	outline: 0;
     vertical-align: top;
 }
+
 p {padding-left:1em;padding-right:1em;}
+
+.slogan {
+font-style: italic;
+font-size: 2em;
+text-align: center;
+margin-top: 0;
+padding-top: 1em;
+line-height: 1.1em;
+padding-left: 0;
+}
 
 ul{
 	list-style: none;

@@ -68,12 +68,12 @@ print"
 	<div id=\"content\">
 	<div class=\"full\">
 	  <div class=\"contenitore\">
-		<h2>Le categorie:</h2>		 
+		<p class=\"slogan\">\"Si cucina sempre pensando a qualcuno, altrimenti stai solo preparando da mangiare\"</p>		 
 		<div class=\"blocco1\">
 
 		  <div  class=\"box-img\">
 		  <h2><span>PRIMI</span> PIATTI</h2>
-		  <a href=\"Primo.cgi\">
+		  <a href=\"Primi.cgi\">
 		  <img src=\"../images/primopiatto.jpg\" alt=\"immagine che descrive risotto allo zafferano\"/> 
 		  Continua a leggere i primi</a></div>
 
@@ -167,7 +167,7 @@ if(scalar(@ricette)>=4) #mostro ricette casuali solo se ne ho abbastanza
 	print"
 			
 			<div class=\"contenitore\">
-			<h3>I nostri consigli:</h3>
+			<p class=\"slogan\">I nostri consigli:</p>
 			<div class=\"blocco1\">
 			<div class=\"box-img\">
 			<a class=\"title\" href=\"page_template.cgi?id=$rand1\">$titolo1
@@ -207,14 +207,12 @@ if(scalar(@ricette)>=4) #mostro ricette casuali solo se ne ho abbastanza
             <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
          </p>
          <p>
-         <a href=\"http://validator.w3.org/check?uri=referer\"><img
-      		src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
-         <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-       	 <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\"
-            alt=\"CSS Valido!\"/></a>
-         <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-         <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
-        	alt=\"CSS Valido!\"/></a>
+		 <img src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/>
+
+       	 <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\" alt=\"CSS Valido!\"/>
+
+       	 <img src=\"../images/valid_wcag2_aaa.gif\" alt=\"Totally Valid WCAG 2.0 AAA\" />
+
          </p>
          <p>
           <a href=\"amministratore_login.cgi\">Admin</a>
@@ -241,20 +239,16 @@ else
           <p>
             <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
            </p>
-      <p>
-      <a href=\"http://validator.w3.org/check?uri=referer\"><img
-      src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
+    	 <p>
+		 <img src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/>
 
-        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\"
-            alt=\"CSS Valido!\"/></a>
+       	 <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\" alt=\"CSS Valido!\"/>
 
-        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
-        alt=\"CSS Valido!\"/></a>
-          </p>
+       	 <img src=\"../images/valid_wcag_aaa.gif\" alt=\"Totally Valid WCAG 2.0 AAA\" />
+
+         </p>
            <p>
-          <a href=\"amministratore_login.cgi\">Admin</a>
+          <a href=\"amministratore_login.cgi\">Login Admin</a>
           </p>
           </div>
     </div>

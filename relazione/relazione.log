@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.15)  21 JUN 2016 18:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.15)  21 JUN 2016 19:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -238,19 +238,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.107 		\end{itemize}
-                      [1]
-Overfull \hbox (132.41263pt too wide) in paragraph at lines 119--121
-[]\OT1/cmr/m/n/12 Sono stati in-ser-iti per ogni pag-ina i tag meta: ti-tle, de
-scription,keywords,language,author,content-
- []
-
+l.106 			T
+          utto il codice \'e stato scritto secondo le raccomandazioni W3C,co...
+[1]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+[2]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-[2] [3]
-Overfull \hbox (7.82088pt too wide) in paragraph at lines 155--156
+[3]
+Overfull \hbox (7.82088pt too wide) in paragraph at lines 173--174
 []\OT1/cmr/m/n/12 data: in questa cartella sono con-tenuti i file xml ed i rel-
 a-tivi XMLSchema. 
  []
@@ -298,20 +295,20 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 [7]
-Overfull \hbox (25.35814pt too wide) in paragraph at lines 268--269
+Overfull \hbox (25.35814pt too wide) in paragraph at lines 286--287
 []\OT1/cmr/m/n/12 amministratorelogin.cgi: gen-era la pag-ina di lo-gin per l'a
 mministratore. 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 293.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 311.
 [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 293.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 311.
 (./relazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 293.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 293.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 311.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 311.
 Package rerunfilecheck Info: File `relazione.out' has not changed.
 (rerunfilecheck)             Checksum: 1EE674C882DB09F22A6ED80599F9A715;943.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 293.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 311.
  ) 
 Here is how much of TeX's memory you used:
  6020 strings out of 495032
@@ -320,14 +317,14 @@ Here is how much of TeX's memory you used:
  9192 multiletter control sequences out of 15000+600000
  9744 words of font info for 34 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 36i,5n,38p,646b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,5n,38p,646b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on relazione.pdf (10 pages, 110028 bytes).
+Output written on relazione.pdf (10 pages, 110220 bytes).
 PDF statistics:
  163 PDF objects out of 1000 (max. 8388607)
  27 named destinations out of 1000 (max. 500000)

@@ -101,23 +101,36 @@
 		\subsection{Separazione tra struttura,presentazione e comportamento}
 		\begin{itemize}
 			\item Per una maggiore accessibilit\'a al sito da parte di utenti disabili e per favorire gli algoritmi dei motori di ricerca si \'e deciso di separarare la struttura dalla presentazione e dal comportamento.
-			Infatti il contenuto del sito \'e rapprentato dai file HTML e CGI, i quali richiamano i fogli di stile CSS e si utilizzano (anche in questo caso attraverso percorsi esterni), esternamente controlli in JavaScript in particolare per la compilazione dei form. Tuttavia il contenuto rimane accessibile anche se JavaScript \'e disabilitato.(da verificare!!)
-			
+			Infatti il contenuto del sito \'e rapprentato dai file HTML e CGI, i quali richiamano i fogli di stile CSS e si utilizzano (anche in questo caso attraverso percorsi esterni), esternamente controlli in JavaScript in particolare per la compilazione dei form. Tuttavia il contenuto rimane accessibile anche se JavaScript \'e disabilitato. Infatti opportuni controlli in perl ne verificano la validit\`a.
+
 			Tutto il codice \'e stato scritto secondo le raccomandazioni W3C,con opportuna validazione di esso.
 		\end{itemize}
 			\subsection{Colori}
 			\begin{itemize}
-				\item Si \'e scelto uno schema di colori non particolarmente vivace (azzuro chiaro);Non sono colori di base, ma comunque la lettura dei testi risulta accessibile.Bisogna ricordare che si tratta di un sito di cucina e quindi l'utente si aspetta dei colori vivaci adatti al tipo di sito.Inoltre i link sono sempre sottolineati, e diventano di colore viola quando vengono cliccati.
+				\item Si \'e scelto uno schema di colori non particolarmente vivace (azzuro chiaro);Non sono colori di base, ma comunque la lettura dei testi risulta accessibile.Bisogna ricordare che si tratta di un sito di cucina e quindi l'utente si aspetta dei colori vivaci adatti al tipo di sito. 
+
+				\item I link sono sempre sottolineati, e diventano di colore viola quando vengono cliccati.
+
 				Di seguito sono riportate le visualizzazioni del sito attraverso alcuni disturbi visivi:
 
-				MANCA...
+				MANCA...DOMANI
 			\end{itemize}	
 			
 		
 			\subsection{Tag meta}
 			\begin{itemize}
-				\item Sono stati inseriti per ogni pagina i tag meta: title, description,keywords,language,author,content-type.
-				il tag title descrive la pagina corrente dal particolare al generale.Il tag description da una descrizione del contenuto del sito, il tag language indica che il sito \'e stato interamente scritto in italiano. 
+				\item Sono stati inseriti per ogni pagina i tag meta:
+				\subitem title
+				\subitem description
+				\subitem keywords
+				\subitem language 
+				\subitem author
+				\subitem content-type
+
+				\item Il tag title descrive la pagina corrente dal particolare al generale.
+				\item Il tag description da una descrizione del contenuto del sito
+
+				\item  il tag language indica che il sito \'e stato interamente scritto in italiano. 
 			\end{itemize}
 			\subsection{Screen reader}
 			\begin{itemize}
@@ -130,22 +143,27 @@
 			\begin{itemize}
 				\item Per l'usabilit\`a del sito si è fatta attenzione ad inserire le 6W del giornalismo:
 				
-				What?: Un utente appena entra nella home capisce subito che si tratta di un sito di ricette, dalla barra dei men\'u (Proponi ricetta, Cerca ricetta), e dal contenuto in primo piano che mette in evidenza alcune ricette proposte.
+				\subitem What?: 
+				Un utente appena entra nella home capisce subito che si tratta di un sito di ricette, dalla barra dei men\'u (Proponi ricetta, Cerca ricetta), e dal contenuto in primo piano che mette in evidenza alcune ricette proposte.
 				
-				Who?: A chi \'e rivolto il sito? Il sito grazie alle immagini si capisce che \'e dedicato a mamme e pap\`a
+				\subitem Who?:
+				 A chi \'e rivolto il sito? Il sito grazie alle immagini si capisce che \'e dedicato a mamme e pap\`a
 				che vogliono preparare una gustosa ricetta per i propri figli.
 				
-				Where?: Nonnostante il sito non abbia una propria locazione, gi\'a  nel footer di ogni pagina sono presenti informazioni riguardo gli amministratori e il sito.Per maggiore visibilit\`a, \'e stata inserita una pagina CONTATTACI dove oltre ala sezione commenti, sono specificati gli indirizzi email e numero di telefono degli amministratori. 
+				\subitem Where?: 
+				Nonnostante il sito non abbia una propria locazione, gi\'a  nel footer di ogni pagina sono presenti informazioni riguardo gli amministratori e il sito.Per maggiore visibilit\`a, \'e stata inserita una pagina CONTATTACI dove oltre ala sezione commenti, sono specificati gli indirizzi email e numero di telefono degli amministratori. 
 				
 				When?: ..........
 				
-				Why?: Perch\'e un utente dovrebbe rimanere nel sito o dovrebbe ritornarci? Il sito \'e principalmente espositivo,(gli utenti possono liberamente visualizzare le ricette), si \'e cercato di renderlo pi\'u interessante, aggiungendo una sezione proponi ricetta (l'utente ha la possibilit\'a di inserire la propria ricetta), e anche una sezione commenti.
+				\subitem Why?: 
+				Perch\'e un utente dovrebbe rimanere nel sito o dovrebbe ritornarci? Il sito \'e principalmente espositivo,(gli utenti possono liberamente visualizzare le ricette), si \'e cercato di renderlo pi\'u interessante, aggiungendo una sezione proponi ricetta (l'utente ha la possibilit\'a di inserire la propria ricetta), e anche una sezione commenti.
 				
-				How?: La barra di navigazione mostra tutte le sezioni principali del sito alle quali un utente pu\'o accedere.
+				\subitem How?:
+				 La barra di navigazione mostra tutte le sezioni principali del sito alle quali un utente pu\'o accedere.
+				Nella barra men\'u \'e sempre evidenziata la voce della pagina in cui ci troviamo,e si vede attraverso una diversa colorazione dei link in quali altre pagine si \'e stati. 
+
 				
-				Nella barra men\'u \'e sempre evidenziata la voce della pagina in cui ci troviamo (DA SISTEMARE),e si vede attraverso una diversa colorazione dei link in quali altre pagine si \'e stati. il testo \'e sottolineato, per evidenziare il fatto che sono link.
-				
-				Breadcrumbs: Affinch\'e l'utente non si perda mai all'interno del sito, \'e stato riportato sotto la barra di navigazione, il percorso che si \'e effettuato dall'home page.
+				Breadcrumbs: Affinch\'e l'utente non si perda mai all'interno del sito, \'e stato riportato sotto la barra di navigazione, il percorso che si \'e effettuato dalla home page.
 				
 			\end{itemize}
 			\section{Gerarchia dei file}

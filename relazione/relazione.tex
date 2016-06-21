@@ -95,42 +95,36 @@
 	\end{itemize}
 		\section{Utenti destinatari}
 		\begin{itemize}
-			\item Il sito 
+			\item Manca..
 		\end{itemize}
 		\section{Accessibilit\`a}
 		\subsection{Separazione tra struttura,presentazione e comportamento}
 		\begin{itemize}
 			\item Per una maggiore accessibilit\'a al sito da parte di utenti disabili e per favorire gli algoritmi dei motori di ricerca si \'e deciso di separarare la struttura dalla presentazione e dal comportamento.
-			Infatti il contenuto del sito \'e rapprentato dai file HTML e CGI, i quali richiamano i fogli di stile CSS e si utilizzano (anche in questo caso attraverso percorsi esterni), esternamente controlli in JavaScript in particolare per la compilazione dei form. Tuttavi il contenuto rimane accessibile anche se JavaScript \'e disabilitato.(da verificare!!)
+			Infatti il contenuto del sito \'e rapprentato dai file HTML e CGI, i quali richiamano i fogli di stile CSS e si utilizzano (anche in questo caso attraverso percorsi esterni), esternamente controlli in JavaScript in particolare per la compilazione dei form. Tuttavia il contenuto rimane accessibile anche se JavaScript \'e disabilitato.(da verificare!!)
 			
 			Tutto il codice \'e stato scritto secondo le raccomandazioni W3C,con opportuna validazione di esso.
 		\end{itemize}
 			\subsection{Colori}
 			\begin{itemize}
-				\item Si \'e scelto uno schema di colori non particolarmente vivace (arancione opaco,bianco sporco,nero);Non sono colori di base, ma comunque la lettura dei testi risulta accessibile.Bisogna ricordare che si tratta di un sito di cucina e quindi l'utente si aspetta dei colori vivaci adatti al tipo di sito.(da rivedere!!).Inoltre i link sono sempre sottolineati, e diventano del colore standard quando vengono cliccati.
+				\item Si \'e scelto uno schema di colori non particolarmente vivace (azzuro chiaro);Non sono colori di base, ma comunque la lettura dei testi risulta accessibile.Bisogna ricordare che si tratta di un sito di cucina e quindi l'utente si aspetta dei colori vivaci adatti al tipo di sito.Inoltre i link sono sempre sottolineati, e diventano di colore viola quando vengono cliccati.
 				Di seguito sono riportate le visualizzazioni del sito attraverso alcuni disturbi visivi:
-				
-			
-			\begin{figure}[ht!]
-				\centering
-				\includegraphics[width=100mm]{test1}
-				\caption{vedi file test1.png}
-			\end{figure}
 
-				\begin{figure}[ht!]
-					\centering
-					\includegraphics[width=100mm]{test2}					\caption{vedi file test2.png}
-				\end{figure}
-			\end{itemize}
+				MANCA...
+			\end{itemize}	
+			
+		
 			\subsection{Tag meta}
 			\begin{itemize}
 				\item Sono stati inseriti per ogni pagina i tag meta: title, description,keywords,language,author,content-type.
-				il tag title descrive la pagina corrente dal particolare al generale.Il tag description da una descrizione del contenuto del sito, il tag language indica che il sito \'e stato interamente scritto in italiano. Compaiono per\'o alcune parole inglesi che sono state segnalate agli screenreader attraverso il tag "span xml:lang=en" segnalando la lingua con cui leggere correttamente i vocaboli. 
+				il tag title descrive la pagina corrente dal particolare al generale.Il tag description da una descrizione del contenuto del sito, il tag language indica che il sito \'e stato interamente scritto in italiano. 
 			\end{itemize}
 			\subsection{Screen reader}
 			\begin{itemize}
 				\item Ogni foto ha il suo attributo alt che descrive ci\'o che l'immagine ritrae.
 				Si è evitato di utilizzare immagini per visualizzare il testo, quindi il contenuto informativo rimane accessibile anche quando fallisce il caricamento delle immagini o del CSS.
+				\item Si \'e fornita particolare attenzione alle parole straniere che sono state segnalate agli screenreader attraverso il tag "span xml:lang=en" segnalando la lingua con cui leggere correttamente i vocaboli. 
+				\item Inoltre \`e stato inserito un link skip nav per saltare direttamente al contenuto, quando viene premuto il tasto tab.
 			\end{itemize}
 			\section{Usabilit\`a}
 			\begin{itemize}

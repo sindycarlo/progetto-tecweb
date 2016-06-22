@@ -29,6 +29,7 @@ print <<EOF;
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta http-equiv="Content-Script-Type" content="text/javascript"/>
     <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen"/>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon"/>	
     <link rel="stylesheet" href="../css/print.css" type="text/css" media="print"/>
     <script type="text/javascript" src="../js/proponi_ricetta.js"></script>
 </head>
@@ -87,26 +88,26 @@ print <<EOF;
       <div id="fieldset">
 
             <div class="form-txt">Nome piatto<span id="err_piatto"></span></div>
-              <label for=\"n_piatto\"></label>
+
               <input type="text" name="n_piatto" id="n_piatto" title="Inserisci il nome del tuo piatto"/>
              
 
           
             <div class="form-txt">Autore<span id="err_author"></span></div>
-              <label for=\"n_author\"></label>
+
               <input type="text" name="n_author" id="n_author" title="Inserisci il nome dell'autore"/>
               
           
           
             <div class="form-txt">Breve descrizione <span id="err_descrizione"></span></div>
-              <label for=\"n_desc\"></label>
+
               <textarea rows="20" cols="60" name="n_desc" id="n_desc" title=\"inserisci una breve descrizione\" ></textarea>
               
 
           <div class="Td">
           <div class="td">
             <div class="form-txt">Tempo (minuti) <span id="err_tempo"></span></div>
-              <label for=\"n_tempo\"></label>
+
               <input type="text" name="n_tempo" id="n_tempo" title="Inserisci il tempo di preparazione"/>
            
            </div>
@@ -122,7 +123,7 @@ print <<EOF;
             </div>
              <div class="td">
            <div class="form-txt">Numero persone<span id="err_pers"></span></div>
-               <label for=\"n_persone\"></label>
+
               <input type="text" name="n_persone" id="n_persone" title="Inserisci il numero di persone"/>
              
              </div>
@@ -146,12 +147,12 @@ print <<EOF;
           
 
             <div class="form-txt">Ingredienti (ogni ingrediente deve terminare con il simbolo ; ed essere in una riga a se' stante) <span id="err_ingr"></span></div>
-              <label for=\"n_ingr\"></label>
+
               <textarea rows="20" cols="60" id="n_ingr" name="n_ingr" title=\"inserisci ingredienti\"></textarea>
              
 
             <div class="form-txt">Procedimento <span id="err_proc"></span></div>
-             <label for=\"n_proc\"></label>
+
               <textarea rows="20" cols="60" name="n_proc" id="n_proc" title=\"inserisci il procedimento\" ></textarea>
               
               
@@ -161,7 +162,7 @@ print <<EOF;
 			<input type="submit" title=\"invia dati\" value="Submit"/>
 		</div>
 	<div class="button">
-		<input type="reset" title=\"resetta form\" value="reset"/>
+		<input type="reset" title=\"resetta form\" value="Reset"/>
 	</div>
         </div>
         </div>
@@ -184,16 +185,14 @@ if($auth eq "amministratoreautenticato")
           <p>
             <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
            </p>
-      <p>
-      <a href=\"http://validator.w3.org/check?uri=referer\"><img
-      src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
-        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\"
-            alt=\"CSS Valido!\"/></a>
-        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
-        alt=\"CSS Valido!\"/></a>
-          </p>
+      		<p>
+		 <img src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/>
+
+       	 <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\" alt=\"CSS Valido!\"/>
+
+       	 <img src=\"../images/valid_wcag_aaa.gif\" alt=\"Totally Valid WCAG 2.0 AAA\" />
+
+         </p>
              <p>
           ACCESSO EFFETTUTATO COME ADMIN:
           <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">logout</span></button></a>
@@ -218,18 +217,14 @@ else
           <p>
             <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
            </p>
-      <p>
-      <a href=\"http://validator.w3.org/check?uri=referer\"><img
-      src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
+      		<p>
+		 <img src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/>
 
-        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\"
-            alt=\"CSS Valido!\"/></a>
+       	 <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\" alt=\"CSS Valido!\"/>
 
-        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
-        alt=\"CSS Valido!\"/></a>
-          </p>
+       	 <img src=\"../images/valid_wcag_aaa.gif\" alt=\"Totally Valid WCAG 2.0 AAA\" />
+
+         </p>
           </div>
     </div>
   </div>

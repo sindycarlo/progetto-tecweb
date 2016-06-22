@@ -45,6 +45,7 @@ print "
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
     <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
+    <link rel=\"shortcut icon\" href=\"../images/favicon.ico\" type=\"image/x-icon\"/>	
     <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
 </head>
 <body>

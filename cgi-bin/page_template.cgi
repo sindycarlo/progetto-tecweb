@@ -61,10 +61,11 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
     <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
+    <link rel=\"shortcut icon\" href=\"../images/favicon.ico\" type=\"image/x-icon\"/>	
     <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
 </head>
 <body>
-<div><a class=\"salta-main\" href=\".list\"><span>Salta al contenuto</span></a></div>
+<div><a class=\"salta-main\" href=\"#num-pers\"><span>Salta al contenuto</span></a></div>
 <!--==============================header=================================-->
 <div id=\"header\">
   <div class=\"main\">
@@ -86,7 +87,7 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w
       <div class=\"allinea\"></div>
         <div id='breadcrumb'>
         <p>Ti trovi in:
-      <a href=\"../index.html\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
+      <a href=\"menu.cgi\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
       <a href=\"$cat.cgi\">$cat</a><span>&gt;</span>
       $titolo
       </p>
@@ -120,7 +121,7 @@ foreach my $singleing (@ingredients)
 	<p><strong>Autore:</strong> $autore</p> <p><strong>Categoria:</strong> $cat</p>
 <p>$descrizione</p>
     <div class=\"allinea\"></div>
-      <div class=\"box-img\"><img src=\"../images/$imgpiatto\" alt=\"immagine che rappresenta $titolo\"/></div>
+      <div class=\"box-img\"><img src=\"../images/$imgpiatto\" alt=\"immagine di $titolo\"/></div>
       <h2>PREPARAZIONE</h2>
       <div>
 	<p><strong>Tempo di preparazione:</strong> $tempo minuti</p> <p><strong>Difficolta':</strong> $diff</p>
@@ -144,18 +145,14 @@ print "<!--==============================footer=================================
          	<p>             
             <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
        	   </p>
-			<p> 
-    	<a href=\"http://validator.w3.org/check?uri=referer\"><img
-     	src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
+			<p>
+		 <img src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/>
 
-        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-      	<img src=\"http://jigsaw.w3.org/css-validator/images/vcss\"
-            alt=\"CSS Valido!\"/></a>
-        						
-        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
-        alt=\"CSS Valido!\"/></a>				
-          </p>
+       	 <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\" alt=\"CSS Valido!\"/>
+
+       	 <img src=\"../images/valid_wcag_aaa.gif\" alt=\"Totally Valid WCAG 2.0 AAA\" />
+
+         </p>
           <p>
           ACCESSO EFFETTUTATO COME ADMIN:
           <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">logout</span></button></a>
@@ -177,18 +174,14 @@ else {
          	<p>             
             <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
        	   </p>
-			<p> 
-    	<a href=\"http://validator.w3.org/check?uri=referer\"><img
-     	src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
+			<p>
+		 <img src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/>
 
-        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-      	<img src=\"http://jigsaw.w3.org/css-validator/images/vcss\"
-            alt=\"CSS Valido!\"/></a>
-        						
-        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
-        alt=\"CSS Valido!\"/></a>				
-          </p>
+       	 <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\" alt=\"CSS Valido!\"/>
+
+       	 <img src=\"../images/valid_wcag_aaa.gif\" alt=\"Totally Valid WCAG 2.0 AAA\" />
+
+         </p>
           </div>
 	  </div>
 	</div>

@@ -5,9 +5,12 @@
 
 <xsd:element name="ricetteDB">
 	<xsd:complexType>
-		<xsd:sequence>
-		<xsd:element name="ricetta" maxOccurs="unbounded">
-		<xsd:complexType>
+		<xsd:element ref="ricetta" maxOccurs="unbounded"/>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="ricetta">
+	<xsd:complexType>
 		<xsd:sequence>
 			<xsd:element name="nomePiatto" type="xsd:string"/>
 			<xsd:element name="categoria" type="xsd:string"/>  
@@ -18,24 +21,18 @@
 			<xsd:element name="quantePersone" type="xsd:short"/>
 			<xsd:element name="ingredienti">
 				<xsd:complexType>
-					<xsd:sequence>
-					<xsd:element name="ingr" type="xsd:string"/>
-					</xsd:sequence>
+					<xsd:element ref="ingr" minOccurs="1" maxOccurs="unbounded"/>
 				</xsd:complexType>
 			</xsd:element>
-
-			<xsd:element name="tempoPreparazione" type="xsd:short"/>
-
-			<xsd:element name="procedimento" type="xsd:string"/>	
-
+			<xsd;element name="tempoPreparazione" type="xsd:short"/>
+			<xsd:element name="procedimento" type="xsd:string"/>			
 		</xsd:sequence>
-		<xsd:attribute name="accepted" type="xsd:integer"/> 
+		<xsd:attribute name="accepted" type="xsd:integer"/> <!-- non boolean che al perl non piace -->
 		<xsd:attribute name="IDCode" type="xsd:integer"/>
 	</xsd:complexType>
-	</xsd:element>
-</xsd:sequence>
-	</xsd:complexType>
 </xsd:element>
+
+<xsd:element name="ingr" type="xsd:string"/>
 
 </xsd:schema>
 <!-- by Alessio Luca Last Update 07/05/2016 aggiunto attributo accepted-->

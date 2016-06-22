@@ -1,0 +1,25 @@
+
+
+
+
+/*-----ridimensiono il testo e il contenuto --------*/
+body {font-size: 12pt;}
+#header {width: auto;}
+#content {width: auto;}
+
+
+/*-----nascondo immagini background --------*/
+#menu, #nav, #breadcrumb {display:none;}
+* {background: transparent !important; color: black !important;}
+
+
+/*------nascondo immagini e form -----------*/
+#content img {display:none;}
+#footer img {display:none;}
+.button {display:none;}
+
+
+/*---------nascondo salta contenuto-----------*/
+a.salta-main{display:none;}
+/*----------nascondo UP-----------------------*/
+#up{display: none;}

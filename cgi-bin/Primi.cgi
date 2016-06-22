@@ -5,8 +5,8 @@ use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
 use CGI::Session;
 use XML::LibXML;
-use HTML::Entities;
 use File::Copy;
+use HTML::Entities;
 use utf8;
 use URI;
 
@@ -20,9 +20,9 @@ print "
 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\">
 <head>
-    <title>Dessert- 2Forchette</title>
-    <meta name=\"title\" content=\"2forchette - Dessert\"/>
-    <meta name=\"description\" content=\"Sezione dessert del sito 2forchette\"/>
+    <title>Primi piatti - 2Forchette</title>
+    <meta name=\"title\" content=\"2forchette - Primi piatti\"/>
+    <meta name=\"description\" content=\"Sezione primi piatti del sito 2forchette\"/>
     <meta name=\"keywords\" content=\"2forchette, progetto, tecnologie web, cucina, ricette, piatti, cibo\"/>
     <meta name=\"language\" content=\"italian it\"/>
     <meta name=\"author\" content=\"Carlo Sindico ,Luca Alessio\"/>
@@ -49,14 +49,14 @@ print "
 				  <input type=\"text\" class=\"tftextinput\" name=\"search_parameter\" title=\"inserisci testo qui\" size=\"30\" maxlength=\"30\"/>
 				  <input type=\"submit\" value=\"Cerca\" title=\"cerca\" class=\"tfbutton\"/>
           </div>
-	      </form>
+	        </form>
         </div>
       </div>
-            <div class=\"allinea\"></div>
-                <div id='breadcrumb'>
+      <div class=\"allinea\"></div>
+            <div id='breadcrumb'>
         <p>Ti trovi in:
       <a href=\"../index.html\"><span xml:lang=\"en\">Home</span></a><span>&gt;</span>
-      Dessert
+      Primi piatti
       </p>
     </div>
     </div>
@@ -67,27 +67,26 @@ print "
 <div id=\"content\">
 <div class=\"full\">
     <div class=\"main\">
-    <h2>Dolci e dessert</h2>
+    <h2>Primi piatti</h2>
 
-    <div class=\"box-img\"><img src=\"../images/dolce.jpg\" alt=\"immagine che descrive la crostata con crema\"/></div>
+    <div class=\"box-img\"><img src=\"../images/amatriciana.jpg\" alt=\"immagine che descrive spaghetti all'amatriciana\"/></div>
     <div>
         <p>
-L’Italia è famosa nel mondo per i numerosi dolci e dessert tipici della tradizione. Basta citare il tiramisù, golosità in grado di soddisfare il palato di tutti, il panettone o il pandoro, tipici nel periodo natalizio, o i tradizionali dolci del sud come la pastiera napoletana o la cassata siciliale. Impossibile dimenticare il carnevale, periodo perfetto per preparare ogni tipologia di dolce fritto come frappe o chiacchiere né i dolci al cucchiaio come il biancomangiare o il budino al cioccolato.
- E se i biscotti meritano un capitolo a parte, la bella stagione è subito sinonimo di gelati artigianali al pistacchio, alla crema o ai gusti più insoliti.
 
+Fiore all’occhiello della cucina italiana, i primi piatti sono indiscussi protagonisti di ogni tipo di menù. Si sposano con qualsiasi ingrediente e possono essere realizzati con pasta, riso e condimenti a base di carne, pesce, uova o verdure. Ogni tipo di pasta ha caratteristiche ben precise e deve essere condita in modo appropriato. La pasta fresca all’uovo, come le tagliatelle, è ideale da condire con sughi elaborati a base di carne, le orecchiette si sposano perfettamente con le cime di rapa, alcuni primi piatti sono gustosi se conditi con vari tipi di sughi “a crudo”, come il pesto. Non mancano poi timballi di pasta al forno, gustosi risotti o arancini di riso.
 </p>
     </div>
     <div class=\"allinea\"></div>
 
     </div>
-      <div class=\"contenitore\">
-";
 
+      <div class=\"contenitore\">
+          ";
 
 my $file = "../data/4forchette.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
-my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Dessert']");
+my @ricette = $doc->findnodes("/ricetteDB/ricetta[categoria='Primi']");
 
 my $isempty=0;
 
@@ -97,13 +96,15 @@ foreach my $recipe (@ricette)
 	if($allowed=="1")
   	{
 		my $nome = $recipe->findvalue('nomePiatto');
-		decode_entities($nome);
+		 decode_entities($nome);
 	  	my $id = $recipe->getAttribute('IDCode');
 	 	my $img = $recipe->findvalue('imgPiatto');
+    decode_entities($nome);
     $isempty=1;
   		print "
-			<div class=\"blocco1\">
-            <div class=\"box-img\">
+      		
+		<div class=\"blocco1\">
+                <div class=\"box-img\">
        			<a class=\"title\" href=\"page_template.cgi?id=$id\">$nome
        			<img src=\"../images/$img\" alt=\"immagine che descrive $nome\"/></a></div></div>
      		  ";
@@ -111,11 +112,10 @@ foreach my $recipe (@ricette)
 }
 if($isempty==0){print "<div class=\"search-box\"><strong>Nessuna ricetta</strong></div>";}
 
-print "
+  print "</div></div>
+    <div class=\"allinea\"></div>
+</div>";
 
-  </div>
-    <div class=\"allinea\"></div></div>
-    </div>";
     if($auth eq "amministratoreautenticato")
 {
 	#footer con admin loggato
@@ -127,7 +127,7 @@ print "
           <p>
             <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
            </p>
-     		<p>
+      		<p>
 		 <img src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/>
 
        	 <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\" alt=\"CSS Valido!\"/>
@@ -156,9 +156,9 @@ else
           <div id=\"inline\">
 
           <p>
-            <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
+            <span>2Forchette</span> - copyright 2016 CARLOeLUCA produzione riservata - P.IVA 0838456799
            </p>
-      	<p>
+      		<p>
 		 <img src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/>
 
        	 <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\" alt=\"CSS Valido!\"/>
@@ -173,5 +173,5 @@ else
 </html>";
 }
 
-#Last update by Luca 31/05/2016
-#bug fix generale
+#Last Update by Carlo 1/06/2016
+#bug fix risolti

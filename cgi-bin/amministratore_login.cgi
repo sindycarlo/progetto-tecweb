@@ -40,6 +40,7 @@ print "
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
     <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
     <link rel=\"stylesheet\" href=\"../css/print.css\" type=\"text/css\" media=\"print\"/>
+    <link rel=\"shortcut icon\" href=\"../images/favicon.ico\" type=\"image/x-icon\"/>	
      <script type=\"text/javascript\" src=\"../js/login_control.js\"></script>
 </head>
 <body>
@@ -81,16 +82,16 @@ print "
     <form id=\"contact-form\" action=\"controllo_login.cgi\" method=\"post\" onsubmit=\"return valida_campi()\">
       <div id=\"fieldset\">
             <div class=\"form-txt\"><span xml:lang=\"en\">Username <span id=\"err_username\"></span></span></div>
-				<label for=\"username\"></label>
+
               <input type=\"text\" name=\"username\" id=\"username\" title=\"inserisci qui il tuo username\"/>
              
 
             <div class=\"form-txt\"><span xml:lang=\"en\">Password <span id=\"err_password\"></span></span></div>
-            <label for=\"password\"></label>
+
               <input type=\"password\" name=\"password\" id=\"password\" title=\"inserisci qui la tua password\"/>
               
 
-         <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" title=\"iniva dati\" value=\"Submit\"/></div><div class=\"button\"><input type=\"reset\" title=\"resetta form\" value=\"reset\"/></div></div>
+         <div class=\"buttons\"><div class=\"button\"><input type=\"submit\" title=\"invia dati\" value=\"Submit\"/></div><div class=\"button\"><input type=\"reset\" title=\"resetta form\" value=\"Reset\"/></div></div>
       </div>
     </form>
     </div>
@@ -100,25 +101,19 @@ print "
   </div>
 <!--==============================footer=================================-->
 <div id=\"footer\">
-<a href=\"#header\"><span id=\"up\">TORNA SU</span></a>
     <div class=\"main\">
           <div id=\"inline\">
 
           <p>             
             <span>2Forchette</span> - copyright 2016 CARLO E LUCA produzione riservata - P.IVA 0838456799
            </p>
-      <p> 
-      <a href=\"http://validator.w3.org/check?uri=referer\"><img
-      src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/></a>
+		 <p>
+		 <img src=\"http://www.w3.org/Icons/valid-xhtml10\" alt=\"Valid XHTML 1.0 Strict\"/>
 
-        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\"
-            alt=\"CSS Valido!\"/></a>
-                    
-        <a href=\"http://jigsaw.w3.org/css-validator/check/referer\">
-        <img src=\"http://jigsaw.w3.org/css-validator/images/vcss-blue\"
-        alt=\"CSS Valido!\"/></a>       
-          </p>
+       	 <img src=\"http://jigsaw.w3.org/css-validator/images/vcss\" alt=\"CSS Valido!\"/>
+
+       	 <img src=\"../images/valid_wcag_aaa.gif\" alt=\"Totally Valid WCAG 2.0 AAA\" />
+         </p>
           </div>
     </div>
   </div>

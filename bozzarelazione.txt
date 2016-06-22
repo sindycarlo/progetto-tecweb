@@ -1,0 +1,59 @@
+ABSTRACT
+2Forchette.it è un sito dedicato alla raccolta di ricette culinarie. L'utenza che accede al sito ha la possibilità di visualizzare le ricette attualmente presenti ed eventualmente di proporne di nuove. Le ricette vengono suddivise in diverse categorie per facilitarne la consultazione e contengono dettagliate informazioni sulla loro preparazione. Per ogni ricetta vengono indicati una breve descrizione, la lista degli ingredienti, un'immagine rappresentativa, una spiegazione dettagliata del procedimento da seguire ed altri dati minori (quali tempo di preparazione, difficoltà, autore e numero di persone).
+La principale feature del sito è costituita dalla sezione "Proponi ricetta", dove appunto l'utente ha la possibilità di inserire una propria ricetta che verrà in seguito valutata dall'amministratore ed eventualmente ammessa nel sito.
+All'interno del sito l'utente ha inoltre le possibilità di ricercare ricette per nome (funzionalità disponibile in tutte le pagine tramite la barra di ricerca sull' header) e di lasciare eventuali commenti sul sito nella pagina dei contatti.
+Si è scelto di rendere la navigazione del sito più immediata possibile, ogni ricetta può essere infatti raggiunta con un massimo di 3 click (home -> categoria -> ricetta, ricerca -> ricetta) e il design del sito è minimale e responsive per garantire la massima usabilità.
+Per quanto riguarda la parte amministrativa, l'admin può accedere alla propria console dal link posto nel footer della home (login: admin password: admin), da questa area riservata sarà possibile la gestione delle ricette proposte dagli utenti (deciderne quindi l'accettazione o il rifiuto) e l'eventuale eliminazione di ricette ritenute obsolete o di commenti offensivi. Queste funzionalità sono presentate in modo semplice e correlate da una breve spiegazione.
+
+UTENZA DESTINATARIA
+Il target di riferimento di questo sito è molto ampio, un sito di cucina viene visitato solitamente da persone appartenenti a varie fasce d'età e con differenti bagagli culturali perciò è stato scelto di rendere il sito il più semplice ed intuitivo possibile, in particolare è stata posta molta attenzione all'accessibilità per utenti non vedenti (ma questo verrà approfondito in una sezione apposita).
+
+MATERIALE CONSEGNATO
+
+SUDDIVISIONE COMPITI
+
+SPIEGAZIONE PARTE HTML
+La struttura HTML del sito viene interamente "stampata" da vari file .cgi: questa scelta è dovuta alla grande presenza di contenuto dinamico all'interno del sito per cui non sono presenti file .html "puri" se non index.html che è però un semplice redirect a menu.cgi, file Perl che effettivamente stampa la homepage.
+
+SPIEGAZIONE PARTE CSS
+media query cosa cambia
+
+SPIEGAZIONE PARTE XML
+Sono presenti 3 file xml principali con i rispettivi xsd:
+- amministratore.xml - semplice file ausiliario per il controllo del corretto login nell'area amministrativa, contiene solamente due campi per il login e la password.
+- commenti.xml - contiene i commenti contenuti nella sezione contatti; dalla console amministrativa è possibile intervenire indirettamente sul file attuando operazioni di eliminazione
+- 4forchette.xml - cuore centrale del sistema, questo documento xml svolge la funzione di database per le ricette: anche qui l'amministratore può effettuare operazioni di eliminazione mentre l'inserimento è riservato all'utente (questo aspetto è esaminato nel dettaglio a pagina X)
+per quanto riguarda la parte xsd, sono stati usate bambole veneziane (????)
+
+SPIEGAZIONE PARTE JS
+Javascript è stato utilizzato principalmente per il controllo degli input dei form. Nel sito sono presenti 3 differenti form, quello per il login nell'area amministrativa, un secondo per il submit dei commenti nella pagina dei contatti ed infine il più complesso nella sezione per la proposta di nuove ricette.
+Per quanto riguarda i primi due form (gestiti rispettivamente dai file controllo_login.js e valida_commento.js), una volta che l'utente clicca su "Submit" vengono analizzati in ordine di apparizione tutti i campi del form, se ne viene identificato uno vuoto allora l'invio viene bloccato e l'utente ne viene notificato da un messaggio d'errore specifico per quel campo.
+Per quanto riguarda il form "Proponi ricetta" invece (gestito dal file proponi_ricetta.js), oltre a questi controlli basilari ne viene effettuato un altro più approfondito nell'area di inserimento degli ingredienti. Dato che ogni ricetta presenta un numero di ingredienti sempre differente era impossibile prevedere un numero definito di campi per ciascun ingrediente nel form (in quanto sarebbero stati spesso insufficienti oppure troppo numerosi e comunque sgradevoli visivamente), per risolvere questo problema si è inizialmente pensato di realizzare un form dinamico che aggiungesse campi su richiesta dell'utente. Questa soluzione è stata però scartata per difficoltà tecniche nella realizzazione e principalmente per il fatto che non fosse accessibile agli screen reader. Si è optato quindi per lasciare la zona di inserimento degli ingredienti come una semplice area di testo all'interno della quale però vengono applicate delle regole per l'identificazione dei singoli ingredienti: dopo ogni ingrediente è necessario inserire il carattere di separazione ";" (punto e virgola senza virgolette) ed andare a capo. Se il testo inserito dall'utente rispetta questa sintassi l'input verrà accettato, altrimenti verrà fornito un messaggio d'errore. Nella pagina sono presenti delle istruzioni sull'utilizzo del form che spiegano anche l'appropriato inserimento degli ingredienti; riteniamo che la maggior parte degli utenti non trovi difficoltà ad usare questa sintassi che è inoltre pienamente accessibile ed utilizzabile da utenti non vedenti.
+
+SPIEGAZIONE PARTE PERL
+Le pagine scritte in Perl si dividono principalmente in due tipologie: pagine "dinamiche" di rappresentazione e pagine di elaborazione dei dati.
+Alla prima tipologia appartengono i file .cgi che eseguono il "print" della pagina html con il contenuto richiesto (ne è un esempio la pagina page_template.cgi che si occupa della stampa a video di ogni ricetta) mentre le pagine della seconda tipologia sono solitamente "pagine di servizio" ovvero codice che esegue operazioni dietro le quinte come salvataggi ed eliminazioni di dati sui file xml. Nel dettaglio, questo è ciò di cui ciascun file si occupa:
+- antipasti.cgi, secondi.cgi, primo.cgi, dessert.cgi - semplici sottomenù che si occupano di raggruppare le ricette appartenenti alla stessa categoria per facilitare la navigazione dell'utente
+- accept_ricetta.cgi, delete_ricetta.cgi
+- menu.cgi
+- amministratore_login.cgi
+- controllo_login.cgi
+- logout.cgi
+- contatti.cgi
+- inserisci_commento.cgi, delete_commento.cgi
+- page_template.cgi
+- proponiricetta.cgi
+- handle_proposta.cgi
+- cercaricetta.cgi
+- console_admin.cgi
+- funzioni.pl
+
+COME VARIE TECNOLOGIE INTERAGISCONO
+DESCRIZIONE PROCEDIMENTI IN CUI I LINGUAGGI INTERAGISCONO TRA LORO
+proposta ricetta dell'utente
+
+SPIEGAZIONE SCELTE STILISTICHE MINIMALI (?)
+
+ACCESSIBILITA'
+
+USABILITA' E LE 6 W

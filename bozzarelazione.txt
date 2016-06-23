@@ -8,9 +8,7 @@ Per quanto riguarda la parte amministrativa, l'admin può accedere alla propria c
 UTENZA DESTINATARIA
 Il target di riferimento di questo sito è molto ampio, un sito di cucina viene visitato solitamente da persone appartenenti a varie fasce d'età e con differenti bagagli culturali perciò è stato scelto di rendere il sito il più semplice ed intuitivo possibile, in particolare è stata posta molta attenzione all'accessibilità per utenti non vedenti (ma questo verrà approfondito in una sezione apposita).
 
-MATERIALE CONSEGNATO
-
-SUDDIVISIONE COMPITI
+DESCRIZIONE MATERIALE CONSEGNATO
 
 SPIEGAZIONE PARTE HTML
 La struttura HTML del sito viene interamente "stampata" da vari file .cgi: questa scelta è dovuta alla grande presenza di contenuto dinamico all'interno del sito per cui non sono presenti file .html "puri" se non index.html che è però un semplice redirect a menu.cgi, file Perl che effettivamente stampa la homepage.
@@ -22,8 +20,7 @@ SPIEGAZIONE PARTE XML
 Sono presenti 3 file xml principali con i rispettivi xsd:
 - amministratore.xml - semplice file ausiliario per il controllo del corretto login nell'area amministrativa, contiene solamente due campi per il login e la password.
 - commenti.xml - contiene i commenti contenuti nella sezione contatti; dalla console amministrativa è possibile intervenire indirettamente sul file attuando operazioni di eliminazione
-- 4forchette.xml - cuore centrale del sistema, questo documento xml svolge la funzione di database per le ricette: anche qui l'amministratore può effettuare operazioni di eliminazione mentre l'inserimento è riservato all'utente (questo aspetto è esaminato nel dettaglio a pagina X)
-per quanto riguarda la parte xsd, sono stati usate bambole veneziane (????)
+- 4forchette.xml - cuore centrale del sistema, questo documento xml svolge la funzione di database per le ricette: anche qui l'amministratore può effettuare operazioni di eliminazione mentre l'inserimento è riservato all'utente (questo aspetto è esaminato nel dettaglio a pagina X). Di ogni ricetta è necessario memorizzare autore, categoria, descrizione, (link alla) immagine, difficoltà, tempo di preparazione, numero di persone, gli ingredienti necessari e le istruzioni per la preparazione. Ogni ricetta ha inoltre due attributi, un codice identificativo per distinguerle (IDCode) e un valore (accepted) che indica se la ricetta è stata accettata o meno dall'amministratore e può quindi comparire nel sito.  Per quanto riguarda la parte xsd, essa è stata strutturata usando il modello ?
 
 SPIEGAZIONE PARTE JS
 Javascript è stato utilizzato principalmente per il controllo degli input dei form. Nel sito sono presenti 3 differenti form, quello per il login nell'area amministrativa, un secondo per il submit dei commenti nella pagina dei contatti ed infine il più complesso nella sezione per la proposta di nuove ricette.
@@ -33,27 +30,31 @@ Per quanto riguarda il form "Proponi ricetta" invece (gestito dal file proponi_r
 SPIEGAZIONE PARTE PERL
 Le pagine scritte in Perl si dividono principalmente in due tipologie: pagine "dinamiche" di rappresentazione e pagine di elaborazione dei dati.
 Alla prima tipologia appartengono i file .cgi che eseguono il "print" della pagina html con il contenuto richiesto (ne è un esempio la pagina page_template.cgi che si occupa della stampa a video di ogni ricetta) mentre le pagine della seconda tipologia sono solitamente "pagine di servizio" ovvero codice che esegue operazioni dietro le quinte come salvataggi ed eliminazioni di dati sui file xml. Nel dettaglio, questo è ciò di cui ciascun file si occupa:
+- menu.cgi - pagina principale del sito, contiene del contenuto dinamico in quanto le "ricette consigliate" che compaiono nella pagina sono casuali e variano ad ogni accesso alla pagina (inoltre in ogni pagina del sito il footer varia leggermente a seconda se l'amministratore sia loggato o pure meno)
 - antipasti.cgi, secondi.cgi, primo.cgi, dessert.cgi - semplici sottomenù che si occupano di raggruppare le ricette appartenenti alla stessa categoria per facilitare la navigazione dell'utente
-- accept_ricetta.cgi, delete_ricetta.cgi
-- menu.cgi
-- amministratore_login.cgi
-- controllo_login.cgi
-- logout.cgi
-- contatti.cgi
-- inserisci_commento.cgi, delete_commento.cgi
-- page_template.cgi
-- proponiricetta.cgi
-- handle_proposta.cgi
-- cercaricetta.cgi
-- console_admin.cgi
-- funzioni.pl
+- page_template.cgi - pagina dinamica che visualizza la ricetta richiesta, funziona nel seguente modo: il link cliccato dall'utente che lo indirizza a questa pagina contiene un parametro (id) differente per ogni ricetta, page_template.cgi cerca il parametro passato tra gli attributi IDCode delle singole ricette nel file 4forchette.xml (vedi sezione XML) ed identifica quale era la ricetta richiesta di cui va poi a restituirne le informazioni su schermo.
+- proponiricetta.cgi - stampa la pagina "Proponi una ricetta" attraverso la quale l'utente ha la possibilità di proporre nuove ricette da inserire nel sito. La pagina contiene un form di discrete dimensioni e delle istruzioni sul suo completamento. Un'analisi più dettagliata su come avviene il processo di creazione, memorizzazione e approvazione delle ricette verrà effettuata in un successivo paragrafo.
+- handle_proposta.cgi - quando l'utente ha compilato correttamente (vedi sezione Javascript) il form per la proposta di una nuova ricetta, la ricetta viene salvata nel "database" xml. La nuova ricetta non verrà tuttavia ancora visualizzata nel sito, prima dovrà infatti venire approvata dall'amministratore (vedi accept_ricetta.cgi).
+- contatti.cgi - stampa la pagina dei contatti, qui l'utente ha la possibilità di vedere i messaggi lasciati da altri utenti ed eventualmente può lasciarne uno proprio compilando il form apposito dove viene richiesto un nome ed il testo effettivo del commento (sarebbe stato interessante implementare un sistema di registrazione e gestione degli utenti nel sito ma date le scarse dimensioni del gruppo e il tempo disponibile si è optato per una soluzione meno impegnativa).
+- inserisci_commento.cgi - gestisce l'inserimento di un nuovo commento traducendo l'input dell'utente in dati xml.
+- amministratore_login.cgi - contiene il form che l'amministratore utilizza per effettuare l'accesso all'area riservata. Questa pagina è accessibile solamente dal link posto nel footer della pagina principale (menu.cgi).
+- controllo_login.cgi - controlla la correttezza delle credenziali inserite nel form del punto precedente. Al momento è previsto un solo amministratore per il sistema. L'amministratore viene identificato come autenticato quando un parametro apposito ($auth) è impostato ad un preciso valore e ciò viene settato in degli appositi cookie (vedi codice del file per i dettagli) per rendere l'informazione nota tra le diverse pagine.
+- console_admin.cgi - stampa l'hub amministrativo da cui è possibile gestire semplicemente l'intero sito. Da questa pagina l'amministratore ha la possibilità di accettare o rifiutare le nuove ricette, eliminare vecchie ricette ed eliminare eventuali commenti ritenuti offensivi.
+- accept_ricetta.cgi - concede ad una ricetta il permesso di venire visualizzata nel sito (semplicemente il suo attributo accepted viene settato positivamente).
+- delete_ricetta.cgi - elimina una ricetta dal file xml. Operazione irreversibile.
+- delete_commento.cgi - elimina un commento dal file xml. Operazione irreversibile.
+- logout.cgi - breve script che effettua il logout dell'amministratore. Viene invocato alla pressione del tasto "logout" visibile sul footer di ogni pagina qualora l'amministratore sia attualmente autenticato nel sistema.
+- cercaricetta.cgi - nell'header di ogni pagina è presente una barra di ricerca, qualora l'utente digitasse una stringa di caratteri e ne richiedesse l'elaborazione, questo è lo script che verrebbe eseguito: cercaricetta.cgi stampa una pagina contente un elenco di tutte le ricette il cui titolo matcha in parte o totalmente il parametro di ricerca inserito dall'utente. La ricerca avviene semplicemente scorrendo l'xml isolandone nomi ed id di tutte le ricette e restituendo solamente quelle che contengono una corrispondenza.
+- funzioni.pl - contiene funzioni di servizio usate in diversi contesti (ad es. trim degli input)
 
-COME VARIE TECNOLOGIE INTERAGISCONO
-DESCRIZIONE PROCEDIMENTI IN CUI I LINGUAGGI INTERAGISCONO TRA LORO
-proposta ricetta dell'utente
+Come interagiscono le varie tecnologie tra di loro? Vediamo un esempio...
+CICLO DI VITA DI UNA RICETTA STEP BY STEP
+1 - L'utente è intenzionato a proporre una nuova ricetta e si reca sulla pagina apposita che viene visualizzata dal file proponiricetta.cgi
+2 - L'utente ha terminato di compilare i campi e preme su "Submit"
+3 - Viene eseguito lo script proponi_ricetta.js che controlla prima di tutto se non ci sono campi vuoti e secondariamente se la sintassi del campo "Ingredienti" è corretta: se entrambe le condizioni sono soddisfatte si passa al punto successivo, altrimenti si ritorna al punto 2
+4 - Arrivati a questo punto siamo certi della correttezza dell'input che viene succesivamente processato dal file handle_proposta.cgi e memorizzato in 4forchette.xml rispettando i criteri stabiliti. In questo momento l'attributo accepted della nuova ricetta è impostato a 0 (che simboleggia lo stato di attesa, per cui la ricetta non verrà visualizzata all'interno del sito)
+5 - Al suo successivo accesso nell'area amministrativa, l'admin vedrà comparire la nuova ricetta proposta dall'utente nella sezione "Ricette proposte" da dove potrà  vederne un'anteprima e di conseguenza decidere se accettarla o meno tramite gli appositi pulsanti
+6 - Se la ricetta è stata scartata essa verrà semplicemente eliminata dall'xml, se invece è stata accettata il suo attributo accepted verrà cambiato ad 1 (che simboleggia lo stato di accettamento) e la ricetta diverrà visibile all'utenza del sito.
+7 - In qualsiasi momento l'amministratore ha la possibilità di eliminare le ricette, attenzione però che l'eliminazione è un' operazione irreversibile!
 
-SPIEGAZIONE SCELTE STILISTICHE MINIMALI (?)
-
-ACCESSIBILITA'
-
-USABILITA' E LE 6 W
+SPIEGAZIONE SCELTE STILISTICHE ESTETICHE

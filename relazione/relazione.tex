@@ -87,23 +87,36 @@
 	
 	\section{Abstract}
 	\begin{itemize}
-		\item Il progetto si propone di offrire  alla maggior parte degli utenti  un sito che ha come contenuto un insieme di ricette. 
-			
-		Il sito ha un scopo principalmente informativo, infatti riporta tutte le informazioni reltaive a ciascuna ricetta. Le ricette sono classificate in Primi piatti, Secondi piatti, Antipasti e Dessert. L'utente ha la possibilit\'a di proporre una nuova ricetta compilando un apposito form, e un lato amministratore ha il pieno controllo nell'accettare o rifiutare le ricette proposte. Si \'e trovato utile inserire una sezione commenti, che permette all'utente di chiedere ulteriori informazioni e inviare feedback scrivendo direttamente nel sito, e l'amministratore ha la possibilit\'a di rimuovere i commenti inopportuni.
-		
-		Il sito \'e stato creato con lo scopo di essere visualizzato in internet, quindi si \'e data importanza alla presentazione e alla sua usabilit\'a, rispettando lo standard W3C. Infatti si \'e data particolare attenzione nella separazione tra struttura presentazione e comportamento con le regole di accessibilit\'a richieste.
+		\item 2Forchette.it è un sito dedicato alla raccolta di ricette culinarie. 
+		\item L'utenza che accede al sito ha la possibilità di visualizzare le ricette attualmente presenti ed eventualmente di proporne di nuove. Le ricette vengono suddivise in diverse categorie per facilitarne la consultazione e contengono dettagliate informazioni sulla loro preparazione.
+
+		\item Per ogni ricetta vengono indicati una breve descrizione, la lista degli ingredienti, un'immagine rappresentativa, una spiegazione dettagliata del procedimento da seguire ed altri dati minori (quali tempo di preparazione, difficoltà, autore e numero di persone).
+
+		\item La principale feature del sito è costituita dalla sezione "Proponi ricetta", dove appunto l'utente ha la possibilità di inserire una propria ricetta che verrà in seguito valutata dall'amministratore ed eventualmente ammessa nel sito.
+
+		\item All'interno del sito l'utente ha inoltre le possibilità di ricercare ricette per nome (funzionalità disponibile in tutte le pagine tramite la barra di ricerca sull' header) e di lasciare eventuali commenti sul sito nella pagina dei contatti.
+
+		\item Si è scelto di rendere la navigazione del sito più immediata possibile, ogni ricetta può essere infatti raggiunta con un massimo di 3 click (home -> categoria -> ricetta, ricerca -> ricetta) e il design del sito è minimale e responsive per garantire la massima usabilità.
+
+
+		\item Per quanto riguarda la parte amministrativa, l'admin può accedere alla propria console dal link posto nel footer della home (login: admin password: admin), da questa area riservata sarà possibile la gestione delle ricette proposte dagli utenti (deciderne quindi l'accettazione o il rifiuto) e l'eventuale eliminazione di ricette ritenute obsolete o di commenti offensivi. Queste funzionalità sono presentate in modo semplice e correlate da una breve spiegazione.
 	\end{itemize}
+
+
 		\section{Utenti destinatari}
 		\begin{itemize}
-			\item Manca..
+			\item Il target di riferimento di questo sito è molto ampio, un sito di cucina viene visitato solitamente da persone appartenenti a varie fasce d'età e con differenti bagagli culturali perciò è stato scelto di rendere il sito il più semplice ed intuitivo possibile, in particolare è stata posta molta attenzione all'accessibilità per utenti non vedenti (ma questo verrà approfondito in una sezione apposita). 
+
 		\end{itemize}
 		\section{Accessibilit\`a}
 		\subsection{Separazione tra struttura,presentazione e comportamento}
 		\begin{itemize}
 			\item Per una maggiore accessibilit\'a al sito da parte di utenti disabili e per favorire gli algoritmi dei motori di ricerca si \'e deciso di separarare la struttura dalla presentazione e dal comportamento.
-			Infatti il contenuto del sito \'e rapprentato dai file HTML e CGI, i quali richiamano i fogli di stile CSS e si utilizzano (anche in questo caso attraverso percorsi esterni), esternamente controlli in JavaScript in particolare per la compilazione dei form. Tuttavia il contenuto rimane accessibile anche se JavaScript \'e disabilitato. Infatti opportuni controlli in perl ne verificano la validit\`a.
+			Infatti il contenuto del sito \'e rapprentato dai file HTML e CGI, i quali richiamano i fogli di stile CSS e si utilizzano (anche in questo caso attraverso percorsi esterni),controlli in JavaScript in particolare per la compilazione dei form. 
 
-			Tutto il codice \'e stato scritto secondo le raccomandazioni W3C,con opportuna validazione di esso.
+			\item Il contenuto rimane accessibile anche se JavaScript \'e disabilitato. Infatti opportuni controlli in Perl ne verificano la validit\`a.
+
+			\item Tutto il codice \'e stato scritto secondo le raccomandazioni W3C,con opportuna validazione di esso.
 		\end{itemize}
 			\subsection{Colori}
 			\begin{itemize}
@@ -176,6 +189,9 @@
 				➔ img: cartella contenente tutte le foto del sito;
 				➔ js: cartella contenente i vari script realizzati in JavaScript.
 			\end{itemize}
+			\section{HTML}
+			La struttura HTML del sito viene interamente "stampata" da vari file .cgi: questa scelta è dovuta alla grande presenza di contenuto dinamico all'interno del sito per cui non sono presenti file .html "puri" se non index.html che è però un semplice redirect a menu.cgi, file Perl che effettivamente stampa la homepage.
+
 			\section{Struttura}
 			\begin{itemize}
 				\item Nella cartella public-html si trovano i file delle pagine statiche html.
@@ -224,18 +240,9 @@
 				
 				Si \'e fatto uso della tecnologia JavaScript e si \'e cercato di non usare framework o altre tecnologie pi\'u invasive.
 				
-				JavaScript \'e stato utilizzato per eseguire i controlli sui form, oltre ovviamente all'utilizzo di Perl, questa combinazione \'e dettata dall'esigenza di fornire una risposta pi\'u immediata all'utente. Anche senza Javascript comunque non vi \'e la possibilit\'a che siano memorizzati dati con caratteri che compromettono la validazione del sito o che siano vuoti dove il campo invece non debba esserlo.
-				Anche se JavaScript non è comunque necessario per il corretto funzionamento del sito, migliora
-				l'usabilità generale, in quanto oltre a dare una risposta più immediata, visualizza anche una breve
-				descrizione di ciò che si vuole sia inserito nel campo, quindi è presente un avviso che invita ad
-				attivarlo implementato tramite tag noscript nei form dove esso è di utilità.
-				JavaScript esegue quindi i controlli che sono più di interesse per l'utente, atti soprattutto a verificare
-				se un campo è vuoto, e l'output di queste valutazioni è visualizzato in uno spazio apposito vicino al
-				campo che ha generato l'errore.
-				Si è  deciso di non  ricorrere il meno possibile agli alert di JavaScript, in quanto essi sono finestre
-				popup, che sono odiate dagli utenti web e il cui utilizzo estensivo quindi avrebbe compromesso
-				fortemente l'usabilità e l'attrattiva del sito.
-				
+				Javascript è stato utilizzato principalmente per il controllo degli input dei form. Nel sito sono presenti 3 differenti form, quello per il login nell'area amministrativa, un secondo per il submit dei commenti nella pagina dei contatti ed infine il più complesso nella sezione per la proposta di nuove ricette.
+				Per quanto riguarda i primi due form (gestiti rispettivamente dai file controllo_login.js e valida_commento.js), una volta che l'utente clicca su "Submit" vengono analizzati in ordine di apparizione tutti i campi del form, se ne viene identificato uno vuoto allora l'invio viene bloccato e l'utente ne viene notificato da un messaggio d'errore specifico per quel campo.
+				Per quanto riguarda il form "Proponi ricetta" invece (gestito dal file proponi_ricetta.js), oltre a questi controlli basilari ne viene effettuato un altro più approfondito nell'area di inserimento degli ingredienti. Dato che ogni ricetta presenta un numero di ingredienti sempre differente era impossibile prevedere un numero definito di campi per ciascun ingrediente nel form (in quanto sarebbero stati spesso insufficienti oppure troppo numerosi e comunque sgradevoli visivamente), per risolvere questo problema si è inizialmente pensato di realizzare un form dinamico che aggiungesse campi su richiesta dell'utente. Questa soluzione è stata però scartata per difficoltà tecniche nella realizzazione e principalmente per il fatto che non fosse accessibile agli screen reader. Si è optato quindi per lasciare la zona di inserimento degli ingredienti come una semplice area di testo all'interno della quale però vengono applicate delle regole per l'identificazione dei singoli ingredienti: dopo ogni ingrediente è necessario inserire il carattere di separazione ";" (punto e virgola senza virgolette) ed andare a capo. Se il testo inserito dall'utente rispetta questa sintassi l'input verrà accettato, altrimenti verrà fornito un messaggio d'errore. Nella pagina sono presenti delle istruzioni sull'utilizzo del form che spiegano anche l'appropriato inserimento degli ingredienti; riteniamo che la maggior parte degli utenti non trovi difficoltà ad usare questa sintassi che è inoltre pienamente accessibile ed utilizzabile da utenti non vedenti.
 				
 				Si è scelto di attivare questi controlli in reazione all'evento onsubmit, in quanto permette un
 				fallback semplicissimo in caso JavaScript non sia supportato. Quindi tutte le funzioni ritornano il
@@ -263,8 +270,18 @@
 			Agli utenti autorizzati (l'amministratore del sito) \'e invece concessa la possibilit\'a di rimuovere oppure accettare le ricette proposte, e di rimuovere i commenti inappropriati. Si \'e scelto di non rendere possibili l'aggiunta di nuovi utenti,(DA RIVEDERE!!)
 		\end{itemize}
 		\subsection{XMLSchema}
-		Per definire e verificare la validità dei dati sono stati creati degli appositi XMLSchema che definiscono i tag che \'e possibile utilizzare e i vincoli.
-		Sono regole associate ai file XML cui si riferiscono e si trovano nella stessa cartella.
+		Sono presenti 3 file xml principali con i rispettivi xsd:
+
+		\begin{itemize}
+		\item  amministratore.xml - semplice file ausiliario per il controllo del corretto login nell'area amministrativa, contiene solamente due campi per il login e la password.
+		\end{itemize}
+		\begin{itemize}
+		\item commenti.xml - contiene i commenti contenuti nella sezione contatti; dalla console amministrativa è possibile intervenire indirettamente sul file attuando operazioni di eliminazione
+		\end{itemize}
+		\begin{itemize}
+		\item 4forchette.xml - cuore centrale del sistema, questo documento xml svolge la funzione di database per le ricette: anche qui l'amministratore può effettuare operazioni di eliminazione mentre l'inserimento è riservato all'utente (questo aspetto è esaminato nel dettaglio a pagina X)
+		per quanto riguarda la parte xsd, sono stati usate bambole veneziane (????)
+		\end{itemize}
 			
 		\subsection{XSLT}
 			\begin{itemize}
@@ -273,9 +290,8 @@
 			
 			\section{Perl}
 			\begin{itemize}
-				\item Perl nel progetto \'e stato impiegato per gestire il contenuto dinamico del sito.
-				Gli script CGI che sono stati implementati, sono:
-				
+				\item Le pagine scritte in Perl si dividono principalmente in due tipologie: pagine "dinamiche" di rappresentazione e pagine di elaborazione dei dati.
+				Alla prima tipologia appartengono i file .cgi che eseguono il "print" della pagina html con il contenuto richiesto (ne è un esempio la pagina page_template.cgi che si occupa della stampa a video di ogni ricetta) mentre le pagine della seconda tipologia sono solitamente "pagine di servizio" ovvero codice che esegue operazioni dietro le quinte come salvataggi ed eliminazioni di dati sui file xml. Nel dettaglio, questo è ciò di cui ciascun file si occupa:
 				
 				\begin{itemize} \item acceptricetta.cgi: che si occupa di pubblicare la ricetta nel sito.
 				\end{itemize}

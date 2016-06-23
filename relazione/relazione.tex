@@ -166,7 +166,6 @@
 				\subitem Where?: 
 				Nonnostante il sito non abbia una propria locazione, gi\'a  nel footer di ogni pagina sono presenti informazioni riguardo gli amministratori e il sito.Per maggiore visibilit\`a, \'e stata inserita una pagina CONTATTACI dove oltre ala sezione commenti, sono specificati gli indirizzi email e numero di telefono degli amministratori. 
 				
-				When?: ..........
 				
 				\subitem Why?: 
 				Perch\'e un utente dovrebbe rimanere nel sito o dovrebbe ritornarci? Il sito \'e principalmente espositivo,(gli utenti possono liberamente visualizzare le ricette), si \'e cercato di renderlo pi\'u interessante, aggiungendo una sezione proponi ricetta (l'utente ha la possibilit\'a di inserire la propria ricetta), e anche una sezione commenti.
@@ -238,12 +237,10 @@
 			\begin{itemize}
 				\item Nel programmare il sito si \'e cercato per quanto possibile di fornire all'utente semplicit\'a, cercando di essere il meno invasivi possibile, per dare una migliore usabilit\'a al sito oltre che una presentazione migliore.
 				
-				Si \'e fatto uso della tecnologia JavaScript e si \'e cercato di non usare framework o altre tecnologie pi\'u invasive.
-				
-				Javascript è stato utilizzato principalmente per il controllo degli input dei form. Nel sito sono presenti 3 differenti form, quello per il login nell'area amministrativa, un secondo per il submit dei commenti nella pagina dei contatti ed infine il più complesso nella sezione per la proposta di nuove ricette.
-				Per quanto riguarda i primi due form (gestiti rispettivamente dai file controllo_login.js e valida_commento.js), una volta che l'utente clicca su "Submit" vengono analizzati in ordine di apparizione tutti i campi del form, se ne viene identificato uno vuoto allora l'invio viene bloccato e l'utente ne viene notificato da un messaggio d'errore specifico per quel campo.
-				Per quanto riguarda il form "Proponi ricetta" invece (gestito dal file proponi_ricetta.js), oltre a questi controlli basilari ne viene effettuato un altro più approfondito nell'area di inserimento degli ingredienti. Dato che ogni ricetta presenta un numero di ingredienti sempre differente era impossibile prevedere un numero definito di campi per ciascun ingrediente nel form (in quanto sarebbero stati spesso insufficienti oppure troppo numerosi e comunque sgradevoli visivamente), per risolvere questo problema si è inizialmente pensato di realizzare un form dinamico che aggiungesse campi su richiesta dell'utente. Questa soluzione è stata però scartata per difficoltà tecniche nella realizzazione e principalmente per il fatto che non fosse accessibile agli screen reader. Si è optato quindi per lasciare la zona di inserimento degli ingredienti come una semplice area di testo all'interno della quale però vengono applicate delle regole per l'identificazione dei singoli ingredienti: dopo ogni ingrediente è necessario inserire il carattere di separazione ";" (punto e virgola senza virgolette) ed andare a capo. Se il testo inserito dall'utente rispetta questa sintassi l'input verrà accettato, altrimenti verrà fornito un messaggio d'errore. Nella pagina sono presenti delle istruzioni sull'utilizzo del form che spiegano anche l'appropriato inserimento degli ingredienti; riteniamo che la maggior parte degli utenti non trovi difficoltà ad usare questa sintassi che è inoltre pienamente accessibile ed utilizzabile da utenti non vedenti.
-				
+				\item Si \'e fatto uso della tecnologia JavaScript e si \'e cercato di non usare framework o altre tecnologie pi\'u invasive.
+
+				\item Javascript \'e stato utilizzato principalmente per il controllo degli input dei form. Nel sito sono presenti 3 differenti form, quello per il login nell'area amministrativa, un secondo per il submit dei commenti nella pagina dei contatti ed infine il più complesso nella sezione per la proposta di nuove ricette. Per quanto riguarda i primi due form (gestiti rispettivamente dai file controllo\_login.js e valida\_commento.js), una volta che l'utente clicca su "Submit" vengono analizzati in ordine di apparizione tutti i campi del form, se ne viene identificato uno vuoto allora l'invio viene bloccato e l'utente ne viene notificato da un messaggio d'errore specifico per quel campo.
+				Per quanto riguarda il form "Proponi ricetta" invece (gestito dal file proponi\_ricetta.js), oltre a questi controlli basilari ne viene effettuato un altro più approfondito nell'area di inserimento degli ingredienti. Dato che ogni ricetta presenta un numero di ingredienti sempre differente era impossibile prevedere un numero definito di campi per ciascun ingrediente nel form (in quanto sarebbero stati spesso insufficienti oppure troppo numerosi e comunque sgradevoli visivamente), per risolvere questo problema si è inizialmente pensato di realizzare un form dinamico che aggiungesse campi su richiesta dell'utente. Questa soluzione è stata però scartata per difficoltà tecniche nella realizzazione e principalmente per il fatto che non fosse accessibile agli screen reader. Si è optato quindi per lasciare la zona di inserimento degli ingredienti come una semplice area di testo all'interno della quale però vengono applicate delle regole per l'identificazione dei singoli ingredienti: dopo ogni ingrediente è necessario inserire il carattere di separazione ";" (punto e virgola senza virgolette) ed andare a capo. Se il testo inserito dall'utente rispetta questa sintassi l'input verrà accettato, altrimenti verrà fornito un messaggio d'errore. Nella pagina sono presenti delle istruzioni sull'utilizzo del form che spiegano anche l'appropriato inserimento degli ingredienti; riteniamo che la maggior parte degli utenti non trovi difficoltà ad usare questa sintassi che è inoltre pienamente accessibile ed utilizzabile da utenti non vedenti.
 				Si è scelto di attivare questi controlli in reazione all'evento onsubmit, in quanto permette un
 				fallback semplicissimo in caso JavaScript non sia supportato. Quindi tutte le funzioni ritornano il
 				valore false se i controlli non sono superati e true se invece sono stati superati tutti i controlli.
@@ -290,37 +287,47 @@
 			
 			\section{Perl}
 			\begin{itemize}
-				\item Le pagine scritte in Perl si dividono principalmente in due tipologie: pagine "dinamiche" di rappresentazione e pagine di elaborazione dei dati.
-				Alla prima tipologia appartengono i file .cgi che eseguono il "print" della pagina html con il contenuto richiesto (ne è un esempio la pagina page_template.cgi che si occupa della stampa a video di ogni ricetta) mentre le pagine della seconda tipologia sono solitamente "pagine di servizio" ovvero codice che esegue operazioni dietro le quinte come salvataggi ed eliminazioni di dati sui file xml. Nel dettaglio, questo è ciò di cui ciascun file si occupa:
+				 \item Le pagine scritte in Perl si dividono principalmente in due tipologie: pagine "dinamiche" di rappresentazione e pagine di elaborazione dei dati.
+				\item Alla prima tipologia appartengono i file .cgi che eseguono il "print" della pagina html con il contenuto richiesto (ne è un esempio la pagina page\_template.cgi che si occupa della stampa a video di ogni ricetta) mentre le pagine della seconda tipologia sono solitamente "pagine di servizio" ovvero codice che esegue operazioni dietro le quinte come salvataggi ed eliminazioni di dati sui file xml. Nel dettaglio, questo \`e' ciò di cui ciascun file si occupa:
+
+
+				\item  menu.cgi - pagina principale del sito, contiene del contenuto dinamico in quanto le "ricette consigliate" che compaiono nella pagina sono casuali e variano ad ogni accesso alla pagina (inoltre in ogni pagina del sito il footer varia leggermente a seconda se l'amministratore sia loggato o pure meno)
 				
-				\begin{itemize} \item acceptricetta.cgi: che si occupa di pubblicare la ricetta nel sito.
-				\end{itemize}
+				\item  antipasti.cgi, secondi.cgi, primo.cgi, dessert.cgi - semplici sottomenù che si occupano di raggruppare le ricette appartenenti alla stessa categoria per facilitare la navigazione dell'utente
+
+				\item page\_template.cgi - pagina dinamica che visualizza la ricetta richiesta, funziona nel seguente modo: il link cliccato dall'utente che lo indirizza a questa pagina contiene un parametro (id) differente per ogni ricetta, page\_template.cgi cerca il parametro passato tra gli attributi IDCode delle singole ricette nel file 4forchette.xml (vedi sezione XML) ed identifica quale era la ricetta richiesta di cui va poi a restituirne le informazioni su schermo.
+
+				\item proponiricetta.cgi - stampa la pagina "Proponi una ricetta" attraverso la quale l'utente ha la possibilità di proporre nuove ricette da inserire nel sito. La pagina contiene un form di discrete dimensioni e delle istruzioni sul suo completamento. Un'analisi più dettagliata su come avviene il processo di creazione, memorizzazione e approvazione delle ricette verrà effettuata in un successivo paragrafo.
+
+
+				\item handle\_proposta.cgi - quando l'utente ha compilato correttamente (vedi sezione Javascript) il form per la proposta di una nuova ricetta, la ricetta viene salvata nel "database" xml. La nuova ricetta non verrà tuttavia ancora visualizzata nel sito, prima dovrà infatti venire approvata dall'amministratore (vedi accept\_ricetta.cgi).
+
+				\item contatti.cgi - stampa la pagina dei contatti, qui l'utente ha la possibilità di vedere i messaggi lasciati da altri utenti ed eventualmente può lasciarne uno proprio compilando il form apposito dove viene richiesto un nome ed il testo effettivo del commento (sarebbe stato interessante implementare un sistema di registrazione e gestione degli utenti nel sito ma date le scarse dimensioni del gruppo e il tempo disponibile si è optato per una soluzione meno impegnativa).
+
+				\item inserisci\_commento.cgi - gestisce l'inserimento di un nuovo commento traducendo l'input dell'utente in dati xml.
+
+				\item amministratore\_login.cgi - contiene il form che l'amministratore utilizza per effettuare l'accesso all'area riservata. Questa pagina è accessibile solamente dal link posto nel footer della pagina principale (menu.cgi).
+
+				\item controllo\_login.cgi - controlla la correttezza delle credenziali inserite nel form del punto precedente. Al momento è previsto un solo amministratore per il sistema. L'amministratore viene identificato come autenticato quando un parametro apposito (\$auth) è impostato ad un preciso valore e ciò viene settato in degli appositi cookie (vedi codice del file per i dettagli) per rendere l'informazione nota tra le diverse pagine.
+
+				\item console\_admin.cgi - stampa l'hub amministrativo da cui \'e possibile gestire semplicemente l'intero sito. Da questa pagina l'amministratore ha la possibilità di accettare o rifiutare le nuove ricette, eliminare vecchie ricette ed eliminare eventuali commenti ritenuti offensivi.
+
+				\item accept\_ricetta.cgi - concede ad una ricetta il permesso di venire visualizzata nel sito (semplicemente il suo attributo accepted viene settato positivamente).
+
+				\item delete\_ricetta.cgi - elimina una ricetta dal file xml. Operazione irreversibile.
+
 				
-				\begin{itemize} \item controllologin.cgi: che si occupa di verificare se i campi del login sono corretti.
-				\end{itemize}
-				
-				\begin{itemize} \item amministratorelogin.cgi: genera la pagina di login per l'amministratore.
-				\end{itemize}
-				
-				\begin{itemize} \item deletericetta.cgi: che si occupa di eliminare una ricetta dal file XML.
-				\end{itemize}
-				
-				\begin{itemize} \item handleproposta.cgi: che si occupa di inviare la ricetta (tutti i dati vengono prelevati dalla form proponiricetta.cgi) in un file XML temporaneo(DA RIVEDERE!!).
-				\end{itemize}
-				
-				\begin{itemize} \item inseriscicommento.cgi: che si occupa di aggiungere un commento al file XML dedicato.
-				\end{itemize}
-				
-				\begin{itemize} \item deletecommento.cgi: che si occupa di rimuovere un commento dal file XML (commentiricetta.xml).
-				\end{itemize}
-				
-				\begin{itemize} \item pagetemplate.cgi: visualizza come pagina CGI tutte le ricette che vengono inserite.
-				\end{itemize}
-				(DA RIVEDERE!! mancano alcuni file)
-				
-			\end{itemize}
-			
-				
+				\item delete\_commento.cgi - elimina un commento dal file xml. Operazione irreversibile.
+
+				\item logout.cgi - breve script che effettua il logout dell'amministratore. Viene invocato alla pressione del tasto "logout" visibile sul footer di ogni pagina qualora l'amministratore sia attualmente autenticato nel sistema.
+
+				\item cercaricetta.cgi - nell'header di ogni pagina è presente una barra di ricerca, qualora l'utente digitasse una stringa di caratteri e ne richiedesse lelaborazione, questo è lo script che verrebbe eseguito: cercaricetta.cgi stampa una pagina contente un elenco di tutte le ricette il cui titolo matcha in parte o totalmente il parametro di ricerca inserito dall'utente. La ricerca avviene semplicemente scorrendo l'xml isolandone nomi ed id di tutte le ricette e restituendo solamente quelle che contengono una corrispondenza.
+
+				\item funzioni.pl  contiene funzioni di servizio usate in diversi contesti (ad es. trim degli input).	
+
+\end{itemize}
+
+	
 		
 	
 	

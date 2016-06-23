@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}Abstract}{1}{section.1}
+\contentsline {section}{\numberline {2}Utenti destinatari}{2}{section.2}
+\contentsline {section}{\numberline {3}Materiale consegnato}{2}{section.3}
+\contentsline {section}{\numberline {4}HTML NOOOOOOO DA RIFARE}{2}{section.4}
+\contentsline {section}{\numberline {5}Struttura}{2}{section.5}
+\contentsline {section}{\numberline {6}Presentazione}{3}{section.6}
+\contentsline {subsection}{\numberline {6.1}Divisione dei file}{4}{subsection.6.1}
+\contentsline {section}{\numberline {7}SPIEGAZIONE IN DETTAGLIO...}{4}{section.7}
+\contentsline {section}{\numberline {8}Gestione dei dati}{6}{section.8}
+\contentsline {subsection}{\numberline {8.1}XML}{6}{subsection.8.1}
+\contentsline {section}{\numberline {9}Perl questo praticamente sta con html}{6}{section.9}
+\contentsline {section}{\numberline {10}Accessibilit\`a}{9}{section.10}
+\contentsline {subsection}{\numberline {10.1}Separazione tra struttura,presentazione e comportamento}{9}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Colori}{9}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Tag meta}{10}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.4}Screen reader}{10}{subsection.10.4}
+\contentsline {section}{\numberline {11}Usabilit\`a}{11}{section.11}

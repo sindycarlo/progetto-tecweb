@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.6.16)  24 JUN 2016 11:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.14)  24 JUN 2016 14:54
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
-**relazione.tex
+**./relazione.tex
 (./relazione.tex
-LaTeX2e <2015/10/01> patch level 2
-Babel <3.9m> and hyphenation patterns for 79 languages loaded.
-(/usr/share/texmf-dist/tex/latex/base/article.cls
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+(c:/texlive/2015/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texmf-dist/tex/latex/base/size12.clo
+(c:/texlive/2015/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -22,12 +22,15 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+)
+(c:/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
-(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+
+(c:/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+
+(c:/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
@@ -67,24 +70,30 @@ Package atveryend Info: \enddocument detected (standard20110627).
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
-) (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+)
+(c:/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
-) (/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+)
+(c:/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-) (/usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
+)
+(c:/texlive/2015/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-) (/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+)
+(c:/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen103
 \Hy@linkcounter=\count87
 \Hy@pagecounter=\count88
-(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+
+(c:/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count89
-(/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+
+(c:/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -95,7 +104,8 @@ Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count90
-(/usr/share/texmf-dist/tex/latex/url/url.sty
+
+(c:/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -120,37 +130,45 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+(c:/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count95
 \c@bookmark@seq@number=\count96
-(/usr/share/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+
+(c:/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip43
-) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(c:/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
-(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
-) (/usr/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
+
+(c:/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
-(/usr/share/texmf-dist/tex/latex/pdftex-def/pdftex.def
+Package graphics Info: Driver file: pdftex.def on input line 95.
+
+(c:/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \Gread@gobject=\count97
 ))
 \Gin@req@height=\dimen107
 \Gin@req@width=\dimen108
-) (/usr/share/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2015/09/17 v3.3-111 Customizing captions (AR)
-(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2015/09/20 v1.7-115 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
+)
+(c:/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(c:/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen109
 \captionmargin@=\dimen110
 \captionwidth=\dimen111
@@ -180,9 +198,11 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 \AtBeginShipoutBox=\box26
 Package hyperref Info: Link coloring OFF on input line 9.
-(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+
+(c:/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
-(/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+
+(c:/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count99
@@ -190,11 +210,13 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 9.
 LaTeX Info: Redefining \pageref on input line 9.
 LaTeX Info: Redefining \nameref on input line 9.
+
 (./relazione.out) (./relazione.out)
 \@outlinefile=\write3
 \openout3 = `relazione.out'.
 
-(/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(c:/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count100
 \scratchdimen=\dimen116
@@ -207,16 +229,18 @@ LaTeX Info: Redefining \nameref on input line 9.
 \MPnumerator=\count104
 \makeMPintoPDFobject=\count105
 \everyMPtoPDFconversion=\toks16
-) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (c:/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+
+(c:/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+
+(c:/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -228,9 +252,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 39.
-[1
+ [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./relazione.toc)
+{c:/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./relazione.to
+c)
 \tf@toc=\write4
 \openout4 = `relazione.toc'.
 
@@ -238,24 +263,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.85 	\newpage
+l.88 	\newpage
                [1]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 90.
-(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 93.
+ (c:/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 93.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 
-Overfull \hbox (9.56113pt too wide) in paragraph at lines 93--94
+Overfull \hbox (9.56113pt too wide) in paragraph at lines 96--97
 \OT1/cmr/m/n/12 pro-ced-i-mento da seguire ed al-tri dati mi-nori (quali tempo 
 di preparazione,
  []
 
 
-Overfull \hbox (1.5279pt too wide) in paragraph at lines 95--96
+Overfull \hbox (1.5279pt too wide) in paragraph at lines 98--99
 []\OT1/cmr/m/n/12 La prin-ci-pale fea-ture del sito ^^Re cos-ti-tuita dalla sez
 ione "Pro-poni ricetta",
  []
@@ -274,39 +299,39 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.109 
+l.112 
        [1]
-Overfull \hbox (7.82088pt too wide) in paragraph at lines 117--118
+Overfull \hbox (7.82088pt too wide) in paragraph at lines 120--121
 []\OT1/cmr/m/n/12 data: in questa cartella sono con-tenuti i file xml ed i rel-
 a-tivi XMLSchema. 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 128--130
+Underfull \hbox (badness 10000) in paragraph at lines 132--134
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--135
+Underfull \hbox (badness 10000) in paragraph at lines 138--140
 
  []
 
 
-Overfull \hbox (6.67587pt too wide) in paragraph at lines 133--135
+Overfull \hbox (6.67587pt too wide) in paragraph at lines 138--140
 \OT1/cmr/m/n/12 ina html con il con-tenuto richiesto (ne ^^Re un es-em-pio la p
 ag-ina page[]template.cgi
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--135
+Underfull \hbox (badness 10000) in paragraph at lines 138--140
 
  []
 
 [3]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-[4]
-Overfull \hbox (1.02742pt too wide) in paragraph at lines 163--164
+ [4]
+Overfull \hbox (1.02742pt too wide) in paragraph at lines 168--169
 []\OT1/cmr/m/n/12 logout.cgi - breve script che ef-fet-tua il lo-gout dell'ammi
 nistratore. Viene
  []
@@ -314,7 +339,7 @@ nistratore. Viene
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-Overfull \hbox (2.57648pt too wide) in paragraph at lines 165--166
+Overfull \hbox (2.57648pt too wide) in paragraph at lines 170--171
 \OT1/cmr/m/n/12 ricerca, qualora l'utente dig-i-tasse una stringa di carat-teri
  e ne richiedesse
  []
@@ -322,92 +347,85 @@ Overfull \hbox (2.57648pt too wide) in paragraph at lines 165--166
 [5]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+
+Overfull \hbox (1.10031pt too wide) in paragraph at lines 191--192
+[]| \OT1/cmr/m/n/12 print.css: modella lo stile di stampa delle pagine del sito
+.(particolare
+ []
+
+[6]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
-[6] [7]
-Overfull \hbox (4.60007pt too wide) in paragraph at lines 207--208
+ [7] [8]
+Overfull \hbox (4.60007pt too wide) in paragraph at lines 229--230
 []\OT1/cmr/m/n/12 Se la ricetta ^^Re stata scar-tata essa verr^^Ra sem-plice-me
 nte elim-i-nata dall'xml,
  []
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-[8]
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
-
-Overfull \hbox (1.10031pt too wide) in paragraph at lines 225--226
-[]| \OT1/cmr/m/n/12 print.css: modella lo stile di stampa delle pagine del sito
-.(particolare
- []
-
-<desktop.png, id=133, 983.675pt x 1284.8pt>
-File: desktop.png Graphic file (type png)
-<use desktop.png>
-Package pdftex.def Info: desktop.png used on input line 234.
-(pdftex.def)             Requested size: 256.0748pt x 334.45181pt.
-<mobile.jpg, id=135, 722.7pt x 1284.8pt>
-File: mobile.jpg Graphic file (type jpg)
-<use mobile.jpg>
-Package pdftex.def Info: mobile.jpg used on input line 240.
-(pdftex.def)             Requested size: 256.0748pt x 455.2348pt.
-[9] [10 <./desktop.png>] [11 <./mobile.jpg>]
+[9]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
-<deuteranopia.png, id=155, 988.69376pt x 583.17876pt>
+ <deuteranopia.png, id=137, 988.69376pt x 583.17876pt>
 File: deuteranopia.png Graphic file (type png)
+
 <use deuteranopia.png>
-Package pdftex.def Info: deuteranopia.png used on input line 268.
+Package pdftex.def Info: deuteranopia.png used on input line 255.
 (pdftex.def)             Requested size: 256.0748pt x 151.0445pt.
-<protanopia.png, id=156, 987.69pt x 581.17125pt>
+ <protanopia.png, id=139, 987.69pt x 581.17125pt>
 File: protanopia.png Graphic file (type png)
+
 <use protanopia.png>
-Package pdftex.def Info: protanopia.png used on input line 274.
+Package pdftex.def Info: protanopia.png used on input line 261.
 (pdftex.def)             Requested size: 256.0748pt x 150.6753pt.
-<tritanopia.png, id=157, 988.69376pt x 581.17125pt>
+ <tritanopia.png, id=140, 988.69376pt x 581.17125pt>
 File: tritanopia.png Graphic file (type png)
+
 <use tritanopia.png>
-Package pdftex.def Info: tritanopia.png used on input line 280.
+Package pdftex.def Info: tritanopia.png used on input line 267.
 (pdftex.def)             Requested size: 256.0748pt x 150.52454pt.
-[12] [13 <./deuteranopia.png> <./protanopia.png> <./tritanopia.png>]
+ [10] [11 <./deuteranopia.png> <./protanopia.png> <./tritanopia.png>] [12]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-[14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 328.
-[15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 328.
-(./relazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 328.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 328.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 315.
+ [13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 315.
+ (./relazione.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 315.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 315.
 Package rerunfilecheck Info: File `relazione.out' has not changed.
-(rerunfilecheck)             Checksum: C715A88A2DC0AB21F7ACEDFCF4AF14C6;819.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 328.
+(rerunfilecheck)             Checksum: 7A14323E65461D9FE6C6834A8296AFCB;819.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 315.
  ) 
 Here is how much of TeX's memory you used:
- 6196 strings out of 493054
- 94707 string characters out of 6140586
- 180306 words of memory out of 5000000
- 9647 multiletter control sequences out of 15000+600000
+ 6189 strings out of 493033
+ 94947 string characters out of 6137754
+ 180670 words of memory out of 5000000
+ 9660 multiletter control sequences out of 15000+600000
  10699 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,5n,38p,828b,425s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on relazione.pdf (17 pages, 1707399 bytes).
+ 36i,5n,39p,830b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2015/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr17.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
+12.pfb>
+Output written on relazione.pdf (15 pages, 499780 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 182 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 

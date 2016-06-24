@@ -43,7 +43,7 @@
 				\emph{Matricola:} \\
 				\textsc{1070690} % Supervisor's Name
 			\end{flushright}
-		\end{minipage}\\[2cm]
+		\end{minipage}\\[1cm]
 		
 			\begin{minipage}{0.3\textwidth}
 				\begin{flushleft} \large
@@ -57,20 +57,23 @@
 					\emph{Matricola:} \\
 					\textsc{1069322} % Supervisor's Name
 				\end{flushright}
-			\end{minipage}\\[2cm]
+			\end{minipage}\\[1cm]
 			
 		%----------------------------------------------------------------------------------------
 		%	INFORMATION WEBSITE
 		%----------------------------------------------------------------------------------------
 		
-		\textsc{\Large Informazioni sul sito:}\\[0.3cm]	
+		\textsc{\Large Link al sito:}\\[0.2cm]	
 		\textit{//tecnologie-web.studenti.math.unipd.it/tecweb/$\sim$csindico/}\\[1cm]
+		
+		\textsc{\Large Mail del referente:}\\[0.2cm]	
+		\textit{lucaalessio1994@gmail.com}\\[1cm]
 		
 		%----------------------------------------------------------------------------------------
 		%	DATI LOGIN
 		%----------------------------------------------------------------------------------------
 		
-			\textsc{\Large Login Admin:}\\[0.3cm]
+			\textsc{\Large Login Admin:}\\[0.2cm]
 			\textsc{ Username:}\textit{ admin }\\[0.1mm]
 			\textsc{ Password:}\textit{ admin }\\[0.1mm]
 			
@@ -111,7 +114,7 @@
 		
 			\section{Materiale consegnato}
 			
-			 I file consegnati sono organizzati su 3 cartelle:
+			 I file consegnati sono organizzati su quattro cartelle:
 			\begin{itemize}
 				\item cgi-bin: cartella nella quale sono presenti i file .cgi
 				\item data: in questa cartella sono contenuti i file xml ed i relativi XMLSchema.
@@ -120,13 +123,15 @@
 \item css: cartella contenente i file .css;
 		\item		 images: cartella contenente tutte le foto del sito;
 			\item	 js: cartella contenente i vari script realizzati in JavaScript.
-\end{itemize}				 
+\end{itemize}		
+\item relazione: cartella contenente la presente relazione in formato pdf e le immagini in essa contenute a dimensioni originali		 
 			\end{itemize}	Andiamo ora ad esaminare nel dettaglio le applicazioni di ciascuna tecnologia impiegata nel sito e le loro interazioni. 
 			\newpage
 			\section{HTML}
 
  La struttura HTML del sito viene interamente "stampata" da vari file .cgi: questa scelta \`e dovuta alla grande presenza di contenuto dinamico all'interno del sito per cui non sono presenti file .html "puri" se non index.html che \`e per\`o un semplice redirect a menu.cgi, file Perl che effettivamente stampa la homepage. \\ \\
 Le pagine HTML del sito (stampate dal cgi) sono state realizzate rispettando lo standard XHTML 1.0 Strict.
+
 
 			\section{Perl}
 			
@@ -169,7 +174,24 @@ Le pagine HTML del sito (stampate dal cgi) sono state realizzate rispettando lo 
 \end{itemize}	
 			
 		\newpage	
-	
+	\section{CSS}
+			\begin{itemize}
+				\item Nella realizzazione dell'interfaccia grafica del sito è stato usato lo standard CSS3.
+				\item Allo stesso tempo si \'e fatta molta attenzione alla compatibilit\'a con browser pi\'u datati, e si \'e cercato di utilizzare un numero ristretto delle nuove funzionalit\'a offerte dallo standard.
+				
+				\item Alcune delle funzionalit\'a CSS3 che sono state utilizzate:
+				Border-radius e Box shadow: per realizzare i pulsanti delle form , e per le immagini.
+				
+			
+				\item Nella cartella public-html/css sono presenti i seguenti fogli di stile:
+
+				\subitem style.css: modella lo stile di visualizzazione del sito sia per gli utenti desktop (che hanno uno schermo largo al massimo 1200px) che per gli utenti mobile con dispositivi con schermo piccolo (che hanno uno schermo largo massimo 390px) e dispositivi con dimensioni schermo intermedie ( max-width=730px).
+
+
+				\subitem print.css: modella lo stile di stampa delle pagine del sito.(particolare attenzione si \'e data alla stampa delle pagine delle ricette).
+
+\end{itemize}
+					\newpage
 				
 		\section{XML}
 		Sono presenti 3 file xml principali con i rispettivi xsd:
@@ -208,41 +230,6 @@ Le pagine HTML del sito (stampate dal cgi) sono state realizzate rispettando lo 
 \item In qualsiasi momento l'amministratore ha la possibilità di eliminare le ricette, attenzione per\`o che l'eliminazione \`e un' operazione irreversibile!
 \end{enumerate}
 \newpage
-\section{CSS}
-			\begin{itemize}
-				\item Nella realizzazione dell'interfaccia grafica del sito è stato usato lo standard CSS3.
-				\item Allo stesso tempo si \'e fatta molta attenzione alla compatibilit\'a con browser pi\'u datati, e si \'e cercato di utilizzare un numero ristretto delle nuove funzionalit\'a offerte dallo standard.
-				
-				\item Alcune delle funzionalit\'a CSS3 che sono state utilizzate:
-				Border-radius e Box shadow: per realizzare i pulsanti delle form , e per le immagini.
-				
-			
-				\item Nella cartella public-html/css sono presenti i seguenti fogli di stile:
-
-				\subitem style.css: modella lo stile di visualizzazione del sito sia per gli utenti desktop (che hanno uno schermo largo al massimo 1200px) che per gli utenti mobile con dispositivi con schermo piccolo (che hanno uno schermo largo massimo 390px) e dispositivi con dimensioni schermo intermedie ( max-width=730px).
-
-
-				\subitem print.css: modella lo stile di stampa delle pagine del sito.(particolare attenzione si \'e data alla stampa delle pagine delle ricette).
-
-
-					Di seguito sono riportate le rispettive visualizzazioni del sito   della versione mobile e desktop:
-
-
-
-			\begin{figure}
-			\centering
-			\includegraphics[width=90mm]{desktop}
-			\caption{vedi file desktop.png}
-			\end{figure}
-
-			\begin{figure}
-			\centering
-			\includegraphics[width=90mm]{mobile}
-			\caption{vedi file mobile.png}
-			\end{figure}
-		
-				\end{itemize}
-	
 
 	\newpage
 		\section{Accessibilit\`a}
@@ -304,7 +291,7 @@ Le pagine HTML del sito (stampate dal cgi) sono state realizzate rispettando lo 
 				\item Si \'e fornita particolare attenzione alle parole straniere che sono state segnalate agli screenreader attraverso il tag "span xml:lang=en" segnalando la lingua con cui leggere correttamente i vocaboli. 
 				\item Inoltre \`e stato inserito un link skip nav per saltare direttamente al contenuto qualora l'utente dello screen reader non voglia riascoltare nuovamente il men\`u
 			\end{itemize}
-			\section{Usabilit\`a}
+\newpage			\section{Usabilit\`a}
 			L'utente riesce ad orientarsi nel sito? Analizziamo alcuni degli assi principali del giornalismo. Ometteremo gli assi Who e When dato che nel nostro contesto non \`e necessario dare all'utente informazioni su chi c'\`e dietro al sito (\`e un progetto didattico) n\`e sono presenti novità continue.
 			\begin{itemize}
 				

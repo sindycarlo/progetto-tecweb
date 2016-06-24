@@ -208,18 +208,21 @@ Le pagine HTML del sito (stampate dal cgi) sono state realizzate rispettando lo 
 \item In qualsiasi momento l'amministratore ha la possibilità di eliminare le ricette, attenzione per\`o che l'eliminazione \`e un' operazione irreversibile!
 \end{enumerate}
 \newpage
-\section{CSS DA SCRIVEREEEEEEEEEEEEEEEEEEEEEEEEEEEE}
+\section{CSS}
 			\begin{itemize}
-				\item Nella realizzazione dell'interfaccia grafica del sito è stato usato lo standard CSS3, allo stesso tempo si \'e fatta molta attenzione alla compatibilit\'a con browser pi\'u datati, e si \'e cercato di utilizzare un numero ristretto delle nuove funzionalit\'a offerte dallo standard.
+				\item Nella realizzazione dell'interfaccia grafica del sito è stato usato lo standard CSS3.
+				\item Allo stesso tempo si \'e fatta molta attenzione alla compatibilit\'a con browser pi\'u datati, e si \'e cercato di utilizzare un numero ristretto delle nuove funzionalit\'a offerte dallo standard.
 				
 				\item Alcune delle funzionalit\'a CSS3 che sono state utilizzate:
 				Border-radius e Box shadow: per realizzare i pulsanti delle form , e per le immagini.
-				(DA COMPLETARE!!)
 				
 			
 				\item Nella cartella public-html/css sono presenti i seguenti fogli di stile:
-				style.css: modella lo stile di visualizzazione del sito ia per gli utenti desktop (che hanno uno schermo largo al massimo 890px) che per gli utenti mobile con dispositivi con schermo piccolo (che hanno uno schermo largo massimo 330px) e dispositivi con dimensioni schermo intermedie (min-width=330px e max-width=550px).(DA RIVEDERE!)
-				print.css: modella lo stile di stampa delle pagine del sito.(particolare attenzione si \'e data alla stampa delle pagine delle ricette).
+
+				\subitem style.css: modella lo stile di visualizzazione del sito sia per gli utenti desktop (che hanno uno schermo largo al massimo 1200px) che per gli utenti mobile con dispositivi con schermo piccolo (che hanno uno schermo largo massimo 390px) e dispositivi con dimensioni schermo intermedie ( max-width=730px).
+
+
+				\subitem print.css: modella lo stile di stampa delle pagine del sito.(particolare attenzione si \'e data alla stampa delle pagine delle ricette).
 				\end{itemize}
 	
 		\section{Accessibilit\`a}
@@ -237,14 +240,39 @@ Le pagine HTML del sito (stampate dal cgi) sono state realizzate rispettando lo 
 				\item Si \'e scelto uno schema di colori non particolarmente vivace (un mix di azzuri chiaro); anche se non sono colori di base comunque la lettura dei testi risulta accessibile. Per un sito di cucina inoltre è opportuno non utilizzare colori troppi aggressivi e decisi ma attenersi ad uno stile più sobrio e rilassato. 
 
 				\item I link sono sempre sottolineati, e diventano di colore viola quando vengono cliccati.
+
+			Di seguito sono riportate le visualizzazioni del sito attraverso alcuni disturbi visivi:
+
+			\begin{figure}[ht!]
+			\centering
+			\includegraphics[width=90mm]{deuteranopia}
+			\caption{vedi file deuteranopia.png}
+			\end{figure} 
+
+			\begin{figure}[ht!]
+			\centering
+			\includegraphics[width=90mm]{protanopia}
+			\caption{vedi file protanopia.png}
+			\end{figure}
+
+			\begin{figure}[ht!]
+			\centering
+			\includegraphics[width=90mm]{tritanopia}
+			\caption{vedi file tritanopia.png}
+			\end{figure}
+
+		
 				
 			\end{itemize}	
+
+
+
 			
-			Di seguito sono riportate le visualizzazioni del sito attraverso alcuni disturbi visivi:
-		
+			\newpage
 			\subsection{Tag meta}
 			
-	 Sono stati inseriti per ogni pagina i tag meta:\begin{itemize}
+	 Sono stati inseriti per ogni pagina i tag meta:
+	 		\begin{itemize}
 				\item title: descrive la pagina corrente dal particolare al generale.
 				\item description: da una descrizione del contenuto del sito
 				\item keywords: contiene parole chiave per i motori di ricerca
@@ -259,7 +287,7 @@ Le pagine HTML del sito (stampate dal cgi) sono state realizzate rispettando lo 
 				Si \`e evitato di utilizzare immagini per visualizzare il testo, quindi il contenuto informativo rimane accessibile anche quando fallisce il caricamento delle immagini o del CSS.
 				\item Si \'e fornita particolare attenzione alle parole straniere che sono state segnalate agli screenreader attraverso il tag "span xml:lang=en" segnalando la lingua con cui leggere correttamente i vocaboli. 
 				\item Inoltre \`e stato inserito un link skip nav per saltare direttamente al contenuto qualora l'utente dello screen reader non voglia riascoltare nuovamente il men\`u
-			\end{itemize}\newpage
+			\end{itemize}
 			\section{Usabilit\`a}
 			L'utente riesce ad orientarsi nel sito? Analizziamo alcuni degli assi principali del giornalismo. Ometteremo gli assi Who e When dato che nel nostro contesto non \`e necessario dare all'utente informazioni su chi c'\`e dietro al sito (\`e un progetto didattico) n\`e sono presenti novità continue.
 			\begin{itemize}

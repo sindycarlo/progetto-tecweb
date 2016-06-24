@@ -7,9 +7,9 @@
 \contentsline {section}{\numberline {7}Javascript}{6}{section.7}
 \contentsline {section}{\numberline {8}Step by step: ciclo di vita di una ricetta}{8}{section.8}
 \contentsline {section}{\numberline {9}CSS}{9}{section.9}
-\contentsline {section}{\numberline {10}Accessibilit\`a}{10}{section.10}
-\contentsline {subsection}{\numberline {10.1}Separazione tra struttura,presentazione e comportamento}{10}{subsection.10.1}
+\contentsline {section}{\numberline {10}Accessibilit\`a}{12}{section.10}
+\contentsline {subsection}{\numberline {10.1}Separazione tra struttura,presentazione e comportamento}{12}{subsection.10.1}
 \contentsline {subsection}{\numberline {10.2}Colori}{12}{subsection.10.2}
-\contentsline {subsection}{\numberline {10.3}Tag meta}{13}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.3}Tag meta}{14}{subsection.10.3}
 \contentsline {subsection}{\numberline {10.4}Screen reader}{14}{subsection.10.4}
 \contentsline {section}{\numberline {11}Usabilit\`a}{14}{section.11}

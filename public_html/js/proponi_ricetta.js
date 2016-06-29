@@ -33,11 +33,29 @@ function valida_campi(){
 	    document.getElementById("n_tempo").focus();
 	    return false;
 	}
+	else
+	{
+		if(isNan(tempoprep))
+		{
+			document.getElementById("err_tempo").innerHTML = "Il campo \"Tempo di Preparazione\" non puo' contenere lettere!";
+	    		document.getElementById("n_tempo").focus();
+	    		return false;
+		}
+	}
 	
 	if (!numpersone.replace(/^\s+/g, '').length) {
             document.getElementById("err_pers").innerHTML = "Il campo \"Numero Persone\" e' obbligatorio!";
 	    document.getElementById("n_persone").focus();
 	    return false;
+	}
+	else
+	{
+		if(isNan(numpersone))
+		{
+			document.getElementById("err_pers").innerHTML = "Il campo \"Numero Persone\" non puo' contenere lettere!";
+	    		document.getElementById("n_persone").focus();
+	    		return false;
+		}
 	}
 	
 	if (!procedimento.replace(/^\s+/g, '').length) {
@@ -65,5 +83,5 @@ function valida_campi(){
  	
         return true;
 }
-//Last update by Luca 01/06/2016
-//Solo correzioni minori (pulizia del codice)
+//Last update by Luca 29/06/2016
+//Aggiunto controllo isNan

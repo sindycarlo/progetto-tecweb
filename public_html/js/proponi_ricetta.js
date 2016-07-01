@@ -1,4 +1,4 @@
-function valida_campi(){
+﻿function valida_campi(){
 
 
 	var nomepiatto = document.getElementById("n_piatto").value;	
@@ -33,6 +33,7 @@ function valida_campi(){
 	    document.getElementById("n_tempo").focus();
 	    return false;
 	}
+/*
 	else
 	{
 		if(isNan(tempoprep))
@@ -42,12 +43,14 @@ function valida_campi(){
 	    		return false;
 		}
 	}
+*/
 	
 	if (!numpersone.replace(/^\s+/g, '').length) {
             document.getElementById("err_pers").innerHTML = "Il campo \"Numero Persone\" e' obbligatorio!";
 	    document.getElementById("n_persone").focus();
 	    return false;
 	}
+/*
 	else
 	{
 		if(isNan(numpersone))
@@ -57,6 +60,7 @@ function valida_campi(){
 	    		return false;
 		}
 	}
+*/
 	
 	if (!procedimento.replace(/^\s+/g, '').length) {
             document.getElementById("err_proc").innerHTML = "Il campo \"Procedimento\" e' obbligatorio!";
@@ -84,4 +88,3 @@ function valida_campi(){
         return true;
 }
 //Last update by Luca 29/06/2016
-//Aggiunto controllo isNan

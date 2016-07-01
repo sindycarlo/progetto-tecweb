@@ -1,4 +1,1 @@
-* il sito è completo e interamente funzionante
-* relazione 40%
-* volendo si potrebbero perfezionare alcuni controlli perl
-* tutto il codice valida
+Il sito di cucina "2Forchette" è stato realizzato da Alessio Luca e Sindico Carlo come progetto finale per il corso di Tecnologie Web della facoltà di Informatica dell'Università di Padova. I creatori del sito danno il permesso di copiare e/o riusare i file di questa repository a chiunque ne abbia bisogno per fini non di lucro e si astengono da ogni responsabilità in caso di malfunzionamenti o perl e css merda chi cazzo vi ha inventato vostra ma're pissa in pìe mannaggiavvoi due righe di codice e tre bestemmie ma è possibile ma non lo so io. Have fun
